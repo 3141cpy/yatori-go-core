@@ -1,0 +1,12 @@
+- [x] Cookie 字段（UID、uf、vc/vc2/vc3、xxtenc、fid、cx_p_token、p_auth_token 等）的作用已完整梳理
+- [x] Token 类型（_token 旧版、_token 新版、cx_p_token、p_auth_token）的获取方式已明确
+- [x] puid 与 UID 的等价关系已确认
+- [x] 旧版云盘 API（pan-yz.chaoxing.com）的 _token + puid 机制已分析完成
+- [x] 新版云盘 API（noteyd.chaoxing.com）的 _token + puid 机制已分析完成
+- [x] 登录加密算法（AES-CBC，密钥 u2oh6Vu^HWe4_AES）已详细说明
+- [x] p_auth_token（JWT）的 Header、Payload、Signature 结构已解码分析
+- [x] 完整认证流程图已绘制（登录 → Cookie → _token → 云盘操作）
+- [x] token 与 puid 的核心关系已总结（puid=UID，_token 是 puid 的服务端凭证，必须配对使用）
+- [x] _token 可预测性分析已完成（格式特征、生成算法推测、可预测性评估）— 结论：不可预测
+- [x] security_report.md 中攻击路径2的绕过方案已验证（_token 算法逆向失败，200+种哈希尝试均不匹配）
+- [x] security_report.md 已更新（补充5.3.1 Token生成算法逆向分析、5.3.2 Token与PUID核心关系）

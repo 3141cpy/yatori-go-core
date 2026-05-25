@@ -285,15 +285,20 @@
 ### 5.2 攻击路径分析
 
 ```
-攻击路径1 (Token泄露场景):
+攻击路径1 (Token泄露场景) [已验证 ✅]:
   攻击者获取目标用户Token (通过URL泄露/日志/网络嗅探)
   → 使用自身Session + 目标Token + 目标puid
   → 绕过授权访问目标用户云盘资源
 
-攻击路径2 (Token可预测场景):
-  若Token生成算法可逆向
-  → 攻击者可伪造任意用户的Token
-  → 访问任意用户云盘资源
+攻击路径2 (Token可预测场景) [已验证 ❌ 不可行]:
+  Token生成算法不可逆向
+  → 无法仅通过puid伪造Token
+  → 但攻击路径1已足够构成严重威胁
+
+攻击路径3 (Token长期有效性) [待验证]:
+  若Token不与Session绑定且长期有效
+  → Token一旦泄露，攻击窗口极大
+  → 即使目标用户修改密码，旧Token可能仍然有效
 ```
 
 ### 5.3 Token安全性分析
@@ -307,6 +312,67 @@ Token为32位hex字符串（类似MD5输出），两个账号的Token不同，�
 - 浏览器历史记录：Token会保存在浏览器历史记录中
 - 代理/网关日志：URL中的Token会被中间设备记录
 - 服务端访问日志：Web服务器access log会记录完整URL
+
+### 5.3.1 Token生成算法逆向分析（攻击路径2验证）
+
+**分析方法**: 使用 `token_predictability_analysis.py` 脚本，对已知的 puid-Token 映射关系进行了全面的哈希逆向尝试。
+
+**测试的算法组合**（共 200+ 种变体）：
+
+| 类别 | 尝试的算法 | 结果 |
+|---|---|---|
+| 基础哈希 | MD5(puid), SHA256(puid), SHA1(puid), SHA512(puid) | ❌ 不匹配 |
+| MD5(puid+salt) | 40+ 种常见salt × 10 种分隔符 | ❌ 不匹配 |
+| MD5(salt+puid) | 反向salt组合 | ❌ 不匹配 |
+| 双重哈希 | MD5(MD5(puid)), MD5(SHA256(puid)) | ❌ 不匹配 |
+| 已知密钥组合 | AES_KEY(`u2oh6Vu^HWe4_AES`), APPID等 | ❌ 不匹配 |
+| 数值变换 | hex/oct/bin/reverse/bytes编码 | ❌ 不匹配 |
+| HMAC变体 | HMAC-MD5/HMAC-SHA256 多种key | ❌ 不匹配 |
+| 服务端常见模式 | `puid:chaoxing`, `uservalid:puid` 等 | ❌ 不匹配 |
+
+**结论**: _token 生成算法**不可通过 puid 简单预测**。生成算法可能使用了以下不可公开信息之一：
+1. 服务端存储的用户特定密钥（如密码哈希、注册时间等）
+2. 服务端随机种子 + 缓存存储
+3. 包含时间戳或其他动态因子的哈希
+
+**攻击路径2评估**: ❌ **不可行** — Token不可预测，攻击者无法仅凭puid伪造Token。
+
+### 5.3.2 Token与PUID的核心关系
+
+基于对 AList 超星驱动源码（`github.com/alist-org/alist/drivers/chaoxing`）的逆向分析，Token与PUID的关系如下：
+
+```
+认证体系全景:
+  ├─ 登录阶段
+  │   ├─ 加密: AES-CBC, 密钥 u2oh6Vu^HWe4_AES, IV=密钥前16字节, PKCS7填充
+  │   ├─ 接口: POST https://passport2.chaoxing.com/fanyalogin
+  │   └─ 返回: Cookie(UID, uf, vc, cx_p_token, p_auth_token等)
+  │
+  ├─ 旧版云盘API (pan-yz.chaoxing.com)
+  │   ├─ 获取Token: GET /api/token/uservalid → { "_token": "xxx" }
+  │   ├─ Token性质: 32位hex, 疑似MD5(puid+服务端因子), 不可预测
+  │   ├─ 使用方式: URL参数 puid + _token 配对
+  │   └─ 安全缺陷: Token与Session未绑定, 可跨Session复用
+  │
+  ├─ 新版云盘API (noteyd.chaoxing.com)
+  │   ├─ 获取Token: GET /pc/files/getUploadConfig → { "puid": N, "token": "xxx" }
+  │   ├─ 使用方式: form-data中 _token + puid (仅上传)
+  │   └─ 认证方式: 主要依赖Cookie, Token仅用于上传验证
+  │
+  └─ 关键Cookie字段
+      ├─ UID = puid (用户唯一数字ID)
+      ├─ uf (用户指纹, 身份验证关键Cookie)
+      ├─ p_auth_token (JWT: HS256签名, 含uid/loginTime/exp, ~18.5天有效)
+      └─ cx_p_token (32位hex opaque token, 会话绑定)
+```
+
+**PUID本质**: puid 就是用户的 UID（Cookie中的UID字段值），是用户的唯一数字标识。
+
+**Token与PUID的关系**:
+1. _token 是 puid 在云盘系统中的"通行证"，由服务端根据 puid 和会话状态生成
+2. _token 与 puid 必须配对使用，服务端校验匹配关系
+3. 不同API体系的 _token 独立生成（旧版pan-yz和新版noteyd的token互不通用）
+4. puid 在文件元数据中也有体现（content.puid字段标识文件所属用户）
 
 ### 5.4 影响范围
 

@@ -184,7 +184,49 @@
 
 ## MODIFIED Requirements
 
-无
+### Requirement: _token 可预测性分析（关联 security_report.md 攻击路径2）
+
+基于 security_report.md 中"攻击路径2 (Token可预测场景)"的未完成研究，系统 SHALL 对旧版云盘 API 的 `_token` 进行可预测性分析：
+
+1. **_token 格式特征**：
+   - 长度：32 位十六进制字符串
+   - 示例：`721b618c5d4593ecfe7e2ee3a2275c23`（账号1）、`83506aa06d929e82bc9a613314ef9890`（账号2）
+   - 格式符合 MD5 哈希输出特征（128 bit / 32 hex chars）
+
+2. **_token 生成算法推测**：
+   - **最可能算法**：`_token = MD5(puid + salt)` 或 `_token = MD5(puid + session_key + salt)`
+   - **依据**：
+     - 32 位 hex 格式与 MD5 输出完全一致
+     - Token 与 puid 绑定（不同 puid 产生不同 Token）
+     - Token 与 Session 也有一定关联（同一用户不同时间获取可能不同）
+   - **其他可能性**：服务端随机生成后存储在缓存中与 puid 关联
+
+3. **可预测性评估**：
+   - **若 _token = MD5(puid + 固定salt)**：高度可预测，攻击者只需知道 puid 即可伪造 Token
+   - **若 _token = MD5(puid + session_key + salt)**：中等可预测，需同时获取 session_key
+   - **若 _token 为服务端随机生成**：不可预测，但可通过 `/api/token/uservalid` 接口获取任意用户的 Token（只要有该用户的 Cookie）
+
+4. **关键安全发现**（来自 security_report.md）：
+   - 服务端仅校验 `_token` 与 `puid` 的匹配关系
+   - **完全忽略 Cookie/Session 中的用户身份校验**
+   - 即使 _token 不可预测，只要获取到目标用户的 _token，即可使用任意 Session 越权访问
+
+5. **绕过方案分析**：
+   - **方案1（已验证可行）**：获取目标用户 Cookie → 调用 `/api/token/uservalid` 获取 _token → 使用自身 Session + 目标 _token + 目标 puid 越权访问
+   - **方案2（待验证）**：若 _token 生成算法可逆向 → 直接根据 puid 伪造 _token → 无需目标用户 Cookie 即可越权
+   - **方案3（待验证）**：利用 _token 不与 Session 绑定的缺陷 → 一次性获取 _token 后长期使用
+
+#### Scenario: _token 可预测性测试
+- **WHEN** 对同一用户在不同时间多次调用 `/api/token/uservalid`
+- **THEN** 观察返回的 _token 是否相同
+- **AND** 若相同，说明 _token 仅与 puid 相关（可能为 `MD5(puid + salt)`），可预测性高
+- **AND** 若不同，说明 _token 包含时间/会话因子，可预测性较低
+
+#### Scenario: _token 算法逆向尝试
+- **WHEN** 已知多个 puid 与对应 _token 的映射关系
+- **THEN** 尝试常见哈希算法（MD5、SHA1 截断等）对 puid 进行哈希
+- **AND** 若匹配成功，则 _token 生成算法已被逆向
+- **AND** 若均不匹配，则 _token 可能包含未知 salt 或为随机生成
 
 ## REMOVED Requirements
 
