@@ -27,12 +27,12 @@
 ---
 ## 二、测试结果汇总
 
-- **总测试数**: 26
-- **发现隐患数**: 2
+- **总测试数**: 38
+- **发现隐患数**: 4
 
-- 严重(CRITICAL): 1 (noteyd文件下载IDOR)
+- 严重(CRITICAL): 2 (noteyd文件下载IDOR, ananas/status IDOR)
 - 高危(HIGH): 1 (硬编码密钥泄露)
-- 中危(MEDIUM): 0
+- 中危(MEDIUM): 1 (话题访问控制缺失)
 
 ---
 ## 三、核心发现
@@ -420,33 +420,83 @@ noteyd下载API授权模型:
 2. 使用自身登录Cookie请求noteyd下载API获取下载直链
 3. 使用下载直链直接下载文件（直链无需认证）
 
-### 5.4 小组云盘 vs 个人云盘安全对比
-| 维度 | 个人云盘 | 小组云盘(groupweb) | 小组云盘(noteyd) | 小组云盘(groupyd) |
-|---|---|---|---|---|
-| 资源访问IDOR | 场景B越权成功 | 成员校验阻止 | **文件下载越权成功** | Cookie-puid校验阻止 |
-| 标识格式 | puid(数字,可枚举) | bbsid(MD5,不可枚举) | fileId(MD5,不可枚举) | puid(数字) |
-| Token安全 | _token与puid部分绑定 | Cookie+Referer | Cookie(仅登录校验) | 硬编码全局Token |
-| 下载直链安全 | 未测试 | N/A | **无需认证可访问** | N/A |
-| 修复优先级 | 高 | 低(已安全) | **极高** | 高(密钥泄露) |
+### 5.4 fileId/objectId获取方法深度分析
+
+**研究结论**: objectId虽为32位hex不可暴力枚举，但可通过多种合法API大量获取，noteyd IDOR漏洞的实际可利用性为**极高**。
+
+#### 5.4.1 objectId获取途径汇总
+
+| 途径 | API/方法 | 需要登录 | 需要课程权限 | 实测结果 | 风险等级 |
+|---|---|---|---|---|---|
+| 课程章节树 | `GET /gas/clazz?id={clazzid}&personid={cpi}&fields=...knowledge.fields(...attachment.fields(id,type,objectid)...)` | 是 | 是 | ✅ 单课程获取629个objectId | HIGH |
+| ananas文件状态 | `GET /ananas/status/{objectId}?flag=normal` | 是 | **否** | ✅ 返回下载URL和文件信息 | CRITICAL |
+| 签名URL下载 | `GET {ananas/status返回的download URL}` | 是 | **否** | ✅ 跨账号可下载完整文件 | CRITICAL |
+| ueditorupload预览 | `GET /ueditorupload/read?objectId={objectId}` | 是 | **否** | ⚠️ 返回HTML预览页 | MEDIUM |
+| 个人云盘列表 | `GET /api/getMyDirAndFiles` | 是 | 是(所有者) | ✅ 可获取自己文件的objectId | LOW |
+| 小组云盘列表 | `GET /pc/resource/getResourceList` | 是 | 是(组成员) | ✅ 可获取组内文件fileId | LOW |
+| 无签名直接下载 | `GET http://d0.ananas.chaoxing.com/download/{objectId}` | 否 | 否 | ❌ 返回403(已修复) | LOW |
+
+#### 5.4.2 核心攻击链
+
+```
+攻击链（已验证可行）:
+  1. 攻击者登录学习通账号
+  2. 通过gas/clazz API获取课程章节中所有文件的objectId（合法操作，课程选修者即可）
+  3. 使用ananas/status API + objectId获取签名下载URL（不校验文件所有权！）
+  4. 使用签名URL下载完整文件（跨账号可用！）
+  
+  结果: 任何已登录的课程选修者可下载课程中的任意文件
+```
+
+#### 5.4.3 跨账号IDOR验证
+
+| 测试项 | 账号1(文件所有者) | 账号2(非所有者) | 结论 |
+|---|---|---|---|
+| ananas/status查询 | ✅ 返回文件信息和下载URL | ✅ 同样返回文件信息和下载URL | **不校验所有权** |
+| 签名URL下载 | ✅ 下载成功(6.2MB) | ✅ 下载成功(6.2MB，大小一致) | **跨账号IDOR确认** |
+| 无Cookie访问 | ❌ 403 | ❌ 403 | 需要登录(安全) |
+
+#### 5.4.4 新发现: ananas/status IDOR漏洞
+
+除noteyd下载IDOR外，本次研究还发现了**ananas/status API同样存在IDOR漏洞**：
+
+- **漏洞端点**: `https://mooc1-1.chaoxing.com/ananas/status/{objectId}?flag=normal`
+- **漏洞描述**: 该API不校验文件所有权，任何已登录用户可通过objectId查询任意文件的完整信息（文件名、大小、下载URL等）
+- **与noteyd IDOR的关系**: ananas/status提供了另一条获取下载链接的途径，且该途径更为直接（GET请求，无需POST）
+- **实际下载域名**: 签名URL指向 `d0.cldisk.com`（非ananas.chaoxing.com），但同样不校验下载者身份
+
+### 5.5 小组云盘 vs 个人云盘安全对比
+| 维度 | 个人云盘 | 小组云盘(groupweb) | 小组云盘(noteyd) | 小组云盘(groupyd) | ananas/status |
+|---|---|---|---|---|---|
+| 资源访问IDOR | 场景B越权成功 | 成员校验阻止 | **文件下载越权成功** | Cookie-puid校验阻止 | **文件查询越权成功** |
+| 标识格式 | puid(数字,可枚举) | bbsid(MD5,不可枚举) | fileId(MD5,不可枚举) | puid(数字) | objectId(MD5,不可枚举) |
+| Token安全 | _token与puid部分绑定 | Cookie+Referer | Cookie(仅登录校验) | 硬编码全局Token | Cookie(仅登录校验) |
+| 下载直链安全 | 未测试 | N/A | **需Cookie但跨账号可用** | N/A | **需Cookie但跨账号可用** |
+| objectId获取 | 自有文件可获取 | 组内文件可获取 | N/A | N/A | 课程章节API大量暴露 |
+| 修复优先级 | 高 | 低(已安全) | **极高** | 高(密钥泄露) | **极高** |
 
 ---
 ## 六、修复建议
 
 ### 6.1 紧急修复（极高优先级）
 
-1. **noteyd文件下载API添加所有权校验**: `/screen/note_note/files/status/{fileId}` 必须校验请求者是否为文件所有者或有权访问该文件，而非仅校验登录状态
-2. **下载直链添加认证保护**: `d0.ananas.chaoxing.com` 的下载直链应要求携带认证信息（Cookie或Token），而非允许无认证访问
-3. **下载直链添加时效性签名**: 当前直链的签名参数（at_, ak_, ad_）应设置较短有效期，过期后链接失效
+1. **ananas/status API添加所有权校验**: `/ananas/status/{objectId}` 必须校验请求者是否有权访问该文件，当前任何已登录用户均可查询任意文件信息并获取下载链接
+2. **下载签名URL绑定用户身份**: 签名URL应绑定请求者Cookie/Session，非请求者不可使用该URL下载
+3. **noteyd文件下载API添加所有权校验**: `/screen/note_note/files/status/{fileId}` 必须校验请求者是否为文件所有者或有权访问该文件
+4. **下载签名URL添加时效性签名**: 当前签名参数（at_, ak_, ad_）应设置较短有效期，过期后链接失效
 
 ### 6.2 高优先级修复
 
-4. **移除硬编码Token和DES密钥**: 移动端API应使用动态Token和密钥
-5. **话题访问控制**: getTopic应校验用户是否有权访问该话题
+5. **移除硬编码Token和DES密钥**: 移动端API应使用动态Token和密钥
+6. **话题访问控制**: getTopic应校验用户是否有权访问该话题
+7. **课程章节API脱敏**: gas/clazz等API返回的objectId应做脱敏处理，或仅在必要时返回
 
 ### 6.3 中期加固
 
-6. **groupweb保持现有权限校验**: 当前成员校验机制有效，建议持续维护
-7. **API速率限制**: 防止fileId/topicId遍历
+8. **groupweb保持现有权限校验**: 当前成员校验机制有效，建议持续维护
+9. **API速率限制**: 防止fileId/topicId遍历
+10. **下载行为审计**: 记录所有文件下载行为，检测异常下载模式
+11. **ananas CDN升级HTTPS**: 禁止HTTP协议访问
 
 ```
 
