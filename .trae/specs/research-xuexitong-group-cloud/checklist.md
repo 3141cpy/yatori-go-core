@@ -1,0 +1,15 @@
+- [x] 报告覆盖了小组云盘概述（定义、特征、bbsid获取方式）
+- [x] 报告覆盖了学校云盘SSO入口信息
+- [x] 报告覆盖了小组云盘专用域名体系（groupweb/noteyd/pan-yz）
+- [x] 报告覆盖了认证方式（登录认证、请求认证、Cookie刷新）
+- [x] 报告覆盖了文件列表API（recType=1文件夹、recType=2文件）
+- [x] 报告覆盖了手机端文件特殊处理（fileId替代、JSON格式差异）
+- [x] 报告覆盖了文件下载API（noteyd域名、下载链接获取）
+- [x] 报告覆盖了文件上传API（三步流程：getUploadConfig→upload→addResource）
+- [x] 报告覆盖了文件夹管理API（创建、重命名）
+- [x] 报告覆盖了文件移动与删除API（moveResource、deleteResourceFolder/File）
+- [x] 报告覆盖了权限体系（groupAuth、operationAuth完整字段）
+- [x] 报告覆盖了数据结构定义（File结构、ID编码规则）
+- [x] 报告覆盖了小组云盘与个人云盘完整对比表（15个维度）
+- [x] 报告覆盖了关键发现（三套云盘体系、OnlyProxy特性、手机端差异）
+- [x] 报告中所有API端点均包含域名、路径、参数说明
