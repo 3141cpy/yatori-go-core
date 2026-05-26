@@ -1,0 +1,10 @@
+- [x] 代理问题已解决，API端点可正常访问（通过i.chaoxing.com获取完整Cookie解决404问题）
+- [x] 课程章节CPI越权测试完成（/gas/clazz）— **越权成功，可获取他人章节列表+知识点**
+- [x] 章节任务点状态CPI越权测试完成（/job/myjobsnodesmap）— **被拒绝，cpi与userid绑定**
+- [x] 知识节点详情CPI越权测试完成（/gas/knowledge）— **K6 Token=万能密钥，无Cookie也可访问任意课程**
+- [x] 知识卡片资源CPI越权测试完成（/mooc-ans/knowledge/cards）— **被拒绝**
+- [x] 进入章节CPI越权测试完成（/mooc-ans/mycourse/studentstudyAjax）— **越权成功！**
+- [x] 课程完成度CPI越权测试完成（/mooc2-ans/mycourse/stu-job-info）— **越权成功！**
+- [x] CPI获取方式评估完成 — **cpi为半公开信息，课程列表API直接返回**
+- [x] CPI越权完整攻击链已构建
+- [x] 课程CPI越权深入评估报告已生成
