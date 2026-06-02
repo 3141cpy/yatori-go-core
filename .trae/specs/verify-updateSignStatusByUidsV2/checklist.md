@@ -1,0 +1,8 @@
+- [x] 教师账号调用updateSignStatusByUidsV2 API成功，响应已记录
+- [x] 学生账号越权调用updateSignStatusByUidsV2 API测试完成
+- [x] "只能改状态"特征已验证（无需位置/二维码/手势信息）
+- [x] 不同status值和uids组合测试完成
+- [x] DB_STRATEGY参数影响已测试
+- [x] 签到状态修改持久化已验证
+- [x] updateSignStatusByUidsV2与updateSignStatus差异已分析
+- [x] 安全测试报告已更新（/workspace/sign_vuln_report.md）

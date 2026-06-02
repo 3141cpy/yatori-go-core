@@ -1,0 +1,177 @@
+[
+  {
+    "tag": "T3-before-50001637",
+    "detail": "修改前: aid=5000163767353, status=2, name=3141cpy",
+    "evidence": "{\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 2, \"createtime\": 1780400956000, \"updatetime\": 1780410670000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd"
+  },
+  {
+    "tag": "T3-before-50001627",
+    "detail": "修改前: aid=5000162787534, 未签到或已结束",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-before-50001399",
+    "detail": "修改前: aid=5000139908007, status=1, name=3141cpy",
+    "evidence": "{\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_"
+  },
+  {
+    "tag": "T3-before-50001397",
+    "detail": "修改前: aid=5000139741015, status=1, name=3141cpy",
+    "evidence": "{\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762142169606, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_"
+  },
+  {
+    "tag": "T3-before-50001397",
+    "detail": "修改前: aid=5000139740903, 未签到或已结束",
+    "evidence": ""
+  },
+  {
+    "tag": "T4-modify-50001637",
+    "detail": "教师修改 status=2 aid=5000163767353: {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T4-modify-50001627",
+    "detail": "教师修改 status=2 aid=5000162787534: {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T4-modify-50001399",
+    "detail": "教师修改 status=2 aid=5000139908007: {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T5-after-50001637",
+    "detail": "修改后: aid=5000163767353, status=2, name=3141cpy",
+    "evidence": "{\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 2, \"createtime\": 1780400956000, \"updatetime\": 1780410670000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd"
+  },
+  {
+    "tag": "T5-after-50001627",
+    "detail": "修改后: aid=5000162787534, status=2, name=3141cpy",
+    "evidence": "{\"id\": 5001369403441, \"uid\": 431407443, \"activeId\": 5000162787534, \"status\": 2, \"createtime\": 1780410761000, \"updatetime\": 1780410761000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780410760870, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd"
+  },
+  {
+    "tag": "T5-after-50001399",
+    "detail": "修改后: aid=5000139908007, status=2, name=3141cpy",
+    "evidence": "{\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 2, \"createtime\": 1762220611000, \"updatetime\": 1780410760000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_"
+  },
+  {
+    "tag": "T5-after-50001397",
+    "detail": "修改后: aid=5000139741015, status=1, name=3141cpy",
+    "evidence": "{\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762142169606, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_"
+  },
+  {
+    "tag": "T5-after-50001397",
+    "detail": "修改后: aid=5000139740903, 未签到或已结束",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-csrf-origin",
+    "detail": "跨域Origin测试: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T6-csrf-no-xhr",
+    "detail": "跨域Origin(无XHR头): HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T6-csrf-get",
+    "detail": "GET方法(可CSRF): HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T7-poc",
+    "detail": "CSRF POC已构造: 使用img标签发起GET请求，无需JavaScript",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-教师全部Cookie",
+    "detail": "学生+教师全部Cookie: {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T8-key-UID",
+    "detail": "学生+UID Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-_uid",
+    "detail": "学生+_uid Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-uf",
+    "detail": "学生+uf Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-_d",
+    "detail": "学生+_d Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-VC3",
+    "detail": "学生+VC3 Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-vc3",
+    "detail": "学生+vc3 Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-JSESSIONID",
+    "detail": "学生+JSESSIONID Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-route",
+    "detail": "学生+route Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-route_mobilelearn",
+    "detail": "学生+route_mobilelearn Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-p_auth_token",
+    "detail": "学生+p_auth_token Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-cx_p_token",
+    "detail": "学生+cx_p_token Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-xxtenc",
+    "detail": "学生+xxtenc Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-DSSTASH_LOG",
+    "detail": "学生+DSSTASH_LOG Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-fanyamoocs",
+    "detail": "学生+fanyamoocs Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-fid",
+    "detail": "学生+fid Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-key-spaceFid",
+    "detail": "学生+spaceFid Cookie: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-uid-override",
+    "detail": "教师Cookie+学生UID: ",
+    "evidence": ""
+  }
+]

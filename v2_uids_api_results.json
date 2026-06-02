@@ -1,0 +1,187 @@
+[
+  {
+    "tag": "T1-01",
+    "detail": "教师 multipart uids=431407443 status=2: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-02",
+    "detail": "教师 urlencoded uids=431407443 status=2: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-03",
+    "detail": "教师 default uids=431407443 status=2: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-0",
+    "detail": "教师 status=0: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-1",
+    "detail": "教师 status=1: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-2",
+    "detail": "教师 status=2: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-3",
+    "detail": "教师 status=3: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-4",
+    "detail": "教师 status=4: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-5",
+    "detail": "教师 status=5: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-6",
+    "detail": "教师 status=6: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-status-7",
+    "detail": "教师 status=7: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-db-PRIMARY_KEY",
+    "detail": "教师 DB_STRATEGY=PRIMARY_KEY: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T1-db-NONE",
+    "detail": "教师 DB_STRATEGY=NONE: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T1-db-empty",
+    "detail": "教师 DB_STRATEGY=empty: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T1-db-RANDOM",
+    "detail": "教师 DB_STRATEGY=RANDOM: HTTP 200, {\"state\":\"活动不存在\"}",
+    "evidence": "{\"state\":\"活动不存在\"}"
+  },
+  {
+    "tag": "T1-db-SLAVE",
+    "detail": "教师 DB_STRATEGY=SLAVE: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T1-batch",
+    "detail": "教师 批量uids: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[\"陈鹏宇\"],\"missingAndNoSignIds\":[402644",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[\"陈鹏宇\"],\"missingAndNoSignIds\":[402644510]}"
+  },
+  {
+    "tag": "T1-batch2",
+    "detail": "教师 uids+不存在uid: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[999999999]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[999999999]}"
+  },
+  {
+    "tag": "T1-no-db",
+    "detail": "教师 无DB_STRATEGY: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T2-01",
+    "detail": "学生 multipart uids=自己 status=2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-02",
+    "detail": "学生 urlencoded uids=自己 status=2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-03",
+    "detail": "学生 default uids=自己 status=2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-04",
+    "detail": "学生 multipart uids=教师 status=2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-0",
+    "detail": "学生 status=0: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-1",
+    "detail": "学生 status=1: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-2",
+    "detail": "学生 status=2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-3",
+    "detail": "学生 status=3: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-4",
+    "detail": "学生 status=4: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-5",
+    "detail": "学生 status=5: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-status-6",
+    "detail": "学生 status=6: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-hybrid",
+    "detail": "教师Cookie+学生UA: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-extra-0",
+    "detail": "教师 +['latitude', 'longitude']: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-extra-1",
+    "detail": "教师 +['enc']: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-extra-2",
+    "detail": "教师 +['signCode']: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-extra-3",
+    "detail": "教师 +['classId', 'courseId']: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-GET",
+    "detail": "教师 GET: HTTP 200, {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  },
+  {
+    "tag": "T3-GET-s",
+    "detail": "学生 GET: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  }
+]
