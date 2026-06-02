@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "T2-before-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)修改前status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T2-modify-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)修改status=1: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T2-after-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)修改后status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T2-teacher-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)教师端status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T2-final-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)最终status=1",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369411142, \"uid\": 431407443, \"activeId\": 5000163776552, \"status\": 1, \"createtime\": 1780423059000, \"updatetime\": 1780423059000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780423058586, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"is"
+  },
+  {
+    "tag": "T2-stuSignajax-5000163776552",
+    "detail": "场景1(已结束未签二维码签到)正常签到: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T3-before-5000163776548",
+    "detail": "场景2(进行中二维码签到)修改前status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T3-modify-5000163776548",
+    "detail": "场景2(进行中二维码签到)修改status=1: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T3-after-5000163776548",
+    "detail": "场景2(进行中二维码签到)修改后status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T3-teacher-5000163776548",
+    "detail": "场景2(进行中二维码签到)教师端status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T3-final-5000163776548",
+    "detail": "场景2(进行中二维码签到)最终status=1",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369411143, \"uid\": 431407443, \"activeId\": 5000163776548, \"status\": 1, \"createtime\": 1780423062000, \"updatetime\": 1780423062000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780423061903, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"is"
+  },
+  {
+    "tag": "T3-stuSignajax-5000163776548",
+    "detail": "场景2(进行中二维码签到)正常签到: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T3-status0-50001637",
+    "detail": "场景2 status=0(缺勤): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-status2-50001637",
+    "detail": "场景2 status=2(迟到): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-status3-50001637",
+    "detail": "场景2 status=3(事假): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-status4-50001637",
+    "detail": "场景2 status=4(病假): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-status5-50001637",
+    "detail": "场景2 status=5(补签): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-status6-50001637",
+    "detail": "场景2 status=6(旷课): API=success, 查询=1",
+    "evidence": ""
+  },
+  {
+    "tag": "T4-before-5000163776554",
+    "detail": "场景3(已结束签退活动)修改前status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T4-modify-5000163776554",
+    "detail": "场景3(已结束签退活动)修改status=1: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4-after-5000163776554",
+    "detail": "场景3(已结束签退活动)修改后status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T4-teacher-5000163776554",
+    "detail": "场景3(已结束签退活动)教师端status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": null, \"errorMsg\": \"此种类型的签到活动暂时不支持pc端签到\"}"
+  },
+  {
+    "tag": "T4-final-5000163776554",
+    "detail": "场景3(已结束签退活动)最终status=1",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369411144, \"uid\": 431407443, \"activeId\": 5000163776554, \"status\": 1, \"createtime\": 1780423069000, \"updatetime\": 1780423069000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780423068802, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"is"
+  },
+  {
+    "tag": "T4-stuSignajax-5000163776554",
+    "detail": "场景3(已结束签退活动)正常签到: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  }
+]
