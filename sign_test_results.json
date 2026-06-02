@@ -1,0 +1,122 @@
+[
+  {
+    "id": "T2-01",
+    "name": "学生正常签到",
+    "vuln": false,
+    "sev": "MEDIUM",
+    "detail": "学生签到结果: result=, msg=",
+    "evidence": "HTTP 200, 响应: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}"
+  },
+  {
+    "id": "T2-02",
+    "name": "学生重复签到",
+    "vuln": false,
+    "sev": "LOW",
+    "detail": "重复签到结果: result=, msg=",
+    "evidence": "HTTP 200, 响应: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}"
+  },
+  {
+    "id": "T3-01",
+    "name": "修改activeId参数签到其他活动",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "修改activeId签到其他活动: {\"raw_status\": 200, \"raw_text\": \"签到失败，请重新扫描\"}",
+    "evidence": "HTTP 200"
+  },
+  {
+    "id": "T3-02",
+    "name": "添加status/signStatus参数",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "添加额外参数签到: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}",
+    "evidence": "HTTP 200"
+  },
+  {
+    "id": "T3-03",
+    "name": "使用PUT方法访问签到API",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "PUT方法签到: HTTP 500, {\"raw_status\": 500, \"raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Er",
+    "evidence": "HTTP 500"
+  },
+  {
+    "id": "T3-04",
+    "name": "学生访问签到结果API",
+    "vuln": false,
+    "sev": "MEDIUM",
+    "detail": "学生查看签到结果: 被拒绝",
+    "evidence": "HTTP 500, 响应前300字: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "id": "T3-05",
+    "name": "学生POST修改签到结果",
+    "vuln": false,
+    "sev": "CRITICAL",
+    "detail": "学生POST修改签到结果: {\"raw_status\": 500, \"raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Er",
+    "evidence": "HTTP 500"
+  },
+  {
+    "id": "T3-06",
+    "name": "学生访问签到活动详情API",
+    "vuln": false,
+    "sev": "MEDIUM",
+    "detail": "学生查看签到详情: 被拒绝",
+    "evidence": "HTTP 500, 响应前300字: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "id": "T3-07",
+    "name": "使用K6 Token构造移动端签到请求",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "K6 Token签到: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}",
+    "evidence": "HTTP 200"
+  },
+  {
+    "id": "T3-08",
+    "name": "修改签到类型参数",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "修改签到类型: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}",
+    "evidence": "HTTP 200"
+  },
+  {
+    "id": "T3-09",
+    "name": "对已结束签到进行补签",
+    "vuln": false,
+    "sev": "CRITICAL",
+    "detail": "已结束签到补签: result=None, msg=",
+    "evidence": "HTTP 200, 响应: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}"
+  },
+  {
+    "id": "T3-10",
+    "name": "修改uid冒充其他学生签到",
+    "vuln": false,
+    "sev": "CRITICAL",
+    "detail": "冒充签到: result=None, msg=",
+    "evidence": "HTTP 200, 响应: {\"raw_status\": 200, \"raw_text\": \"您已签到过了\"}"
+  },
+  {
+    "id": "T3-11",
+    "name": "学生访问preSign页面",
+    "vuln": true,
+    "sev": "MEDIUM",
+    "detail": "preSign页面: HTTP 200, 响应长度=14550",
+    "evidence": "响应前200字: ﻿<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n    <meta http-equiv=\"C"
+  },
+  {
+    "id": "T3-12",
+    "name": "通过新版签到API签到",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "新版API签到: {\"raw_status\": 500, \"raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Er",
+    "evidence": "HTTP 500"
+  },
+  {
+    "id": "T3-13",
+    "name": "学生访问签到统计API",
+    "vuln": false,
+    "sev": "HIGH",
+    "detail": "签到统计: 被拒绝",
+    "evidence": "HTTP 500, 响应前300字: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  }
+]

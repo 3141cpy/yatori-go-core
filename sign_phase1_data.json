@@ -1,0 +1,87 @@
+{
+  "puid_teacher": "402644510",
+  "puid_student": "431407443",
+  "teacher_courses": [
+    {
+      "courseid": "260554328",
+      "classid": "141377820",
+      "cpi": "493376740",
+      "name": "国际学院2025级4班",
+      "roletype": 3
+    },
+    {
+      "courseid": "260899594",
+      "classid": "140271434",
+      "cpi": "493376740",
+      "name": "班级977002.29周五上午1-2节",
+      "roletype": 3
+    },
+    {
+      "courseid": "260532723",
+      "classid": "139283549",
+      "cpi": "493376740",
+      "name": "2025级机械工程（中外合作办学）-1234",
+      "roletype": 3
+    },
+    {
+      "courseid": "260362082",
+      "classid": "138928392",
+      "cpi": "493376740",
+      "name": "机械工程25级1-4班",
+      "roletype": 3
+    },
+    {
+      "courseid": "258167046",
+      "classid": "134350680",
+      "cpi": "493376740",
+      "name": "班级841065.09",
+      "roletype": 3
+    },
+    {
+      "courseid": "256571696",
+      "classid": "130789414",
+      "cpi": "493376740",
+      "name": "国院25级机械工程1-4班",
+      "roletype": 3
+    },
+    {
+      "courseid": "255538200",
+      "classid": "128255887",
+      "cpi": "493376740",
+      "name": "班级841011.08",
+      "roletype": 3
+    },
+    {
+      "courseid": "255697280",
+      "classid": "128677101",
+      "cpi": "505704349",
+      "name": "机械工程25级1-4班",
+      "roletype": 3
+    },
+    {
+      "courseid": "255512502",
+      "classid": "128190013",
+      "cpi": "493376740",
+      "name": "机械工程(中外合作办学)1234班",
+      "roletype": 3
+    }
+  ],
+  "student_courses": [
+    {
+      "courseid": "262934472",
+      "classid": "145110605",
+      "cpi": "520211407",
+      "name": "默认班级",
+      "roletype": 3
+    },
+    {
+      "courseid": "257485372",
+      "classid": "132821141",
+      "cpi": "520211407",
+      "name": "exam",
+      "roletype": 3
+    }
+  ],
+  "teacher_target": null,
+  "student_target": null
+}
