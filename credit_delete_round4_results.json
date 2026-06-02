@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "A-credit-学生We",
+    "detail": "积分引用: ['pointer', 'point']",
+    "evidence": "['pointer', 'point']"
+  },
+  {
+    "tag": "A-api-学生We",
+    "detail": "API引用: ['cursor: pointer;', 'display: flex;align-items: center;cursor: pointer;', '.red-point']",
+    "evidence": "['cursor: pointer;', 'display: flex;align-items: center;cursor: pointer;', '.red-point']"
+  },
+  {
+    "tag": "A-credit-教师We",
+    "detail": "积分引用: ['pointer', 'point']",
+    "evidence": "['pointer', 'point']"
+  },
+  {
+    "tag": "A-api-教师We",
+    "detail": "API引用: ['cursor: pointer;', 'display: flex;align-items: center;cursor: pointer;', '.red-point']",
+    "evidence": "['cursor: pointer;', 'display: flex;align-items: center;cursor: pointer;', '.red-point']"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/stuScoreList-学生",
+    "detail": "学生 GET ml/pptSign/stuScoreList: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/stuScoreList-教师",
+    "detail": "教师 GET ml/pptSign/stuScoreList: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/getStuScore-学生",
+    "detail": "学生 GET ml/pptSign/getStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/getStuScore-教师",
+    "detail": "教师 GET ml/pptSign/getStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/updateStuScore-学生",
+    "detail": "学生 POST ml/pptSign/updateStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/updateStuScore-教师",
+    "detail": "教师 POST ml/pptSign/updateStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/addStuScore-学生",
+    "detail": "学生 POST ml/pptSign/addStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/pptSign/addStuScore-教师",
+    "detail": "教师 POST ml/pptSign/addStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/stuScoreList-学生",
+    "detail": "学生 GET ml/newsign/stuScoreList: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/stuScoreList-教师",
+    "detail": "教师 GET ml/newsign/stuScoreList: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/updateStuScore-学生",
+    "detail": "学生 POST ml/newsign/updateStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/updateStuScore-教师",
+    "detail": "教师 POST ml/newsign/updateStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/addStuScore-学生",
+    "detail": "学生 POST ml/newsign/addStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "B-credit-ml/newsign/addStuScore-教师",
+    "detail": "教师 POST ml/newsign/addStuScore: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "C-endSign-bypass0",
+    "detail": "学生endSign(uid=431407443): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  },
+  {
+    "tag": "C-endSign-bypass1",
+    "detail": "学生endSign(uid=431407443, roletype=1): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  },
+  {
+    "tag": "C-endSign-bypass2",
+    "detail": "学生endSign(uid=431407443, role=1): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  },
+  {
+    "tag": "C-endSign-bypass3",
+    "detail": "学生endSign(uid=431407443, cpi=0): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  },
+  {
+    "tag": "C-endSign-bypass4",
+    "detail": "学生endSign(uid=431407443, operateSource=teacher): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  },
+  {
+    "tag": "C-endSign-bypass5",
+    "detail": "学生endSign(uid=402644510): {\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}",
+    "evidence": "{\"status\":-1,\"errormsg\":\"无权限结束此班级签到活动\"}"
+  }
+]
