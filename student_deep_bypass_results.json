@@ -1,0 +1,67 @@
+[
+  {
+    "tag": "T3-01",
+    "detail": "学生访问管理页面后调用: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "教师活动列表: result=1, msg=, count=0",
+    "evidence": "{\"status\": 1, \"activeList\": [], \"groupList\": [], \"count\": 0, \"result\": 1}"
+  },
+  {
+    "tag": "T5-02",
+    "detail": "学生活动列表: result=1, msg=, count=14",
+    "evidence": "{\"groupList\": [{\"classId\": \"\", \"content\": \"\", \"courseId\": \"\", \"createTime\": null, \"fid\": \"\", \"id\": 1, \"isDelete\": 0, \"name\": \"进行中(1)\", \"sort\": 0, \"type\": 0, \"uid\": \"\", \"updateTime\": null}, {\"classId\": \"\", \"content\": \"\", \"courseId\": \"\", \"createTime\": null, \"fid\": \"\", \"id\": 0, \"isDelete\": 0, \"name\": \""
+  },
+  {
+    "tag": "T6-updateSignStatu-POST",
+    "detail": "学生 POST updateSignStatusByUidsV2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T6-updateSignStatu-GET",
+    "detail": "学生 GET updateSignStatusByUidsV2: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T6-updateSignStatu-POST",
+    "detail": "学生 POST updateSignStatusByUids: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-updateSignStatu-GET",
+    "detail": "学生 GET updateSignStatusByUids: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-updateSignStatu-POST",
+    "detail": "学生 POST updateSignStatus: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-updateSignStatu-GET",
+    "detail": "学生 GET updateSignStatus: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-stuSignajax-POST",
+    "detail": "学生 POST stuSignajax: HTTP 200, 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T6-stuSignajax-GET",
+    "detail": "学生 GET stuSignajax: HTTP 200, 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T7-01",
+    "detail": "学生Cookie+教师JSESSIONID: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T8-01",
+    "detail": "完整教师Cookie(移动端): {\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}",
+    "evidence": "{\"missingButAttendIds\":[],\"state\":\"success\",\"missingUserNames\":[],\"missingAndNoSignIds\":[]}"
+  }
+]

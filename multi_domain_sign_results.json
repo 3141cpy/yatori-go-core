@@ -1,0 +1,642 @@
+[
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-stuSignajax-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-stuSignajax-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1-api.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-api-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1-api.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-stuSignajax-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-stuSignajax-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-学生",
+    "detail": "学生 POST https://mooc1.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "mooc1-updateSignStatus-教师",
+    "detail": "教师 POST https://mooc1.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-stuSignajax-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-stuSignajax-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-学生",
+    "detail": "学生 POST https://fy.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "fy-updateSignStatus-教师",
+    "detail": "教师 POST https://fy.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='fy.chaoxing.com', port=443): Max retries exceeded with",
+    "evidence": ""
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://i.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://i.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-学生",
+    "detail": "学生 POST https://i.chaoxing.com/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-教师",
+    "detail": "教师 POST https://i.chaoxing.com/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://i.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://i.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-stuSignajax-学生",
+    "detail": "学生 POST https://i.chaoxing.com/pptSign/stuSignajax: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-stuSignajax-教师",
+    "detail": "教师 POST https://i.chaoxing.com/pptSign/stuSignajax: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://i.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://i.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-学生",
+    "detail": "学生 POST https://i.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-教师",
+    "detail": "教师 POST https://i.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://i.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://i.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-学生",
+    "detail": "学生 POST https://i.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "i-updateSignStatus-教师",
+    "detail": "教师 POST https://i.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 302, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://api.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://api.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-学生",
+    "detail": "学生 POST https://api.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-教师",
+    "detail": "教师 POST https://api.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://api.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://api.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-stuSignajax-学生",
+    "detail": "学生 POST https://api.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-stuSignajax-教师",
+    "detail": "教师 POST https://api.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://api.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://api.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-学生",
+    "detail": "学生 POST https://api.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-教师",
+    "detail": "教师 POST https://api.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://api.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://api.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-学生",
+    "detail": "学生 POST https://api.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "api-updateSignStatus-教师",
+    "detail": "教师 POST https://api.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://app.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://app.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-学生",
+    "detail": "学生 POST https://app.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-教师",
+    "detail": "教师 POST https://app.chaoxing.com/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://app.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://app.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-stuSignajax-学生",
+    "detail": "学生 POST https://app.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-stuSignajax-教师",
+    "detail": "教师 POST https://app.chaoxing.com/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://app.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://app.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-学生",
+    "detail": "学生 POST https://app.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-教师",
+    "detail": "教师 POST https://app.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://app.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://app.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-学生",
+    "detail": "学生 POST https://app.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "app-updateSignStatus-教师",
+    "detail": "教师 POST https://app.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,max",
+    "evidence": "<!doctype html>\n<html>\n<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\"/>\n<meta charset=\"utf-8\">"
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://web.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://web.chaoxing.com/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-学生",
+    "detail": "学生 POST https://web.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-教师",
+    "detail": "教师 POST https://web.chaoxing.com/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://web.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://web.chaoxing.com/pptSign/updateSignStatusByUids: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-stuSignajax-学生",
+    "detail": "学生 POST https://web.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-stuSignajax-教师",
+    "detail": "教师 POST https://web.chaoxing.com/pptSign/stuSignajax: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://web.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://web.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-学生",
+    "detail": "学生 POST https://web.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-教师",
+    "detail": "教师 POST https://web.chaoxing.com/mooc-ans/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://web.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://web.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-学生",
+    "detail": "学生 POST https://web.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "web-updateSignStatus-教师",
+    "detail": "教师 POST https://web.chaoxing.com/apis/pptSign/updateSignStatus: ERROR HTTPSConnectionPool(host='web.chaoxing.com', port=443): Max retries exceeded wit",
+    "evidence": ""
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/pptSign/updateSignStatusByUidsV2: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatus-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/pptSign/updateSignStatus: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatus-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/pptSign/updateSignStatus: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUids-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUids-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/pptSign/updateSignStatusByUids: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-stuSignajax-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/pptSign/stuSignajax: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-stuSignajax-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/pptSign/stuSignajax: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/mooc-ans/pptSign/updateSignStatusByUidsV2: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatus-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatus-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/mooc-ans/pptSign/updateSignStatus: HTTP 405, <!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\""
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "learn-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/apis/pptSign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "learn-updateSignStatus-学生",
+    "detail": "学生 POST https://learn.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "learn-updateSignStatus-教师",
+    "detail": "教师 POST https://learn.chaoxing.com/apis/pptSign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  }
+]

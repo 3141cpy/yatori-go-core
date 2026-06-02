@@ -1,0 +1,247 @@
+{
+  "analysis_summary": {
+    "total_pages_analyzed": 4,
+    "total_js_files_analyzed": 15,
+    "total_api_endpoints_discovered": 12,
+    "critical_findings": 3
+  },
+  "pages": [
+    {
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signedResult?activeId=5000163767353&classId=132821141&courseId=257485372&uid=431407443",
+      "status": 500,
+      "js_files": [],
+      "inline_scripts": [],
+      "note": "学生端签到结果页返回500，可能因activeId过期或服务端异常"
+    },
+    {
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign?activeId=5000163767353&classId=132821141&courseId=257485372&uid=431407443",
+      "status": 200,
+      "js_files": [],
+      "inline_scripts": [],
+      "note": "学生端签到页面返回200但内容为空，活动可能已结束"
+    },
+    {
+      "url": "https://mooc1.chaoxing.com/visit/interaction?courseid=257485372&clazzid=132821141",
+      "status": 200,
+      "js_files": [
+        "https://mooc1.chaoxing.com/mooc-ans/static/js/domain.js",
+        "https://mooc1.chaoxing.com/mooc-ans/js/ServerHost.js",
+        "https://mooc-res2.chaoxing.com/mooc-ans/js/common/jquery.min.js",
+        "https://mooc-res2.chaoxing.com/mooc-ans/js/common/jquery-migrate.min.js",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/iframeResizer.contentWindow.min.js",
+        "https://mooc1.chaoxing.com/mooc-ans/js/jquery.nicescroll.min.js",
+        "https://mooc1.chaoxing.com/mooc-ans/js/statistic/unnormal/lib/layui-v2.5.4/layui/layui.js",
+        "https://mooc1.chaoxing.com/mooc-ans/js/lib/cropper/cropper.js",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/common.js",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/poplayout.js",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/poptoast.js",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/course/course.js?v=2023-0825-1300",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/course/pagePopup.js?v=2026-0318-1757",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/course/toTop.js?v=2025-1204-2022",
+        "https://mooc1.chaoxing.com/mooc-ans/mooc2/js/course/pcClientCourse.js?v=2023-0601"
+      ],
+      "inline_scripts": [
+        "_HOST_ = '//mooc1.chaoxing.com'; _CP_ = '/mooc-ans';",
+        "I18N国际化配置对象",
+        "alertTips/courseTipMsg辅助函数"
+      ],
+      "note": "课程互动页面正常加载，含15个JS文件，但course.js中无直接签到相关代码"
+    },
+    {
+      "url": "https://mooc1.chaoxing.com/mycourse/stuindex?courseid=257485372&clazzid=132821141",
+      "status": 404,
+      "js_files": [],
+      "inline_scripts": [],
+      "note": "旧版课程页面URL已失效(404)"
+    }
+  ],
+  "api_calls": [
+    {
+      "source": "direct_api_test",
+      "method": "GET/POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateSignStatus",
+      "context": "返回'无权限' - 端点存在但学生账号无权访问",
+      "risk_level": "HIGH",
+      "params": "activeId, classId, courseId, uid, status",
+      "finding": "该端点确认存在，仅做角色权限校验（返回'无权限'而非404），若权限校验存在绕过可能则学生可直接修改签到状态"
+    },
+    {
+      "source": "direct_api_test",
+      "method": "GET/POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax",
+      "context": "返回'您已签到过了' - 学生可正常访问的签到执行端点",
+      "risk_level": "HIGH",
+      "params": "activeId, classId, courseId, uid, lat, lon, address, signType",
+      "finding": "学生端核心签到执行API，接受GET和POST请求，支持位置参数(lat/lon/address)和signType参数，已签到则返回'您已签到过了'"
+    },
+    {
+      "source": "direct_api_test",
+      "method": "GET",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/changeSign",
+      "context": "GET返回405 Method Not Allowed，POST返回HTML页面",
+      "risk_level": "MEDIUM",
+      "params": "activeId, classId, courseId, uid, status",
+      "finding": "该端点存在，仅接受POST方法，POST时返回HTML页面（可能是签到修改页面），需进一步分析POST参数"
+    },
+    {
+      "source": "direct_api_test",
+      "method": "GET/POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSign",
+      "context": "GET返回500错误页面(含HTML)，POST返回HTML页面",
+      "risk_level": "MEDIUM",
+      "params": "activeId, classId, courseId, uid",
+      "finding": "学生签到页面端点，GET时返回500错误页面，POST时返回HTML内容，可能是签到表单页面"
+    },
+    {
+      "source": "direct_api_test",
+      "method": "POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2",
+      "context": "返回500 Internal Server Error",
+      "risk_level": "HIGH",
+      "params": "activeId, classId, courseId, uids, status, source",
+      "finding": "教师端批量修改签到状态API，学生端POST返回500（非404），说明端点存在但可能需要特定参数格式或教师权限"
+    },
+    {
+      "source": "direct_api_test",
+      "method": "POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/makeUpSign",
+      "context": "返回500 Internal Server Error",
+      "risk_level": "MEDIUM",
+      "params": "activeId, classId, courseId, uid",
+      "finding": "补签API端点，返回500可能因活动已结束或缺少必要参数"
+    },
+    {
+      "source": "api_test",
+      "method": "GET",
+      "url": "https://mooc1-api.chaoxing.com/mycourse/backclazzdata",
+      "context": "返回JSON: {result:1, msg:'获取成功', channelList:[...]}",
+      "risk_level": "LOW",
+      "params": "clazzid, courseid",
+      "finding": "课程数据API，学生可正常访问，返回课程频道列表和学生数量等信息"
+    },
+    {
+      "source": "api_test",
+      "method": "GET",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign",
+      "context": "返回200空内容",
+      "risk_level": "LOW",
+      "params": "activeId, classId, courseId, uid",
+      "finding": "签到预处理页面，活动已结束时返回空内容"
+    },
+    {
+      "source": "api_test",
+      "method": "GET",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signedResult",
+      "context": "返回500 Internal Server Error",
+      "risk_level": "LOW",
+      "params": "activeId, classId, courseId, uid",
+      "finding": "签到结果页面，返回500可能因活动状态异常"
+    },
+    {
+      "source": "api_test",
+      "method": "GET/POST",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/doSign",
+      "context": "返回500 Internal Server Error",
+      "risk_level": "LOW",
+      "params": "activeId, classId, courseId",
+      "finding": "执行签到端点，返回500"
+    },
+    {
+      "source": "api_test",
+      "method": "GET",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/sign",
+      "context": "返回500 Internal Server Error",
+      "risk_level": "LOW",
+      "params": "activeId, classId, courseId, uid",
+      "finding": "签到端点，返回500"
+    },
+    {
+      "source": "js_analysis:ServerHost.js",
+      "method": "N/A",
+      "url": "https://p.ananas.chaoxing.com",
+      "context": "资源服务器域名配置",
+      "risk_level": "INFO",
+      "params": "",
+      "finding": "ServerHost.js中配置的域名信息，含p.ananas.chaoxing.com、passport2、photo.chaoxing.com等"
+    }
+  ],
+  "status_related": [
+    {
+      "source": "updateSignStatus端点测试",
+      "code": "GET/POST https://mobilelearn.chaoxing.com/pptSign/updateSignStatus => '无权限'",
+      "analysis": "updateSignStatus端点对学生账号返回'无权限'而非404，说明：1)该端点确实存在 2)仅通过角色权限校验拦截 3)若权限校验逻辑存在缺陷（如仅检查cookie中的角色标识而非服务端session），则可能被绕过"
+    },
+    {
+      "source": "stuSignajax端点测试",
+      "code": "GET/POST https://mobilelearn.chaoxing.com/pptSign/stuSignajax => '您已签到过了'",
+      "analysis": "stuSignajax是学生端核心签到执行API，已确认可正常访问。该API接受位置参数和signType参数，若签到类型校验不严格，可能存在通过修改signType绕过特定签到类型的可能"
+    },
+    {
+      "source": "changeSign端点测试",
+      "code": "GET https://mobilelearn.chaoxing.com/pptSign/changeSign => 405 Method Not Allowed; POST => HTML页面",
+      "analysis": "changeSign端点仅接受POST方法，POST时返回HTML页面。该端点名称暗示'修改签到'功能，若学生可访问该页面且页面中包含修改签到状态的表单/JS逻辑，则存在签到状态被学生直接修改的风险"
+    },
+    {
+      "source": "updateSignStatusByUidsV2端点测试",
+      "code": "POST https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2 => 500 Internal Server Error",
+      "analysis": "updateSignStatusByUidsV2是教师端批量修改签到状态的API，学生端POST返回500而非404。500错误可能是因为：1)缺少教师身份验证token 2)参数格式不正确 3)服务端内部错误。该端点的存在确认了批量修改签到状态的API路径"
+    },
+    {
+      "source": "course.js分析",
+      "code": "var courseId = courseli.attr('courseId'); var clazzId = courseli.attr('clazzId');",
+      "analysis": "course.js中处理courseId和clazzId的方式表明这些参数从DOM属性中获取，前端未做严格校验，可能存在参数篡改风险"
+    }
+  ],
+  "vulnerability_assessment": {
+    "critical": [
+      {
+        "endpoint": "https://mobilelearn.chaoxing.com/pptSign/updateSignStatus",
+        "issue": "端点存在且仅通过角色权限校验（返回'无权限'），若权限校验可被绕过（如伪造请求头、篡改cookie中的角色标识），学生可直接修改签到状态",
+        "params": "activeId, classId, courseId, uid, status",
+        "recommendation": "1)服务端应验证用户角色而非仅依赖前端传递的uid 2)添加请求签名验证 3)记录所有修改操作的审计日志"
+      }
+    ],
+    "high": [
+      {
+        "endpoint": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax",
+        "issue": "学生端签到执行API，接受GET和POST请求，支持位置参数。若位置校验不严格，学生可伪造签到位置",
+        "params": "activeId, classId, courseId, uid, lat, lon, address, signType",
+        "recommendation": "1)服务端应验证位置参数的合理性 2)限制仅POST方法 3)添加请求频率限制"
+      },
+      {
+        "endpoint": "https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2",
+        "issue": "批量修改签到状态API，学生端POST返回500而非404，端点路径已暴露",
+        "params": "activeId, classId, courseId, uids, status, source",
+        "recommendation": "1)对非教师角色应返回404而非500 2)加强服务端权限验证 3)添加请求来源验证"
+      }
+    ],
+    "medium": [
+      {
+        "endpoint": "https://mobilelearn.chaoxing.com/pptSign/changeSign",
+        "issue": "签到修改端点，POST返回HTML页面，需进一步分析页面中的表单和JS逻辑",
+        "params": "activeId, classId, courseId, uid, status",
+        "recommendation": "1)分析changeSign页面HTML中的表单和JS代码 2)验证学生是否能通过该页面修改签到状态"
+      }
+    ]
+  },
+  "js_source_analysis": {
+    "student_sign_pages": {
+      "note": "学生签到页面(mobilelearn.chaoxing.com/pptSign/*)大多返回500错误或空内容，无法获取到前端JS源码。这可能是因为：1)签到活动已结束 2)服务端对Web端UA返回错误 3)需要特定的请求头或参数",
+      "accessible_endpoints_via_api": [
+        "stuSignajax - 学生签到执行（返回'您已签到过了'）",
+        "updateSignStatus - 签到状态修改（返回'无权限'）",
+        "changeSign - 签到变更（POST返回HTML）",
+        "stuSign - 签到页面（POST返回HTML）"
+      ]
+    },
+    "course_interaction_page": {
+      "js_files_found": 15,
+      "sign_related_code_in_js": "course.js中无直接签到相关API调用代码，仅包含courseId/classId处理逻辑",
+      "inline_scripts": "无签到相关内联脚本"
+    },
+    "cdn_js_files": {
+      "note": "尝试了25个CDN路径(css.chaoxing.com)获取签到相关JS文件，均返回404或500",
+      "conclusion": "签到页面的JS资源可能通过动态加载或打包在HTML页面中，而非独立JS文件"
+    }
+  }
+}

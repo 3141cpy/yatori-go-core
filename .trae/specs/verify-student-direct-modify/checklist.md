@@ -1,0 +1,8 @@
+- [x] V3/V4/V5等更高版本签到状态修改API已探索（全部404）
+- [x] 学生端浏览器控制台场景已模拟测试（第一轮，全部"无权限"）
+- [x] updateSignStatusByUidsV2学生端深度绕过测试完成（第一轮，全部"无权限"）
+- [x] 学生签到流程API全面探索完成（🔴 发现/newsign/updateSignStatus学生端返回success）
+- [x] 多域名签到API探索完成（learn.chaoxing.com/apis/路径有不同API网关）
+- [x] 学生端签到页面JS源码分析完成
+- [x] 学生深度绕过测试（第二轮）完成（🔴 /newsign/updateSignStatus确认漏洞）
+- [x] 安全测试报告已更新（/workspace/sign_vuln_report.md）

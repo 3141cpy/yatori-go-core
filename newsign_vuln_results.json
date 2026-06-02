@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "T4.1-newsign-updateSignStatus-基本",
+    "detail": "HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.2-newsign-noDB",
+    "detail": "HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.3-newsign-minimal",
+    "detail": "HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.4-newsign-GET",
+    "detail": "HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status0",
+    "detail": "status=0: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status1",
+    "detail": "status=1: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status3",
+    "detail": "status=3: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status4",
+    "detail": "status=4: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status5",
+    "detail": "status=5: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.5-newsign-status6",
+    "detail": "status=6: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T4.6-after-status",
+    "detail": "修改前status=2, 修改后status=2",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 2, \"createtime\": 1780400956000, \"updatetime\": 1780410670000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, "
+  },
+  {
+    "tag": "T5.1-modify-to-3",
+    "detail": "修改status=3: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T5.2-persist-check",
+    "detail": "修改后status=2",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 2, \"createtime\": 1780400956000, \"updatetime\": 1780410670000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, "
+  },
+  {
+    "tag": "T6-teacher-view",
+    "detail": "教师端查看: status=None",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T7-restore",
+    "detail": "恢复status=2: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T8-newsign-aid50001627",
+    "detail": "aid=50001627: 原status=2, 修改后: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T8-newsign-aid50001399",
+    "detail": "aid=50001399: 原status=2, 修改后: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T8-newsign-aid50001397",
+    "detail": "aid=50001397: 原status=1, 修改后: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T9-csrf-test",
+    "detail": "跨域请求: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T10-pptSign-updateSignStatus",
+    "detail": "/pptSign/updateSignStatus: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-newsign-updateSignStatus",
+    "detail": "/newsign/updateSignStatus: success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T11-browser-console",
+    "detail": "浏览器控制台场景: HTTP 200, success",
+    "evidence": "success"
+  }
+]

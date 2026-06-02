@@ -1,0 +1,182 @@
+[
+  {
+    "tag": "T5-learn-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST learn/apis/pptSign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST learn/apis/pptSign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatus-学生",
+    "detail": "学生 POST learn/apis/pptSign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatus-教师",
+    "detail": "教师 POST learn/apis/pptSign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatusByUids-学生",
+    "detail": "学生 POST learn/apis/pptSign/updateSignStatusByUids: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatusByUids-教师",
+    "detail": "教师 POST learn/apis/pptSign/updateSignStatusByUids: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-stuSignajax-学生",
+    "detail": "学生 POST learn/apis/pptSign/stuSignajax: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-stuSignajax-教师",
+    "detail": "教师 POST learn/apis/pptSign/stuSignajax: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-changeSign-学生",
+    "detail": "学生 POST learn/apis/pptSign/changeSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-changeSign-教师",
+    "detail": "教师 POST learn/apis/pptSign/changeSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-doSign-学生",
+    "detail": "学生 POST learn/apis/pptSign/doSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-doSign-教师",
+    "detail": "教师 POST learn/apis/pptSign/doSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-signIn-学生",
+    "detail": "学生 POST learn/apis/pptSign/signIn: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-signIn-教师",
+    "detail": "教师 POST learn/apis/pptSign/signIn: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST learn/apis/sign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST learn/apis/sign/updateSignStatusByUidsV2: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatus-学生",
+    "detail": "学生 POST learn/apis/sign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-updateSignStatus-教师",
+    "detail": "教师 POST learn/apis/sign/updateSignStatus: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-signIn-学生",
+    "detail": "学生 POST learn/apis/sign/signIn: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-signIn-教师",
+    "detail": "教师 POST learn/apis/sign/signIn: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-doSign-学生",
+    "detail": "学生 POST learn/apis/sign/doSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T5-learn-doSign-教师",
+    "detail": "教师 POST learn/apis/sign/doSign: HTTP 200, {\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}",
+    "evidence": "{\"result\":\"0\",\"errorMsg\":\"服务异常，请稍后重试[50001]\"}"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST mooc-api/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST mooc-api/pptSign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-学生",
+    "detail": "学生 POST mooc-api/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-教师",
+    "detail": "教师 POST mooc-api/pptSign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-stuSignajax-学生",
+    "detail": "学生 POST mooc-api/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-stuSignajax-教师",
+    "detail": "教师 POST mooc-api/pptSign/stuSignajax: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST mooc-api/sign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST mooc-api/sign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-学生",
+    "detail": "学生 POST mooc-api/sign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-教师",
+    "detail": "教师 POST mooc-api/sign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-学生",
+    "detail": "学生 POST mooc-api/v2/apis/sign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatusByUidsV2-教师",
+    "detail": "教师 POST mooc-api/v2/apis/sign/updateSignStatusByUidsV2: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-学生",
+    "detail": "学生 POST mooc-api/v2/apis/sign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T7-moocapi-updateSignStatus-教师",
+    "detail": "教师 POST mooc-api/v2/apis/sign/updateSignStatus: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  }
+]

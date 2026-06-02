@@ -1,0 +1,742 @@
+[
+  {
+    "tag": "stu_stuSignajax_normal",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_normal_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_stuSignajax_normal_GET",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_0",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_1",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_2",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_3",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_4",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_5",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_status_6",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_preSign_GET",
+    "detail": "HTTP 200",
+    "evidence": ""
+  },
+  {
+    "tag": "stu_preSign_POST",
+    "detail": "HTTP 200",
+    "evidence": ""
+  },
+  {
+    "tag": "stu_doSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_doSign_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_doSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signIn_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signIn_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signIn_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_makeUpSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_makeUpSign_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_makeUpSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_makeUpSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_modifySignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_modifySignResult_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_modifySignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_modifySignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_editSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_editSignResult_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_editSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_editSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_saveSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_saveSignResult_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_saveSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_saveSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_updateSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_updateSignResult_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_updateSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_updateSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_changeSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_changeSignResult_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_changeSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_changeSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_cancelSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_cancelSign_POST_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_cancelSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_cancelSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_saveSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_saveSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_editSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_editSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_setSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_setSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_putSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_putSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_addSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_addSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_submitSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_submitSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_completeSign_POST",
+    "detail": "HTTP 404",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "stu_completeSign_GET",
+    "detail": "HTTP 404",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "stu_finishSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_finishSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_confirmSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_confirmSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_verifySign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_verifySign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_checkSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_checkSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_resign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_resign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_reSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_reSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_reSignIn_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_reSignIn_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_refreshSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_refreshSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_resetSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_resetSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_sign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_sign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_sign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_doSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_doSign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_doSign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_submit_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_submit_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_submit_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_modify_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_modify_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_modify_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_edit_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_edit_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_edit_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_update_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_update_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_update_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_cancel_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_cancel_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_cancel_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_makeup_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_makeup_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_makeup_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_resign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_v2_resign_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_v2_resign_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "tch_stuSignajax_status_0",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_1",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_2",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_3",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_4",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_5",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "tch_stuSignajax_status_6",
+    "detail": "HTTP 200",
+    "evidence": "签到已结束"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_0",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_0_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_1",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_1_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_2",
+    "detail": "HTTP 200",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "stu_stuSignajax_extra_2_multipart",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_activetask_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_activetask_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_stuSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_stuSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_querySignResult_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_querySignResult_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signDetail_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signDetail_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignDetail_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignDetail_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signInfo_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_signInfo_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignInfo_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_getSignInfo_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_activeDetail_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_activeDetail_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_taskDetail_GET",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_taskDetail_POST",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "teacher_updateSignStatusByUidsV2",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_teacher_updateSignStatusByUidsV2",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "teacher_startSign",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_teacher_startSign",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "teacher_endSign",
+    "detail": "HTTP 200",
+    "evidence": "<script>alert('签到不存在')</script>"
+  },
+  {
+    "tag": "stu_teacher_endSign",
+    "detail": "HTTP 200",
+    "evidence": "<script>alert('签到不存在')</script>"
+  },
+  {
+    "tag": "teacher_deleteSign",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "stu_teacher_deleteSign",
+    "detail": "HTTP 500",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  }
+]

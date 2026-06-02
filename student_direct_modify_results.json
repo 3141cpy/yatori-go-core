@@ -1,0 +1,192 @@
+[
+  {
+    "tag": "T1-updateSignStatusByUids-教师",
+    "detail": "教师 /pptSign/updateSignStatusByUids: HTTP 500, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T1-GET-updateSignStatusByUi-教师",
+    "detail": "教师 GET /pptSign/updateSignStatusByUids: HTTP 500, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T1-updateSignStatusByUids-学生",
+    "detail": "学生 /pptSign/updateSignStatusByUids: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T1-GET-updateSignStatusByUi-学生",
+    "detail": "学生 GET /pptSign/updateSignStatusByUids: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T1-updateSignStatusByUids-教师",
+    "detail": "教师 /v2/apis/sign/updateSignStatusByUids: HTTP 404, {\"timestamp\":1780411517211,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517211,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/updateSignStatusByUids\"}"
+  },
+  {
+    "tag": "T1-updateSignStatusByUids-学生",
+    "detail": "学生 /v2/apis/sign/updateSignStatusByUids: HTTP 404, {\"timestamp\":1780411517326,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517326,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/updateSignStatusByUids\"}"
+  },
+  {
+    "tag": "T1-updateSignStatus-教师",
+    "detail": "教师 /v2/apis/sign/updateSignStatus: HTTP 404, {\"timestamp\":1780411517437,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517437,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/updateSignStatus\"}"
+  },
+  {
+    "tag": "T1-updateSignStatus-学生",
+    "detail": "学生 /v2/apis/sign/updateSignStatus: HTTP 404, {\"timestamp\":1780411517558,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517558,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/updateSignStatus\"}"
+  },
+  {
+    "tag": "T1-modifySignStatus-教师",
+    "detail": "教师 /v2/apis/sign/modifySignStatus: HTTP 404, {\"timestamp\":1780411517802,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517802,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/modifySignStatus\"}"
+  },
+  {
+    "tag": "T1-modifySignStatus-学生",
+    "detail": "学生 /v2/apis/sign/modifySignStatus: HTTP 404, {\"timestamp\":1780411517933,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411517933,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/modifySignStatus\"}"
+  },
+  {
+    "tag": "T1-batchUpdateSignStatus-教师",
+    "detail": "教师 /v2/apis/sign/batchUpdateSignStatus: HTTP 404, {\"timestamp\":1780411518049,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411518049,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/batchUpdateSignStatus\"}"
+  },
+  {
+    "tag": "T1-batchUpdateSignStatus-学生",
+    "detail": "学生 /v2/apis/sign/batchUpdateSignStatus: HTTP 404, {\"timestamp\":1780411518163,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":",
+    "evidence": "{\"timestamp\":1780411518163,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/v2/apis/sign/batchUpdateSignStatus\"}"
+  },
+  {
+    "tag": "T2-01",
+    "detail": "学生Web+浏览器头+urlencoded: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-02",
+    "detail": "学生Web+浏览器头+multipart: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-03",
+    "detail": "学生Web+浏览器头+GET: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T2-04",
+    "detail": "学生Web+无XHR头: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-00",
+    "detail": "学生+courseId/classId: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-01",
+    "detail": "学生+uid=教师puid: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-02",
+    "detail": "学生+cpi: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-03",
+    "detail": "学生+roletype=1: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-04",
+    "detail": "学生+role=1: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-05",
+    "detail": "学生+operateSource=2: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-06",
+    "detail": "学生+sourceType=1: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-07",
+    "detail": "学生+type=1: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-08",
+    "detail": "学生+activeType=2: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-09",
+    "detail": "学生+uids=JSON数组: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-10",
+    "detail": "学生+signType=1: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-db-PRIMARY_KEY",
+    "detail": "学生 DB_STRATEGY=PRIMARY_KEY: {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-db-NONE",
+    "detail": "学生 DB_STRATEGY=NONE: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T4-db-empty",
+    "detail": "学生 DB_STRATEGY=empty: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T4-db-SLAVE",
+    "detail": "学生 DB_STRATEGY=SLAVE: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T4-db-RANDOM",
+    "detail": "学生 DB_STRATEGY=RANDOM: {\"state\":\"活动不存在\"}",
+    "evidence": "{\"state\":\"活动不存在\"}"
+  },
+  {
+    "tag": "T4-db-COURSEID",
+    "detail": "学生 DB_STRATEGY=COURSEID: {\"state\":\"活动不存在\"}",
+    "evidence": "{\"state\":\"活动不存在\"}"
+  },
+  {
+    "tag": "T4-ct-json",
+    "detail": "学生 Content-Type=application/json: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-ct-plain",
+    "detail": "学生 Content-Type=text/plain: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-ct-x-www-form",
+    "detail": "学生 Content-Type=application/x-www-form-urlencoded: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T4-ct-form-data",
+    "detail": "学生 Content-Type=multipart/form-data: HTTP 200, {\"state\":\"无权限\"}",
+    "evidence": "{\"state\":\"无权限\"}"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "signedResult页面: HTTP 500, len=224",
+    "evidence": ""
+  }
+]

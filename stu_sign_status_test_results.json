@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "T4-stuSignajax-0",
+    "detail": "stuSignajax(status=2): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-1",
+    "detail": "stuSignajax(status=0): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-2",
+    "detail": "stuSignajax(status=2, signType=5): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-3",
+    "detail": "stuSignajax(status=2, isModify=1): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-4",
+    "detail": "stuSignajax(status=2, type=modify): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-5",
+    "detail": "stuSignajax(status=2, operate=modify): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-6",
+    "detail": "stuSignajax(status=2, action=update): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSignajax-7",
+    "detail": "stuSignajax(status=2, source=teacher): 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T5-changeSign-50001637",
+    "detail": "学生POST changeSign(aid=50001637): HTTP 404, len=1395",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"format-detection\" content=\"telephone=no,email=no,adress=no\"/>\r\n<meta charset=\"utf-8\"/>\r\n<title>404</title>\r\n<style>\r\n<!--\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing"
+  },
+  {
+    "tag": "T5-changeSign-50001627",
+    "detail": "学生POST changeSign(aid=50001627): HTTP 404, len=1395",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"format-detection\" content=\"telephone=no,email=no,adress=no\"/>\r\n<meta charset=\"utf-8\"/>\r\n<title>404</title>\r\n<style>\r\n<!--\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing"
+  },
+  {
+    "tag": "T5-changeSign-50001399",
+    "detail": "学生POST changeSign(aid=50001399): HTTP 404, len=1395",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"format-detection\" content=\"telephone=no,email=no,adress=no\"/>\r\n<meta charset=\"utf-8\"/>\r\n<title>404</title>\r\n<style>\r\n<!--\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing"
+  },
+  {
+    "tag": "T6-teacher-changeSign-50001637",
+    "detail": "教师POST changeSign(aid=50001637): HTTP 404, len=1395",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"format-detection\" content=\"telephone=no,email=no,adress=no\"/>\r\n<meta charset=\"utf-8\"/>\r\n<title>404</title>\r\n<style>\r\n<!--\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing"
+  },
+  {
+    "tag": "T6-teacher-changeSign-50001627",
+    "detail": "教师POST changeSign(aid=50001627): HTTP 404, len=1395",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"format-detection\" content=\"telephone=no,email=no,adress=no\"/>\r\n<meta charset=\"utf-8\"/>\r\n<title>404</title>\r\n<style>\r\n<!--\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing"
+  },
+  {
+    "tag": "T7-newsign-updateSignStatusByUidsV2",
+    "detail": "学生 POST newsign/updateSignStatusByUidsV2: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-updateSignStatus",
+    "detail": "学生 POST newsign/updateSignStatus: HTTP 200, success",
+    "evidence": "success"
+  },
+  {
+    "tag": "T7-newsign-stuSignajax",
+    "detail": "学生 POST newsign/stuSignajax: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-changeSign",
+    "detail": "学生 POST newsign/changeSign: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-doSign",
+    "detail": "学生 POST newsign/doSign: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-signIn",
+    "detail": "学生 POST newsign/signIn: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-modifySign",
+    "detail": "学生 POST newsign/modifySign: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T7-newsign-editSign",
+    "detail": "学生 POST newsign/editSign: HTTP 404, <!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,",
+    "evidence": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\" />\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\" />\r\n<meta name=\"f"
+  },
+  {
+    "tag": "T8-create-startSign",
+    "detail": "教师创建: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Se",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T8-create-pptActive",
+    "detail": "教师创建: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Se",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T8-create-addActive",
+    "detail": "教师创建: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Se",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  }
+]

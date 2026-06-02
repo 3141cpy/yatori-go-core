@@ -1,0 +1,207 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script>
+    _HOST_ = "//mooc1.chaoxing.com";
+    _CP_ = "/mooc-ans";
+    _HOST_CP1_ = "//mooc1.chaoxing.com/mooc-ans";
+    // _HOST_CP2_ = _HOST_ + _CP_;
+    _HOST_CP2_ = _CP_;
+</script><html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>课程</title>
+	    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/mooc-ans/mooc2/css/common2.css?v=2025-0424-1038"/>
+    <link href="//mooc1.chaoxing.com/mooc-ans/js/lib/cropper/cropper.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/mooc-ans/mooc2/css/pop.css"/>
+    <link href="//mooc1.chaoxing.com/mooc-ans/mooc2/css/iconmoon/style.css?v=1" type="text/css" rel="stylesheet">
+    <link href="//mooc1.chaoxing.com/mooc-ans/mooc2/css/course/coursestyle.css?v=2021" type="text/css" rel="stylesheet">
+    <link href="//mooc1.chaoxing.com/mooc-ans/mooc2/css/course/course.css?v=2022-1201-1046" type="text/css" rel="stylesheet">
+    <link href="//mooc1.chaoxing.com/mooc-ans/js/statistic/unnormal/lib/layui-v2.5.4/layui/css/modules/layer/default/layer.css" type="text/css" rel="stylesheet"/>
+    <script src="//mooc1.chaoxing.com/mooc-ans/static/js/domain.js"></script>
+    <script src="//mooc1.chaoxing.com/mooc-ans/js/ServerHost.js"></script>
+    <style type="text/css">
+        body{background:transparent!important;}
+        /*.content .main{min-width: 890px;box-shadow: 0 0 8px 0 #DADEE6;}*/
+        .box{background: #F2F4F7}
+        .back_to_top{right:40px!important;}
+        .layui-layer-iframe iframe{border-radius:10px;}
+        .experience{display:inline-block;padding:0 10px;height:28px;border:1px solid #e1e7f0;background: #F6F9FE;text-align:center;line-height:28px;font-size:14px;color:#5C7499;border-radius: 30px;margin-left: 20px;position: absolute;right: 37px;top: 15px;}
+		.experience:hover{opacity:0.7}
+
+    </style>
+	<style type="text/css">.floatLayer {position: fixed;z-index: 9;right: 0px;display: block;width: 132px;}
+	.floatLayer a {display: block;width: 132px;height: 50px;line-height: 50px;margin-bottom: 20px;font-size: 16px;color: #3A8BFF;background: #ffffff;border-radius: 32px;-webkit-box-shadow: 0px 2px 10px 0px rgba(31, 35, 41, 0.1);box-shadow: 0px 2px 10px 0px rgba(31, 35, 41, 0.1);}
+	.floatLayer a img {float: left;margin: 13px 8px 13px 18px;width: 24px;height: 24px;}
+	.floatLayer a:hover img, .floatLayer a:hover span {opacity: 0.7;}
+	.color-white {color: #FFFFFF;}
+	.floatLayer .update-notice{position:relative}
+	.floatLayer .update-notice a{position:relative}
+	.floatLayer .update-notice .mark-red{position:absolute;width:8px;height:8px;background:#F33F34;top:8px;right:10px;border-radius:50%}
+	.floatLayer .update-notice .notice-tip{position:absolute;top:5px;left:-103px;background:#3A8BFF;border-radius:4px;padding:10px;line-height:20px}
+	.floatLayer .update-notice .notice-tip:after{content:'';position:absolute;top:13px;right:-7px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #3A8BFF}
+	</style>
+</head>
+
+<body>
+		<div id="divbox" class="box">
+	        <input type="hidden" id="courseFolderId" value="0"/>
+        <input type="hidden" id="courseType" value="0"/>
+        <input type="hidden" id="courseFolderSize" value="0"/>
+        <input type="hidden" id="clearLocalStorage" value="0"/>
+        <input type="hidden" id="curMoocDomian" value="https://mooc1.chaoxing.com/mooc-ans"/>
+        <input type="hidden" id="showAllModule" value="0"/>
+        <input type="hidden" id="baseEducation" value="0"/>
+        <input type="hidden" id="superstarClass" value=""/>
+        <input type="hidden" id="baseEduCreCourseUrl" value=""/>
+
+        <div class="content">
+            <div class="main">
+                <!-- 分类 -->
+                <div class="course-tab">
+
+                    		                		                    <div class="tab-item current" courseType="1">
+		                       	我学的课		                    </div>
+		                    <div class="tab-item" courseType="0">
+		                 		我教的课		                    </div>
+		                		            	                	                	<a href="javascript:void(0);" class="experience" onclick="toNewCourseList();">体验新版</a>
+	                                </div>
+                <div class="course-con">
+
+	                <div class="course-list-con minheight700">
+					    <div class="btn_group">
+						    						    																				<a id="newCourse" href="javascript:;"  onclick="courseTipMsg()"; class="jb_btn jb_btn_104 fs14">
+							            <i class="PlusIcon">
+							                <img src="//mooc1.chaoxing.com/mooc-ans/mooc2/images/add.png" />
+							            </i>新建课程</a>
+																								
+															<a id="addCourse" class="jb_btn jb_btn_104 fs14" 		                            		                                		                                    		                                        		                                            href="/category/00" target="_top"
+		                                        		                                    		                                		                            >
+		                            <i class="PlusIcon">
+		                                <img src="//mooc1.chaoxing.com/mooc-ans/mooc2/images/add.png"/>
+		                            </i>添加课程		                        </a>
+					    						       	<a class="add-folder btnBlue btn_104 fs14" href="javascript:;" id="addFolder">新建文件夹</a>
+
+					        <div class="fr">
+					            <div class="dataSearch fl">
+					                <a class="dataSearch_dele" href="javascript:"></a>
+					                <input type="text" name="" value="" class="dataSearch_input fl" placeholder="搜索" id="searchInput">
+					                <span class="icon icon-search" id="searchBtn"></span>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="courselistArea" id="courselistArea">
+
+
+                   		</div>
+
+                   		<ul class="file-list" id="fileList">
+				          				       </ul>
+	                </div>
+                     <div class="archiveCourseBtn" style="display: block" >
+                   	   <a href="/mooc-ans/visit/filecourselist" class="fl btn-handle icon-gd color5 courseOperationBtn"
+                   	   		   id="deleteCourseHref"  style="display: none;">已删除课程</a>
+
+                       <a href="/mooc-ans/visit/stuendcourselist" class="fl btn-handle icon-clock3 color5 courseOperationBtn"
+			                   style="display: none;" id="endCourseListHref">已结束课程</a>
+
+			           <a href="/mooc-ans/visit/getdropclazzlist" class="fl btn-handle icon_dropclazz color5 courseOperationBtn"
+			                   style="display: none; margin-left:30px" id="dropCourseListHref">已退课课程</a>
+		            </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--退课 start-->
+    <!--退课 end-->
+	    <!--删除文件夹 start-->
+        <!--删除文件夹 end-->
+
+        <!--结课 start-->
+	    <!--结课 end-->
+
+        <!-- 右下角浮动层 start -->
+
+
+      <div class="floatLayer" id="to_top" style="z-index:1000;position: fixed;_position: absolute;_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));right: 30px;bottom:0px;">
+		  <div class="update-notice" >
+			  <a href="http://mooc2-ans.chaoxing.com/mooc2-ans/visit/announcement" target="_blank" onclick="$('.mark-red-hander').hide()">
+				  <img src="//mooc1.chaoxing.com/mooc-ans/images/courselist/publicnotice.png">
+				  <span>更新公告</span>
+				  <i id="showRedPoint" style="display: none" class="mark-red mark-red-hander"></i>
+			  </a>
+			  <div id="showRedTip" style="display: none" class="notice-tip mark-red-hander">
+				  <p class="color-white fs14">发现新版本</p>
+			  </div>
+		  </div>
+        <a href="https://mooc1.chaoxing.com/zt/216847184.html" target="_blank" >
+            <img src="//mooc1.chaoxing.com/mooc-ans/images/courselist/useHelp.png">
+            <span>使用帮助</span>
+        </a>
+                        
+        <a href="javascript:;" id="goTop" style="display: none;" onclick="$('html,body').animate({scrollTop:0},600);">
+            <img src="//mooc1.chaoxing.com/mooc-ans/images/courselist/float-backTop.png">
+            <span>返回顶部</span>
+        </a>
+    </div>
+        <!-- 右下角浮动层 end -->
+    </div>
+
+    <script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/common/jquery-migrate.min.js"></script>    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/iframeResizer.contentWindow.min.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/js/statistic/unnormal/lib/layui-v2.5.4/layui/layui.js"></script>
+
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/js/lib/cropper/cropper.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/common.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/poplayout.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/poptoast.js"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/course/course.js?v=2023-0825-1300"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/course/pagePopup.js?v=2026-0318-1757"></script>
+	<script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/course/toTop.js?v=2025-1204-2022"></script>
+    <script type="text/javascript" src="//mooc1.chaoxing.com/mooc-ans/mooc2/js/course/pcClientCourse.js?v=2023-0601"></script>
+	 <script  type="text/javascript" >
+ I18N = {
+    "loadData" : "正在加载数据...",
+    "chooseClassNullTip" : "请选择分析对象",
+    "chooseClassOverTip" : "选择分析对象数量不能大于30",
+    "chooseTypeNullTip" : "请选择试卷结构分析或试卷成绩分析",
+    "systemAbnormal" : "系统异常，稍后再试",
+    "generateReportTip" : "确定要生成报告吗？",
+    "reGenerateReportTip" : "确定要重新生成报告吗？",
+    "analysisTip":"提示：学生人数已超过2000人，请重新选择班级范围",
+     'courseChapterTip6':'隐藏章节后，学生已产生的学习数据将不计算成绩，确认隐藏？',
+     'taskprogress':'任务点进度',
+     'Pendinghomework':'待完成作业',
+     'PendingTest':'待完成考试',
+     'view':'查看',
+     'addSubColumn':'添加同级栏目',
+     'netErrorTip':'操作失败：无法连接到网络',
+     'language':'chinese',
+     'CourseTip6':'退出后，将无法查看和使用自己在本课私有文件夹下的所有资料。确认退出教学团队？',
+     'fileSizeTip':'图片大小不能超过4MB',
+     'STts':'提示',
+     'readCheck1':'请先阅读并勾选《人脸识别授权协议》',
+     'ctlearn':'继续学习',
+     'recording':'录制中'
+ }
+ </script>
+    <script>
+	    function alertTips(){
+	    	alert("访问高峰时段，此功能暂时关闭");
+	    }
+	    function courseTipMsg(){
+	    	alert("当前账户暂未绑定单位，无法建课，请到我-设置-账户管理绑定单位");
+	    }
+
+	    if ($("body").width() < 1000) {
+	        $(".content .main").css("min-width", "920px");
+	    }
+
+    </script>
+
+</body>
+
+</html>
