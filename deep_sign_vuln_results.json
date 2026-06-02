@@ -1,0 +1,232 @@
+[
+  {
+    "tag": "T4-00",
+    "detail": "教师 updateSignStatus (status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-01",
+    "detail": "教师 updateSignStatus (uid=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-02",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-03",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-04",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-05",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, signStatus=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-06",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, signResultType=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-07",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, stuId=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-08",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, userId=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-09",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentUid=431407443, status=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-10",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, status=1, type=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-11",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, status=1, operateSource=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-12",
+    "detail": "教师 updateSignStatus (classId=141377820, courseId=260554328, uid=402644510, studentId=431407443, status=1, sourceType=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T5-00",
+    "detail": "学生越权 (学生修改自己状态): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "学生越权 (学生+role=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T5-02",
+    "detail": "学生越权 (学生+uid=教师puid): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T5-03",
+    "detail": "学生越权 (学生+roletype=1): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T5-04",
+    "detail": "学生越权 (学生+教师cpi): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-01",
+    "detail": "学生+sso_role=1 调用updateSignStatus: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-02",
+    "detail": "学生+sso_role=1+uid=教师puid: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T7-1000161102850",
+    "detail": "教师 updateSignStatus (aid=1000161102850, type=2, status=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T7-1000160165622",
+    "detail": "教师 updateSignStatus (aid=1000160165622, type=2, status=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T7-1000159168580",
+    "detail": "教师 updateSignStatus (aid=1000159168580, type=2, status=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T7-1000158940384",
+    "detail": "教师 updateSignStatus (aid=1000158940384, type=2, status=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T7-1000158547913",
+    "detail": "教师 updateSignStatus (aid=1000158547913, type=2, status=2): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T8-01",
+    "detail": "教师 GET signedResult (type=1): HTTP 500, len=224",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T8-02",
+    "detail": "教师 GET signedResult (AJAX): HTTP 500, len=224",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T9-01",
+    "detail": "教师 GET newsign/preSign: HTTP 500, len=224",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T9-02",
+    "detail": "学生 GET newsign/preSign: HTTP 500, len=224",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T9-preSign-1000161102850",
+    "detail": "学生 preSign (aid=1000161102850): HTTP 500, len=224, signstatus=False, location=False",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T9-preSign-1000160165622",
+    "detail": "学生 preSign (aid=1000160165622): HTTP 500, len=224, signstatus=False, location=False",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T9-preSign-1000159168580",
+    "detail": "学生 preSign (aid=1000159168580): HTTP 500, len=224, signstatus=False, location=False",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T11-1000161102850",
+    "detail": "学生 stuSignajax+status=1 (aid=1000161102850): 距教师指定签到地点1.2294171E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294171E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T11-post-1000161102850",
+    "detail": "学生 POST stuSignajax+status=1 (aid=1000161102850): 距教师指定签到地点1.2294171E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294171E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T11-1000160165622",
+    "detail": "学生 stuSignajax+status=1 (aid=1000160165622): 距教师指定签到地点1.2294126E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294126E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T11-post-1000160165622",
+    "detail": "学生 POST stuSignajax+status=1 (aid=1000160165622): 距教师指定签到地点1.2294126E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294126E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T11-1000159168580",
+    "detail": "学生 stuSignajax+status=1 (aid=1000159168580): 距教师指定签到地点1.2294171E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294171E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T11-post-1000159168580",
+    "detail": "学生 POST stuSignajax+status=1 (aid=1000159168580): 距教师指定签到地点1.2294171E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2294171E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T12-00",
+    "detail": "V2 API GET activelist: HTTP 200, {\"errorMsg\":\"参数缺失\",\"result\":0}",
+    "evidence": "{\"errorMsg\":\"参数缺失\",\"result\":0}"
+  },
+  {
+    "tag": "T12-01",
+    "detail": "V2 API GET activelist: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-02",
+    "detail": "V2 API GET sign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-03",
+    "detail": "V2 API GET sign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-04",
+    "detail": "V2 API POST sign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-05",
+    "detail": "V2 API POST sign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-06",
+    "detail": "V2 API POST updateStatus: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T12-07",
+    "detail": "V2 API GET updateStatus: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  }
+]

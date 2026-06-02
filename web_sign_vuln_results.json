@@ -1,0 +1,57 @@
+[
+  {
+    "tag": "T4-01",
+    "detail": "Web学生 updateSignStatus: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-02",
+    "detail": "Web教师 updateSignStatus: 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "教师管理页面: HTTP 404, len=737",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"
+  },
+  {
+    "tag": "T5-02",
+    "detail": "教师管理页面(edudepartment): HTTP 404, len=737",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"
+  },
+  {
+    "tag": "T6-signed-50001637",
+    "detail": "signedResult: HTTP 500, len=224",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001627",
+    "detail": "signedResult: HTTP 500, len=224",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001399",
+    "detail": "signedResult: HTTP 500, len=224",
+    "evidence": ""
+  },
+  {
+    "tag": "T7-01",
+    "detail": "uf/_d/VC3学生 updateSignStatus: <!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Co",
+    "evidence": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n    <title>用户登录</title>\r\n    <link href=\"https://passport2-static.chaoxing.com/css/fanya/common.css\" rel=\"stylesheet\">\r\n    <link href=\"https://passport2-static."
+  },
+  {
+    "tag": "T7-02",
+    "detail": "uf/_d/VC3教师 updateSignStatus: <!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Co",
+    "evidence": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n    <title>用户登录</title>\r\n    <link href=\"https://passport2-static.chaoxing.com/css/fanya/common.css\" rel=\"stylesheet\">\r\n    <link href=\"https://passport2-static."
+  },
+  {
+    "tag": "T8-01",
+    "detail": "教师uf+学生UID updateSignStatus: <!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Co",
+    "evidence": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n    <title>用户登录</title>\r\n    <link href=\"https://passport2-static.chaoxing.com/css/fanya/common.css\" rel=\"stylesheet\">\r\n    <link href=\"https://passport2-static."
+  },
+  {
+    "tag": "T8-02",
+    "detail": "教师uf+教师UID updateSignStatus: <!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Co",
+    "evidence": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n    <title>用户登录</title>\r\n    <link href=\"https://passport2-static.chaoxing.com/css/fanya/common.css\" rel=\"stylesheet\">\r\n    <link href=\"https://passport2-static."
+  }
+]

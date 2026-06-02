@@ -1,0 +1,177 @@
+[
+  {
+    "tag": "T2-mobilelearn",
+    "detail": "学生 https://mobilelearn.chaoxing.com: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T2-mobilelearn-t",
+    "detail": "教师 https://mobilelearn.chaoxing.com: HTTP 200, 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T2-mooc1-api",
+    "detail": "学生 https://mooc1-api.chaoxing.com: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T2-mooc1-api-t",
+    "detail": "教师 https://mooc1-api.chaoxing.com: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T2-mooc1",
+    "detail": "学生 https://mooc1.chaoxing.com: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T2-mooc1-t",
+    "detail": "教师 https://mooc1.chaoxing.com: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T2-api",
+    "detail": "学生 https://api.chaoxing.com: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded with url: /pptSign/updateSignStatus (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))",
+    "evidence": ""
+  },
+  {
+    "tag": "T2-api-t",
+    "detail": "教师 https://api.chaoxing.com: ERROR HTTPSConnectionPool(host='api.chaoxing.com', port=443): Max retries exceeded with url: /pptSign/updateSignStatus (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))",
+    "evidence": ""
+  },
+  {
+    "tag": "T2-chaoxing",
+    "detail": "学生 https://chaoxing.com: HTTP 404, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>404 Not",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T2-chaoxing-t",
+    "detail": "教师 https://chaoxing.com: HTTP 404, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>404 Not",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T3-01",
+    "detail": "学生+inf_enc+K6 Token: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T3-02",
+    "detail": "学生+K6 Token: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T3-03",
+    "detail": "学生+inf_enc+K6 Token(mooc1-api): HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-sc",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padd"
+  },
+  {
+    "tag": "T4-教师管理页面",
+    "detail": "教师 教师管理页面: HTTP 404, len=737, html=True",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T4-学生课程页面",
+    "detail": "教师 学生课程页面: HTTP 404, len=737, html=True",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T4-教师活动列表",
+    "detail": "教师 教师活动列表: HTTP 200, len=64, html=False",
+    "evidence": "{\"status\":1,\"activeList\":[],\"groupList\":[],\"count\":0,\"result\":1}"
+  },
+  {
+    "tag": "T4-教师活动列表POST",
+    "detail": "教师 教师活动列表POST: HTTP 200, len=64, html=False",
+    "evidence": "{\"status\":1,\"activeList\":[],\"groupList\":[],\"count\":0,\"result\":1}"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "教师管理页面: HTTP 404, len=737",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-01",
+    "detail": "preSign页面: HTTP 500, len=224",
+    "evidence": ""
+  },
+  {
+    "tag": "T7-mooc1-updateSignStat",
+    "detail": "学生 https://mooc1.chaoxing.com/pptSign/updateSignStatu: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-updateSignStat-t",
+    "detail": "教师 https://mooc1.chaoxing.com/pptSign/updateSignStatu: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-api-updateSign",
+    "detail": "学生 https://mooc1-api.chaoxing.com/mooc-ans/pptSign/up: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-api-updateSign-t",
+    "detail": "教师 https://mooc1-api.chaoxing.com/mooc-ans/pptSign/up: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-modifySignResu",
+    "detail": "学生 https://mooc1.chaoxing.com/ppt/activeAPI/modifySig: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-modifySignResu-t",
+    "detail": "教师 https://mooc1.chaoxing.com/ppt/activeAPI/modifySig: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-api-modifySign",
+    "detail": "学生 https://mooc1-api.chaoxing.com/mooc-ans/ppt/active: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T7-mooc1-api-modifySign-t",
+    "detail": "教师 https://mooc1-api.chaoxing.com/mooc-ans/ppt/active: HTTP 404, <!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport",
+    "evidence": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height"
+  },
+  {
+    "tag": "T8-url-5000163767353",
+    "detail": "签到URL: https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=5000163767353&general=1&sys=1&ls=1&appType=15&uid=431407443&isTeacherViewOpen=0",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-stuSign-5000163767353",
+    "detail": "stuSignajax+signStatus=1: 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T8-url-5000162787534",
+    "detail": "签到URL: https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=5000162787534&general=1&sys=1&ls=1&appType=15&uid=431407443&isTeacherViewOpen=0",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-stuSign-5000162787534",
+    "detail": "stuSignajax+signStatus=1: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T8-url-5000139908007",
+    "detail": "签到URL: https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=5000139908007&general=1&sys=1&ls=1&appType=15&uid=431407443&isTeacherViewOpen=0",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-stuSign-5000139908007",
+    "detail": "stuSignajax+signStatus=1: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-01",
+    "detail": "学生p_auth_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI0M",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-02",
+    "detail": "学生+p_auth_token: 无权限",
+    "evidence": "无权限"
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "tag": "T3-50001637",
+    "detail": "V2 signIn aid=5000163767353 type=2 status=2 name=普通签到: result=1, msg=success, error=None, data={\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": nu",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"is"
+  },
+  {
+    "tag": "T3-50001627",
+    "detail": "V2 signIn aid=5000162787534 type=2 status=2 name=二维码签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001399",
+    "detail": "V2 signIn aid=5000139908007 type=2 status=2 name=手势签到: result=1, msg=success, error=None, data={\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"223.104.110.156\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12"
+  },
+  {
+    "tag": "T3-50001397",
+    "detail": "V2 signIn aid=5000139741015 type=2 status=2 name=签到码签到: result=1, msg=success, error=None, data={\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762142169606, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"223.104.110.156\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12"
+  },
+  {
+    "tag": "T3-50001397",
+    "detail": "V2 signIn aid=5000139740903 type=2 status=2 name=手势签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001395",
+    "detail": "V2 signIn aid=5000139561997 type=2 status=2 name=手势签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001395",
+    "detail": "V2 signIn aid=5000139509423 type=2 status=2 name=签到码签到: result=1, msg=success, error=None, data={\"id\": 5001082627116, \"uid\": 431407443, \"activeId\": 5000139509423, \"status\": 1, \"createtime\": 1761879670000, \"updatetime\": 1761879670000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082627116, \"uid\": 431407443, \"activeId\": 5000139509423, \"status\": 1, \"createtime\": 1761879670000, \"updatetime\": 1761879670000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761879670450, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; Android 12; Red"
+  },
+  {
+    "tag": "T3-50001395",
+    "detail": "V2 signIn aid=5000139506185 type=2 status=2 name=二维码签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001395",
+    "detail": "V2 signIn aid=5000139505593 type=2 status=2 name=位置签到: result=1, msg=success, error=None, data={\"id\": 5001082592686, \"uid\": 431407443, \"activeId\": 5000139505593, \"status\": 1, \"createtime\": 1761878752000, \"updatetime\": 1761878752000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082592686, \"uid\": 431407443, \"activeId\": 5000139505593, \"status\": 1, \"createtime\": 1761878752000, \"updatetime\": 1761878752000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878752857, \"longitude\": 113.659721, \"latitude\": 34.7845099, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; And"
+  },
+  {
+    "tag": "T3-50001395",
+    "detail": "V2 signIn aid=5000139503533 type=2 status=2 name=手势签到: result=1, msg=success, error=None, data={\"id\": 5001082579068, \"uid\": 431407443, \"activeId\": 5000139503533, \"status\": 1, \"createtime\": 1761878442000, \"updatetime\": 1761878442000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082579068, \"uid\": 431407443, \"activeId\": 5000139503533, \"status\": 1, \"createtime\": 1761878442000, \"updatetime\": 1761878442000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878442867, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; Android 12; Red"
+  },
+  {
+    "tag": "T3-50001394",
+    "detail": "V2 signIn aid=5000139411280 type=2 status=2 name=位置签到: result=1, msg=success, error=None, data={\"id\": 5001081235404, \"uid\": 431407443, \"activeId\": 5000139411280, \"status\": 1, \"createtime\": 1761816792000, \"updatetime\": 1761816792000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": ",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001081235404, \"uid\": 431407443, \"activeId\": 5000139411280, \"status\": 1, \"createtime\": 1761816792000, \"updatetime\": 1761816792000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761816792602, \"longitude\": 113.659858, \"latitude\": 34.7843548, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"39.144.29.120\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; "
+  },
+  {
+    "tag": "T3-50001394",
+    "detail": "V2 signIn aid=5000139410559 type=2 status=2 name=位置签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001394",
+    "detail": "V2 signIn aid=5000139410338 type=2 status=2 name=手势签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T3-50001394",
+    "detail": "V2 signIn aid=5000139411554 type=2 status=2 name=二维码签到: result=0, msg=None, error=签到已结束，签到失败, data={\"refreshFlag\": 1}",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T4-stuSign-50001637",
+    "detail": "stuSignajax aid=5000163767353: 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T4-stuSign-50001627",
+    "detail": "stuSignajax aid=5000162787534: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T4-stuSign-50001399",
+    "detail": "stuSignajax aid=5000139908007: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T4-stuSign-50001397",
+    "detail": "stuSignajax aid=5000139741015: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T4-stuSign-50001397",
+    "detail": "stuSignajax aid=5000139740903: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T5-00",
+    "detail": "V2 signIn (uid=431407443): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-01",
+    "detail": "V2 signIn (uid=431407443, latitude=39.9042, longitude=116.4074): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-02",
+    "detail": "V2 signIn (uid=431407443, latitude=0, longitude=0): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-03",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, address=test): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-04",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, appType=15): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-05",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, fid=0): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-06",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, clientip=): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-07",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, signStatus=1): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T5-08",
+    "detail": "V2 signIn (uid=431407443, latitude=-1, longitude=-1, status=1): result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T6-signed-50001637",
+    "detail": "教师 signedResult aid=5000163767353: HTTP 500",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001627",
+    "detail": "教师 signedResult aid=5000162787534: HTTP 500",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001399",
+    "detail": "教师 signedResult aid=5000139908007: HTTP 500",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001397",
+    "detail": "教师 signedResult aid=5000139741015: HTTP 500",
+    "evidence": ""
+  },
+  {
+    "tag": "T6-signed-50001397",
+    "detail": "教师 signedResult aid=5000139740903: HTTP 500",
+    "evidence": ""
+  },
+  {
+    "tag": "T7-uid-40264451",
+    "detail": "V2 signIn uid=402644510: result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T7-uid-12345678",
+    "detail": "V2 signIn uid=12345678: result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T7-uid-99999999",
+    "detail": "V2 signIn uid=999999999: result=1, msg=success, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T8-50001637",
+    "detail": "[普通签到] aid=5000163767353: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, "
+  },
+  {
+    "tag": "T8-50001627",
+    "detail": "[普通签到] aid=5000162787534: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001399",
+    "detail": "[普通签到] aid=5000139908007: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": n"
+  },
+  {
+    "tag": "T8-50001397",
+    "detail": "[普通签到] aid=5000139741015: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762142169606, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": n"
+  },
+  {
+    "tag": "T8-50001397",
+    "detail": "[普通签到] aid=5000139740903: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001395",
+    "detail": "[普通签到] aid=5000139561997: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001395",
+    "detail": "[普通签到] aid=5000139509423: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082627116, \"uid\": 431407443, \"activeId\": 5000139509423, \"status\": 1, \"createtime\": 1761879670000, \"updatetime\": 1761879670000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761879670450, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": n"
+  },
+  {
+    "tag": "T8-50001395",
+    "detail": "[普通签到] aid=5000139506185: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001395",
+    "detail": "[普通签到] aid=5000139505593: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082592686, \"uid\": 431407443, \"activeId\": 5000139505593, \"status\": 1, \"createtime\": 1761878752000, \"updatetime\": 1761878752000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878752857, \"longitude\": 113.659721, \"latitude\": 34.7845099, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null"
+  },
+  {
+    "tag": "T8-50001395",
+    "detail": "[普通签到] aid=5000139503533: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001082579068, \"uid\": 431407443, \"activeId\": 5000139503533, \"status\": 1, \"createtime\": 1761878442000, \"updatetime\": 1761878442000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878442867, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": n"
+  },
+  {
+    "tag": "T8-50001394",
+    "detail": "[普通签到] aid=5000139411280: result=1, error=None, data_keys=['id', 'uid', 'activeId', 'status', 'createtime', 'updatetime', 'name', 'username', 'isdelete', 'qasort', 'sasort', 'longitude', 'latitude', 'longitude_gd', 'latitude_gd', 'distance', 'distanceStr', 'xxuid', 'clientip', 'issend', 'useragent', 'type', 'confidence', 'islook', 'isshow', 'score', 'flowerScore', 'skscore', 'result', 'title', 'iphoneContent', 'ismark', 'submittime', 'groupId', 'taskavg', 'content', 'answerScore', 'answerTime', 'teacherGiveScore', 'isPrompted', 'mutualEvaluationId', 'pingyu', 'tag', 'flowerCount', 'schoolname', 'fid', 'screenContent', 'screenimages', 'iframeCount', 'showScore', 'teaScore', 'ifGiveScore', 'taskScoreRecored', 'taskTeacherEvaluation', 'updatetimeStr', 'extraJsonData', 'deviceCode', 'vpProbability', 'vpStrategy', 'uname', 'stuGetAnswerTime', 'teaGetAnswerTime', 'vpProbabilityFromJson', 'extraJson']",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001081235404, \"uid\": 431407443, \"activeId\": 5000139411280, \"status\": 1, \"createtime\": 1761816792000, \"updatetime\": 1761816792000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761816792602, \"longitude\": 113.659858, \"latitude\": 34.7843548, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null"
+  },
+  {
+    "tag": "T8-50001394",
+    "detail": "[普通签到] aid=5000139410559: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001394",
+    "detail": "[普通签到] aid=5000139410338: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T8-50001394",
+    "detail": "[普通签到] aid=5000139411554: result=0, error=签到已结束，签到失败, data_keys=['refreshFlag']",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T9-detail-50001637",
+    "detail": "签到记录详情: {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd",
+    "evidence": "{\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": 0, \"score\": null, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittim"
+  },
+  {
+    "tag": "T9-detail-50001627",
+    "detail": "签到记录: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-detail-50001399",
+    "detail": "签到记录详情: {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_",
+    "evidence": "{\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"223.104.110.156\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12; SM-N9006 Build/8aba9e4.0) (schild:ce31140dfcdc2fcd113ccdd86f89a9aa) (device:SM-N9006) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6"
+  },
+  {
+    "tag": "T10-50001637-0",
+    "detail": "重复签到#1 aid=5000163767353: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T10-50001637-1",
+    "detail": "重复签到#2 aid=5000163767353: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T10-50001637-2",
+    "detail": "重复签到#3 aid=5000163767353: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": "
+  },
+  {
+    "tag": "T10-50001627-0",
+    "detail": "重复签到#1 aid=5000162787534: result=0, error=签到已结束，签到失败",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T10-50001627-1",
+    "detail": "重复签到#2 aid=5000162787534: result=0, error=签到已结束，签到失败",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T10-50001627-2",
+    "detail": "重复签到#3 aid=5000162787534: result=0, error=签到已结束，签到失败",
+    "evidence": "{\"result\": 0, \"msg\": null, \"data\": {\"refreshFlag\": 1}, \"errorMsg\": \"签到已结束，签到失败\"}"
+  },
+  {
+    "tag": "T10-50001399-0",
+    "detail": "重复签到#1 aid=5000139908007: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\""
+  },
+  {
+    "tag": "T10-50001399-1",
+    "detail": "重复签到#2 aid=5000139908007: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\""
+  },
+  {
+    "tag": "T10-50001399-2",
+    "detail": "重复签到#3 aid=5000139908007: result=1, error=None",
+    "evidence": "{\"result\": 1, \"msg\": \"success\", \"data\": {\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\""
+  }
+]

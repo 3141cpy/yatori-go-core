@@ -1,0 +1,187 @@
+[
+  {
+    "tag": "T3-5000163767353",
+    "detail": "签到记录: id=5001369321490, status=5, lat=None, lng=None, create=1780400956000, update=1780405303000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001369321490, \"uid\": 431407443, \"activeId\": 5000163767353, \"status\": 5, \"createtime\": 1780400956000, \"updatetime\": 1780405303000, \"name\": \"3141cpy\", \"username\": \"\", \"isdelete\": 0, \"qasort\": null, \"sasort\": 1780400955777, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": 0, \"clientip\": null, \"issend\": null, \"useragent\": null, \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": 0, \"score\": null, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2026-06-02 19:49:15\", \"groupId\": 0, \"taskavg\": 0.0, \"content\": \"\", \"answerScore\": null, \"answerTime\": null, \"teacherGiveScore\": 0, \"isPrompted\": 0, \"mutualEvaluationId\": null, \"pingyu\": null, \"tag\": \"{\\\"teaUpdateFlag\\\": 1}\", \"flowerCount\": null, \"schoolname\": null, \"fid\": 20, \"screenContent\": null, \"screenimages\": null, \"iframeCount\": null, \"showScore\": 0, \"teaScore\": null, \"ifGiveScore\": nul"
+  },
+  {
+    "tag": "T3-5000162787534",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139908007",
+    "detail": "签到记录: id=5001089197752, status=1, lat=None, lng=None, create=1762220611000, update=1762220611000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001089197752, \"uid\": 431407443, \"activeId\": 5000139908007, \"status\": 1, \"createtime\": 1762220611000, \"updatetime\": 1762220611000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762220611414, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"223.104.110.156\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12; SM-N9006 Build/8aba9e4.0) (schild:ce31140dfcdc2fcd113ccdd86f89a9aa) (device:SM-N9006) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.5.1_android_phone_10837_265 (@Kalimdor)_68f184fd763546c1a04ab3a09b3deebb\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 1.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2025-11-04 09:43:31\", \"groupId\": 0, \"taskavg\": 0.0, \"content\": null, \"answerScore\": null, \"answerTime\": null, \"teacherGiveScore\": "
+  },
+  {
+    "tag": "T3-5000139741015",
+    "detail": "签到记录: id=5001086819796, status=1, lat=None, lng=None, create=1762142169000, update=1762142169000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001086819796, \"uid\": 431407443, \"activeId\": 5000139741015, \"status\": 1, \"createtime\": 1762142169000, \"updatetime\": 1762142169000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1762142169606, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"223.104.110.156\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12; SM-N9006 Build/8aba9e4.0) (schild:ce31140dfcdc2fcd113ccdd86f89a9aa) (device:SM-N9006) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.5.1_android_phone_10837_265 (@Kalimdor)_68f184fd763546c1a04ab3a09b3deebb\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 1.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2025-11-03 11:56:09\", \"groupId\": 0, \"taskavg\": 0.0, \"content\": null, \"answerScore\": null, \"answerTime\": null, \"teacherGiveScore\": "
+  },
+  {
+    "tag": "T3-5000139740903",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139561997",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139509423",
+    "detail": "签到记录: id=5001082627116, status=1, lat=None, lng=None, create=1761879670000, update=1761879670000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001082627116, \"uid\": 431407443, \"activeId\": 5000139509423, \"status\": 1, \"createtime\": 1761879670000, \"updatetime\": 1761879670000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761879670450, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; Android 12; Redmi K30 Pro Zoom Edition Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36 (device:Redmi K30 Pro Zoom Edition) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.2.8_android_phone_1050_234 (@Kalimdor)_8c0587fc07ee4c25bdbbb5d7a90d8152\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 0.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2025-10-31 11:01:10\", \"groupId\": 0, \"tas"
+  },
+  {
+    "tag": "T3-5000139506185",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139505593",
+    "detail": "签到记录: id=5001082592686, status=1, lat=34.7845099, lng=113.659721, create=1761878752000, update=1761878752000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001082592686, \"uid\": 431407443, \"activeId\": 5000139505593, \"status\": 1, \"createtime\": 1761878752000, \"updatetime\": 1761878752000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878752857, \"longitude\": 113.659721, \"latitude\": 34.7845099, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; Android 12; Redmi K30 Pro Zoom Edition Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36 (device:Redmi K30 Pro Zoom Edition) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.2.8_android_phone_1050_234 (@Kalimdor)_8c0587fc07ee4c25bdbbb5d7a90d8152\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 1.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": \"河南省郑州市金水区丰乐路4号 河南省建筑科学研究院家属院-1号楼\", \"iphoneContent\": null, \"ismark\": 0, \"submittime\":"
+  },
+  {
+    "tag": "T3-5000139503533",
+    "detail": "签到记录: id=5001082579068, status=1, lat=None, lng=None, create=1761878442000, update=1761878442000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001082579068, \"uid\": 431407443, \"activeId\": 5000139503533, \"status\": 1, \"createtime\": 1761878442000, \"updatetime\": 1761878442000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761878442867, \"longitude\": null, \"latitude\": null, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"113.110.216.48\", \"issend\": null, \"useragent\": \"Mozilla/5.0 (Linux; Android 12; Redmi K30 Pro Zoom Edition Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36 (device:Redmi K30 Pro Zoom Edition) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.2.8_android_phone_1050_234 (@Kalimdor)_8c0587fc07ee4c25bdbbb5d7a90d8152\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 0.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": null, \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2025-10-31 10:40:42\", \"groupId\": 0, \"tas"
+  },
+  {
+    "tag": "T3-5000139411280",
+    "detail": "签到记录: id=5001081235404, status=1, lat=34.7843548, lng=113.659858, create=1761816792000, update=1761816792000, name=3141cpy, addr=N/A",
+    "evidence": "{\"id\": 5001081235404, \"uid\": 431407443, \"activeId\": 5000139411280, \"status\": 1, \"createtime\": 1761816792000, \"updatetime\": 1761816792000, \"name\": \"3141cpy\", \"username\": null, \"isdelete\": 0, \"qasort\": null, \"sasort\": 1761816792602, \"longitude\": 113.659858, \"latitude\": 34.7843548, \"longitude_gd\": null, \"latitude_gd\": null, \"distance\": null, \"distanceStr\": null, \"xxuid\": null, \"clientip\": \"39.144.29.120\", \"issend\": null, \"useragent\": \"Dalvik/2.1.0 (Linux; U; Android 12; SM-N9006 Build/8aba9e4.0) (schild:ce31140dfcdc2fcd113ccdd86f89a9aa) (device:SM-N9006) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.5.1_android_phone_10837_265 (@Kalimdor)_68f184fd763546c1a04ab3a09b3deebb\", \"type\": 0, \"confidence\": null, \"islook\": 1, \"isshow\": null, \"score\": 1.0, \"flowerScore\": null, \"skscore\": null, \"result\": null, \"title\": \"郑州市金水区南阳路街道丰乐路4号\", \"iphoneContent\": null, \"ismark\": 0, \"submittime\": \"2025-10-30 17:33:12\", \"groupId\": 0, \"taskavg\": 0.0, \"content\": null, \"answerScore\": null, \"answerTime\": nu"
+  },
+  {
+    "tag": "T3-5000139410559",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139410338",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T3-5000139411554",
+    "detail": "签到失败: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T4-PUT",
+    "detail": "V2 signIn PUT: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T4-PATCH",
+    "detail": "V2 signIn PATCH: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T4-DELETE",
+    "detail": "V2 signIn DELETE: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-00",
+    "detail": "V2 PUT sign/signIn: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-01",
+    "detail": "V2 PATCH sign/signIn: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-02",
+    "detail": "V2 POST sign/updateSign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-03",
+    "detail": "V2 PUT sign/updateSign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-04",
+    "detail": "V2 POST sign/modifySign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-05",
+    "detail": "V2 POST sign/changeSign: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-06",
+    "detail": "V2 POST active/signResult: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-07",
+    "detail": "V2 GET active/signResult: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-08",
+    "detail": "V2 POST sign/signResult: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T5-09",
+    "detail": "V2 GET sign/signResult: HTTP 500, <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</",
+    "evidence": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+  },
+  {
+    "tag": "T6-create-0",
+    "detail": "创建签到: params={'courseId': '257485372', 'classId': '132821141', 'activeType': '2', 'title': '安全测试签到'}, result={\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server ",
+    "evidence": "{\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Error</h1></center>\\r\\n<hr><center>tengine</center>\\r\\n</body>\\r\\n</html>\\r\\n\"}"
+  },
+  {
+    "tag": "T6-create-1",
+    "detail": "创建签到: params={'courseId': '257485372', 'classId': '132821141', 'activeType': '2'}, result={\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server ",
+    "evidence": "{\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Error</h1></center>\\r\\n<hr><center>tengine</center>\\r\\n</body>\\r\\n</html>\\r\\n\"}"
+  },
+  {
+    "tag": "T6-create-2",
+    "detail": "创建签到: params={'courseId': '257485372', 'classId': '132821141', 'activeType': '2', 'title': '测试', 'ifTiJiao': '1'}, result={\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server ",
+    "evidence": "{\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Error</h1></center>\\r\\n<hr><center>tengine</center>\\r\\n</body>\\r\\n</html>\\r\\n\"}"
+  },
+  {
+    "tag": "T6-create-3",
+    "detail": "创建签到: params={'courseId': '257485372', 'clazzId': '132821141', 'activeType': '2', 'title': '测试'}, result={\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server ",
+    "evidence": "{\"_raw_status\": 500, \"_raw_text\": \"<!DOCTYPE HTML PUBLIC \\\"-//IETF//DTD HTML 2.0//EN\\\">\\r\\n<html>\\r\\n<head><title>500 Internal Server Error</title></head>\\r\\n<body>\\r\\n<center><h1>500 Internal Server Error</h1></center>\\r\\n<hr><center>tengine</center>\\r\\n</body>\\r\\n</html>\\r\\n\"}"
+  },
+  {
+    "tag": "T8-50001637",
+    "detail": "签到status=5(补签), type=2, name=普通签到",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-50001399",
+    "detail": "签到status=1(已签到), type=2, name=手势签到",
+    "evidence": ""
+  },
+  {
+    "tag": "T8-50001397",
+    "detail": "签到status=1(已签到), type=2, name=签到码签到",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001637",
+    "detail": "V2 signIn+status=1: 返回status=5",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001627",
+    "detail": "V2 signIn+status=1: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001399",
+    "detail": "V2 signIn+status=1: 返回status=1",
+    "evidence": ""
+  }
+]

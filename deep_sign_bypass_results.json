@@ -1,0 +1,152 @@
+[
+  {
+    "tag": "T3-01",
+    "detail": "无Cookie调用updateSignStatus: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T3-02",
+    "detail": "仅UID Cookie调用updateSignStatus: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-01",
+    "detail": "Web UA+学生Cookie: HTTP 200, 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T4-02",
+    "detail": "Web UA+教师Cookie: HTTP 200, 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T6-01",
+    "detail": "教师 updateSignStatus(新活动): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T6-02",
+    "detail": "学生 updateSignStatus(新活动): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T6-03",
+    "detail": "教师Cookie+学生UA(新活动): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-0",
+    "detail": "教师 updateSignStatus(status=0): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-1",
+    "detail": "教师 updateSignStatus(status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-2",
+    "detail": "教师 updateSignStatus(status=2): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-3",
+    "detail": "教师 updateSignStatus(status=3): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-4",
+    "detail": "教师 updateSignStatus(status=4): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-5",
+    "detail": "教师 updateSignStatus(status=5): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-6",
+    "detail": "教师 updateSignStatus(status=6): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T7-7",
+    "detail": "教师 updateSignStatus(status=7): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-00",
+    "detail": "教师 (studentId=431407443, status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-01",
+    "detail": "教师 (stuId=431407443, status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-02",
+    "detail": "教师 (userId=431407443, status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-03",
+    "detail": "教师 (studentUid=431407443, status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-04",
+    "detail": "教师 (studentId=431407443, signStatus=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-05",
+    "detail": "教师 (studentId=431407443, signResultType=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-06",
+    "detail": "教师 (studentId=431407443, status=1, operateSource=2): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-07",
+    "detail": "教师 (studentId=431407443, status=1, sourceType=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T8-08",
+    "detail": "教师 (clazzId=132821141, studentId=431407443, status=1): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T9-00",
+    "detail": "学生-基本参数: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T9-01",
+    "detail": "学生+uid=教师puid: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T9-02",
+    "detail": "学生+role=1: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T9-03",
+    "detail": "学生+roletype=1: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T9-04",
+    "detail": "学生+sso_role=1: 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T9-05",
+    "detail": "教师Cookie+学生UA: 修改失败",
+    "evidence": "修改失败"
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "tag": "T9-50001637",
+    "detail": "[普通签到] stuSignajax: 您已签到过了",
+    "evidence": "您已签到过了"
+  },
+  {
+    "tag": "T9-v2-50001637",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001627",
+    "detail": "[普通签到] stuSignajax: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T9-v2-50001627",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001399",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001399",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001397",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001397",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001397",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001397",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001395",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001395",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001395",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001395",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001395",
+    "detail": "[普通签到] stuSignajax: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T9-v2-50001395",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001395",
+    "detail": "[普通签到] stuSignajax: 距教师指定签到地点1.2293497E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2293497E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T9-v2-50001395",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001395",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001395",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001394",
+    "detail": "[普通签到] stuSignajax: 距教师指定签到地点1.2293637E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2293637E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T9-v2-50001394",
+    "detail": "[普通签到] V2 signIn: result=1, error=None",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001394",
+    "detail": "[普通签到] stuSignajax: 距教师指定签到地点1.2293355E7米，不在可签到范围内。",
+    "evidence": "距教师指定签到地点1.2293355E7米，不在可签到范围内。"
+  },
+  {
+    "tag": "T9-v2-50001394",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001394",
+    "detail": "[普通签到] stuSignajax: 签到失败[90002]",
+    "evidence": "签到失败[90002]"
+  },
+  {
+    "tag": "T9-v2-50001394",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T9-50001394",
+    "detail": "[普通签到] stuSignajax: 签到失败，请重新扫描",
+    "evidence": "签到失败，请重新扫描"
+  },
+  {
+    "tag": "T9-v2-50001394",
+    "detail": "[普通签到] V2 signIn: result=0, error=签到已结束，签到失败",
+    "evidence": ""
+  },
+  {
+    "tag": "T10-50001637-s0",
+    "detail": "教师 updateSignStatus(current=5, target=0): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001637-s0-s",
+    "detail": "学生 updateSignStatus(current=5, target=0): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001637-s3",
+    "detail": "教师 updateSignStatus(current=5, target=3): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001637-s3-s",
+    "detail": "学生 updateSignStatus(current=5, target=3): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001637-s4",
+    "detail": "教师 updateSignStatus(current=5, target=4): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001637-s4-s",
+    "detail": "学生 updateSignStatus(current=5, target=4): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001637-s5",
+    "detail": "教师 updateSignStatus(current=5, target=5): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001637-s5-s",
+    "detail": "学生 updateSignStatus(current=5, target=5): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001637-s6",
+    "detail": "教师 updateSignStatus(current=5, target=6): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001637-s6-s",
+    "detail": "学生 updateSignStatus(current=5, target=6): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001399-s0",
+    "detail": "教师 updateSignStatus(current=1, target=0): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001399-s0-s",
+    "detail": "学生 updateSignStatus(current=1, target=0): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001399-s3",
+    "detail": "教师 updateSignStatus(current=1, target=3): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001399-s3-s",
+    "detail": "学生 updateSignStatus(current=1, target=3): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001399-s4",
+    "detail": "教师 updateSignStatus(current=1, target=4): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001399-s4-s",
+    "detail": "学生 updateSignStatus(current=1, target=4): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001399-s5",
+    "detail": "教师 updateSignStatus(current=1, target=5): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001399-s5-s",
+    "detail": "学生 updateSignStatus(current=1, target=5): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001399-s6",
+    "detail": "教师 updateSignStatus(current=1, target=6): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001399-s6-s",
+    "detail": "学生 updateSignStatus(current=1, target=6): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001397-s0",
+    "detail": "教师 updateSignStatus(current=1, target=0): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001397-s0-s",
+    "detail": "学生 updateSignStatus(current=1, target=0): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001397-s3",
+    "detail": "教师 updateSignStatus(current=1, target=3): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001397-s3-s",
+    "detail": "学生 updateSignStatus(current=1, target=3): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001397-s4",
+    "detail": "教师 updateSignStatus(current=1, target=4): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001397-s4-s",
+    "detail": "学生 updateSignStatus(current=1, target=4): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001397-s5",
+    "detail": "教师 updateSignStatus(current=1, target=5): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001397-s5-s",
+    "detail": "学生 updateSignStatus(current=1, target=5): 无权限",
+    "evidence": "无权限"
+  },
+  {
+    "tag": "T10-50001397-s6",
+    "detail": "教师 updateSignStatus(current=1, target=6): 修改失败",
+    "evidence": "修改失败"
+  },
+  {
+    "tag": "T10-50001397-s6-s",
+    "detail": "学生 updateSignStatus(current=1, target=6): 无权限",
+    "evidence": "无权限"
+  }
+]
