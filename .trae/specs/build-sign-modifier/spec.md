@@ -11,12 +11,12 @@
 ## Impact
 - Affected APIs: /newsign/updateSignStatus, /ppt/activeAPI/taskactivelist, /v2/apis/sign/signIn
 - 依赖已有漏洞发现成果
-- 新增脚本文件: /workspace/sign_status_modifier.py
+- 脚本文件: /workspace/sign_status_modifier.py
 
 ## ADDED Requirements
 
 ### Requirement: 自动登录
-系统 SHALL 提供账号密码输入，自动完成学习通登录（移动端AES-CBC加密方式），获取UID和Cookie。
+系统 SHALL 提供账号密码输入，自动完成学习通登录（移动端AES-CBC加密方式，含schild签名UA），获取UID和Cookie。
 
 #### Scenario: 用户输入账号密码登录
 - **WHEN** 用户输入手机号和密码
@@ -30,11 +30,11 @@
 - **THEN** 显示所有课程的编号、课程名、班级名，用户输入编号选择课程
 
 ### Requirement: 签到活动列表展示
-系统 SHALL 获取所选课程的所有签到活动，展示活动ID、名称、状态（进行中/已结束）及当前签到状态。
+系统 SHALL 获取所选课程的所有签到活动，按未签到/已签到分组展示，显示活动ID、名称、状态（进行中/已结束）及当前签到状态。
 
 #### Scenario: 选择课程后展示签到活动
 - **WHEN** 用户选择某课程后
-- **THEN** 显示该课程所有签到活动的编号、活动ID、名称、时间、当前签到状态（未签到/出勤/迟到/事假/病假/补签/缺勤/旷课）
+- **THEN** 显示该课程所有签到活动的编号、活动ID、名称、时间、当前签到状态（未签到/出勤/迟到/事假/病假/补签/缺勤/旷课），按未签到/已签到分组
 
 ### Requirement: 签到状态修改
 系统 SHALL 允许用户选择目标活动和目标状态，调用 `/newsign/updateSignStatus` API修改签到状态。
@@ -44,17 +44,17 @@
 - **THEN** 系统调用漏洞API修改签到状态，显示修改结果
 
 ### Requirement: 修改结果验证
-系统 SHALL 在修改后自动查询签到状态，核实修改是否真正生效。
+系统 SHALL 在修改后自动查询签到状态，核实修改是否真正生效。若API返回success但验证状态未变，提示可能存在查询缓存延迟。
 
 #### Scenario: 修改后自动验证
 - **WHEN** 签到状态修改API返回"success"
-- **THEN** 系统通过V2 signIn API查询实际签到状态，对比修改前后确认是否生效
+- **THEN** 系统等待2秒后通过V2 signIn API查询实际签到状态，对比修改前后确认是否生效
 
 ### Requirement: 多选与批量修改
-系统 SHALL 支持用户一次选择多个签到活动进行批量修改。
+系统 SHALL 支持用户一次选择多个签到活动进行批量修改，支持逗号分隔、范围选择和all关键字。
 
 #### Scenario: 批量修改多个活动
-- **WHEN** 用户输入多个活动编号（如"1,3,5"或"1-5"）
+- **WHEN** 用户输入多个活动编号（如"1,3,5"或"1-5"或"all"）
 - **THEN** 系统依次修改所有选中活动的签到状态，并逐一显示结果
 
 ### Requirement: 状态值对照

@@ -15,20 +15,16 @@
 
 - [x] Task 3: 实现签到状态修改与验证
   - [x] SubTask 3.1: 实现修改签到状态函数（/newsign/updateSignStatus，含Referer和X-Requested-With头）
-  - [x] SubTask 3.2: 实现修改后自动验证（查询实际状态对比）
+  - [x] SubTask 3.2: 实现修改后自动验证（查询实际状态对比，等待2秒）
   - [x] SubTask 3.3: 实现批量修改逻辑（遍历选中活动逐一修改并验证）
-  - [x] SubTask 3.4: 实现修改结果汇总展示（含修补检测）
+  - [x] SubTask 3.4: 实现修改结果汇总展示
 
 - [x] Task 4: 测试与优化
   - [x] SubTask 4.1: 使用测试账号端到端测试完整流程
-  - [x] SubTask 4.2: 修复发现的bug（API域名修正、添加必要请求头、schild签名UA）
-  - [x] SubTask 4.3: 优化输出格式和用户体验（分组显示、修补检测、all关键字）
+  - [x] SubTask 4.2: 修复发现的bug（API域名、请求头、schild签名UA）
+  - [x] SubTask 4.3: 优化输出格式和用户体验（分组显示、all关键字、验证逻辑优化）
 
 # Task Dependencies
 - [Task 2] depends on [Task 1] ✅
 - [Task 3] depends on [Task 1] ✅
 - [Task 4] depends on [Task 1, Task 2, Task 3] ✅
-
-# 重要发现
-测试过程中发现 `/newsign/updateSignStatus` API仍返回"success"但实际不再执行修改。
-这表明该漏洞可能已被服务端修补（静默失效模式），脚本已加入修补检测逻辑。

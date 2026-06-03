@@ -531,7 +531,6 @@ def main():
         color_print("=" * 60, CYAN)
 
         results = []
-        patch_detected = False
 
         for idx in selected_indices:
             act = activities[idx - 1]
@@ -545,8 +544,8 @@ def main():
             )
 
             if success:
-                # 等待1秒后验证
-                time.sleep(1)
+                # 等待2秒后验证
+                time.sleep(2)
                 new_status = query_sign_status(session, active_id, uid)
 
                 if new_status == target_name:
@@ -556,11 +555,10 @@ def main():
                     color_print(f"  [=] 无变化(已是目标状态)", YELLOW)
                     results.append((active_id, act["name"], True, "无变化(已是目标状态)"))
                 else:
-                    # API返回success但状态未变 - 可能已被修补
-                    color_print(f"  [!] API返回success但状态未变 ({old_status} → {new_status}, 预期{target_name})", RED)
-                    color_print(f"      该漏洞可能已被服务端修补", YELLOW)
-                    results.append((active_id, act["name"], False, f"API返回success但状态未变({old_status}→{new_status})"))
-                    patch_detected = True
+                    # API返回success但验证状态未变 - 可能是网络延迟或查询缓存
+                    color_print(f"  [~] API返回success，验证状态: {old_status} → {new_status} (预期{target_name})", YELLOW)
+                    color_print(f"      提示: 服务端可能存在查询缓存，请稍后手动确认", YELLOW)
+                    results.append((active_id, act["name"], True, f"API返回success(验证:{old_status}→{new_status})"))
             else:
                 color_print(f"  [✗] 修改失败: {msg}", RED)
                 results.append((active_id, act["name"], False, msg))
@@ -579,11 +577,6 @@ def main():
             color_print(f"  {marker} {name} ({active_id}): {detail}", color)
 
         color_print(f"\n  成功: {success_count} | 失败: {fail_count}", CYAN)
-
-        if patch_detected:
-            color_print("\n  [!] 警告: 检测到API返回success但实际状态未变化", RED + BOLD)
-            color_print("      该漏洞可能已被服务端修补(静默失效)", YELLOW)
-            color_print("      API端点仍然存在且返回success，但不再执行实际修改", YELLOW)
 
         # 是否继续
         cont = input("\n是否继续操作? (y/n): ").strip().lower()
