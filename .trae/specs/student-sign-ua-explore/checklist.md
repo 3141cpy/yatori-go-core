@@ -1,0 +1,10 @@
+- [ ] 多UA测试脚本覆盖5种以上UA（移动端App含schild、移动端Web、PC端Chrome、微信内嵌、iPad）
+- [ ] /newsign/updateSignStatus 在每种UA下均测试，并用V2 signIn查询验证数据是否真正变化
+- [ ] /pptSign/updateSignStatus、/pptSign/updateSignStatusByUidsV2 在每种UA下均测试
+- [ ] /pptSign/stuSignajax 带status参数在每种UA下均测试
+- [ ] 不同Content-Type（json、form-data、urlencoded）均测试
+- [ ] 学生端完整签到流程模拟（preSign→stuSignajax→updateqrstatus）
+- [ ] 其他域名（mooc1-api、learn.chaoxing.com）+不同UA组合测试
+- [ ] 参数名变体（signStatus、resultStatus、type等）测试
+- [ ] 所有返回"success"或非错误响应的测试项已标记
+- [ ] 生成用户可自行验证的curl命令列表
