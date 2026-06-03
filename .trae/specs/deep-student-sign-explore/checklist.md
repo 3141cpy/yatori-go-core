@@ -1,0 +1,8 @@
+- [ ] /newsign/updateSignStatus 在不同参数组合下的响应已全部记录
+- [ ] /newsign/ 路径下所有非404端点已发现并记录
+- [ ] /pptSign/ 学生端可用端点已全部测试
+- [ ] /v2/apis/ 签到相关端点已全部探索
+- [ ] 多域名API权限校验差异已记录
+- [ ] 位置签到三角定位伪造已验证
+- [ ] CSRF攻击路径已验证并生成PoC
+- [ ] 完整测试报告已输出到 /workspace/student_sign_vuln_deep_report.md

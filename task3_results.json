@@ -1,0 +1,3179 @@
+{
+  "login_puid": "431407443",
+  "activities": [],
+  "active_ids": [
+    "0"
+  ],
+  "activity_count": 0,
+  "stuSignajax_tests": [
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_standard_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_standard_POST",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9042&longitude=116.4074&appType=15&fid=0&address=%E5%8C%97%E4%BA%AC%E5%B8%82%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_with_location_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "北京市天安门广场"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_with_location_POST",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "北京市天安门广场"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&enc=",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_enc_empty_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "enc": ""
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&enc=test",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_enc_test_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "enc": "test"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&enc=abc123",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_enc_abc123_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "enc": "abc123"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&enc=12345678",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_enc_12345678_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "enc": "12345678"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&status=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_status_0_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "status": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&status=1",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_status_1_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "status": "1"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&status=2",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_status_2_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "status": "2"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&status=3",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_status_3_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "status": "3"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=0&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_0_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "0",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=1&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_1_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "1",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_15_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=2&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_2_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "2",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=3&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_3_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "3",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=5&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_5_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "5",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=10&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_appType_10_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "10",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_fid_0_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=-1",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_fid_-1_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "-1"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=1",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_fid_1_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "1"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "stuSignajax_fid_431407443_GET",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "431407443"
+      }
+    }
+  ],
+  "preSign_tests": [
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign?activeId=0&courseId=257485372&classId=132821141&uid=431407443",
+      "text": "",
+      "json": null,
+      "test": "preSign_full_GET",
+      "params": {
+        "activeId": "0",
+        "courseId": "257485372",
+        "classId": "132821141",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign",
+      "text": "",
+      "json": null,
+      "test": "preSign_full_POST",
+      "params": {
+        "activeId": "0",
+        "courseId": "257485372",
+        "classId": "132821141",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign?activeId=0",
+      "text": "",
+      "json": null,
+      "test": "preSign_activeIdOnly_GET",
+      "params": {
+        "activeId": "0"
+      }
+    },
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign",
+      "text": "",
+      "json": null,
+      "test": "preSign_activeIdOnly_POST",
+      "params": {
+        "activeId": "0"
+      }
+    },
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign?courseId=257485372&classId=132821141&uid=431407443",
+      "text": "",
+      "json": null,
+      "test": "preSign_noActiveId_GET",
+      "params": {
+        "courseId": "257485372",
+        "classId": "132821141",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 200,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/preSign?activeId=0&courseId=257485372&classId=132821141&uid=431407443",
+      "text": "",
+      "json": null,
+      "test": "preSign_withReferer_GET",
+      "params": {
+        "activeId": "0",
+        "courseId": "257485372",
+        "classId": "132821141",
+        "uid": "431407443"
+      }
+    }
+  ],
+  "updateqrstatus_tests": [
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_empty_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_empty_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=test&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_test_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "test",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_test_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "test",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=abc123xyz&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_abc123xyz_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "abc123xyz",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_abc123xyz_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "abc123xyz",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=12345678&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_12345678_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "12345678",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_12345678_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "12345678",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_0_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "0",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_0_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "0",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=invalid_enc&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_invalid_enc_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "invalid_enc",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_enc_invalid_enc_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "invalid_enc",
+        "uid": "431407443"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus?activeId=0&enc=test",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_noUid_GET",
+      "params": {
+        "activeId": "0",
+        "enc": "test"
+      }
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateqrstatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "updateqrstatus_noUid_POST",
+      "params": {
+        "activeId": "0",
+        "enc": "test"
+      }
+    }
+  ],
+  "explore_tests": [
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignAjaxNew?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignAjaxNew_GET",
+      "endpoint": "stuSignAjaxNew",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignAjaxNew",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignAjaxNew_POST",
+      "endpoint": "stuSignAjaxNew",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajaxNew?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignajaxNew_GET",
+      "endpoint": "stuSignajaxNew",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajaxNew",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignajaxNew_POST",
+      "endpoint": "stuSignajaxNew",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignNew?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignNew_GET",
+      "endpoint": "stuSignNew",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignNew",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignNew_POST",
+      "endpoint": "stuSignNew",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignV2?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignV2_GET",
+      "endpoint": "stuSignV2",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignV2",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignV2_POST",
+      "endpoint": "stuSignV2",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signV2?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signV2_GET",
+      "endpoint": "signV2",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signV2",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signV2_POST",
+      "endpoint": "signV2",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signNew?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signNew_GET",
+      "endpoint": "signNew",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signNew",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signNew_POST",
+      "endpoint": "signNew",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signInV2?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signInV2_GET",
+      "endpoint": "signInV2",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signInV2",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signInV2_POST",
+      "endpoint": "signInV2",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signInNew?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signInNew_GET",
+      "endpoint": "signInNew",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signInNew",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signInNew_POST",
+      "endpoint": "signInNew",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/qrCodeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_qrCodeSign_GET",
+      "endpoint": "qrCodeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/qrCodeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_qrCodeSign_POST",
+      "endpoint": "qrCodeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/qrcodeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_qrcodeSign_GET",
+      "endpoint": "qrcodeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/qrcodeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_qrcodeSign_POST",
+      "endpoint": "qrcodeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/scanSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_scanSign_GET",
+      "endpoint": "scanSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/scanSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_scanSign_POST",
+      "endpoint": "scanSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/scanQrCode?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_scanQrCode_GET",
+      "endpoint": "scanQrCode",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/scanQrCode",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_scanQrCode_POST",
+      "endpoint": "scanQrCode",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/locationSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_locationSign_GET",
+      "endpoint": "locationSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/locationSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_locationSign_POST",
+      "endpoint": "locationSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/gestureSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_gestureSign_GET",
+      "endpoint": "gestureSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/gestureSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_gestureSign_POST",
+      "endpoint": "gestureSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/numberSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_numberSign_GET",
+      "endpoint": "numberSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/numberSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_numberSign_POST",
+      "endpoint": "numberSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByCode?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByCode_GET",
+      "endpoint": "signByCode",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByCode",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByCode_POST",
+      "endpoint": "signByCode",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByEnc?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByEnc_GET",
+      "endpoint": "signByEnc",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByEnc",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByEnc_POST",
+      "endpoint": "signByEnc",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByToken?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByToken_GET",
+      "endpoint": "signByToken",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signByToken",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signByToken_POST",
+      "endpoint": "signByToken",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignStuInfo?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignStuInfo_GET",
+      "endpoint": "getSignStuInfo",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignStuInfo",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignStuInfo_POST",
+      "endpoint": "getSignStuInfo",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getStuSignInfo?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getStuSignInfo_GET",
+      "endpoint": "getStuSignInfo",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getStuSignInfo",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getStuSignInfo_POST",
+      "endpoint": "getStuSignInfo",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignInfo?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignInfo_GET",
+      "endpoint": "stuSignInfo",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignInfo",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stuSignInfo_POST",
+      "endpoint": "stuSignInfo",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignStatus?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignStatus_GET",
+      "endpoint": "getSignStatus",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignStatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignStatus_POST",
+      "endpoint": "getSignStatus",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signStatus?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signStatus_GET",
+      "endpoint": "signStatus",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signStatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signStatus_POST",
+      "endpoint": "signStatus",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/checkSignStatus?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_checkSignStatus_GET",
+      "endpoint": "checkSignStatus",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/checkSignStatus",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_checkSignStatus_POST",
+      "endpoint": "checkSignStatus",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/activeSignList?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_activeSignList_GET",
+      "endpoint": "activeSignList",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/activeSignList",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_activeSignList_POST",
+      "endpoint": "activeSignList",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signList?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signList_GET",
+      "endpoint": "signList",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signList",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_signList_POST",
+      "endpoint": "signList",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignList?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignList_GET",
+      "endpoint": "getSignList",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignList",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getSignList_POST",
+      "endpoint": "getSignList",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getActiveSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getActiveSign_GET",
+      "endpoint": "getActiveSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getActiveSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_getActiveSign_POST",
+      "endpoint": "getActiveSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/activeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_activeSign_GET",
+      "endpoint": "activeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/activeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_activeSign_POST",
+      "endpoint": "activeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/startSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_startSign_GET",
+      "endpoint": "startSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/startSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_startSign_POST",
+      "endpoint": "startSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/endSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_endSign_GET",
+      "endpoint": "endSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/endSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_endSign_POST",
+      "endpoint": "endSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stopSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stopSign_GET",
+      "endpoint": "stopSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stopSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_stopSign_POST",
+      "endpoint": "stopSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/cancelSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_cancelSign_GET",
+      "endpoint": "cancelSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/cancelSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_cancelSign_POST",
+      "endpoint": "cancelSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/deleteSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_deleteSign_GET",
+      "endpoint": "deleteSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/deleteSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_deleteSign_POST",
+      "endpoint": "deleteSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/removeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_removeSign_GET",
+      "endpoint": "removeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/removeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_removeSign_POST",
+      "endpoint": "removeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/createSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_createSign_GET",
+      "endpoint": "createSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/createSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_createSign_POST",
+      "endpoint": "createSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/addSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_addSign_GET",
+      "endpoint": "addSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/addSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_addSign_POST",
+      "endpoint": "addSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/saveSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_saveSign_GET",
+      "endpoint": "saveSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/saveSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_saveSign_POST",
+      "endpoint": "saveSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_updateSign_GET",
+      "endpoint": "updateSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/updateSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_updateSign_POST",
+      "endpoint": "updateSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/modifySign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_modifySign_GET",
+      "endpoint": "modifySign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/modifySign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_modifySign_POST",
+      "endpoint": "modifySign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/changeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_changeSign_GET",
+      "endpoint": "changeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/changeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_changeSign_POST",
+      "endpoint": "changeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/batchSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_batchSign_GET",
+      "endpoint": "batchSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/batchSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_batchSign_POST",
+      "endpoint": "batchSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/quickSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_quickSign_GET",
+      "endpoint": "quickSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/quickSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_quickSign_POST",
+      "endpoint": "quickSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/autoSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_autoSign_GET",
+      "endpoint": "autoSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/autoSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_autoSign_POST",
+      "endpoint": "autoSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/manualSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_manualSign_GET",
+      "endpoint": "manualSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/manualSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_manualSign_POST",
+      "endpoint": "manualSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/makeupSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_makeupSign_GET",
+      "endpoint": "makeupSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/makeupSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_makeupSign_POST",
+      "endpoint": "makeupSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/lateSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_lateSign_GET",
+      "endpoint": "lateSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/lateSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_lateSign_POST",
+      "endpoint": "lateSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/leaveSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_leaveSign_GET",
+      "endpoint": "leaveSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/leaveSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_leaveSign_POST",
+      "endpoint": "leaveSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/absentSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_absentSign_GET",
+      "endpoint": "absentSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/absentSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_absentSign_POST",
+      "endpoint": "absentSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/presentSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_presentSign_GET",
+      "endpoint": "presentSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/presentSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_presentSign_POST",
+      "endpoint": "presentSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/normalSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_normalSign_GET",
+      "endpoint": "normalSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/normalSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_normalSign_POST",
+      "endpoint": "normalSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/codeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_codeSign_GET",
+      "endpoint": "codeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/codeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_codeSign_POST",
+      "endpoint": "codeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/passwordSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_passwordSign_GET",
+      "endpoint": "passwordSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/passwordSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_passwordSign_POST",
+      "endpoint": "passwordSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/faceSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_faceSign_GET",
+      "endpoint": "faceSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/faceSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_faceSign_POST",
+      "endpoint": "faceSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/fingerprintSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_fingerprintSign_GET",
+      "endpoint": "fingerprintSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/fingerprintSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_fingerprintSign_POST",
+      "endpoint": "fingerprintSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/wifiSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_wifiSign_GET",
+      "endpoint": "wifiSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/wifiSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_wifiSign_POST",
+      "endpoint": "wifiSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/bleSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_bleSign_GET",
+      "endpoint": "bleSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/bleSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_bleSign_POST",
+      "endpoint": "bleSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/nfcSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_nfcSign_GET",
+      "endpoint": "nfcSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/nfcSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_nfcSign_POST",
+      "endpoint": "nfcSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/lbsSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_lbsSign_GET",
+      "endpoint": "lbsSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/lbsSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_lbsSign_POST",
+      "endpoint": "lbsSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/gpsSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_gpsSign_GET",
+      "endpoint": "gpsSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/gpsSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_gpsSign_POST",
+      "endpoint": "gpsSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/mapSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_mapSign_GET",
+      "endpoint": "mapSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/mapSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_mapSign_POST",
+      "endpoint": "mapSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/geoSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_geoSign_GET",
+      "endpoint": "geoSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/geoSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_geoSign_POST",
+      "endpoint": "geoSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/distanceSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_distanceSign_GET",
+      "endpoint": "distanceSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/distanceSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_distanceSign_POST",
+      "endpoint": "distanceSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/rangeSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_rangeSign_GET",
+      "endpoint": "rangeSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/rangeSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_rangeSign_POST",
+      "endpoint": "rangeSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/areaSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_areaSign_GET",
+      "endpoint": "areaSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/areaSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_areaSign_POST",
+      "endpoint": "areaSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/zoneSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_zoneSign_GET",
+      "endpoint": "zoneSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/zoneSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_zoneSign_POST",
+      "endpoint": "zoneSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/regionSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_regionSign_GET",
+      "endpoint": "regionSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/regionSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_regionSign_POST",
+      "endpoint": "regionSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/nearbySign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_nearbySign_GET",
+      "endpoint": "nearbySign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/nearbySign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_nearbySign_POST",
+      "endpoint": "nearbySign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/proximitySign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_proximitySign_GET",
+      "endpoint": "proximitySign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/proximitySign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_proximitySign_POST",
+      "endpoint": "proximitySign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/beaconSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_beaconSign_GET",
+      "endpoint": "beaconSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/beaconSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_beaconSign_POST",
+      "endpoint": "beaconSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/ibeaconSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_ibeaconSign_GET",
+      "endpoint": "ibeaconSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/ibeaconSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_ibeaconSign_POST",
+      "endpoint": "ibeaconSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/eddystoneSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_eddystoneSign_GET",
+      "endpoint": "eddystoneSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/eddystoneSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_eddystoneSign_POST",
+      "endpoint": "eddystoneSign",
+      "method": "POST"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/altBeaconSign?activeId=0&uid=431407443&courseId=257485372&classId=132821141",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_altBeaconSign_GET",
+      "endpoint": "altBeaconSign",
+      "method": "GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/altBeaconSign",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "explore_altBeaconSign_POST",
+      "endpoint": "altBeaconSign",
+      "method": "POST"
+    }
+  ],
+  "found_endpoints": [
+    {
+      "endpoint": "stuSignAjaxNew",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignAjaxNew",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignajaxNew",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignajaxNew",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignNew",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignNew",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignV2",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignV2",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signV2",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signV2",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signNew",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signNew",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signInV2",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signInV2",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signInNew",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signInNew",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "qrCodeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "qrCodeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "qrcodeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "qrcodeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "scanSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "scanSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "scanQrCode",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "scanQrCode",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "locationSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "locationSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "gestureSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "gestureSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "numberSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "numberSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByCode",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByCode",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByEnc",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByEnc",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByToken",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signByToken",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignStuInfo",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignStuInfo",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getStuSignInfo",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getStuSignInfo",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignInfo",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stuSignInfo",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignStatus",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignStatus",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signStatus",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signStatus",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "checkSignStatus",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "checkSignStatus",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "activeSignList",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "activeSignList",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signList",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "signList",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignList",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getSignList",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getActiveSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "getActiveSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "activeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "activeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "startSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "startSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "endSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "endSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stopSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "stopSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "cancelSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "cancelSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "deleteSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "deleteSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "removeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "removeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "createSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "createSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "addSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "addSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "saveSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "saveSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "updateSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "updateSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "modifySign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "modifySign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "changeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "changeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "batchSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "batchSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "quickSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "quickSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "autoSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "autoSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "manualSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "manualSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "makeupSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "makeupSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "lateSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "lateSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "leaveSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "leaveSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "absentSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "absentSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "presentSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "presentSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "normalSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "normalSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "codeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "codeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "passwordSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "passwordSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "faceSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "faceSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "fingerprintSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "fingerprintSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "wifiSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "wifiSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "bleSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "bleSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "nfcSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "nfcSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "lbsSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "lbsSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "gpsSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "gpsSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "mapSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "mapSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "geoSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "geoSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "distanceSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "distanceSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "rangeSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "rangeSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "areaSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "areaSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "zoneSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "zoneSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "regionSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "regionSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "nearbySign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "nearbySign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "proximitySign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "proximitySign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "beaconSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "beaconSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "ibeaconSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "ibeaconSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "eddystoneSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "eddystoneSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "altBeaconSign",
+      "method": "GET",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "endpoint": "altBeaconSign",
+      "method": "POST",
+      "status": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"
+    }
+  ],
+  "distance_tests": [
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9042&longitude=116.4074&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门广场"
+      },
+      "coord_desc": "天安门广场",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9082&longitude=116.3974&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E8%A5%BF%E4%BE%A7%E7%BA%A61km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9082",
+        "longitude": "116.3974",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门西侧约1km"
+      },
+      "coord_desc": "天安门西侧约1km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9142&longitude=116.4074&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%8C%97%E4%BE%A7%E7%BA%A61.1km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9142",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门北侧约1.1km"
+      },
+      "coord_desc": "天安门北侧约1.1km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9042&longitude=116.4174&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E4%B8%9C%E4%BE%A7%E7%BA%A61km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.4174",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门东侧约1km"
+      },
+      "coord_desc": "天安门东侧约1km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.8942&longitude=116.4074&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%8D%97%E4%BE%A7%E7%BA%A61.1km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.8942",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门南侧约1.1km"
+      },
+      "coord_desc": "天安门南侧约1.1km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9242&longitude=116.4074&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%8C%97%E4%BE%A7%E7%BA%A62.2km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9242",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门北侧约2.2km"
+      },
+      "coord_desc": "天安门北侧约2.2km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9042&longitude=116.4274&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E4%B8%9C%E4%BE%A7%E7%BA%A62km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.4274",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门东侧约2km"
+      },
+      "coord_desc": "天安门东侧约2km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.8842&longitude=116.4074&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%8D%97%E4%BE%A7%E7%BA%A62.2km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.8842",
+        "longitude": "116.4074",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门南侧约2.2km"
+      },
+      "coord_desc": "天安门南侧约2.2km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=39.9042&longitude=116.3874&appType=15&fid=0&address=%E5%A4%A9%E5%AE%89%E9%97%A8%E8%A5%BF%E4%BE%A7%E7%BA%A62km",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "39.9042",
+        "longitude": "116.3874",
+        "appType": "15",
+        "fid": "0",
+        "address": "天安门西侧约2km"
+      },
+      "coord_desc": "天安门西侧约2km",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=31.2304&longitude=121.4737&appType=15&fid=0&address=%E4%B8%8A%E6%B5%B7%E5%A4%96%E6%BB%A9",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "31.2304",
+        "longitude": "121.4737",
+        "appType": "15",
+        "fid": "0",
+        "address": "上海外滩"
+      },
+      "coord_desc": "上海外滩",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=23.1291&longitude=113.2644&appType=15&fid=0&address=%E5%B9%BF%E5%B7%9E",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "23.1291",
+        "longitude": "113.2644",
+        "appType": "15",
+        "fid": "0",
+        "address": "广州"
+      },
+      "coord_desc": "广州",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=0&longitude=0&appType=15&fid=0&address=%E9%9B%B6%E5%9D%90%E6%A0%87",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "0",
+        "longitude": "0",
+        "appType": "15",
+        "fid": "0",
+        "address": "零坐标"
+      },
+      "coord_desc": "零坐标",
+      "distance_found": false
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=0&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&address=%E9%BB%98%E8%AE%A4-1%E5%9D%90%E6%A0%87",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "distance_test",
+      "params": {
+        "activeId": "0",
+        "uid": "431407443",
+        "clientip": "",
+        "latitude": "-1",
+        "longitude": "-1",
+        "appType": "15",
+        "fid": "0",
+        "address": "默认-1坐标"
+      },
+      "coord_desc": "默认-1坐标",
+      "distance_found": false
+    }
+  ],
+  "additional_tests": [
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/teacherSign?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_teacherSign_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signStudentList?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_signStudentList_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignInfo?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getSignInfo_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signDetail?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_signDetail_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/checkSign?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_checkSign_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getActiveInfo?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getActiveInfo_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/activeDetail?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_activeDetail_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignResult?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_stuSignResult_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signResult?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_signResult_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignResult?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getSignResult_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getqrstatus?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getqrstatus_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/qrstatus?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_qrstatus_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignConfig?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getSignConfig_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/signConfig?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_signConfig_GET"
+    },
+    {
+      "status_code": 500,
+      "url": "https://mobilelearn.chaoxing.com/pptSign/getSignRule?activeId=0&uid=431407443",
+      "text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "json": null,
+      "test": "additional_getSignRule_GET"
+    }
+  ]
+}

@@ -1,0 +1,3027 @@
+{
+  "meta": {
+    "timestamp": "2026-06-03 11:45:10",
+    "student_uid": "431407443",
+    "course_id": "257485372",
+    "class_id": "132821141",
+    "total_tests": 127,
+    "default_response": "success",
+    "activities_found": []
+  },
+  "results": [
+    {
+      "test_id": 1,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 2,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "COURSEID",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 3,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "CLASSID",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 4,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "ACTIVEID",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 5,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "NONE",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 6,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 7,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "RANDOM",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 8,
+      "category": "DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "SLAVE",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 9,
+      "category": "STRATEGY_PARA",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 10,
+      "category": "STRATEGY_PARA",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "courseId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 11,
+      "category": "STRATEGY_PARA",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "classId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 12,
+      "category": "STRATEGY_PARA",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "uid",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 13,
+      "category": "HTTP_METHOD",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 14,
+      "category": "HTTP_METHOD",
+      "method": "GET",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": null,
+      "content_type": null,
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 15,
+      "category": "HTTP_METHOD",
+      "method": "PUT",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true
+    },
+    {
+      "test_id": 16,
+      "category": "HTTP_METHOD",
+      "method": "DELETE",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": null,
+      "content_type": null,
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true
+    },
+    {
+      "test_id": 17,
+      "category": "HTTP_METHOD",
+      "method": "PATCH",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true
+    },
+    {
+      "test_id": 18,
+      "category": "CONTENT_TYPE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 19,
+      "category": "CONTENT_TYPE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "multipart/form-data",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 20,
+      "category": "CONTENT_TYPE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/json",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 21,
+      "category": "CONTENT_TYPE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "text/plain",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 22,
+      "category": "CONTENT_TYPE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "text/xml",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 23,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 24,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "1",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 25,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "2",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 26,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "3",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 27,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "4",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 28,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "5",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 29,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "6",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 30,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "-1",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 31,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "99",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 32,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "999",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 33,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "-999",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 34,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "abc",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 35,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "1.5",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 36,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "null",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 37,
+      "category": "STATUS_VALUE",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "undefined",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 38,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "single_uid"
+    },
+    {
+      "test_id": 39,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443,999999999",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "comma_separated"
+    },
+    {
+      "test_id": 40,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443,999999998,999999997,999999996",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "comma_many"
+    },
+    {
+      "test_id": 41,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "[\"431407443\"]",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "json_array"
+    },
+    {
+      "test_id": 42,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "[\"431407443\",\"999999999\"]",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "json_array_multi"
+    },
+    {
+      "test_id": 43,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "[431407443]",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "bracket_format"
+    },
+    {
+      "test_id": 44,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "empty_uids"
+    },
+    {
+      "test_id": 45,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": " ",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "space_uids"
+    },
+    {
+      "test_id": 46,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "null",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uids_label": "null_uids"
+    },
+    {
+      "test_id": 47,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "1 OR 1=1",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: d03a3f07b7ce4fd68b8a121ee53461b2 -->",
+      "differs_from_default": true,
+      "uids_label": "sql_injection"
+    },
+    {
+      "test_id": 48,
+      "category": "UIDS_FORMAT",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "<script>alert(1)</script>",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: ea2e60bfd0da4f46bc07835827ca16d0 -->",
+      "differs_from_default": true,
+      "uids_label": "xss_payload"
+    },
+    {
+      "test_id": 49,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "operateSource": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "operateSource"
+    },
+    {
+      "test_id": 50,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "sourceType": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "sourceType"
+    },
+    {
+      "test_id": 51,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "roletype": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "roletype"
+    },
+    {
+      "test_id": 52,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "role": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "role"
+    },
+    {
+      "test_id": 53,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "cpi": "520211407"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "cpi"
+    },
+    {
+      "test_id": 54,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "token": "test_token"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "token"
+    },
+    {
+      "test_id": 55,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "signType": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "signType"
+    },
+    {
+      "test_id": 56,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "fromSource": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "fromSource"
+    },
+    {
+      "test_id": 57,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "isStu": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "isStu"
+    },
+    {
+      "test_id": 58,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "studentId": "431407443"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "studentId"
+    },
+    {
+      "test_id": 59,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "stuId": "431407443"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "stuId"
+    },
+    {
+      "test_id": 60,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "JSESSIONID": "injected_session"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "JSESSIONID"
+    },
+    {
+      "test_id": 61,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "admin": "true"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "admin"
+    },
+    {
+      "test_id": 62,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "isAdmin": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "isAdmin"
+    },
+    {
+      "test_id": 63,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "isTeacher": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "isTeacher"
+    },
+    {
+      "test_id": 64,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "authority": "admin"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "authority"
+    },
+    {
+      "test_id": 65,
+      "category": "EXTRA_PARAM_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "permission": "all"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_param": "permission"
+    },
+    {
+      "test_id": 66,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "activity_info": {
+        "activeId": "1",
+        "type": "test_placeholder_1"
+      }
+    },
+    {
+      "test_id": 67,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "100"
+      },
+      "form_data": {
+        "activeId": "100",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "activity_info": {
+        "activeId": "100",
+        "type": "test_placeholder_100"
+      }
+    },
+    {
+      "test_id": 68,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1000"
+      },
+      "form_data": {
+        "activeId": "1000",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "activity_info": {
+        "activeId": "1000",
+        "type": "test_placeholder_1000"
+      }
+    },
+    {
+      "test_id": 69,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "0"
+      },
+      "form_data": {
+        "activeId": "0",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "activity_info": {
+        "activeId": "0",
+        "type": "zero"
+      }
+    },
+    {
+      "test_id": 70,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "-1"
+      },
+      "form_data": {
+        "activeId": "-1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "activity_info": {
+        "activeId": "-1",
+        "type": "negative"
+      }
+    },
+    {
+      "test_id": 71,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "999999999"
+      },
+      "form_data": {
+        "activeId": "999999999",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "activity_info": {
+        "activeId": "999999999",
+        "type": "large_nonexistent"
+      }
+    },
+    {
+      "test_id": 72,
+      "category": "DIFFERENT_ACTIVITY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "abc"
+      },
+      "form_data": {
+        "activeId": "abc",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "activity_info": {
+        "activeId": "abc",
+        "type": "non_numeric"
+      }
+    },
+    {
+      "test_id": 73,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "0",
+        "uids": "0",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "teacher_uid"
+    },
+    {
+      "test_id": 74,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "empty_uid"
+    },
+    {
+      "test_id": 75,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "999999999",
+        "uids": "999999999",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "different_student"
+    },
+    {
+      "test_id": 76,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "1",
+        "uids": "1",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_as_teacher_uid"
+    },
+    {
+      "test_id": 77,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "-1",
+        "uids": "-1",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_negative"
+    },
+    {
+      "test_id": 78,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "999999999999",
+        "uids": "999999999999",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_very_large"
+    },
+    {
+      "test_id": 79,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "abc",
+        "uids": "abc",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_non_numeric"
+    },
+    {
+      "test_id": 80,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "1 OR 1=1",
+        "uids": "1 OR 1=1",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: d5f9f83de60d4ad3824f0ea684ef68dd -->",
+      "differs_from_default": true,
+      "uid_label": "uid_sql_injection"
+    },
+    {
+      "test_id": 81,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "<script>alert(1)</script>",
+        "uids": "<script>alert(1)</script>",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: 0bba4ff24584421dba540b18e5504eec -->",
+      "differs_from_default": true,
+      "uid_label": "uid_xss"
+    },
+    {
+      "test_id": 82,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "257485372",
+        "uids": "257485372",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_same_as_courseid"
+    },
+    {
+      "test_id": 83,
+      "category": "UID_SUBSTITUTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "132821141",
+        "uids": "132821141",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "uid_label": "uid_same_as_classid"
+    },
+    {
+      "test_id": 84,
+      "category": "NO_DB_STRATEGY",
+      "method": "POST",
+      "url_params": {
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 85,
+      "category": "NO_URL_PARAMS",
+      "method": "POST",
+      "url_params": {},
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 86,
+      "category": "NO_STRATEGY_PARA",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 87,
+      "category": "ONLY_ACTIVEID_IN_URL",
+      "method": "POST",
+      "url_params": {
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 88,
+      "category": "DB_STRATEGY_EMPTY_STR",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "",
+        "STRATEGY_PARA": "",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 89,
+      "category": "PARAM_LOCATION_ALL_URL",
+      "method": "GET",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "form_data": null,
+      "content_type": null,
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 90,
+      "category": "PARAM_LOCATION_ALL_BODY",
+      "method": "POST",
+      "url_params": {},
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "",
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 91,
+      "category": "MISSING_ACTIVEID",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 92,
+      "category": "MISSING_CLASSID",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 93,
+      "category": "MISSING_COURSEID",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 94,
+      "category": "MISSING_UID",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 95,
+      "category": "MISSING_UIDS",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 96,
+      "category": "MISSING_STATUS",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 97,
+      "category": "MISSING_ALL_OPTIONAL",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 98,
+      "category": "EMPTY_BODY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {},
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 99,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1' OR '1'='1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_sqli",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 100,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1; DROP TABLE users--",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_sqli2",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 101,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1 UNION SELECT * FROM users",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_sqli3",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 102,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372' OR '1'='1",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: 0b74841dfdc841bbb0fcf160306901e7 -->",
+      "differs_from_default": true,
+      "injection_label": "courseId_sqli",
+      "injected_param": "courseId"
+    },
+    {
+      "test_id": 103,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141' OR '1'='1",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: 2290c49c09184deaae8e4ddd9d3efb08 -->",
+      "differs_from_default": true,
+      "injection_label": "classId_sqli",
+      "injected_param": "classId"
+    },
+    {
+      "test_id": 104,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "'; DROP TABLE sign;--"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: 9035ced17f0d4ce8b02452d417440977 -->",
+      "differs_from_default": true,
+      "injection_label": "remark_sqli",
+      "injected_param": "remark"
+    },
+    {
+      "test_id": 105,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": "<script>document.cookie</script>"
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 403,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n<!-- event_id: 045456db470a47a6ad981773d4a93675 -->",
+      "differs_from_default": true,
+      "injection_label": "remark_xss",
+      "injected_param": "remark"
+    },
+    {
+      "test_id": 106,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "../../../etc/passwd",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_path_traversal",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 107,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "%s%s%s%s%s",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_format_string",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 108,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1%00",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_null_byte",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 109,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1\u0000",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injection_label": "activeId_unicode",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 110,
+      "category": "INJECTION_TEST",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "injection_label": "activeId_very_long",
+      "injected_param": "activeId"
+    },
+    {
+      "test_id": 111,
+      "category": "AID_MISMATCH",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "999999"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "url_activeId": "999999",
+      "body_activeId": "1"
+    },
+    {
+      "test_id": 112,
+      "category": "AID_MISMATCH",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": ""
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "url_activeId": "",
+      "body_activeId": "1"
+    },
+    {
+      "test_id": 113,
+      "category": "AID_MISMATCH",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 500,
+      "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+      "differs_from_default": true,
+      "url_activeId": "1",
+      "body_activeId": ""
+    },
+    {
+      "test_id": 114,
+      "category": "AID_MISMATCH",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "-1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "url_activeId": "-1",
+      "body_activeId": "1"
+    },
+    {
+      "test_id": 115,
+      "category": "DUPLICATE_PARAMS_URL_BODY",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1",
+        "uid": "999999999",
+        "status": "99"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false
+    },
+    {
+      "test_id": 116,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "X-Forwarded-For",
+      "header_value": "127.0.0.1"
+    },
+    {
+      "test_id": 117,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "X-Real-IP",
+      "header_value": "127.0.0.1"
+    },
+    {
+      "test_id": 118,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "X-Original-URL",
+      "header_value": "/newsign/updateSignStatus"
+    },
+    {
+      "test_id": 119,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "X-Rewrite-URL",
+      "header_value": "/newsign/updateSignStatus"
+    },
+    {
+      "test_id": 120,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "Referer",
+      "header_value": "https://mooc1.chaoxing.com/"
+    },
+    {
+      "test_id": 121,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "Origin",
+      "header_value": "https://mooc1.chaoxing.com"
+    },
+    {
+      "test_id": 122,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "Cookie",
+      "header_value": "admin=true"
+    },
+    {
+      "test_id": 123,
+      "category": "HEADER_INJECTION",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "remark": ""
+      },
+      "content_type": "application/x-www-form-urlencoded",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "injected_header": "Authorization",
+      "header_value": "Bearer test_token"
+    },
+    {
+      "test_id": 124,
+      "category": "JSON_BODY_SPECIAL",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": "0",
+        "extra": {
+          "role": "admin",
+          "authority": "all"
+        }
+      },
+      "content_type": "application/json",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "json_label": "nested_json"
+    },
+    {
+      "test_id": 125,
+      "category": "JSON_BODY_SPECIAL",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": [
+          "431407443",
+          "999999999"
+        ],
+        "status": "0"
+      },
+      "content_type": "application/json",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "json_label": "json_with_array_uids"
+    },
+    {
+      "test_id": 126,
+      "category": "JSON_BODY_SPECIAL",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": null,
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": null
+      },
+      "content_type": "application/json",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "json_label": "json_with_null_values"
+    },
+    {
+      "test_id": 127,
+      "category": "JSON_BODY_SPECIAL",
+      "method": "POST",
+      "url_params": {
+        "DB_STRATEGY": "PRIMARY_KEY",
+        "STRATEGY_PARA": "activeId",
+        "activeId": "1"
+      },
+      "form_data": {
+        "activeId": "1",
+        "classId": "132821141",
+        "courseId": "257485372",
+        "uid": "431407443",
+        "uids": "431407443",
+        "status": true,
+        "isAdmin": true
+      },
+      "content_type": "application/json",
+      "status_code": 200,
+      "response": "success",
+      "differs_from_default": false,
+      "json_label": "json_with_bool_values"
+    }
+  ]
+}

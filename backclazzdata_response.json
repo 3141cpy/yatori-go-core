@@ -1,0 +1,101 @@
+{
+  "result": 1,
+  "msg": "获取成功",
+  "channelList": [
+    {
+      "cfid": -1,
+      "norder": 5,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 520211407,
+      "key": 145110605,
+      "content": {
+        "studentcount": 17,
+        "chatid": "311140036968453",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 0,
+        "name": "默认班级",
+        "course": {
+          "data": [
+            {
+              "createtime": 1776124662000,
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "0",
+              "coursestate": 0,
+              "teacherfactor": "刘俊琦",
+              "isCourseSquare": 0,
+              "schools": "",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=262934472&personId=520211407&classId=145110605&userId=431407443",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/3a7c4e2929905646967168696f78ff01.png",
+              "name": "好好学习，天天向上",
+              "id": 262934472
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 145110605,
+        "state": 0,
+        "cpi": 520211407,
+        "bbsid": "33c1b6ed43e91f4faaea31b6f809c534",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 4,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 520211407,
+      "key": 132821141,
+      "content": {
+        "studentcount": 1,
+        "chatid": "296136586887169",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "exam",
+        "course": {
+          "data": [
+            {
+              "createtime": 1761816180000,
+              "defaultShowCatalog": 0,
+              "sectionId": 36713,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "22757",
+              "coursestate": 0,
+              "teacherfactor": "陈鹏宇",
+              "isCourseSquare": 0,
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=257485372&personId=520211407&classId=132821141&userId=431407443",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/3a7c4e2929905646967168696f78ff01.png",
+              "name": "111",
+              "id": 257485372
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 132821141,
+        "state": 0,
+        "cpi": 520211407,
+        "bbsid": "74e2e556820bd3534701ded6cce5827b",
+        "isSquare": 0
+      },
+      "topsign": 0
+    }
+  ],
+  "mcode": "-1",
+  "createcourse": 1,
+  "teacherEndCourse": 0,
+  "showEndCourse": 0,
+  "hasMore": false,
+  "stuEndCourse": 0
+}
