@@ -1,0 +1,27 @@
+# 学习通签到状态修改 - curl验证命令
+
+## 替换说明:
+# ACTIVE_ID = 5000163891319
+# STUDENT_UID = 431407443
+# COURSE_ID = 257485372
+# CLASS_ID = 132821141
+
+## 1. newsign/updateSignStatus (POST)
+curl -X POST 'https://mobilelearn.chaoxing.com/newsign/updateSignStatus?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId=5000163891319' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Referer: https://mobilelearn.chaoxing.com/' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  -b '你的Cookie' \
+  -d 'uids=431407443&status=1&remark=&activeId=5000163891319&classId=132821141&courseId=257485372&uid=431407443'
+
+## 2. pptSign/stuSignajax (POST)
+curl -X POST 'https://mobilelearn.chaoxing.com/pptSign/stuSignajax' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Referer: https://mobilelearn.chaoxing.com/' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  -b '你的Cookie' \
+  -d 'activeId=5000163891319&uid=431407443&clientip=&latitude=-1&longitude=-1&appType=15&fid=0'
+
+## 3. 查询签到状态
+curl 'https://mobilelearn.chaoxing.com/v2/apis/sign/signIn?activeId=5000163891319&uid=431407443' \
+  -b '你的Cookie'

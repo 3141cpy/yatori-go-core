@@ -1,10 +1,10 @@
-- [ ] 多UA测试脚本覆盖5种以上UA（移动端App含schild、移动端Web、PC端Chrome、微信内嵌、iPad）
-- [ ] /newsign/updateSignStatus 在每种UA下均测试，并用V2 signIn查询验证数据是否真正变化
-- [ ] /pptSign/updateSignStatus、/pptSign/updateSignStatusByUidsV2 在每种UA下均测试
-- [ ] /pptSign/stuSignajax 带status参数在每种UA下均测试
-- [ ] 不同Content-Type（json、form-data、urlencoded）均测试
-- [ ] 学生端完整签到流程模拟（preSign→stuSignajax→updateqrstatus）
-- [ ] 其他域名（mooc1-api、learn.chaoxing.com）+不同UA组合测试
-- [ ] 参数名变体（signStatus、resultStatus、type等）测试
-- [ ] 所有返回"success"或非错误响应的测试项已标记
-- [ ] 生成用户可自行验证的curl命令列表
+- [x] 多UA测试脚本覆盖10种UA（移动端App含schild x4版本、移动端Web、PC端Chrome/Edge、微信内嵌、iPad、iPhone Web）
+- [x] /newsign/updateSignStatus 在每种UA下均测试，并用V2 signIn查询验证数据是否真正变化（结论：所有UA下均为假success）
+- [x] /pptSign/updateSignStatus、/pptSign/updateSignStatusByUidsV2 在每种UA下均测试
+- [x] /pptSign/stuSignajax 带status参数在每种UA下均测试
+- [x] 不同Content-Type（json、form-data、urlencoded）均测试
+- [x] 学生端完整签到流程模拟（preSign→stuSignajax→updateqrstatus），发现JS逆向关键参数（ifTiJiao、validate、deviceCode）
+- [x] 其他域名（mooc1-api、learn.chaoxing.com、office.chaoxing.com）+不同UA组合测试
+- [x] 参数名变体（signStatus、resultStatus、type等10+种变体）测试
+- [x] 所有返回"success"或非错误响应的测试项已标记
+- [x] 生成用户可自行验证的curl命令列表（/workspace/final_curl_commands.txt 和 /workspace/final_findings_report.md）

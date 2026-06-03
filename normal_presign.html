@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/css/reset.min.css?v=1780480565513" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/css/signResult.css?v=1780480565513" type="text/css" rel="stylesheet"/>
+
+    <script src="/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/jquery.min.js?v=1780480565513" type="text/javascript"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/vue.js?v=1780480565513" type="text/javascript"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/common.js?v=1780480565513" charset="utf-8"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/CXJSBridge.js?v=1780480565513" charset="utf-8"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/app.utils.js?v=1780480565513" charset="utf-8"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/ratio.js?v=1780480565513"></script>
+    
+    <!-- 页面国际化配置文件-->
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/widget/readproperties.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/en_US.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/zh_TW.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/zh_CN.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/th_TH.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/lo_LA.js?v=1780480565513"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/xinfanya/js/language/vue-i18n.js?v=1780480565513"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div class="sign-top">
+        <i v-show="signOutId() || getTeaUpdateFlag(signInAttend())" class="icon-com" :class="isStatus(signInAttend().status)['icon']"></i>
+        <span class="sign-status-text" v-show="signOutId() || getTeaUpdateFlag(signInAttend())">{{isStatus(signInAttend().status)['text']}}</span>
+        <span class="tea-update-status-tips" v-if="getTeaUpdateFlag(signInAttend())">
+            {{$t('language.teaUpdateSignStatusTips')}}
+        </span><!--老师已修改你的签到状态-->
+    </div>
+
+    <div class="sign-com" :class="'sign-' + isStatus(primaryAttend.status)['icon']">
+        <div class="sign-title flex-between">
+            <div class="sign-name flex-center">
+                <i class="icon-com sign"></i>
+                <span>{{$t('language.checkin')}}</span>
+            </div>
+            <div class="sign-status flex-center">
+                <i class="icon-com" :class="isStatus(primaryAttend.status)['icon']"></i>
+                <span :class="isStatus(primaryAttend.status)['color']">{{isStatus(primaryAttend.status)['text']}}</span>
+            </div>
+        </div>
+        <div class="time-com flex-start" 
+             v-if="primaryAttend.status > 0"
+             :class="isStatus(primaryAttend.status)['icon'] == 'warning' ? 'warning' : 'normal'">
+            <i class="icon-com time"></i>
+            <span>{{dealTimeStr(primaryAttend.submittime ? primaryAttend.submittime : primaryAttend.updatetime, null, "minute")}}</span>
+        </div>
+        <div class="place-com flex-start" v-if="showLocationFlag() && primaryAttend.status > 0">
+            <i class="icon-com place"></i>
+            <span>{{primaryAttend.title ? primaryAttend.title : $t('language.locationInformationNotObtained')}}</span>
+        </div>
+        <div class="picture-com" v-if="showPhotoFlag() && primaryAttend.title">
+            <img :src="picDomainWithProtocol + '/star3/312_412c/' + primaryAttend.title + '.jpg'"
+                 v-on:click="showImage(primaryAttend.title)"
+                 alt="">
+        </div>
+    </div>
+
+    <div class="sign-com" :class="'sign-' + isStatus(signOutAttend().status)['icon']">
+        <div class="sign-title flex-between">
+            <div class="sign-name flex-center">
+                <i class="icon-com sign-back"></i>
+                <span>{{$t('language.signOut')}}</span>
+            </div>
+            <div class="sign-status flex-center">
+                <i class="icon-com" :class="isStatus(signOutAttend().status)['icon']"></i>
+                <span :class="isStatus(signOutAttend().status)['color']">
+                    {{signOutId() ? isStatus(signOutAttend().status)['text'] : $t('language.notStarted')}}
+                </span>
+            </div>
+        </div>
+        <div class="time-com flex-start"
+             v-if="signOutAttend().status > 0"
+             :class="isStatus(signOutAttend().status)['icon'] == 'warning' ? 'warning' : 'normal'">
+            <i class="icon-com time"></i>
+            <span>{{dealTimeStr(signOutAttend().submittime ? signOutAttend().submittime : signOutAttend().updatetime, null, "minute")}}</span>
+        </div>
+        <div class="place-com flex-start" v-if="showLocationFlag() && signOutAttend().status > 0">
+            <i class="icon-com place"></i>
+            <span>{{signOutAttend().title ? signOutAttend().title : $t('language.locationInformationNotObtained')}}</span>
+        </div>
+        <div class="picture-com" v-if="showPhotoFlag() && signOutAttend().title">
+            <img :src="picDomainWithProtocol + '/star3/312_412c/' + signOutAttend().title + '.jpg'"
+                 v-on:click="showImage(signOutAttend().title)"
+                 alt="">
+        </div>
+    </div>
+</div>
+<script>
+    var messages = {
+        zh_CN: {language: zhLanguage},
+        en_US: {language: enLanguage},
+        th_TH: {language: thLanguage},
+        zh_TW: {language: zhTWLanguage},
+        lo_LA: {language: loLanguage}
+    }
+
+    var i18n = new VueI18n({
+        locale: languageCookieFuc("browserLocale"), // 语言标识
+        messages: messages
+    })
+    
+    var vm = new Vue({
+        el: '#app',
+        i18n: i18n,
+        data() {
+            return {
+                picDomainWithProtocol: "https://p.cldisk.com",
+                xxtVersion: "6070200",
+                
+                active: {"ifPhoto":1,"ifRefreshEwm":0,"viewPicPath":"https://mobilelearn.chaoxing.com/front/mobile/common/images/teachingPlan/ppt_qd.png","source":15,"chartId":"296136586887169","activeSort":31,"id":5000163958796,"isResult":0,"createUid":"402644510","createxxuid":"402644510","activeType":74,"name":"普通签到-签退","status":1,"configJson":"{\"sendToOtherClassList\":\"\",\"ifSendToOtherClass\":0}","timeLong":600000,"content":"{\"locationLongitude_gd\":\"\",\"ifNeedVCode\":1,\"locationLatitude\":\"\",\"openSignOutFlag\":1,\"ifopenAddress\":0,\"openCheckWeChatFlag\":1,\"openCheckFaceFlag\":0,\"lateMinute\":0,\"signInId\":5000163954182,\"locationLongitude\":\"\",\"locationLatitude_gd\":\"\",\"signOutAbsoluteTime\":1780480800000,\"signOutDuration\":600000}","pptPlanId":5000006136437,"startTime":1780480801000,"isClone":1,"otherId":0,"isDelete":0,"setEndTimeNull":0,"pptnum":0,"parentId":5000163958795,"createTime":1780480801000,"clazzId":132821141,"endTime":1780481401000},
+                activeConfig: {},
+                attend: {"ismark":0,"xxuid":"0","groupId":0,"activeId":5000163958796,"type":0,"content":"","isshow":0,"score":0.0,"uid":431407443,"id":5001371557572,"tag":"{\"teaUpdateFlag\": 1}","submittime":"2026-06-03 18:04:09","createtime":1780481049000,"vpProbabilityFromJson":0,"sasort":1780481049250,"taskavg":0.0,"name":"3141cpy","extraJson":{},"isdelete":0,"updatetime":1780481057000,"islook":1,"status":1,"username":""},
+                otherAttend: {"ismark":0,"xxuid":"0","groupId":0,"activeId":5000163954182,"type":0,"content":"","isshow":0,"score":0.0,"uid":431407443,"id":5001371554290,"tag":"{\"teaUpdateFlag\": 1}","submittime":"2026-06-03 18:01:24","createtime":1780480885000,"vpProbabilityFromJson":0,"sasort":1780480884892,"taskavg":0.0,"name":"3141cpy","extraJson":{},"isdelete":0,"updatetime":1780480889000,"islook":1,"status":1,"username":""},
+                primaryAttend: {"ismark":0,"xxuid":"0","groupId":0,"activeId":5000163954182,"type":0,"content":"","isshow":0,"score":0.0,"uid":431407443,"id":5001371554290,"tag":"{\"teaUpdateFlag\": 1}","createtime":1780480885000,"vpProbabilityFromJson":0,"sasort":1780480884892,"taskavg":0.0,"name":"3141cpy","extraJson":{},"isdelete":0,"updatetime":1780480889000,"islook":1,"status":0,"username":""},
+            }
+        },
+        created() {
+            var that = this;
+            that.initActiveConfig();
+        },
+        mounted: function () {
+            
+        },
+        computed:{
+            signInAttend: function () {
+                return function () {
+                    var that = this;
+                    if (that.active.activeType == 2) {
+                        return that.attend;
+                    } else {
+                        return that.otherAttend;
+                    }
+                }
+            },
+
+            signOutAttend: function () {
+                return function () {
+                    var that = this;
+                    if (that.active.activeType == 74) {
+                        return that.attend;
+                    } else {
+                        return that.otherAttend;
+                    }
+                }
+            },
+            
+            showLocationFlag: function () {
+                return function () {
+                    var that = this;
+                    if (!that.active) {
+                        return false;
+                    }
+                    return that.active.otherId == 4 || (that.active.otherId == 2 && that.activeConfig.ifopenAddress == 1);
+                }
+            },
+            
+            showPhotoFlag: function () {
+                return function () {
+                    var that = this;
+                    if (!that.active) {
+                        return false;
+                    }
+                    return that.active.otherId == 0 && that.active.ifPhoto == 1
+                }
+            },
+            
+            signOutId() {
+                return function () {
+                    var that = this;
+                    if (!that.active) {
+                        return 0;
+                    }
+                    if (that.active.activeType == 2) {
+                        return that.activeConfig.signOutId;
+                    } else {
+                        return that.active.id;
+                    }
+                }
+            }
+        },
+        methods: {
+            getUrlParam,
+            isStatus(status) {
+                var that = this;
+                if (status == 0) {//"未签"
+                    return {
+                        text: that.$t('language.unsign'),
+                        icon: 'normal',
+                        color: 'gray'
+                    }
+                } else if (status == 1) {//"已签"
+                    return {
+                        text: that.$t('language.signed'),
+                        icon: 'success',
+                        color: 'green'
+                    }
+                } else if (status == 2) {//"教师代签";
+                    return {
+                        text: that.$t('language.signedbyteacher1'),
+                        icon: 'success',
+                        color: 'green'
+                    }
+                } else if (status == 3) {//"补签";
+                    return {
+                        text: that.$t('language.Makeupcheck'),
+                        icon: 'success',
+                        color: 'green'
+                    }
+                } else if (status == 4) {//"请假";
+                    return {
+                        text: that.$t('language.PersonalLeave2'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                } else if (status == 5) {//"缺勤";
+                    return {
+                        text: that.$t('language.Absence'),
+                        icon: 'error',
+                        color: 'red'
+                    }
+                } else if (status == 7) {//"病假";
+                    return {
+                        text: that.$t('language.SickLeave'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                } else if (status == 8) {//"事假";
+                    return {
+                        text: that.$t('language.PersonalLeave'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                } else if (status == 9) {//"迟到";
+                    return {
+                        text: that.$t('language.Late'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                } else if (status == 10) {//"早退";
+                    return {
+                        text: that.$t('language.LeaveEarly'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                } else if (status == 11) {//"签到已过期";
+                    return {
+                        text: that.$t('language.SignExpire'),
+                        icon: 'normal',
+                        color: 'gray'
+                    }
+                } else if (status == 12) {//"公假";
+                    return {
+                        text: that.$t('language.PublicLeave'),
+                        icon: 'warning',
+                        color: 'yellow'
+                    }
+                }
+                return {};
+            },
+
+            dealTimeStr: function (time, status, limit) {
+                if (status == 0) {
+                    return "";
+                }
+                return dealDisplayTime(time, limit);
+            },
+
+            showImage: function (objId) {
+                var that = this;
+                var imgsArray = [];
+                var star = that.picDomainWithProtocol + "/star3/720_100000/";
+                var origin = that.picDomainWithProtocol + "/star3/origin/";
+                var img = {"imageUrl": star + objId, "originUrl": origin + objId};
+                imgsArray.push(img);
+                var data = {showIndex: 0, imageUrls: imgsArray};
+                jsBridge.postNotification('CLIENT_PREVIEW_IMAGES', data);
+            },
+
+            initActiveConfig: function () {
+                var that = this;
+                if (typeof that.active == 'undefined') {
+                    return;
+                }
+                if (!that.active || !that.active.content) {
+                    return;
+                }
+                var content = {};
+                try {
+                    content = JSON.parse(that.active.content);   
+                } catch (e) {
+                    console.error(e)
+                }
+                that.activeConfig = content;
+            },
+
+            getTeaUpdateFlag(attend) {
+                if (typeof attend == "undefined" || !attend || !attend.tag) {
+                    return false;
+                }
+                var tagJson;
+                try {
+                    tagJson = JSON.parse(attend.tag);
+                } catch (e) {
+                    console.error(e);
+                    return false;
+                }
+                return tagJson.teaUpdateFlag == 1;
+            },
+        }
+    })
+</script>
+</body>
+</html>

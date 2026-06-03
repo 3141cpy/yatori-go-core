@@ -1,0 +1,852 @@
+[
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.5.0",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_6.3.0",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileApp_5.5.0",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "MobileWeb",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "PC_Edge",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "WeChat",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPad",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "newsign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "pptSign/updateSignStatus",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "无权限",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "pptSign/updateSignStatusByUidsV2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "{\"state\":\"无权限\"}",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "stuSignajax(标准)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "stuSignajax(status=1)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase1",
+    "ua": "iPhone_Web",
+    "api": "stuSignajax(位置)",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase2",
+    "ua": "MobileApp",
+    "api": "newsign/json格式",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase2",
+    "ua": "MobileApp",
+    "api": "newsign/multipart格式",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase2",
+    "ua": "MobileApp",
+    "api": "newsign/GET方式",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": ""
+  },
+  {
+    "tag": "phase2",
+    "ua": "MobileApp",
+    "api": "newsign/PUT方法",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</cen",
+    "extra": ""
+  },
+  {
+    "tag": "phase2",
+    "ua": "MobileApp",
+    "api": "stuSignajax/multipart",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</cen",
+    "extra": ""
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体1",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'signStatus']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'resultStatus']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体3",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'operateType']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体4",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'sourceType']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体5",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'clientType']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体6",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'appType']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体7",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体8",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'stuId']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体9",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'userId']"
+  },
+  {
+    "tag": "phase3",
+    "ua": "MobileApp",
+    "api": "newsign/变体10",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "success",
+    "extra": "['uids', 'status', 'remark', 'activeId', 'classId', 'courseId', 'uid', 'studentUid']"
+  },
+  {
+    "tag": "phase5",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax/尝试1",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax/尝试2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax/尝试3",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax/尝试4",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描。",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "MobileApp_6.7.2",
+    "api": "stuSignajax/尝试5",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax/尝试1",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax/尝试2",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax/尝试3",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax/尝试4",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描。",
+    "extra": ""
+  },
+  {
+    "tag": "phase5",
+    "ua": "PC_Chrome",
+    "api": "stuSignajax/尝试5",
+    "before": null,
+    "after": null,
+    "changed": false,
+    "response": "签到失败，请重新扫描",
+    "extra": ""
+  }
+]
