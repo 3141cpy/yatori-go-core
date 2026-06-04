@@ -1,0 +1,10 @@
+- [x] PC端 `/widget/sign/pcTeaSignController/` 下所有端点已枚举并记录权限差异
+- [x] PC端 `/widget/sign/pcStuSignController/` 下所有端点已枚举并记录权限差异
+- [x] `/widget/sign/` 下其他Controller已枚举
+- [x] 已修复的updateSignStatus2接口绕过测试完成（参数篡改、方法变换、路径变体、请求头篡改等）
+- [x] 移动端与PC端鉴权差异对比完成
+- [x] IDOR测试完成——学生修改其他学生签到状态
+- [x] 垂直越权测试完成——学生执行教师操作
+- [x] 批量操作测试完成
+- [x] 修复方案有效性评估完成
+- [x] 安全测试报告已更新

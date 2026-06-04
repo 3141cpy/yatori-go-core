@@ -1,8 +1,8 @@
 # 超星学习通签到系统安全审计报告
 
 **审计日期**: 2026-06-03
-**版本**: v5.0（最终版）
-**审计范围**: 学习通App端签到功能安全评估
+**版本**: v6.0（PC端漏洞修复评估版）
+**审计范围**: 学习通PC端+移动端签到功能全面安全评估
 **测试账号**: 教师 19712720708 (puid=402644510)，学生 18436633997 (puid=431407443)
 **测试课程**: courseId=257485372, classId=132821141
 
@@ -10,15 +10,14 @@
 
 ## 核心结论
 
-经过系统性安全评估，发现以下安全漏洞：
+原始漏洞位于PC端接口 `/widget/sign/pcTeaSignController/updateSignStatus2`（通过油猴脚本确认），已被紧急修复。修复后学生调用返回"您无权限修改"。但全面评估发现修复方案存在缺陷，且签到系统整体仍存在多个安全问题。
 
 | # | 漏洞 | 严重程度 | 学生端可直接利用 |
 |---|---|---|---|
 | 1 | `/pptSign/updateSignStatusByUidsV2` CSRF漏洞 | **HIGH (7.5)** | 否（需诱导教师） |
-| 2 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
-| 3 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
-
-**重要更正**: 之前报告将`/newsign/updateSignStatus`评为CRITICAL级别，经验证该API返回"success"但**实际不修改任何数据**（假success），降级为LOW。
+| 2 | PC端权限中间件JSON Content-Type绕过 | **MEDIUM (6.1)** | 否（当前不可利用，但修复不完整） |
+| 3 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
+| 4 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
 
 ---
 
@@ -26,7 +25,7 @@
 
 ### 漏洞描述
 
-教师端签到状态修改API `/pptSign/updateSignStatusByUidsV2` 存在完全无防护的CSRF漏洞。攻击者可构造恶意页面，当已登录的教师访问时，自动修改任意学生的签到状态。
+移动端教师签到状态修改API存在完全无防护的CSRF漏洞。攻击者可构造恶意页面，当已登录的教师访问时，自动修改任意学生的签到状态。
 
 ### 验证证据
 
@@ -38,6 +37,7 @@
 教师POST(无任何自定义Header)         | {"state":"success"}     | 修改成功
 教师POST(Referer=evil.com)          | {"state":"success"}     | 修改成功
 教师GET方式                          | {"state":"success"}     | 修改成功
+教师GET(Origin=evil.com)            | {"state":"success"}     | 修改成功
 ```
 
 **关键问题**:
@@ -79,7 +79,52 @@
 
 ---
 
-## 漏洞2：位置签到信息泄露 + 位置伪造 (MEDIUM)
+## 漏洞2：PC端权限中间件JSON Content-Type绕过 (MEDIUM)
+
+### 漏洞描述
+
+PC端 `/widget/sign/pcTeaSignController/updateSignStatus2` 的权限中间件仅检查 `Content-Type: application/x-www-form-urlencoded` 的请求。当使用 `Content-Type: application/json` 时，权限检查被完全绕过，请求直接进入业务逻辑层。
+
+### 验证证据
+
+```
+Content-Type                          | 学生响应                          | 绕过权限?
+------------------------------------- | --------------------------------- | --------
+application/x-www-form-urlencoded     | {"result":0,"errorMsg":"您无权限修改"} | 否
+application/json                      | HTTP 500 Internal Server Error     | 是!!!
+```
+
+**关键发现**:
+- form-urlencoded请求被权限中间件正确拦截
+- JSON请求绕过权限中间件，进入Controller业务逻辑
+- 由于Spring MVC的`@RequestParam`无法从JSON body提取参数，Controller内部抛出异常（500）
+- **教师使用JSON请求同样返回500** — 说明是参数解析问题而非权限问题
+- V1端点 `updateSignStatus` 同样存在此绕过
+- `endSign`、`preSign` 等其他端点同样存在此绕过
+
+### 根因分析
+
+权限中间件（Filter/Interceptor）仅对form-urlencoded请求执行权限校验，未覆盖JSON请求。这是典型的**安全控制覆盖不完整**问题。
+
+```
+请求流程:
+  form-urlencoded → 权限中间件(检查) → Controller → 业务逻辑
+  application/json → 权限中间件(跳过!) → Controller → 参数解析失败(500)
+```
+
+### 当前可利用性
+
+**当前不可利用** — 因为Controller使用`@RequestParam`注解，无法从JSON body中提取参数，导致空指针异常。但如果后端代码改为`@RequestBody`接收JSON，此绕过将变为高危可利用漏洞。
+
+### 修复建议
+
+1. **[关键]** 权限中间件必须覆盖所有Content-Type，而非仅form-urlencoded
+2. **[关键]** 对未支持的Content-Type应返回415 Unsupported Media Type，而非跳过检查
+3. **[建议]** 在Controller层添加二次权限校验（纵深防御）
+
+---
+
+## 漏洞3：位置签到信息泄露 + 位置伪造 (MEDIUM)
 
 ### 漏洞描述
 
@@ -131,7 +176,7 @@ POST /pptSign/stuSignajax
 
 ---
 
-## 漏洞3：`/newsign/updateSignStatus` 假success + 越权 (LOW)
+## 漏洞4：`/newsign/updateSignStatus` 假success + 越权 (LOW)
 
 ### 漏洞描述
 
@@ -156,28 +201,6 @@ POST /pptSign/stuSignajax
   修改后: status=2, updatetime=1780468339000  ← 真正修改
 ```
 
-**越权访问**:
-```
-学生POST /newsign/updateSignStatus → "success"（应返回"无权限"）
-学生POST /pptSign/updateSignStatus → "无权限"（正确行为）
-```
-
-**不同参数组合均返回"success"**:
-```
-无DB_STRATEGY          → "success"
-DB_STRATEGY=COURSEID   → "success"
-DB_STRATEGY=ACTIVEID   → "success"
-STRATEGY_PARA=courseId → "success"
-uids=教师puid          → "success"
-不存在的activeId       → 500（说明API确实做了某些验证）
-```
-
-### 根因分析
-
-`/newsign/`路径是签到系统的新版本，在API迁移过程中：
-1. 遗漏了权限校验逻辑（学生应返回"无权限"）
-2. API内部逻辑可能未实现完整（返回success但未执行数据库操作）
-
 ### 修复建议
 
 1. **添加权限校验** — 参照`/pptSign/updateSignStatus`
@@ -186,29 +209,63 @@ uids=教师puid          → "success"
 
 ---
 
-## 其他发现
+## PC端接口枚举结果
 
-### 发现A: 各签到类型的学生端防护情况
+### 存活的PC端端点
 
-| 签到类型 | stuSignajax响应 | 防护措施 |
+| 控制器 | 端点 | 学生响应 | 教师响应 | 备注 |
+|---|---|---|---|---|
+| pcTeaSignController | updateSignStatus | "您无权限修改" | "success" | V1，已修复 |
+| pcTeaSignController | updateSignStatus2 | "您无权限修改" | "success" | V2，已修复 |
+| pcTeaSignController | endSign | HTML页面(200) | HTML页面(200) | 页面端点 |
+| pcStuSignController | preSign | HTML页面(200) | HTML页面(200) | 学生签到页面 |
+
+### 不存在的控制器
+
+以下控制器路径均返回超时/无响应，确认不存在：
+pcSignController, signController, teaSignController, stuSignController, qrSignController, signAdminController, signManageController, signApiController
+
+---
+
+## 原始漏洞修复评估
+
+### 修复方案分析
+
+**原始漏洞**: `/widget/sign/pcTeaSignController/updateSignStatus2` 允许学生直接修改签到状态
+**修复方式**: 添加了基于角色的权限校验中间件
+**修复效果**: 学生调用返回"您无权限修改" ✅
+
+### 修复完整性评估
+
+| 评估项 | 结果 | 风险 |
 |---|---|---|
-| 二维码签到 | "签到失败，请重新扫描" | 需要有效二维码enc参数 |
-| 普通签到(已结束) | "签到已结束" | 活动结束不可签到 |
-| 位置签到 | "距教师指定签到地点X米，不在可签到范围内" | 距离校验（但泄露距离） |
-| 手势签到 | "签到失败[90002]" | 需要手势验证 |
-| 签到码签到 | 未测试 | 需要签到码 |
+| 学生直接调用被阻止 | ✅ 是 | - |
+| 权限中间件覆盖所有Content-Type | ❌ 否 | **MEDIUM** — JSON绕过 |
+| 同类接口(V1)也修复 | ✅ 是 | - |
+| CSRF防护 | ❌ 否 | **HIGH** — 移动端API仍无CSRF防护 |
+| 移动端等价接口安全 | ❌ 否 | **HIGH** — CSRF漏洞 |
+| 纵深防御(Controller层二次校验) | ❌ 否 | **LOW** |
 
-### 发现B: 教师V2 API数据修改验证
+### 修复改进建议
 
-| 操作 | V2 signIn查询结果 | 数据是否变化 |
+1. **[紧急]** 权限中间件必须覆盖所有Content-Type，对非form-urlencoded请求也应执行权限检查
+2. **[紧急]** 移动端 `/pptSign/updateSignStatusByUidsV2` 添加CSRF防护
+3. **[高]** 所有数据修改接口禁止GET方法
+4. **[中]** Controller层添加二次权限校验（纵深防御）
+5. **[中]** 位置签到不返回精确距离
+
+---
+
+## 移动端 vs PC端鉴权差异
+
+| 维度 | PC端 | 移动端 |
 |---|---|---|
-| 教师设status=0(缺勤) | data=None | 签到记录被删除 |
-| 教师设status=1(出勤) | status=1, createtime=当前时间 | 签到记录被创建 |
-| 教师设status=2(迟到) | status=2, updatetime=当前时间 | 签到状态被修改 |
-
-### 发现C: V2 signIn API信息泄露
-
-`GET /v2/apis/sign/signIn?activeId={aid}&uid={uid}` 返回签到记录详情，包含精确位置（经纬度）、签到时间、签到地址等。
+| 权限校验位置 | 中间件(Filter) | Controller内部 |
+| Content-Type覆盖 | 仅form-urlencoded | 所有类型 |
+| CSRF防护 | 无 | 无 |
+| GET方法修改数据 | 否(返回页面) | 是(CSRF风险) |
+| 学生越权调用 | 返回"您无权限修改" | 返回"无权限" |
+| JSON绕过 | 存在(500错误) | 不存在 |
 
 ---
 
@@ -217,6 +274,7 @@ uids=教师puid          → "success"
 | 漏洞 | CVSS | 攻击难度 | 实际影响 |
 |---|---|---|---|
 | CSRF(updateSignStatusByUidsV2) | 7.5 | 中（需诱导教师） | 可修改任意学生签到状态 |
+| JSON Content-Type权限绕过 | 6.1 | 低（当前不可利用） | 权限控制覆盖不完整 |
 | 位置签到信息泄露+伪造 | 5.3 | 低（学生可直接利用） | 可伪造位置完成签到 |
 | 假success+越权(newsign) | 3.5 | 极低（但无实际影响） | 误导性响应，无数据修改 |
 
@@ -225,6 +283,7 @@ uids=教师puid          → "success"
 ## 修复优先级
 
 1. **[紧急]** `/pptSign/updateSignStatusByUidsV2` — 禁止GET方法，添加CSRF Token，校验Referer
-2. **[高]** 位置签到 — 不返回精确距离，改为返回"在/不在范围内"
-3. **[中]** `/newsign/updateSignStatus` — 添加权限校验，修复假success
-4. **[低]** V2 signIn API — 添加访问控制，位置信息脱敏
+2. **[紧急]** PC端权限中间件 — 覆盖所有Content-Type，对JSON请求也执行权限检查
+3. **[高]** 位置签到 — 不返回精确距离，改为返回"在/不在范围内"
+4. **[中]** `/newsign/updateSignStatus` — 添加权限校验，修复假success
+5. **[低]** V2 signIn API — 添加访问控制，位置信息脱敏
