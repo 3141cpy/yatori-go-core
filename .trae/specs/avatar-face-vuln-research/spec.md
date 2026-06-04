@@ -1,98 +1,100 @@
-# 学习通头像/人脸图片漏洞深入研究 Spec
+# 学习通头像图片安全漏洞研究 Spec
 
 ## Why
-通过分析代码库中的Go API文件，发现了学习通头像和人脸识别系统的多个潜在安全漏洞，包括：人脸图片获取接口的加密盐值硬编码（`md5(puid + "uWwjeEKsri")`）、云盘Token可被CSRF窃取用于上传伪造人脸、头像上传接口缺乏权限校验等。需要对这些漏洞进行深入验证和评估。
+学习通的头像/图片上传功能可能存在多种安全漏洞，包括但不限于：图片马（将WebShell代码嵌入图片文件绕过上传检测）、存储型XSS（通过文件名/EXIF/Metadata注入恶意脚本）、CSRF（替他人上传头像）、任意文件上传（绕过文件类型检测）、SSRF（通过图片URL触发服务端请求）等。需要针对这些攻击面进行深入研究。
 
 ## What Changes
-- 验证`getUserFaceid`接口的加密算法是否可被利用获取任意用户人脸图片
-- 测试头像/人脸图片上传接口是否存在IDOR（使用他人puid和token上传）
-- 测试头像URL是否可被遍历/预测
-- 测试人脸识别绕过（使用他人人脸图片通过验证）
-- 评估头像图片存储路径的安全性
+- 测试头像/图片上传接口是否可上传图片马（WebShell嵌入图片）
+- 测试文件名XSS（特殊字符文件名是否被正确过滤）
+- 测试EXIF/Metadata XSS（图片元数据中的恶意脚本是否被保留和渲染）
+- 测试Content-Type欺骗（修改MIME类型绕过检测）
+- 测试文件扩展名绕过（双扩展名、空字节、大小写等）
+- 测试CSRF替他人上传头像
+- 测试图片存储路径是否可遍历
+- 测试SVG/XSS（上传SVG文件执行脚本）
 - 生成技术报告
 
 ## Impact
 - Affected APIs:
-  - `https://passport2-api.chaoxing.com/api/getUserFaceid?enc={md5(puid+"uWwjeEKsri")}&token=4faa8662c59590c6f43ae9fe5b002b42`
-  - `https://pan-yz.chaoxing.com/upload` (uploadtype=face)
+  - `https://pan-yz.chaoxing.com/upload` (uploadtype=face/normal)
   - `https://pan-yz.chaoxing.com/api/token/uservalid`
-  - `https://mooc1-api.chaoxing.com/mooc-ans/facephoto/clientfacecheckstatus`
+  - `https://passport2-api.chaoxing.com/api/getUserFaceid`
   - `https://mooc1-api.chaoxing.com/mooc-ans/knowledge/uploadInfo`
-  - `https://mooc1-api.chaoxing.com/qr/updateqrstatus`
-  - `https://mooc1-api.chaoxing.com/mooc-ans/facephoto/continuelearn`
+  - `https://groupweb.chaoxing.com/pc/resource/addResource`
 - Test accounts: 教师 19712720708/3.1415926Cpy (puid=402644510), 学生 18436633997/3.1415926Cpy (puid=431407443)
-
-## 已知关键信息
-
-### getUserFaceid接口加密算法泄露
-```go
-hash := md5.Sum([]byte(puid + "uWwjeEKsri"))
-enc := hex.EncodeToString(hash[:])
-urlStr := "https://passport2-api.chaoxing.com/api/getUserFaceid?enc=" + enc + "&token=4faa8662c59590c6f43ae9fe5b002b42&_time=" + timestamp
-```
-- 盐值: `uWwjeEKsri`（硬编码）
-- Token: `4faa8662c59590c6f43ae9fe5b002b42`（硬编码）
-- 这意味着任何人都可以计算任意puid的enc，获取该用户的人脸图片URL
-
-### 人脸上传流程
-1. 获取云盘Token: `GET /api/token/uservalid` → 返回`_token`
-2. 上传人脸图片: `POST /upload` with `uploadtype=face&_token={token}&puid={puid}` → 返回`objectId`
-3. 使用objectId通过人脸验证: `GET /facephoto/clientfacecheckstatus?objectId={objectId}`
-
-### 人脸验证绕过接口
-- `/qr/updateqrstatus` — PC端过人脸
-- `/facephoto/clientfacecheckstatus` — 手机端过人脸
-- `/knowledge/uploadInfo` — 老接口过人脸
 
 ## ADDED Requirements
 
-### Requirement: getUserFaceid接口IDOR验证
-系统 SHALL 验证getUserFaceid接口是否存在IDOR漏洞。
+### Requirement: 图片马上传测试
+系统 SHALL 测试头像上传接口是否可上传包含WebShell代码的图片文件。
 
-#### Scenario: 使用计算出的enc获取他人人脸图片
-- **WHEN** 使用学生账号，通过计算教师puid的enc值，调用getUserFaceid接口
-- **THEN** 验证是否能获取教师的人脸图片URL
+#### Scenario: 图片+PHP WebShell
+- **WHEN** 上传一个正常图片文件，末尾追加PHP WebShell代码（`<?php eval($_POST['cmd']); ?>`）
+- **THEN** 验证文件是否被接受，以及上传后的文件是否可被解析为PHP
 
-#### Scenario: 无需登录获取人脸图片
-- **WHEN** 不使用任何Cookie，仅通过enc和token参数调用getUserFaceid
-- **THEN** 验证是否可以在未认证状态下获取人脸图片
+#### Scenario: 图片+JSP WebShell
+- **WHEN** 上传一个正常图片文件，末尾追加JSP WebShell代码
+- **THEN** 验证文件是否被接受
 
-### Requirement: 人脸图片上传IDOR验证
-系统 SHALL 验证人脸上传接口是否存在IDOR漏洞。
+#### Scenario: 图片+HTML/JS代码
+- **WHEN** 上传一个正常图片文件，末尾追加HTML/JS恶意代码
+- **THEN** 验证文件是否被接受，以及访问时是否执行JS
 
-#### Scenario: 使用他人puid上传人脸图片
-- **WHEN** 学生A获取云盘Token后，使用学生B的puid上传人脸图片
-- **THEN** 验证是否能为他人设置人脸图片
+### Requirement: 存储型XSS测试
+系统 SHALL 测试头像上传接口是否存在存储型XSS漏洞。
 
-#### Scenario: 使用他人Token上传
-- **WHEN** 学生A使用学生B的Token上传人脸图片
-- **THEN** 验证是否可以跨用户上传
+#### Scenario: 文件名XSS
+- **WHEN** 上传文件名为`<img src=x onerror=alert(1)>.jpg`或`test"><script>alert(1)</script>.jpg`的图片
+- **THEN** 验证文件名是否被正确过滤，在页面渲染时是否触发XSS
 
-### Requirement: 人脸识别绕过验证
-系统 SHALL 验证是否可以使用他人的人脸图片绕过人脸识别。
+#### Scenario: EXIF Metadata XSS
+- **WHEN** 上传EXIF信息中包含`<script>alert(1)</script>`的图片
+- **THEN** 验证EXIF信息是否被保留，是否在展示时触发XSS
 
-#### Scenario: 使用他人objectId通过人脸验证
-- **WHEN** 学生A上传自己的人脸图片获取objectId后，学生B使用该objectId调用人脸验证接口
-- **THEN** 验证是否可以跨用户使用objectId
+#### Scenario: SVG XSS
+- **WHEN** 上传包含`<script>alert(document.cookie)</script>`的SVG文件（伪装为.jpg）
+- **THEN** 验证SVG是否被接受，访问时是否执行脚本
 
-#### Scenario: 使用旧objectId重复通过验证
-- **WHEN** 同一用户使用之前上传的objectId重复通过人脸验证
-- **THEN** 验证objectId是否有有效期限制
+### Requirement: 文件类型绕过测试
+系统 SHALL 测试头像上传接口的文件类型检测是否可被绕过。
 
-### Requirement: 头像URL可预测性/遍历测试
-系统 SHALL 测试头像图片URL是否可被预测或遍历。
+#### Scenario: Content-Type欺骗
+- **WHEN** 上传非图片文件但设置Content-Type为image/jpeg
+- **THEN** 验证是否仅依赖Content-Type判断文件类型
 
-#### Scenario: 头像URL模式分析
-- **WHEN** 分析多个人脸图片URL的命名模式
-- **THEN** 识别URL是否包含可预测的元素（如puid、时间戳、递增ID等）
+#### Scenario: 双扩展名绕过
+- **WHEN** 上传文件名为`test.php.jpg`或`test.jpg.php`的文件
+- **THEN** 验证扩展名解析逻辑
 
-#### Scenario: 头像图片未授权访问
-- **WHEN** 直接访问头像图片URL，不携带Cookie
-- **THEN** 验证图片是否可被未认证用户访问
+#### Scenario: 空字节绕过
+- **WHEN** 上传文件名为`test.php%00.jpg`的文件
+- **THEN** 验证空字节是否被正确处理
+
+#### Scenario: 大小写绕过
+- **WHEN** 上传文件名为`test.PhP`或`test.JSP`的文件
+- **THEN** 验证扩展名检测是否区分大小写
+
+#### Scenario: 特殊文件类型
+- **WHEN** 上传.html、.htm、.svg、.xml、.json文件
+- **THEN** 验证是否可以上传非图片类型文件
+
+### Requirement: CSRF头像上传测试
+系统 SHALL 测试头像上传接口是否存在CSRF漏洞。
+
+#### Scenario: 替他人上传头像
+- **WHEN** 通过CSRF构造请求，使用他人puid上传头像
+- **THEN** 验证是否可以替他人修改头像
+
+### Requirement: 图片存储路径安全测试
+系统 SHALL 测试上传图片的存储路径和访问方式的安全性。
+
+#### Scenario: 图片URL直接访问
+- **WHEN** 不携带Cookie直接访问上传的图片URL
+- **THEN** 验证图片是否需要认证才能访问
+
+#### Scenario: 路径遍历
+- **WHEN** 在文件名中包含`../`等路径遍历字符
+- **THEN** 验证是否可以上传到非预期目录
 
 ### Requirement: 技术报告生成
-系统 SHALL 生成完整的头像/人脸图片漏洞技术报告。
-
-#### Scenario: 报告内容
-- **WHEN** 所有测试完成
-- **THEN** 报告应包含：漏洞位置、利用方法、影响范围、严重程度、修复建议
+系统 SHALL 生成完整的头像图片安全漏洞技术报告。
