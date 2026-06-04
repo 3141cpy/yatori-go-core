@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""ChaoXing /newsign/ endpoint scanner - authorized security audit
-Final version: dual-domain async scan with baseline filtering"""
-
-import base64, hashlib, json, uuid, time, sys, asyncio
-import aiohttp
-import urllib3
-import requests
+"""
+ChaoXing Platform Endpoint Scanner - Authorized Security Audit
+Scans /newsign/ and /pptSign/ paths using student account only.
+"""
+import base64, hashlib, json, uuid, requests, urllib3, time, sys, os, threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
+
+# Force unbuffered output
+sys.stdout.reconfigure(line_buffering=True)
 
 urllib3.disable_warnings()
 
@@ -15,6 +17,16 @@ AES_KEY = b"u2oh6Vu^HWe4_AES"
 SCHILD_SALT = "ipL$TkeiEmfy1gTXb2XHrdLN0a@7c^vu"
 LOGIN_URL = "https://passport2.chaoxing.com/fanyalogin"
 BASE = "https://mobilelearn.chaoxing.com"
+
+PHONE = "18436633997"
+PWD = "3.1415926Cpy"
+PUID = "431407443"
+COURSE_ID = "257485372"
+CLASS_ID = "132821141"
+AID = "5000163891319"
+
+# Thread-local storage for sessions
+_thread_local = threading.local()
 
 def aes_enc(p):
     c = AES.new(AES_KEY, AES.MODE_CBC, AES_KEY)
@@ -35,355 +47,460 @@ def get_mobile_ua():
             f"com.chaoxing.mobile/ChaoXingStudy_3_6.7.2_android_phone_10941_314 "
             f"(@Kalimdor)_{imei}")
 
-def login_sync(phone, pwd):
+def login(phone, pwd):
     s = requests.Session()
     s.verify = False
     ua = get_mobile_ua()
     s.headers.update({"User-Agent": ua, "Accept": "application/json, text/plain, */*", "Accept-Language": "zh_CN"})
-    s.post(LOGIN_URL, data={"fid": "-1", "uname": aes_enc(phone), "password": aes_enc(pwd),
+    r = s.post(LOGIN_URL, data={"fid": "-1", "uname": aes_enc(phone), "password": aes_enc(pwd),
                             "refer": "http%3A%2F%2Fi.mooc.chaoxing.com", "t": "true",
                             "forbidotherlogin": "0", "validate": "", "doubleFactorLogin": "0",
                             "independentId": "0", "independentNameId": "0"},
            allow_redirects=False, timeout=30)
-    puid = ""
-    cookies = {}
+    print(f"[LOGIN] Status: {r.status_code}", flush=True)
+    puid_val = ""
     for c in s.cookies:
         if c.name in ("UID", "_uid"):
-            puid = c.value
-        cookies[c.name] = c.value
-    try: s.get("https://i.chaoxing.com/base", timeout=20, allow_redirects=True)
-    except: pass
-    for c in s.cookies:
-        cookies[c.name] = c.value
-    return puid, cookies, ua
+            puid_val = c.value
+    try:
+        s.get("https://i.chaoxing.com/base", timeout=20, allow_redirects=True)
+    except:
+        pass
+    return s, puid_val
 
-# ---- Endpoint patterns ----
+def get_thread_session(cookies_dict, headers_dict):
+    """Get or create a thread-local session with the same cookies/headers"""
+    if not hasattr(_thread_local, 'session'):
+        s = requests.Session()
+        s.verify = False
+        s.headers.update(headers_dict)
+        for name, value in cookies_dict.items():
+            s.cookies.set(name, value)
+        _thread_local.session = s
+    return _thread_local.session
+
+# ============================================================
+# Endpoint lists
+# ============================================================
+
 VERBS = [
-    "add", "save", "create", "insert", "submit", "do", "student", "stu", "sign", "start",
-    "pre", "quick", "makeUp", "resign", "modify", "change", "delete", "cancel", "stop", "end",
-    "close", "lock", "unlock", "send", "push", "publish", "confirm", "check", "verify", "get",
-    "query", "list", "detail", "info", "count", "stat", "refresh", "reset", "retry", "reopen",
-    "batch", "sync", "update", "set", "edit", "remove", "clear", "approve", "reject", "review",
-    "export", "import", "download", "upload", "handle", "process", "execute", "run", "trigger",
-    "invoke", "call", "fetch", "load", "read", "write", "append", "merge", "split", "copy",
-    "move", "replace", "swap", "toggle", "enable", "disable", "grant", "revoke", "assign",
-    "delegate", "transfer", "backup", "restore", "migrate", "upgrade", "downgrade", "rollback",
-    "compile", "build", "deploy", "release", "install", "uninstall", "register", "unregister",
-    "subscribe", "unsubscribe", "notify", "alert", "warn", "log", "debug", "trace", "monitor",
-    "health", "ping", "status", "version", "config", "setting", "preference", "option", "feature",
-    "flag", "switch", "rule", "policy", "permission", "role", "user", "group", "team", "org",
-    "tenant", "project", "app", "module", "plugin", "extension", "hook", "callback", "event",
-    "message", "queue", "task", "job", "worker", "thread", "session", "token", "auth", "login",
-    "logout", "password", "profile", "account", "dashboard", "report", "chart", "graph", "metric",
-    "analytics", "search", "filter", "sort", "page", "limit", "offset", "cursor", "scroll",
-    "paginate", "cache", "store", "db", "database", "table", "field", "column", "row", "record",
-    "document", "file", "folder", "directory", "path", "url", "link", "image", "video", "audio",
-    "media", "attachment", "resource", "asset", "content", "template", "layout", "component",
-    "widget", "element", "section", "block", "item", "entry", "cell", "value", "key", "id",
-    "uuid", "hash", "checksum", "signature", "certificate", "credential", "secret", "code",
-    "captcha", "otp", "mfa", "2fa", "biometric", "fingerprint", "face", "voice", "iris", "palm",
-    "heartbeat", "gesture", "motion", "location", "gps", "coordinate", "latitude", "longitude",
-    "altitude", "accuracy", "speed", "heading", "bearing", "distance", "radius", "area", "region",
-    "zone", "boundary", "perimeter", "fence", "geofence", "beacon", "wifi", "bluetooth", "nfc",
-    "rfid", "qr", "barcode", "scan", "camera", "microphone", "speaker", "sensor", "actuator",
-    "device", "hardware", "firmware", "software", "os", "browser", "client", "server", "proxy",
-    "gateway", "router", "firewall", "loadbalancer", "cdn", "dns", "ssl", "tls", "domain",
-    "host", "port", "protocol", "scheme", "method", "header", "cookie", "storage", "memory",
-    "disk", "cpu", "gpu", "network", "bandwidth", "latency", "throughput", "concurrency",
-    "parallelism", "container", "vm", "cloud", "cluster", "node", "pod", "service", "endpoint",
-    "route", "middleware", "interceptor", "handler", "controller", "repository", "dao", "model",
-    "entity", "dto", "vo", "form", "request", "response", "result", "exception", "warning",
-    "notification", "email", "sms", "webhook", "channel", "stream", "pipe", "flow", "workflow",
-    "pipeline", "cron", "schedule", "timer", "delay", "timeout", "backoff", "circuit", "breaker",
-    "fallback", "buffer", "pool", "stack", "heap", "tree", "list", "map", "set", "array", "tuple",
-    "dict", "string", "number", "boolean", "date", "time", "datetime", "timestamp", "duration",
-    "interval", "period", "range", "span", "window", "frame", "chunk", "segment", "fragment",
-    "piece", "part", "portion", "slice", "division", "category", "class", "type", "kind", "sort",
-    "tag", "label", "name", "title", "description", "summary", "abstract", "body", "footer",
-    "sidebar", "nav", "menu", "button", "input", "placeholder", "default", "required", "optional",
-    "validation", "hint", "tooltip", "icon", "animation", "transition", "effect", "style",
-    "theme", "color", "font", "size", "spacing", "margin", "padding", "border", "shadow",
-    "radius", "opacity", "visibility", "display", "position", "overflow", "zindex", "flex",
-    "grid", "gap", "align", "justify", "order", "wrap", "grow", "shrink", "basis"
+    "add", "save", "create", "insert", "submit", "do", "student", "stu", "sign", "start", "pre", "quick",
+    "makeUp", "resign", "modify", "change", "delete", "cancel", "stop", "end", "close", "confirm", "check",
+    "verify", "get", "query", "list", "detail", "info", "count", "batch", "sync", "update", "set", "edit",
+    "remove", "clear", "approve", "reject", "review", "export", "handle", "process", "execute", "trigger",
+    "fetch", "load", "read", "write", "append", "merge", "copy", "move", "replace", "toggle", "enable",
+    "disable", "grant", "revoke", "assign", "transfer", "backup", "restore", "refresh", "reset", "retry",
+    "reopen", "notify", "alert", "log", "debug", "trace", "monitor", "health", "ping", "status", "version",
+    "config", "setting", "preference", "option", "feature", "flag", "switch", "rule", "policy", "permission",
+    "role", "user", "group", "team", "org", "project", "app", "module", "plugin", "extension", "hook",
+    "callback", "event", "message", "queue", "task", "job", "worker", "session", "token", "auth", "login",
+    "logout", "password", "profile", "account", "dashboard", "report", "chart", "analytics", "search",
+    "filter", "sort", "page", "cache", "store", "db", "database", "table", "field", "record", "document",
+    "file", "folder", "resource", "asset", "content", "template", "layout", "component", "widget", "element",
+    "item", "entry", "value", "key", "id", "uuid", "hash", "signature", "certificate", "credential", "secret",
+    "code", "captcha", "otp", "location", "gps", "coordinate", "latitude", "longitude", "distance", "radius",
+    "area", "region", "zone", "boundary", "geofence", "beacon", "qr", "barcode", "scan", "camera", "sensor",
+    "device", "hardware", "firmware", "software", "os", "browser", "client", "server", "proxy", "gateway",
+    "router", "firewall", "domain", "host", "port", "protocol", "scheme", "method", "header", "cookie",
+    "storage", "memory", "network", "bandwidth", "latency", "concurrency", "thread", "container", "cloud",
+    "cluster", "node", "service", "endpoint", "route", "middleware", "filter", "handler", "controller",
+    "repository", "model", "entity", "dto", "form", "request", "response", "result", "error", "warning",
+    "metric", "notification", "email", "sms", "push", "webhook", "stream", "flow", "workflow", "pipeline",
+    "cron", "schedule", "timer", "delay", "timeout", "retry", "buffer", "pool", "stack", "tree", "graph",
+    "list", "map", "set", "array", "dict", "string", "number", "boolean", "date", "time", "datetime",
+    "timestamp", "duration", "interval", "range", "window", "page", "block", "chunk", "segment", "fragment",
+    "piece", "part", "portion", "slice", "division", "category", "type", "kind", "sort", "tag", "name",
+    "title", "description", "summary", "body", "header", "footer", "button", "link", "input", "field",
+    "value", "default", "validation", "message", "icon", "image", "animation", "style", "theme", "color",
+    "font", "size", "position", "display"
 ]
 
 NOUNS = [
-    "Sign", "SignRecord", "SignStatus", "SignInfo", "SignDetail", "SignResult", "SignLog",
-    "SignHistory", "Active", "Activity", "Task", "Record", "Status", "User", "Student",
-    "Member", "Course", "Class", "Clazz", "Lesson", "Chapter", "Section", "Unit", "Module",
-    "Topic", "Subject", "Category", "Tag", "Label", "Group", "Team", "Role", "Permission",
-    "Rule", "Policy", "Config", "Setting", "Preference", "Option", "Feature", "Flag", "Switch",
-    "Toggle", "Notification", "Message", "Alert", "Warning", "Error", "Exception", "Log",
-    "Debug", "Trace", "Metric", "Event", "Report", "Chart", "Dashboard", "Search", "Filter",
-    "Sort", "Page", "Cache", "Store", "Database", "Table", "Field", "Document", "File",
-    "Folder", "Resource", "Asset", "Content", "Template", "Layout", "Component", "Widget",
-    "Element", "Item", "Entry", "Value", "Key", "Id", "Uuid", "Hash", "Signature",
-    "Certificate", "Credential", "Secret", "Password", "Token", "Code", "Captcha", "Otp",
-    "Location", "Coordinate", "Latitude", "Longitude", "Distance", "Radius", "Area", "Region",
-    "Zone", "Boundary", "Geofence", "Beacon", "Qr", "Barcode", "Scan", "Camera", "Sensor",
-    "Device", "Hardware", "Firmware", "Software", "Os", "Browser", "App", "Client", "Server",
-    "Proxy", "Gateway", "Router", "Firewall", "Domain", "Host", "Port", "Protocol", "Scheme",
-    "Method", "Header", "Cookie", "Session", "Storage", "Memory", "Network", "Bandwidth",
-    "Latency", "Concurrency", "Thread", "Process", "Container", "Cloud", "Cluster", "Node",
-    "Service", "Endpoint", "Route", "Middleware", "Filter", "Handler", "Controller",
-    "Repository", "Model", "Entity", "Dto", "Form", "Request", "Response", "Result", "Info",
-    "Date", "Time", "Datetime", "Timestamp", "Duration", "Interval", "Range", "Window",
-    "Block", "Chunk", "Segment", "Fragment", "Piece", "Part", "Portion", "Slice", "Division",
-    "Type", "Kind", "Name", "Title", "Description", "Summary", "Body", "Footer", "Button",
-    "Link", "Input", "Default", "Validation", "Icon", "Image", "Animation", "Style", "Theme",
-    "Color", "Font", "Size", "Position", "Display"
+    "Sign", "SignRecord", "SignStatus", "SignInfo", "SignDetail", "SignResult", "SignLog", "SignHistory",
+    "Active", "Activity", "Task", "Record", "Status", "User", "Student", "Member", "Course", "Class",
+    "Clazz", "Lesson", "Chapter", "Section", "Unit", "Module", "Topic", "Subject", "Category", "Tag",
+    "Label", "Group", "Team", "Role", "Permission", "Rule", "Policy", "Config", "Setting", "Preference",
+    "Option", "Feature", "Flag", "Switch", "Toggle", "Notification", "Message", "Alert", "Warning",
+    "Error", "Exception", "Log", "Debug", "Trace", "Metric", "Event", "Report", "Chart", "Dashboard",
+    "Search", "Filter", "Sort", "Page", "Cache", "Store", "Database", "Table", "Field", "Document",
+    "File", "Folder", "Resource", "Asset", "Content", "Template", "Layout", "Component", "Widget",
+    "Element", "Item", "Entry", "Value", "Key", "Id", "Uuid", "Hash", "Signature", "Certificate",
+    "Credential", "Secret", "Password", "Token", "Code", "Captcha", "Otp", "Location", "Coordinate",
+    "Latitude", "Longitude", "Distance", "Radius", "Area", "Region", "Zone", "Boundary", "Geofence",
+    "Beacon", "Qr", "Barcode", "Scan", "Camera", "Sensor", "Device", "Hardware", "Firmware", "Software",
+    "Os", "Browser", "App", "Client", "Server", "Proxy", "Gateway", "Router", "Firewall", "Domain",
+    "Host", "Port", "Protocol", "Scheme", "Method", "Header", "Cookie", "Session", "Storage", "Memory",
+    "Network", "Bandwidth", "Latency", "Concurrency", "Thread", "Container", "Cloud", "Cluster", "Node",
+    "Service", "Endpoint", "Route", "Middleware", "Handler", "Controller", "Repository", "Model", "Entity",
+    "Dto", "Form", "Request", "Response", "Result", "Error", "Warning", "Info", "Debug", "Log", "Metric",
+    "Event", "Alert", "Notification", "Email", "Sms", "Push", "Webhook", "Callback", "Queue", "Topic",
+    "Channel", "Stream", "Flow", "Workflow", "Pipeline", "Job", "Task", "Cron", "Schedule", "Timer",
+    "Delay", "Timeout", "Retry", "Cache", "Buffer", "Pool", "Stack", "Tree", "Graph", "List", "Map",
+    "Set", "Array", "Dict", "String", "Number", "Boolean", "Date", "Time", "Datetime", "Timestamp",
+    "Duration", "Interval", "Range", "Window", "Page", "Block", "Chunk", "Segment", "Fragment", "Piece",
+    "Part", "Portion", "Slice", "Division", "Category", "Type", "Kind", "Sort", "Tag", "Name", "Title",
+    "Description", "Summary", "Content", "Body", "Header", "Footer", "Button", "Link", "Input", "Field",
+    "Value", "Default", "Validation", "Message", "Icon", "Image", "Animation", "Style", "Theme", "Color",
+    "Font", "Size", "Position", "Display"
 ]
 
+STANDALONE = [
+    "signIn", "signUp", "doSign", "submit", "modify", "change", "delete", "cancel", "stop", "end",
+    "close", "confirm", "check", "verify", "get", "query", "list", "detail", "info", "count", "batch",
+    "sync", "update", "set", "edit", "remove", "clear", "approve", "reject", "review", "export", "handle",
+    "process", "execute", "trigger", "fetch", "load", "read", "write", "append", "merge", "copy", "move",
+    "replace", "toggle", "enable", "disable", "grant", "revoke", "assign", "transfer", "backup", "restore",
+    "refresh", "reset", "retry", "reopen", "notify", "alert", "log", "debug", "trace", "monitor", "health",
+    "ping", "status", "version", "config", "setting", "preference", "option", "feature", "flag", "switch",
+    "rule", "policy", "permission", "role", "user", "group", "team", "org", "project", "app", "module",
+    "plugin", "extension", "hook", "callback", "event", "message", "queue", "task", "job", "worker",
+    "session", "token", "auth", "login", "logout", "password", "profile", "account", "dashboard", "report",
+    "chart", "analytics", "search", "filter", "sort", "page", "cache", "store", "db", "database", "table",
+    "field", "record", "document", "file", "folder", "resource", "asset", "content", "template", "layout",
+    "component", "widget", "element", "item", "entry", "value", "key", "id", "uuid", "hash", "signature",
+    "certificate", "credential", "secret", "code", "captcha", "otp", "location", "gps", "coordinate",
+    "latitude", "longitude", "distance", "radius", "area", "region", "zone", "boundary", "geofence",
+    "beacon", "qr", "barcode", "scan", "camera", "sensor", "device", "hardware", "firmware", "software",
+    "os", "browser", "client", "server", "proxy", "gateway", "router", "firewall", "domain", "host",
+    "port", "protocol", "scheme", "method", "header", "cookie", "storage", "memory", "network", "bandwidth",
+    "latency", "concurrency", "thread", "container", "cloud", "cluster", "node", "service", "endpoint",
+    "route", "middleware", "handler", "controller", "repository", "model", "entity", "dto", "form",
+    "request", "response", "result", "error", "warning", "metric", "notification", "email", "sms", "push",
+    "webhook", "stream", "flow", "workflow", "pipeline", "cron", "schedule", "timer", "delay", "timeout",
+    "retry", "buffer", "pool", "stack", "tree", "graph", "list", "map", "set", "array", "dict", "string",
+    "number", "boolean", "date", "time", "datetime", "timestamp", "duration", "interval", "range", "window",
+    "page", "block", "chunk", "segment", "fragment", "piece", "part", "portion", "slice", "division",
+    "category", "type", "kind", "sort", "tag", "name", "title", "description", "summary", "body", "header",
+    "footer", "button", "link", "input", "field", "value", "default", "validation", "message", "icon",
+    "image", "animation", "style", "theme", "color", "font", "size", "position", "display"
+]
 
-def generate_endpoints():
-    """Generate all endpoint paths"""
-    paths = set()
-    for w in VERBS:
-        paths.add(w)
-    for n in NOUNS:
-        paths.add(n)
-        paths.add(n.lower())
+PPTSIGN_ENDPOINTS = [
+    "stuSignAjaxNew", "stuSignajaxNew", "stuSignNew", "stuSignV2", "signV2", "signNew", "signInV2",
+    "signInNew", "qrCodeSign", "qrcodeSign", "scanSign", "scanQrCode", "locationSign", "gestureSign",
+    "numberSign", "signByCode", "signByEnc", "signByToken", "getSignStuInfo", "getStuSignInfo",
+    "stuSignInfo", "getSignStatus", "signStatus", "checkSignStatus", "activeSignList", "signList",
+    "getSignList", "getActiveSign", "activeSign", "startSign", "endSign", "stopSign", "cancelSign",
+    "deleteSign", "removeSign", "createSign", "addSign", "saveSign", "updateSign", "modifySign",
+    "changeSign", "batchSign", "quickSign", "autoSign", "manualSign", "makeupSign", "lateSign",
+    "leaveSign", "absentSign", "presentSign", "normalSign", "codeSign", "passwordSign", "faceSign",
+    "fingerprintSign", "wifiSign", "bleSign", "nfcSign", "lbsSign", "gpsSign", "mapSign", "geoSign",
+    "distanceSign", "rangeSign", "areaSign", "zoneSign", "regionSign", "nearbySign", "proximitySign",
+    "beaconSign", "ibeaconSign", "eddystoneSign", "altBeaconSign"
+]
+
+def is_html_error(text):
+    if not text:
+        return False
+    stripped = text.strip()
+    return stripped.startswith("<!DOCTYPE") or stripped.startswith("<html") or stripped.startswith("<HTML")
+
+# Global session info for thread-local session creation
+_session_cookies = {}
+_session_headers = {}
+
+def test_endpoint_threadsafe(base_url, endpoint, method, params=None):
+    """Test a single endpoint with GET or POST using thread-local session"""
+    session = get_thread_session(_session_cookies, _session_headers)
+    url = f"{base_url}/{endpoint}"
+    try:
+        if method == "GET":
+            r = session.get(url, params=params, timeout=8, allow_redirects=False)
+        else:
+            r = session.post(url, data=params, timeout=8, allow_redirects=False)
+
+        if r.status_code == 404:
+            return None
+
+        text = ""
+        try:
+            text = r.text[:500]
+        except:
+            text = "(cannot decode)"
+
+        if is_html_error(text):
+            return None
+
+        return {
+            "endpoint": endpoint,
+            "method": method,
+            "url": url,
+            "status": r.status_code,
+            "response_preview": text[:300]
+        }
+    except requests.exceptions.Timeout:
+        return None
+    except requests.exceptions.ConnectionError:
+        return None
+    except Exception:
+        return None
+
+def generate_newsign_endpoints():
+    seen = set()
+    endpoints = []
     for v in VERBS:
         for n in NOUNS:
-            paths.add(f"{v}{n}")
-    for v in VERBS:
-        for n in NOUNS:
-            paths.add(f"{v}/{n}")
-    for v in VERBS:
-        for n in NOUNS:
-            paths.add(f"{v}_{n}")
-    return list(paths)
+            ep = v + n
+            if ep not in seen:
+                seen.add(ep)
+                endpoints.append(ep)
+    for s in STANDALONE:
+        if s not in seen:
+            seen.add(s)
+            endpoints.append(s)
+    return endpoints
 
+def scan_newsign(puid):
+    """Part 1: Scan /newsign/ endpoints"""
+    print("\n" + "="*80, flush=True)
+    print("PART 1: Scanning /newsign/ endpoints", flush=True)
+    print("="*80, flush=True)
 
-async def async_scan(endpoints, cookies, ua, puid, course_id, class_id, active_id,
-                     base_url, catchall_keys, max_concurrent=200):
-    """Async scan with aiohttp - scan all endpoints, return only non-catchall hits"""
-    results = []
-    catchall_count = 0
-    sem = asyncio.Semaphore(max_concurrent)
+    base_url = f"{BASE}/newsign"
+    endpoints = generate_newsign_endpoints()
+    total = len(endpoints) * 2
+    print(f"[INFO] Total /newsign/ endpoints to test: {len(endpoints)} (x2 methods = {total} requests)", flush=True)
 
-    params = {"activeId": str(active_id), "uid": str(puid), "courseId": str(course_id), "classId": str(class_id)}
-    post_data = {**params, "status": "1", "remark": ""}
-
-    headers = {
-        "User-Agent": ua,
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "zh_CN",
+    base_params = {
+        "activeId": AID,
+        "uid": puid,
+        "courseId": COURSE_ID,
+        "classId": CLASS_ID,
+        "status": "1",
+        "remark": ""
     }
 
-    connector = aiohttp.TCPConnector(ssl=False, limit=max_concurrent, limit_per_host=max_concurrent)
+    results = []
+    tested = 0
+    found = 0
+    lock = threading.Lock()
 
-    async with aiohttp.ClientSession(cookies=cookies, headers=headers, connector=connector) as session:
-        async def scan_one(path):
-            nonlocal catchall_count
-            async with sem:
-                url = f"{base_url}/newsign/{path}"
-                hits = []
-                for method in ["GET", "POST"]:
-                    try:
-                        if method == "GET":
-                            async with session.get(url, params=params,
-                                                   timeout=aiohttp.ClientTimeout(total=5),
-                                                   allow_redirects=False) as r:
-                                status = r.status
-                                body = await r.read()
-                        else:
-                            async with session.post(url, data=post_data,
-                                                    timeout=aiohttp.ClientTimeout(total=5),
-                                                    allow_redirects=False) as r:
-                                status = r.status
-                                body = await r.read()
+    def test_one(args):
+        ep, method = args
+        return test_endpoint_threadsafe(base_url, ep, method, params=base_params)
 
-                        resp_key = (status, len(body))
-                        if resp_key not in catchall_keys:
-                            text = body.decode("utf-8", errors="replace")[:500]
-                            hits.append({
-                                "path": f"/newsign/{path}",
-                                "method": method,
-                                "status_code": status,
-                                "response_length": len(body),
-                                "is_catchall": False,
-                                "response_preview": text,
-                                "base_url": base_url,
-                            })
-                    except Exception:
-                        pass
+    tasks = []
+    for ep in endpoints:
+        tasks.append((ep, "GET"))
+        tasks.append((ep, "POST"))
 
-                if not hits:
-                    catchall_count += 1
-                return hits
+    with ThreadPoolExecutor(max_workers=40) as executor:
+        futures = {executor.submit(test_one, t): t for t in tasks}
+        for future in as_completed(futures):
+            with lock:
+                tested += 1
+            if tested % 1000 == 0:
+                print(f"  [PROGRESS] Tested {tested}/{total} endpoints, found {found} so far...", flush=True)
+            result = future.result()
+            if result:
+                with lock:
+                    results.append(result)
+                    found += 1
+                print(f"  [FOUND] {result['method']} /newsign/{result['endpoint']} -> HTTP {result['status']}", flush=True)
 
-        # Process in batches
-        batch_size = 2000
-        total = len(endpoints)
-        done = 0
+    print(f"\n[SUMMARY] /newsign/ scan complete: {tested} tested, {found} found", flush=True)
+    return results
 
-        for i in range(0, total, batch_size):
-            batch = endpoints[i:i+batch_size]
-            tasks = [scan_one(ep) for ep in batch]
-            batch_results = await asyncio.gather(*tasks, return_exceptions=True)
-            for br in batch_results:
-                if isinstance(br, list):
-                    results.extend(br)
-            done += len(batch)
-            print(f"  [进度] {done}/{total} ({done*100//total}%) - 发现 {len(results)} 个真实命中", flush=True)
+def scan_pptsign(puid):
+    """Part 2: Scan /pptSign/ endpoints"""
+    print("\n" + "="*80, flush=True)
+    print("PART 2: Scanning /pptSign/ endpoints", flush=True)
+    print("="*80, flush=True)
 
-    return results, catchall_count
+    base_url = f"{BASE}/pptSign"
+    base_params = {
+        "activeId": AID,
+        "uid": puid,
+        "courseId": COURSE_ID,
+        "classId": CLASS_ID,
+        "status": "1",
+        "remark": ""
+    }
 
+    results = []
+    tested = 0
+    found = 0
+    lock = threading.Lock()
+
+    tasks = []
+    for ep in PPTSIGN_ENDPOINTS:
+        tasks.append((ep, "GET", base_params.copy()))
+        tasks.append((ep, "POST", base_params.copy()))
+
+    def test_one_ppt(task):
+        ep, method, params = task
+        return test_endpoint_threadsafe(base_url, ep, method, params=params)
+
+    with ThreadPoolExecutor(max_workers=30) as executor:
+        futures = {executor.submit(test_one_ppt, t): t for t in tasks}
+        for future in as_completed(futures):
+            with lock:
+                tested += 1
+            result = future.result()
+            if result:
+                with lock:
+                    results.append(result)
+                    found += 1
+                print(f"  [FOUND] {result['method']} /pptSign/{result['endpoint']} -> HTTP {result['status']}", flush=True)
+
+    print(f"\n[SUMMARY] /pptSign/ basic scan: {tested} tested, {found} found", flush=True)
+
+    # Deep test: stuSignajax with parameter variations
+    print("\n[INFO] Deep testing stuSignajax/stuSignAjaxNew with parameter variations...", flush=True)
+    deep_results = []
+
+    variations = []
+    # status variations for stuSignajax
+    for st in [1, 0, 2]:
+        p = base_params.copy()
+        p["status"] = str(st)
+        variations.append(("stuSignajax", "GET", p))
+        variations.append(("stuSignajax", "POST", p.copy()))
+
+    # enc variations for stuSignajax
+    for enc_val in ["test", "empty", "random"]:
+        for method in ["GET", "POST"]:
+            p = base_params.copy()
+            p["enc"] = enc_val
+            variations.append(("stuSignajax", method, p))
+
+    # appType variations for stuSignajax
+    for app_type in [0, 1, 15]:
+        for method in ["GET", "POST"]:
+            p = base_params.copy()
+            p["appType"] = str(app_type)
+            variations.append(("stuSignajax", method, p))
+
+    # location variations for stuSignajax
+    for method in ["GET", "POST"]:
+        p = base_params.copy()
+        p["latitude"] = "39.9042"
+        p["longitude"] = "116.4074"
+        p["appType"] = "0"
+        variations.append(("stuSignajax", method, p))
+
+    # stuSignAjaxNew variations
+    for st in [1, 0, 2]:
+        for method in ["GET", "POST"]:
+            p = base_params.copy()
+            p["status"] = str(st)
+            variations.append(("stuSignAjaxNew", method, p))
+
+    for enc_val in ["test", "empty", "random"]:
+        for method in ["GET", "POST"]:
+            p = base_params.copy()
+            p["enc"] = enc_val
+            variations.append(("stuSignAjaxNew", method, p))
+
+    for app_type in [0, 1, 15]:
+        for method in ["GET", "POST"]:
+            p = base_params.copy()
+            p["appType"] = str(app_type)
+            variations.append(("stuSignAjaxNew", method, p))
+
+    for method in ["GET", "POST"]:
+        p = base_params.copy()
+        p["latitude"] = "39.9042"
+        p["longitude"] = "116.4074"
+        p["appType"] = "0"
+        variations.append(("stuSignAjaxNew", method, p))
+
+    deep_tested = 0
+    deep_found = 0
+
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        futures = {executor.submit(test_one_ppt, v): v for v in variations}
+        for future in as_completed(futures):
+            deep_tested += 1
+            result = future.result()
+            if result:
+                deep_results.append(result)
+                deep_found += 1
+                print(f"  [DEEP FOUND] {result['method']} /pptSign/{result['endpoint']} -> HTTP {result['status']}", flush=True)
+
+    print(f"\n[SUMMARY] /pptSign/ deep test: {deep_tested} tested, {deep_found} found", flush=True)
+
+    all_results = results + deep_results
+    return all_results
 
 def main():
-    print("=" * 60)
-    print("ChaoXing /newsign/ Endpoint Scanner (Async)")
-    print("Authorized Security Audit")
-    print("=" * 60)
+    print("="*80, flush=True)
+    print("ChaoXing Platform Endpoint Scanner - Authorized Security Audit", flush=True)
+    print("="*80, flush=True)
 
-    # Step 1: Login
-    print("\n[*] 正在登录...")
-    puid, cookies, ua = login_sync("18436633997", "3.1415926Cpy")
-    if not puid:
-        puid = "431407443"
-    print(f"[+] 登录成功, puid={puid}")
+    # Login
+    print("\n[STEP 1] Logging in with student account...", flush=True)
+    session, puid_val = login(PHONE, PWD)
+    if not puid_val:
+        puid_val = PUID
+    print(f"[LOGIN] PUID: {puid_val}", flush=True)
+    print(f"[LOGIN] Cookies: {dict(session.cookies)}", flush=True)
 
-    course_id = 257485372
-    class_id = 132821141
-    active_id = 5000163891319
+    # Set global session info for thread-local sessions
+    global _session_cookies, _session_headers
+    _session_cookies = dict(session.cookies)
+    _session_headers = dict(session.headers)
 
-    # Step 2: Establish baselines
-    print("\n[*] 基线测试...")
-    s = requests.Session()
-    s.verify = False
-    s.headers.update({"User-Agent": ua, "Accept": "application/json, text/plain, */*"})
-    for name, val in cookies.items():
-        s.cookies.set(name, val)
+    # Part 1: /newsign/ scan
+    t1 = time.time()
+    newsign_results = scan_newsign(puid_val)
+    t1_elapsed = time.time() - t1
+    print(f"[TIME] /newsign/ scan took {t1_elapsed:.1f}s", flush=True)
 
-    baselines = {}
-    domains = [
-        (BASE, "mobilelearn.chaoxing.com"),
-        ("https://mooc1-1.chaoxing.com", "mooc1-1.chaoxing.com"),
-    ]
+    # Part 2: /pptSign/ scan
+    t2 = time.time()
+    pptsign_results = scan_pptsign(puid_val)
+    t2_elapsed = time.time() - t2
+    print(f"[TIME] /pptSign/ scan took {t2_elapsed:.1f}s", flush=True)
 
-    for base_url, label in domains:
-        catchall = set()
-        for bp in ["randomnonexistentpath12345", "zzzz_fake_99999"]:
-            try:
-                r = s.get(f"{base_url}/newsign/{bp}", params={"activeId": str(active_id), "uid": str(puid), "courseId": str(course_id), "classId": str(class_id)}, timeout=10, allow_redirects=False)
-                catchall.add((r.status_code, len(r.content)))
-                print(f"  {label}: /newsign/{bp} -> {r.status_code} ({len(r.content)}B)")
-            except Exception as e:
-                print(f"  基线测试失败: {e}")
-        baselines[base_url] = catchall
-        print(f"  {label} catch-all: {catchall}")
+    # Save results
+    print("\n" + "="*80, flush=True)
+    print("SAVING RESULTS", flush=True)
+    print("="*80, flush=True)
 
-    # Step 3: Generate endpoints
-    endpoints = generate_endpoints()
-    print(f"\n[*] 生成了 {len(endpoints)} 个端点路径待扫描")
-
-    # Step 4: Scan both domains concurrently
-    all_results = []
-    total_catchall = 0
-    start_time = time.time()
-
-    # Scan mobilelearn.chaoxing.com (full set)
-    print(f"\n[*] 扫描 {BASE}/newsign/ (并发=200)...")
-    ml_results, ml_catchall = asyncio.run(
-        async_scan(endpoints, cookies, ua, puid, course_id, class_id, active_id,
-                   BASE, baselines[BASE], max_concurrent=200)
-    )
-    all_results.extend(ml_results)
-    total_catchall += ml_catchall
-    print(f"  mobilelearn: {len(ml_results)} 真实命中")
-
-    # Scan mooc1-1.chaoxing.com (focused set)
-    MOOC_BASE = "https://mooc1-1.chaoxing.com"
-    focused_verbs = ["pre", "stu", "do", "quick", "start", "get", "sign", "student", "makeUp", "resign",
-                     "add", "save", "create", "submit", "check", "verify", "query", "list", "detail", "info",
-                     "update", "delete", "cancel", "batch", "refresh", "reset", "count", "stat", "export",
-                     "download", "upload", "search", "filter", "status", "config", "health", "ping"]
-    focused_endpoints = set()
-    for v in focused_verbs:
-        for n in NOUNS:
-            focused_endpoints.add(f"{v}{n}")
-            focused_endpoints.add(f"{v}/{n}")
-    for w in VERBS:
-        focused_endpoints.add(w)
-    for n in NOUNS:
-        focused_endpoints.add(n)
-        focused_endpoints.add(n.lower())
-    focused_endpoints = list(focused_endpoints)
-
-    print(f"\n[*] 扫描 mooc1-1.chaoxing.com/newsign/ ({len(focused_endpoints)} 个端点)...")
-    mooc_results, mooc_catchall = asyncio.run(
-        async_scan(focused_endpoints, cookies, ua, puid, course_id, class_id, active_id,
-                   MOOC_BASE, baselines[MOOC_BASE], max_concurrent=100)
-    )
-    all_results.extend(mooc_results)
-    total_catchall += mooc_catchall
-    print(f"  mooc1-1: {len(mooc_results)} 真实命中")
-
-    total_elapsed = time.time() - start_time
-
-    # Step 5: Save
-    output = {
-        "scan_info": {
-            "base_url": BASE,
-            "path_prefix": "/newsign/",
-            "puid": puid,
-            "courseId": course_id,
-            "classId": class_id,
-            "activeId": active_id,
-            "total_endpoints_scanned": len(endpoints) + len(focused_endpoints),
-            "total_real_hits": len(all_results),
-            "total_catchall_hits": total_catchall,
-            "elapsed_seconds": round(total_elapsed, 2),
-            "mobilelearn_catchall_pattern": str(baselines[BASE]),
-            "mooc_catchall_pattern": str(baselines[MOOC_BASE]),
-            "note": "mobilelearn.chaoxing.com returns 500 (224B) catch-all for all /newsign/ paths when authenticated. "
-                    "mooc1-1.chaoxing.com returns 404 for non-existent /newsign/ paths. "
-                    "Results with is_catchall=false have different response patterns than the baseline.",
-        },
-        "real_hits": all_results,
-        "catchall_hits_total": total_catchall,
-    }
-
+    total_newsign_tested = len(generate_newsign_endpoints()) * 2
     with open("/workspace/task2_results.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump({
+            "scan_type": "/newsign/ endpoint scan",
+            "puid": puid_val,
+            "courseId": COURSE_ID,
+            "classId": CLASS_ID,
+            "activeId": AID,
+            "total_tested": total_newsign_tested,
+            "found_count": len(newsign_results),
+            "elapsed_seconds": round(t1_elapsed, 1),
+            "results": newsign_results
+        }, f, ensure_ascii=False, indent=2)
+    print(f"[SAVED] /workspace/task2_results.json ({len(newsign_results)} endpoints)", flush=True)
 
-    # Step 6: Summary
-    print("\n" + "=" * 60)
-    print("扫描结果摘要")
-    print("=" * 60)
-    print(f"扫描端点总数: {len(endpoints) + len(focused_endpoints)}")
-    print(f"  mobilelearn.chaoxing.com: {len(endpoints)} 个")
-    print(f"  mooc1-1.chaoxing.com: {len(focused_endpoints)} 个")
-    print(f"真实命中 (非catch-all): {len(all_results)}")
-    print(f"Catch-all命中 (服务器统一响应): {total_catchall}")
-    print(f"总耗时: {total_elapsed:.2f}s")
+    with open("/workspace/task3_results.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "scan_type": "/pptSign/ endpoint scan (student account)",
+            "puid": puid_val,
+            "courseId": COURSE_ID,
+            "classId": CLASS_ID,
+            "activeId": AID,
+            "found_count": len(pptsign_results),
+            "elapsed_seconds": round(t2_elapsed, 1),
+            "results": pptsign_results
+        }, f, ensure_ascii=False, indent=2)
+    print(f"[SAVED] /workspace/task3_results.json ({len(pptsign_results)} endpoints)", flush=True)
 
-    if all_results:
-        by_status = {}
-        for r in all_results:
-            sc = r["status_code"]
-            by_status.setdefault(sc, []).append(r)
+    # Print summary
+    print("\n" + "="*80, flush=True)
+    print("FINAL SUMMARY - ALL DISCOVERED ENDPOINTS (non-404, non-HTML-error)", flush=True)
+    print("="*80, flush=True)
 
-        print(f"\n真实命中按状态码分布:")
-        for sc in sorted(by_status.keys()):
-            paths = sorted(set(r["path"] for r in by_status[sc]))
-            print(f"  {sc}: {len(by_status[sc])} 个响应, {len(paths)} 个唯一路径")
+    print(f"\n--- /newsign/ endpoints ({len(newsign_results)}) ---", flush=True)
+    for r in sorted(newsign_results, key=lambda x: (x["endpoint"], x["method"])):
+        print(f"  [{r['method']}] /newsign/{r['endpoint']} -> HTTP {r['status']}", flush=True)
 
-        unique_paths = sorted(set(r["path"] for r in all_results))
-        print(f"\n发现的有效路径 ({len(unique_paths)} 个):")
-        for p in unique_paths[:100]:
-            methods = sorted(set(r["method"] for r in all_results if r["path"] == p))
-            statuses = sorted(set(r["status_code"] for r in all_results if r["path"] == p))
-            domains = sorted(set(r.get("base_url", "").replace("https://", "") for r in all_results if r["path"] == p))
-            print(f"  {p}  [{', '.join(methods)}] -> {statuses} @ {domains}")
-        if len(unique_paths) > 100:
-            print(f"  ... 还有 {len(unique_paths) - 100} 个路径 (详见JSON)")
-    else:
-        print("\n未发现非catch-all的有效端点")
+    print(f"\n--- /pptSign/ endpoints ({len(pptsign_results)}) ---", flush=True)
+    for r in sorted(pptsign_results, key=lambda x: (x["endpoint"], x["method"])):
+        print(f"  [{r['method']}] /pptSign/{r['endpoint']} -> HTTP {r['status']}", flush=True)
 
-    print(f"\n结果已保存到: /workspace/task2_results.json")
-
+    print(f"\n[TOTAL] /newsign/ found: {len(newsign_results)}, /pptSign/ found: {len(pptsign_results)}", flush=True)
+    print("[DONE] Scan complete.", flush=True)
 
 if __name__ == "__main__":
     main()

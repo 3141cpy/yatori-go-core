@@ -1,0 +1,810 @@
+{
+  "login": {
+    "puid": "431407443",
+    "success": true
+  },
+  "activities": [
+    {
+      "id": 5000163958798,
+      "name": "位置签到-签退",
+      "type": 74,
+      "status": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5000163954277,
+      "name": "位置签到",
+      "type": 2,
+      "status": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5000163954225,
+      "name": "位置签到",
+      "type": 2,
+      "status": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5000139505593,
+      "name": "位置签到",
+      "type": 2,
+      "status": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5000139411280,
+      "name": "位置签到",
+      "type": 2,
+      "status": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5000139410559,
+      "name": "位置签到",
+      "type": 2,
+      "status": 2,
+      "groupId": 2
+    }
+  ],
+  "distance_measurements": [
+    {
+      "city": "北京",
+      "lat": 39.908823,
+      "lng": 116.39747,
+      "distance": 617764.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点617764.0米，不在可签到范围内。"
+    },
+    {
+      "city": "上海",
+      "lat": 31.230416,
+      "lng": 121.473701,
+      "distance": 827762.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点827762.0米，不在可签到范围内。"
+    },
+    {
+      "city": "广州",
+      "lat": 23.12911,
+      "lng": 113.26438,
+      "distance": 1296188.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点1296188.0米，不在可签到范围内。"
+    },
+    {
+      "city": "成都",
+      "lat": 30.67197,
+      "lng": 104.06476,
+      "distance": 1006509.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点1006509.0米，不在可签到范围内。"
+    },
+    {
+      "city": "郑州",
+      "lat": 34.75661,
+      "lng": 113.65004,
+      "distance": 3931.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点3931.0米，不在可签到范围内。"
+    },
+    {
+      "city": "武汉",
+      "lat": 30.584355,
+      "lng": 114.298572,
+      "distance": 471017.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点471017.0米，不在可签到范围内。"
+    },
+    {
+      "city": "南京",
+      "lat": 32.05836,
+      "lng": 118.796468,
+      "distance": 564315.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点564315.0米，不在可签到范围内。"
+    },
+    {
+      "city": "济南",
+      "lat": 36.651216,
+      "lng": 116.99719,
+      "distance": 364851.0,
+      "success": false,
+      "already_signed": false,
+      "ended": false,
+      "msg": "距教师指定签到地点364851.0米，不在可签到范围内。"
+    }
+  ],
+  "trilateration": {
+    "lat": 34.786505615583934,
+    "lon": 113.66743588705972,
+    "method": "grid_search + gradient_descent",
+    "num_measurements": 8
+  },
+  "signin_attempt": {
+    "active_id": "5000163954277",
+    "lat": 34.786505615583934,
+    "lon": 113.66743588705972,
+    "success": false,
+    "already_signed": true,
+    "ended": false,
+    "distance": null,
+    "msg": "您已签到过了"
+  },
+  "range_threshold": [
+    {
+      "direction": "北",
+      "distance_from_center": 0,
+      "lat": 34.78450561558393,
+      "lng": 113.66443588705974,
+      "reported_distance": 605.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点605.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 100,
+      "lat": 34.785406516484834,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 200,
+      "lat": 34.786307417385736,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 300,
+      "lat": 34.78720831828664,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 400,
+      "lat": 34.78810921918753,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 500,
+      "lat": 34.789010120088435,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 600,
+      "lat": 34.78991102098934,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 700,
+      "lat": 34.79081192189024,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 800,
+      "lat": 34.79171282279114,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 900,
+      "lat": 34.79261372369204,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1000,
+      "lat": 34.79351462459294,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1100,
+      "lat": 34.79441552549384,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1200,
+      "lat": 34.79531642639474,
+      "lng": 113.66443588705974,
+      "reported_distance": null,
+      "success": false,
+      "already_signed": false,
+      "msg": "签到已结束"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1300,
+      "lat": 34.79621732729564,
+      "lng": 113.66443588705974,
+      "reported_distance": 696.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点696.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1400,
+      "lat": 34.797118228196545,
+      "lng": 113.66443588705974,
+      "reported_distance": 796.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点796.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "北",
+      "distance_from_center": 1500,
+      "lat": 34.79801912909745,
+      "lng": 113.66443588705974,
+      "reported_distance": 897.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点897.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 0,
+      "lat": 34.78450561558393,
+      "lng": 113.66443588705974,
+      "reported_distance": 605.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点605.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 100,
+      "lat": 34.78360471468303,
+      "lng": 113.66443588705974,
+      "reported_distance": 705.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点705.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 200,
+      "lat": 34.78270381378213,
+      "lng": 113.66443588705974,
+      "reported_distance": 805.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点805.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 300,
+      "lat": 34.781802912881226,
+      "lng": 113.66443588705974,
+      "reported_distance": 905.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点905.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 400,
+      "lat": 34.78090201198033,
+      "lng": 113.66443588705974,
+      "reported_distance": 1005.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1005.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 500,
+      "lat": 34.78000111107943,
+      "lng": 113.66443588705974,
+      "reported_distance": 1105.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1105.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 600,
+      "lat": 34.77910021017853,
+      "lng": 113.66443588705974,
+      "reported_distance": 1205.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1205.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 700,
+      "lat": 34.778199309277625,
+      "lng": 113.66443588705974,
+      "reported_distance": 1306.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1306.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 800,
+      "lat": 34.77729840837672,
+      "lng": 113.66443588705974,
+      "reported_distance": 1406.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1406.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 900,
+      "lat": 34.77639750747582,
+      "lng": 113.66443588705974,
+      "reported_distance": 1506.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1506.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1000,
+      "lat": 34.775496606574926,
+      "lng": 113.66443588705974,
+      "reported_distance": 1606.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1606.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1100,
+      "lat": 34.774595705674024,
+      "lng": 113.66443588705974,
+      "reported_distance": 1706.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1706.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1200,
+      "lat": 34.77369480477312,
+      "lng": 113.66443588705974,
+      "reported_distance": 1806.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1806.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1300,
+      "lat": 34.77279390387222,
+      "lng": 113.66443588705974,
+      "reported_distance": 1906.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1906.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1400,
+      "lat": 34.77189300297132,
+      "lng": 113.66443588705974,
+      "reported_distance": 2006.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点2006.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "南",
+      "distance_from_center": 1500,
+      "lat": 34.770992102070416,
+      "lng": 113.66443588705974,
+      "reported_distance": 2106.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点2106.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 0,
+      "lat": 34.78450561558393,
+      "lng": 113.66443588705974,
+      "reported_distance": 605.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点605.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 100,
+      "lat": 34.78450561558393,
+      "lng": 113.66553280297852,
+      "reported_distance": 613.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点613.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 200,
+      "lat": 34.78450561558393,
+      "lng": 113.6666297188973,
+      "reported_distance": 637.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点637.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 300,
+      "lat": 34.78450561558393,
+      "lng": 113.66772663481608,
+      "reported_distance": 675.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点675.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 400,
+      "lat": 34.78450561558393,
+      "lng": 113.66882355073484,
+      "reported_distance": 724.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点724.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 500,
+      "lat": 34.78450561558393,
+      "lng": 113.66992046665362,
+      "reported_distance": 784.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点784.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 600,
+      "lat": 34.78450561558393,
+      "lng": 113.6710173825724,
+      "reported_distance": 851.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点851.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 700,
+      "lat": 34.78450561558393,
+      "lng": 113.67211429849118,
+      "reported_distance": 924.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点924.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 800,
+      "lat": 34.78450561558393,
+      "lng": 113.67321121440996,
+      "reported_distance": 1002.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1002.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 900,
+      "lat": 34.78450561558393,
+      "lng": 113.67430813032874,
+      "reported_distance": 1084.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1084.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1000,
+      "lat": 34.78450561558393,
+      "lng": 113.6754050462475,
+      "reported_distance": 1168.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1168.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1100,
+      "lat": 34.78450561558393,
+      "lng": 113.67650196216628,
+      "reported_distance": 1255.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1255.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1200,
+      "lat": 34.78450561558393,
+      "lng": 113.67759887808506,
+      "reported_distance": 1343.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1343.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1300,
+      "lat": 34.78450561558393,
+      "lng": 113.67869579400384,
+      "reported_distance": 1433.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1433.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1400,
+      "lat": 34.78450561558393,
+      "lng": 113.67979270992262,
+      "reported_distance": 1525.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1525.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "东",
+      "distance_from_center": 1500,
+      "lat": 34.78450561558393,
+      "lng": 113.6808896258414,
+      "reported_distance": 1617.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1617.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 0,
+      "lat": 34.78450561558393,
+      "lng": 113.66443588705974,
+      "reported_distance": 605.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点605.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 100,
+      "lat": 34.78450561558393,
+      "lng": 113.66333897114096,
+      "reported_distance": 613.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点613.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 200,
+      "lat": 34.78450561558393,
+      "lng": 113.66224205522218,
+      "reported_distance": 638.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点638.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 300,
+      "lat": 34.78450561558393,
+      "lng": 113.6611451393034,
+      "reported_distance": 676.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点676.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 400,
+      "lat": 34.78450561558393,
+      "lng": 113.66004822338463,
+      "reported_distance": 726.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点726.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 500,
+      "lat": 34.78450561558393,
+      "lng": 113.65895130746586,
+      "reported_distance": 786.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点786.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 600,
+      "lat": 34.78450561558393,
+      "lng": 113.65785439154708,
+      "reported_distance": 854.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点854.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 700,
+      "lat": 34.78450561558393,
+      "lng": 113.6567574756283,
+      "reported_distance": 927.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点927.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 800,
+      "lat": 34.78450561558393,
+      "lng": 113.65566055970952,
+      "reported_distance": 1005.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1005.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 900,
+      "lat": 34.78450561558393,
+      "lng": 113.65456364379074,
+      "reported_distance": 1087.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1087.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1000,
+      "lat": 34.78450561558393,
+      "lng": 113.65346672787197,
+      "reported_distance": 1171.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1171.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1100,
+      "lat": 34.78450561558393,
+      "lng": 113.65236981195319,
+      "reported_distance": 1258.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1258.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1200,
+      "lat": 34.78450561558393,
+      "lng": 113.65127289603441,
+      "reported_distance": 1346.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1346.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1300,
+      "lat": 34.78450561558393,
+      "lng": 113.65017598011563,
+      "reported_distance": 1437.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1437.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1400,
+      "lat": 34.78450561558393,
+      "lng": 113.64907906419685,
+      "reported_distance": 1528.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1528.0米，不在可签到范围内。"
+    },
+    {
+      "direction": "西",
+      "distance_from_center": 1500,
+      "lat": 34.78450561558393,
+      "lng": 113.64798214827807,
+      "reported_distance": 1620.0,
+      "success": false,
+      "already_signed": false,
+      "msg": "距教师指定签到地点1620.0米，不在可签到范围内。"
+    }
+  ],
+  "info_disclosure": [
+    {
+      "endpoint": "stuSignajax",
+      "url": "https://mobilelearn.chaoxing.com/pptSign/stuSignajax",
+      "found_data": {
+        "info_leak": "API返回学生位置到教师指定位置的距离，可用于三边测量定位"
+      },
+      "severity": "HIGH",
+      "description": "签到API在签到失败时返回学生到教师指定位置的距离信息，攻击者可从多个已知位置探测，通过三边测量法计算出教师指定的签到位置坐标"
+    }
+  ],
+  "summary": "登录: 成功 (puid=431407443); 找到位置签到活动: 6个; 有效距离测量: 8个; 三边测量教师位置: (34.786506, 113.667436); 签到结果: 该学生已签到过（坐标在三边测量位置范围内）; 签到范围阈值: 约605.0m（API返回的最小距离）; 信息泄露: 发现1个安全问题; 关键发现: stuSignajax API在签到失败时返回距离信息，允许三边测量定位教师位置",
+  "range_threshold_meta": {
+    "teacher_location_estimate": {
+      "lat": 34.78450561558393,
+      "lon": 113.66443588705974
+    },
+    "minimum_reported_distance": 605.0,
+    "note": "API返回的最小距离为605.0m，说明签到范围阈值约为605.0m或更小"
+  }
+}

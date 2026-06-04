@@ -1,0 +1,26 @@
+{
+  "scan_type": "/newsign/ endpoint scan",
+  "puid": "431407443",
+  "courseId": "257485372",
+  "classId": "132821141",
+  "activeId": "5000163891319",
+  "total_tested": 131538,
+  "found_count": 2,
+  "elapsed_seconds": 4792.4,
+  "results": [
+    {
+      "endpoint": "updateSignStatus",
+      "method": "GET",
+      "url": "https://mobilelearn.chaoxing.com/newsign/updateSignStatus",
+      "status": 200,
+      "response_preview": "success"
+    },
+    {
+      "endpoint": "updateSignStatus",
+      "method": "POST",
+      "url": "https://mobilelearn.chaoxing.com/newsign/updateSignStatus",
+      "status": 200,
+      "response_preview": "success"
+    }
+  ]
+}
