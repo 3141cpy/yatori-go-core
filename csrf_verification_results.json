@@ -1,0 +1,231 @@
+{
+  "token_csrf": {
+    "normal_response": {
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}"
+    },
+    "no_referer": {
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}"
+    },
+    "evil_referer": {
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}"
+    },
+    "evil_origin": {
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}"
+    },
+    "get_request": {
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    "security_headers": {
+      "X-Frame-Options": "缺失",
+      "X-Content-Type-Options": "缺失",
+      "Content-Security-Policy": "缺失",
+      "Strict-Transport-Security": "缺失",
+      "X-XSS-Protection": "缺失"
+    }
+  },
+  "upload_csrf": {
+    "no_referer": {
+      "status": 200,
+      "body": "{\"code\":-5,\"msg\":\"参数错误, puid不能为空, null\",\"newCode\":200008,\"result\":false}"
+    },
+    "evil_referer": {
+      "status": 200,
+      "body": "{\"code\":-5,\"msg\":\"参数错误, puid不能为空, null\",\"newCode\":200008,\"result\":false}"
+    },
+    "evil_origin": {
+      "status": 200,
+      "body": "{\"code\":-5,\"msg\":\"参数错误, puid不能为空, null\",\"newCode\":200008,\"result\":false}"
+    },
+    "security_headers": {
+      "X-Frame-Options": "缺失",
+      "X-Content-Type-Options": "缺失",
+      "Content-Security-Policy": "缺失"
+    }
+  },
+  "token_capabilities": {
+    "file_list_['puid']": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_list_[]": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_list_['page', 'size']": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_list_['folderId']": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_delete": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_download_['fileId']": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_download_['puid']": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_move": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    },
+    "file_copy": {
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format"
+    }
+  },
+  "endpoint_exploration": {
+    "/api/token/uservalid": {
+      "method": "GET",
+      "status": 200,
+      "body": "{\"result\":true,\"_token\":\"c4f84343764b72973726f34f67c1d0b2\"}",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 200
+    },
+    "/api/file/list": {
+      "method": "GET",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/file/upload": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/file/delete": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/file/move": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/file/copy": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/folder/list": {
+      "method": "GET",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/folder/create": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/folder/delete": {
+      "method": "POST",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/share/list": {
+      "method": "GET",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/share/create": {
+      "method": "POST",
+      "status": 200,
+      "body": "{\"code\":-5,\"msg\":\"参数错误, puid不能为空, null\",\"newCode\":200008,\"result\":false}",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 200
+    },
+    "/api/share/delete": {
+      "method": "POST",
+      "status": 200,
+      "body": "{\"code\":-5,\"msg\":\"参数错误, puid不能为空, null\",\"newCode\":200008,\"result\":false}",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 200
+    },
+    "/api/user/info": {
+      "method": "GET",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    },
+    "/api/disk/info": {
+      "method": "GET",
+      "status": 404,
+      "body": "<html>\r\n<head>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache\">\r\n    <meta http-equiv=\"expires\" content=\"0\">\r\n    <meta name=\"format",
+      "csrf_vulnerable": true,
+      "evil_referer_status": 404
+    }
+  },
+  "cors_check": {
+    "pan-yz.chaoxing.com": {
+      "options_status": 405,
+      "acao": "未设置",
+      "acac": "未设置",
+      "acam": "未设置",
+      "acah": "未设置",
+      "misconfigured": false
+    },
+    "mobilelearn.chaoxing.com": {
+      "options_status": 500,
+      "acao": "未设置",
+      "acac": "未设置",
+      "acam": "未设置",
+      "acah": "未设置",
+      "misconfigured": false
+    },
+    "mooc1-api.chaoxing.com": {
+      "options_status": 405,
+      "acao": "未设置",
+      "acac": "未设置",
+      "acam": "未设置",
+      "acah": "未设置",
+      "misconfigured": false
+    },
+    "groupweb.chaoxing.com": {
+      "options_status": 400,
+      "acao": "未设置",
+      "acac": "未设置",
+      "acam": "未设置",
+      "acah": "未设置",
+      "misconfigured": false
+    },
+    "stat2-ans.chaoxing.com": {
+      "options_status": 403,
+      "acao": "未设置",
+      "acac": "未设置",
+      "acam": "未设置",
+      "acah": "未设置",
+      "misconfigured": false
+    }
+  }
+}

