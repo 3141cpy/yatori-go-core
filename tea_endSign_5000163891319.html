@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>提示信息</title>
+
+  <meta http-equiv="keywords" content="keyword1,keyword2,keyword3" />
+  <meta http-equiv="description" content="this is my page" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+  <style>
+    <!--
+    #errormsg {
+      text-align: center;
+      position: fixed;
+      left: 0;
+      top: 40%;
+      width: 100%;
+      color: #A8A8B3;
+      font-size: 20px;
+    }
+
+    #errormsg2 {
+      text-align: center;
+      position: fixed;
+      left: 0;
+      top: 40%;
+      width: 100%;
+      color: #A8A8B3;
+      font-size: 20px;
+    }
+    -->
+  </style>
+</head>
+
+<body>
+<p id="errormsg"></p>
+<p id="errormsg2" style="padding-top:100px;"></p>
+<script>
+  var userAgentInfo = navigator.userAgent;
+  if(userAgentInfo.indexOf("Android") >= 0||userAgentInfo.indexOf("iPhone") >= 0||userAgentInfo.indexOf("HarmonyOS") >= 0
+          ||userAgentInfo.indexOf("iPad") >= 0||userAgentInfo.indexOf("iPod") >= 0
+          ||userAgentInfo.indexOf("Windows Phone") >= 0||userAgentInfo.indexOf("SymbianOS") >= 0){
+    document.getElementById("errormsg").style.fontSize="36px";
+    document.getElementById("errormsg2").style.fontSize="36px";
+  }
+
+</script>
+</body>
+</html>

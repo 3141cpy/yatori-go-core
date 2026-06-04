@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780480565513" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780480565513" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/sign.css?v=1780480565513" rel="stylesheet" type="text/css" />
+    <!--<link href="/front/mobile/common/css/locationMark.css?v=1780480565513" rel="stylesheet" type="text/css" />-->
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/alert.css?v=1780480565513" type="text/css" rel="stylesheet"/>
+    <!--<link href="../front/mobile/sign/css/style.css?v=1780480565513" type="text/css" rel="stylesheet"/>-->
+	<script src="/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/jquery.min.js?v=1780480565513" type="text/javascript"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/CXJSBridge.js?v=1780480565513" charset="utf-8"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/app.utils.js?v=1780480565513" charset="utf-8"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xYjRz7D6pjc3xV516qReaRgcTdoZTyxP"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/ratio.js?v=1780480565513" type="text/javascript"></script>
+    <style type="text/css">
+        .BMap_Marker div { border-radius: 50%; border: 0.0585rem #fff solid; box-shadow: 0px 0px 0.117rem rgba(0,0,0,0.8);}
+        .BMap_cpyCtrl
+        {
+            display:none;
+        }
+        .anchorBL{
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+
+        /*var username = "3141cpy";
+        var puid = "431407443";
+        if(!username){
+            username = puid;
+        }
+        function _jsBridgeReady(){
+            jsBridge.postNotification("CLIENT_TOOLBAR_TITLE", {"webTitle":username+"的签到"} );
+        }*/
+
+
+        $(function(){
+            $(".change section").click(function(){
+                $(this).addClass("section3").siblings().removeClass("section3")
+            })
+                    })
+
+        //预览图片
+        function showImage(obj,index){
+            var imgsArray=[];
+            var star = "https://p.cldisk.com/star3/720_100000/" ;
+            var origin = "https://p.cldisk.com/star3/origin/" ;
+            var objId = $(obj).attr("objId") ;
+            if(objId){
+                var img={"imageUrl":star+objId,"originUrl":origin+objId};
+                imgsArray.push(img);
+                var data ={showIndex:0,imageUrls:imgsArray};
+                jsBridge.postNotification('CLIENT_PREVIEW_IMAGES',data);
+            }else{
+                var img={"imageUrl":obj.src};
+                imgsArray.push(img);
+                var data ={showIndex:0,imageUrls:imgsArray};
+                jsBridge.postNotification('CLIENT_PREVIEW_IMAGES',data);
+            }
+        }
+
+        function querySignList(){
+            if(15==1||15==2||15==5||15==6||15==0){
+                var acId="5000163964324";
+                var role="";
+                var uid="431407443";
+                var url1="https://mobilelearn.chaoxing.com/sign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role;
+                var opts ="";
+                var  atype='';
+                var appType='15';
+                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};
+                jsBridge.postNotification('CLIENT_OPEN_URL', opts);
+            }else if(15==15||15==17){
+                var acId="5000163964324";
+                var role="";
+                var uid="431407443";
+                var isTeacherViewOpen = "0";
+                //var url1="https://mobilelearn.chaoxing.com/sign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role;
+                var url1="https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=5000163964324&uid="+ uid+"&role="+role+"&appType=15&isSecond=1&isTeacherViewOpen="+isTeacherViewOpen;
+                var opts ="";
+                var  atype='';
+                var appType='15';
+                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};
+                jsBridge.postNotification('CLIENT_OPEN_URL', opts);
+            }else if(15==12){
+                var acId="5000163964324";
+                var role="";
+                var uid="431407443";
+                var url1="https://mobilelearn.chaoxing.com/pptSign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role+"&appType=15";
+                var opts ="";
+                var  atype='';
+                var appType='15';
+                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};
+                jsBridge.postNotification('CLIENT_OPEN_URL', opts);
+            }
+        }
+    </script>
+    <style type="text/css">
+        .zmessage_pic { margin: 20px; text-align: center;}
+        .zmessage_pic img { width: 160px; height: 160px; border-radius: 5px; overflow: hidden;}
+        .zmessage_map,.zmessage_mapFooter { width:100%;}
+    </style>
+</head>
+
+<body>
+<input type="hidden" id="latitude" value="">
+<input type="hidden" id="longitude" value="">
+<div class="zsign">
+    <div class="zsign_box">
+                <div class="zsign_success zsign_hook">
+                        <h1 id="statuscontent">
+             <em style="color:#F33131">缺勤</em>
+                    </h1>
+                                    <p class="signtime"> 06-03 19:01 </p>
+            </div>
+                        <div class="zsign_media">
+                    </div>
+                
+    </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var contentH = $('.zsign_hook').outerHeight() + $('.zsign_site').outerHeight() + $('.zsign_float').outerHeight() + $('.zsign_media').outerHeight();
+    var windowH = $(window).outerHeight();
+    console.log(contentH,windowH);
+    if (windowH < contentH) {
+        pbottom = parseInt($(".zsign_float").css('paddingBottom'));
+        if ((contentH - windowH) < pbottom+10) {
+            $(".zsign_float").css('paddingBottom',pbottom-(contentH - windowH)+'px');
+        } else {
+            $(".zsign_float").css('paddingBottom',10+'px');
+        }
+    }
+
+    var signstatus = 5;
+    if(signstatus == 1 || signstatus == 2){
+        $(".signtime").css("color","#B3B3B3");
+    }else if(signstatus == 5){
+        $(".signtime").css("color","#F33131");
+    }else if(signstatus == 7 || signstatus == 8 || signstatus == 12){
+        $(".signtime").css("color","#00B368");
+    }else if(signstatus == 9 || signstatus == 10 || signstatus == 11){
+        $(".signtime").css("color","#F28C24");
+    }
+
+
+</script>
+<script>
+    var markerArr;
+    //创建和初始化地图函数：
+    function initMap(){
+        var address = '';
+        if((2==4 || 2==2) && address){
+            var longitude=$("#longitude").val();
+            var latitude=$("#latitude").val();
+            markerArr = [{title:"",content:"3141cpy",point:longitude+"|"+latitude,isOpen:0,icon:{w:30,h:30,l:0,t:0,x:6,lb:5}}];
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMarker();//向地图中添加marker
+            $('#mapshow div.anchorBL').remove();
+        }
+    }
+    var latitude1=$("#latitude").val();
+    var longitude1=$("#longitude").val();
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        latitude1=$("#latitude").val();
+        longitude1=$("#longitude").val();
+        //var point = new BMap.Point(116.318506,40.040905);//定义一个中心点坐标
+        var point = new BMap.Point(longitude1,latitude1);//定义一个中心点坐标
+
+
+
+        //var geolocation = new BMap.Geolocation();
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+
+        /*var gc = new BMap.Geocoder();
+        gc.getLocation(point, function(rs){
+            var addComp = rs.addressComponents;
+            if(addComp.province==addComp.city){
+                address = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            }else{
+                address = addComp.province +  addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            }
+            //address = addComp.province +  addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            //$("#address").html(address);
+         //画图
+         //var label = new BMap.Label(address,{offset:new BMap.Size(20,-10)});
+          //marker.setLabel(label);
+         });*/
+
+        //var myIcon = new BMap.Icon("https://photo.chaoxing.com/p/431407443_30", new BMap.Size(30,30));
+        //var marker = new BMap.Marker(point,{icon:myIcon});
+        //map.addOverlay(marker);
+    }
+
+    /*function getAddress(){
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+            //var mk = new BMap.Marker(r.point);
+            //map.addOverlay(mk);
+            //map.panTo(r.point);
+           var address = "";
+           if(r.address.province==r.address.city){
+                   address+=r.address.city;
+           }else{
+                   address+=r.address.province+r.address.city;
+           }
+           address += r.address.district+r.address.street+r.address.street_number;
+            $("#address").html(address);
+        },{enableHighAccuracy: true})
+    }*/
+
+    function myFun(result){
+        var cityName = result.street;
+        alert(JSON.stringify(result));
+
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+    }
+
+    //创建marker
+    function addMarker(){
+
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            //var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(31,30)});
+            marker.setLabel(label);
+            marker.addEventListener("click", function(){
+                jsBridge.postNotification('CLIENT_OPEN_USERINFO', {"passportID":'431407443'}) ;
+            })
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor:"#ffffff",
+                color:"#fff",
+                cursor:"pointer"
+            });
+
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("https://photo.chaoxing.com/p/431407443_30", new BMap.Size(json.w,json.h))
+        return icon;
+    }
+
+    function prePage(){
+        jsBridge.postNotification('CLIENT_EXIT_LEVEL', {}) ;
+    }
+
+    /* $("#statuscontent").on({
+         touchstart: function(e){
+             timeOutEvent = setTimeout(function(){
+                 var lskey = "pptactive"+"5000163964324";
+                var lsvalue = window.localStorage[lskey];
+                if(lsvalue){
+                    alert("此设备本次签到首次签到时间为:"+lsvalue);
+                }
+            },3000);
+        },
+        touchmove: function(){
+            clearTimeout(timeOutEvent);
+            timeOutEvent = 0;
+            e.preventDefault();
+        },
+        touchend: function(e){
+            clearTimeout(timeOutEvent);
+            if(timeOutEvent!=0){//点击
+                //此处为点击事件----在此处添加跳转详情页
+            }
+            return false;
+        }
+    });*/
+</script>
+</body>
+</html>

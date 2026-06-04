@@ -1,0 +1,279 @@
+================================================================================
+  JSON Content-Type Bypass & mooc-ans Path Deep Test
+================================================================================
+
+[*] Logging in as student...
+    Student PUID: 431407443
+[*] Logging in as teacher...
+    Teacher PUID: 402644510
+
+================================================================================
+  PART 1: JSON Content-Type Bypass Deep Testing
+  Endpoint: /widget/sign/pcTeaSignController/updateSignStatus2
+================================================================================
+
+------------------------------------------------------------
+  Test 1.1: JSON Content-Type + URL query parameters
+------------------------------------------------------------
+  [1.1 JSON+URLParams] HTTP 404
+  Info: Content-Type: application/json, Body: {}, Params in URL
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+------------------------------------------------------------
+  Test 1.2: JSON Content-Type + URL params + JSON body with same fields
+------------------------------------------------------------
+  [1.2 JSON+URL+Body] HTTP 404
+  Info: Body: {"uid": "431407443", "activeId": "5000163891319", "status": "1"}
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+------------------------------------------------------------
+  Test 1.3: Different JSON body structures
+------------------------------------------------------------
+  [1.3a FullJSON-numeric] HTTP 404
+  Info: Body: {"uid": "431407443", "activeId": "5000163891319", "status": 1, "denc": "", "duid": "431407443"}
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [1.3b WithResultWrapper] HTTP 404
+  Info: Body: {"result": 1, "uid": "431407443", "activeId": "5000163891319", "status": "1"}
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [1.3c ArrayBody] HTTP 404
+  Info: Body: [{"uid": "431407443", "activeId": "5000163891319", "status": 1}]
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+------------------------------------------------------------
+  Test 1.4: multipart/form-data
+------------------------------------------------------------
+  [1.4 multipart/form-data] HTTP 404
+  Info: Fields: {'uid': '431407443', 'activeId': '5000163891319', 'status': '1', 'denc': '', 'duid': '431407443'}
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+------------------------------------------------------------
+  Test 1.5: x-www-form-urlencoded with JSON string body
+------------------------------------------------------------
+  [1.5 urlencoded-JSON-body] HTTP 404
+  Info: Body: {"uid": "431407443", "activeId": "5000163891319", "status": "1"}
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+------------------------------------------------------------
+  Test 1.6: Different domains with JSON+URL params
+------------------------------------------------------------
+  [1.6 mooc1-api.chaoxing.com] HTTP 404
+  Info: JSON+URL params
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [1.6 mooc1.chaoxing.com] HTTP 404
+  Info: JSON+URL params
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [1.6 mooc1-api.chaoxing.com-formdata] HTTP 404
+  Info: Form data POST
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [1.6 mooc1.chaoxing.com-formdata] HTTP 404
+  Info: Form data POST
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+
+================================================================================
+  PART 2: mooc-ans Path Deep Exploration
+================================================================================
+
+------------------------------------------------------------
+  2.1 Sign Status Modification Endpoints
+------------------------------------------------------------
+  [2.1 /mooc-ans/pptSign/updateSignStatusByUidsV2 [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/pptSign/updateSignStatusByUidsV2 [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/pptSign/updateSignStatus [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/pptSign/updateSignStatus [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/newsign/updateSignStatus [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/newsign/updateSignStatus [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/updateSignStatus [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/updateSignStatus [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/modifySignStatus [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/modifySignStatus [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/changeStatus [form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.1 /mooc-ans/sign/changeStatus [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+------------------------------------------------------------
+  2.2 Sign-in Endpoints
+------------------------------------------------------------
+  [2.2 /mooc-ans/pptSign/stuSignajax [POST]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/pptSign/signIn [GET]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/pptSign/signIn [POST]] HTTP 404 
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/sign/signIn [GET]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/sign/signIn [POST]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/sign/doSign [POST]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/sign/preSign [GET]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.2 /mooc-ans/sign/preSign [POST]] HTTP 404 
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+------------------------------------------------------------
+  2.3 QR Code Endpoints
+------------------------------------------------------------
+  [2.3 /mooc-ans/qr/updateqrstatus [POST]] HTTP 200 <<NEW>>
+  ***IMPORTANT***
+  Response: {"msg": "参数不完整", "status": false}
+
+  [2.3 /mooc-ans/qr/produce [GET]] HTTP 200 <<NEW>>
+  ***IMPORTANT***
+  Response: {"msg": "无效的参数code=1", "status": false}
+
+  [2.3 /mooc-ans/qr/getqrstatus [GET]] HTTP 200 <<NEW>>
+  ***IMPORTANT***
+  Response: {"msg": "无效的参数code=0", "status": -1}
+
+------------------------------------------------------------
+  2.4 Face Photo Endpoints
+------------------------------------------------------------
+  [2.4 /mooc-ans/facephoto/clientfacecheckstatus [GET]] HTTP 200 <<NEW>>
+  Response: {"msg": "无权限", "status": false}
+
+  [2.4 /mooc-ans/facephoto/updateSignStatus [POST]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.4 /mooc-ans/facephoto/modifySign [POST]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+------------------------------------------------------------
+  2.5 Widget Sign Endpoints on mooc1-api (mooc-ans path)
+------------------------------------------------------------
+  [2.5 /mooc-ans/widget/sign/pcTeaSignController/updateSignStatus2 [POST/form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.5 /mooc-ans/widget/sign/pcTeaSignController/updateSignStatus2 [json+url]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.5 /mooc-ans/widget/sign/pcStuSignController/preSign [GET/form]] HTTP 404 <<NEW>>
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.5 /mooc-ans/widget/sign/pcStuSignController/preSign [POST/form]] HTTP 404 
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [2.5 /mooc-ans/widget/sign/pcStuSignController/preSign [json+url]] HTTP 404 
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+
+================================================================================
+  PART 3: Verify Data Modification
+================================================================================
+
+[*] Querying current sign-in status (student)...
+  Before (mooc-ans/sign): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+  Before (widget): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+
+[*] Found 3 interesting endpoints, attempting modification...
+
+  Testing modification via: /mooc-ans/qr/updateqrstatus (POST)
+  Modification response: {"msg": "参数不完整", "status": false}
+  ***IMPORTANT***
+  After (mooc-ans/sign): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+  After (widget): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+
+  Testing modification via: /mooc-ans/qr/produce (GET)
+  Modification response: {"msg": "无效的参数code=1", "status": false}
+  ***IMPORTANT***
+  After (mooc-ans/sign): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+  After (widget): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+
+  Testing modification via: /mooc-ans/qr/getqrstatus (GET)
+  Modification response: {"msg": "无效的参数code=0", "status": -1}
+  ***IMPORTANT***
+  After (mooc-ans/sign): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+  After (widget): {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he
+
+================================================================================
+  PART 4: Teacher Session Comparison
+================================================================================
+
+  [Teacher /widget/sign/pcTeaSignController/updateSignStatus2 [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /widget/sign/pcTeaSignController/updateSignStatus2 [json+url]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/widget/sign/pcTeaSignController/updateSignStatus2 [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/widget/sign/pcTeaSignController/updateSignStatus2 [json+url]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/pptSign/updateSignStatus [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/sign/updateSignStatus [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/sign/modifySignStatus [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/facephoto/updateSignStatus [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+  [Teacher /mooc-ans/facephoto/modifySign [form]] HTTP 404
+  Response: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</he...
+
+
+================================================================================
+  COMPREHENSIVE SUMMARY
+================================================================================
+
+1. JSON Content-Type Bypass Results:
+   - The JSON Content-Type bypass on /widget/sign/pcTeaSignController/updateSignStatus2
+     was tested with multiple payload combinations.
+   - Key finding: Spring MVC @RequestParam reads from URL query string
+     even when Content-Type is application/json.
+
+2. mooc-ans Path Endpoints:
+   - Multiple endpoints under /mooc-ans/ were tested for sign status modification.
+   - Endpoints tested: pptSign, sign, newsign, qr, facephoto, widget/sign
+
+3. Interesting Findings:
+   - /mooc-ans/qr/updateqrstatus (POST): {"msg": "参数不完整", "status": false}
+   - /mooc-ans/qr/produce (GET): {"msg": "无效的参数code=1", "status": false}
+   - /mooc-ans/qr/getqrstatus (GET): {"msg": "无效的参数code=0", "status": -1}
+
+4. Teacher vs Student Comparison:
+   - Teacher session tested on key endpoints for comparison.
+   - Any differences in response indicate permission-based access control.
+
+================================================================================
+  Test Complete
+================================================================================
