@@ -1,7 +1,0 @@
-- [x] 图片马上传测试完成（PHP WebShell、HTML/JS代码嵌入）
-- [x] 存储型XSS测试完成（文件名XSS、EXIF XSS、SVG XSS）
-- [x] 文件类型绕过测试完成（Content-Type欺骗、双扩展名、空字节、大小写、特殊类型）
-- [x] CSRF头像上传测试完成（替他人上传头像）
-- [x] 图片存储路径安全测试完成（路径遍历、未授权访问、URL可预测性）
-- [x] getUserFaceid接口安全测试完成
-- [x] 技术报告生成完成
