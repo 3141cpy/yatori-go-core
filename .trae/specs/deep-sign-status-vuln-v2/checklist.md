@@ -1,9 +1,0 @@
-- [x] mooc1-api.chaoxing.com 域名下签到相关端点已枚举
-- [x] mooc1.chaoxing.com 域名下签到相关端点已枚举
-- [x] mooc2-ans.chaoxing.com 域名下签到相关端点已枚举
-- [x] /qr/updateqrstatus 接口安全测试完成
-- [x] inf_enc签名算法已分析并测试伪造
-- [x] PC端JSON绕过深度利用测试完成
-- [x] mooc-ans路径下签到状态修改接口已探索
-- [x] 所有发现的签到状态修改路径已实际验证（修改前后对比）
-- [x] 安全测试报告已更新
