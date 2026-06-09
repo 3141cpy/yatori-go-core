@@ -1,0 +1,1675 @@
+
+======================================================================
+  Part 1: 登录并获取活动列表
+======================================================================
+[*] 正在登录学生账号...
+    学生 puid: 431407443
+[*] 正在登录教师账号...
+    教师 puid: 402644510
+
+[*] 获取学生活动列表...
+    状态码: 200
+    响应: {"groupList": [{"classId": "", "content": "", "courseId": "", "createTime": null, "fid": "", "id": 1, "isDelete": 0, "name": "进行中(1)", "sort": 0, "type": 0, "uid": "", "updateTime": null}, {"classId": "", "content": "", "courseId": "", "createTime": null, "fid": "", "id": 0, "isDelete": 0, "name": "未开始(0)", "sort": 0, "type": 0, "uid": "", "updateTime": null}, {"classId": "", "content": "", "courseId": "", "createTime": null, "fid": "", "id": 2, "isDelete": 0, "name": "已结束(33)", "sort": 0, "type": 0, "uid": "", "updateTime": null}], "activeList": [{"nameTwo": "结束时间：06-03 19:23", "groupId": 2, "isLook": 1, "releaseNum": 0, "url": "https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=5000163965982&general=1&sys=1&ls=1&appType=15&uid=431407443&isTeacherViewOpen=0", "picUrl": "https://mobilelearn.chaoxing.com/front/mobile/common/images/newActiveIcon80/active_type_2_gray.png?v=4", "attendNum": 1, "activeType": 2, "nameOne": "普通签到", "startTime
+... [truncated, total 17623 chars]
+
+[*] 获取教师活动列表...
+    状态码: 200
+    响应: {"status": 1, "activeList": [], "groupList": [], "count": 0, "result": 1}
+
+[*] 教师活动列表为空，尝试带cpi参数...
+    状态码: 200
+    响应: {"status": 1, "activeList": [], "groupList": [], "count": 0, "result": 1}
+
+[*] 教师活动列表仍为空，尝试不同API...
+    listSignForTeacher 状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+[*] 找到签到活动: 33 个
+    - activeId=5000163965982, name=普通签到
+    - activeId=5000163964324, name=二维码签到
+    - activeId=5000163963862, name=二维码签到
+    - activeId=5000163963460, name=普通签到
+    - activeId=5000163958796, name=普通签到-签退
+    - activeId=5000163958798, name=位置签到-签退
+    - activeId=5000163954277, name=位置签到
+    - activeId=5000163954252, name=普通签到
+    - activeId=5000163954225, name=位置签到
+    - activeId=5000163954182, name=普通签到
+    - activeId=5000163891319, name=二维码签到
+    - activeId=5000163776552, name=二维码签到
+    - activeId=5000163776554, name=二维码签到-签退
+    - activeId=5000163776548, name=二维码签到
+    - activeId=5000163776163, name=签到码签到
+    - activeId=5000163776153, name=二维码签到
+    - activeId=5000163767353, name=普通签到
+    - activeId=5000162787534, name=二维码签到
+    - activeId=5000139908007, name=手势签到
+    - activeId=5000139741015, name=签到码签到
+    - activeId=5000139740903, name=手势签到
+    - activeId=5000139561997, name=手势签到
+    - activeId=5000139509423, name=签到码签到
+    - activeId=5000139506185, name=二维码签到
+    - activeId=5000139505593, name=位置签到
+    - activeId=5000139503533, name=手势签到
+    - activeId=5000139411280, name=位置签到
+    - activeId=5000139410559, name=位置签到
+    - activeId=5000139410338, name=手势签到
+    - activeId=5000139411554, name=二维码签到
+    - activeId=5000163776583, name=[type=42]随堂练习
+    - activeId=5000163776585, name=[type=43]投票
+    - activeId=5000163776587, name=[type=14]问卷
+
+[*] isTeacherViewOpen 设置:
+    - activeId=5000163965982: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163964324: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163963862: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163963460: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163958796: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163958798: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163954277: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163954252: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163954225: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163954182: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163891319: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776583: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776552: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776587: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776554: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776548: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776163: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163776153: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000163767353: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000162787534: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139908007: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139741015: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139740903: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139561997: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139509423: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139506185: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139505593: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139503533: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139411280: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139410559: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139410338: isTeacherViewOpen=0 (不允许查看)
+    - activeId=5000139411554: isTeacherViewOpen=0 (不允许查看)
+
+[*] 获取cpi...
+    学生课程数据: {"result": 1, "msg": "获取成功", "channelList": [{"cfid": -1, "norder": 5, "cataName": "课程", "cataid": "100000002", "id": 0, "cpi": 520211407, "key": 145110605, "content": {"studentcount": 17, "chatid": "311140036968453", "isFiled": 0, "isthirdaq": 0, "isstart": true, "isretire": 0, "name": "默认班级", "course": {"data": [{"createtime": 1776124662000, "defaultShowCatalog": 0, "sectionId": 0, "smartCourseState": 0, "appData": 0, "belongSchoolId": "0", "coursestate": 0, "teacherfactor": "刘俊琦", "isCourseSquare": 0, "schools": "", "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=262934472&
+... [truncated, total 1915 chars]
+    学生 cpi: 520211407
+    教师 cpi: 493376740
+
+======================================================================
+  Part 2: 测试学生查看签到统计
+======================================================================
+
+--- 测试活动: 普通签到 (activeId=5000163965982) ---
+
+  [2.1] /pptSign/signedResult (学生, 移动端UA)
+    状态码: 500
+    Content-Type: text/html; charset=utf-8
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.2] /pptSign/signedResult (学生, 带cpi)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.3] /pptSign/signedResult (学生, PC浏览器UA)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.4] /widget/sign/pcStuSignController/preSign (学生)
+    状态码: 200
+    返回HTML, 长度: 5346
+    前800字符: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />     
+<meta charset="utf-8" />             
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />     
+<meta content="yes" name="apple-mobile-web-app-capable" />     
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />     
+<meta content="telephone=no" name="format-detection" />
+<title>签到</title>
+<script xml:space="preserve" src="/widget/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM&amp;v=1780843995640"
+... [truncated, total 5346 chars]
+    !!!STATS!!! - 页面包含统计信息
+
+  [2.5] /pptSign/signDetail (学生)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.6] /v2/apis/sign/signIn (学生, 个人)
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371688276, "uid": 431407443, "activeId": 5000163965982, "status": 1, "createtime": 1780486788000, "updatetime": 1780486897000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780486787836, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 19:39:47", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+
+  [2.7] /pptSign/signedResult (教师, 作为对比)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.8] /newsign/preSign (学生, 活动列表中的URL)
+    状态码: 200
+    返回HTML, 长度: 14773
+    前1200字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/sign.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <!--<link href="/front/mobile/common/css/locationMark.css?v=1780843995640" rel="stylesheet" type="text/css" />-->
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/alert.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <!--<link href="../front/mobile/sign/css/style.css?v
+... [truncated, total 14773 chars]
+    !!!STATS!!! 发现统计数据: ['签到', '签到"} );\r\n        }*/\r\n\r\n\r\n        $(function(){\r\n            $(".change section").click(function(){\r\n                $(this).addClass("section3").siblings().removeClass("section3")\r\n            })\r\n    ', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }else if(15==15||15==17){\r\n           ', 'isTeacherViewOpen = "-1";\r\n                //var url1="https://mobilelearn.chaoxing.com/sign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role;\r\n                var url1="https://mobilelearn.chaoxing.com/new', 'isTeacherViewOpen="+isTeacherViewOpen;\r\n                var opts ="";\r\n                var  atype=\'\';\r\n                var appType=\'15\';\r\n                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }\r\n        }\r\n    ', '签到成功', '签到首次签到时间为:"+lsvalue);\r\n                }\r\n            },3000);\r\n        },\r\n        touchmove: function(){\r\n            clearTimeout(timeOutEvent);\r\n            timeOutEvent = 0;\r\n            e.preventD']
+
+  [2.9] /newsign/preSign (学生, isTeacherViewOpen=1 绕过尝试)
+    状态码: 200
+    返回HTML, 长度: 14772
+    前800字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/comm
+... [truncated, total 14772 chars]
+
+--- 测试活动: 二维码签到 (activeId=5000163964324) ---
+
+  [2.1] /pptSign/signedResult (学生, 移动端UA)
+    状态码: 500
+    Content-Type: text/html; charset=utf-8
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.2] /pptSign/signedResult (学生, 带cpi)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.3] /pptSign/signedResult (学生, PC浏览器UA)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.4] /widget/sign/pcStuSignController/preSign (学生)
+    状态码: 200
+    返回HTML, 长度: 5342
+    前800字符: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />     
+<meta charset="utf-8" />             
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />     
+<meta content="yes" name="apple-mobile-web-app-capable" />     
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />     
+<meta content="telephone=no" name="format-detection" />
+<title>签到</title>
+<script xml:space="preserve" src="/widget/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM&amp;v=1780843995640"
+... [truncated, total 5342 chars]
+    !!!STATS!!! - 页面包含统计信息
+
+  [2.5] /pptSign/signDetail (学生)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.6] /v2/apis/sign/signIn (学生, 个人)
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371634484, "uid": 431407443, "activeId": 5000163964324, "status": 5, "createtime": 1780484473000, "updatetime": 1780554510000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780484472716, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 19:01:12", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+
+  [2.7] /pptSign/signedResult (教师, 作为对比)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.8] /newsign/preSign (学生, 活动列表中的URL)
+    状态码: 200
+    返回HTML, 长度: 14551
+    前1200字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/sign.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <!--<link href="/front/mobile/common/css/locationMark.css?v=1780843995640" rel="stylesheet" type="text/css" />-->
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/alert.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <!--<link href="../front/mobile/sign/css/style.css?v
+... [truncated, total 14551 chars]
+    !!!STATS!!! 发现统计数据: ['签到', '签到"} );\r\n        }*/\r\n\r\n\r\n        $(function(){\r\n            $(".change section").click(function(){\r\n                $(this).addClass("section3").siblings().removeClass("section3")\r\n            })\r\n    ', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }else if(15==15||15==17){\r\n           ', 'isTeacherViewOpen = "-1";\r\n                //var url1="https://mobilelearn.chaoxing.com/sign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role;\r\n                var url1="https://mobilelearn.chaoxing.com/new', 'isTeacherViewOpen="+isTeacherViewOpen;\r\n                var opts ="";\r\n                var  atype=\'\';\r\n                var appType=\'15\';\r\n                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }\r\n        }\r\n    ', '签到首次签到时间为:"+lsvalue);\r\n                }\r\n            },3000);\r\n        },\r\n        touchmove: function(){\r\n            clearTimeout(timeOutEvent);\r\n            timeOutEvent = 0;\r\n            e.preventD']
+
+  [2.9] /newsign/preSign (学生, isTeacherViewOpen=1 绕过尝试)
+    状态码: 200
+    返回HTML, 长度: 14550
+    前800字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/comm
+... [truncated, total 14550 chars]
+
+--- 测试活动: 二维码签到 (activeId=5000163963862) ---
+
+  [2.1] /pptSign/signedResult (学生, 移动端UA)
+    状态码: 500
+    Content-Type: text/html; charset=utf-8
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.2] /pptSign/signedResult (学生, 带cpi)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.3] /pptSign/signedResult (学生, PC浏览器UA)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.4] /widget/sign/pcStuSignController/preSign (学生)
+    状态码: 200
+    返回HTML, 长度: 5342
+    前800字符: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />     
+<meta charset="utf-8" />             
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />     
+<meta content="yes" name="apple-mobile-web-app-capable" />     
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />     
+<meta content="telephone=no" name="format-detection" />
+<title>签到</title>
+<script xml:space="preserve" src="/widget/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM&amp;v=1780843995640"
+... [truncated, total 5342 chars]
+    !!!STATS!!! - 页面包含统计信息
+
+  [2.5] /pptSign/signDetail (学生)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.6] /v2/apis/sign/signIn (学生, 个人)
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371626458, "uid": 431407443, "activeId": 5000163963862, "status": 5, "createtime": 1780484389000, "updatetime": 1780485813000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780484389372, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 18:59:49", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+
+  [2.7] /pptSign/signedResult (教师, 作为对比)
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [2.8] /newsign/preSign (学生, 活动列表中的URL)
+    状态码: 200
+    返回HTML, 长度: 14551
+    前1200字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/sign.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <!--<link href="/front/mobile/common/css/locationMark.css?v=1780843995640" rel="stylesheet" type="text/css" />-->
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/alert.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <!--<link href="../front/mobile/sign/css/style.css?v
+... [truncated, total 14551 chars]
+    !!!STATS!!! 发现统计数据: ['签到', '签到"} );\r\n        }*/\r\n\r\n\r\n        $(function(){\r\n            $(".change section").click(function(){\r\n                $(this).addClass("section3").siblings().removeClass("section3")\r\n            })\r\n    ', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }else if(15==15||15==17){\r\n           ', 'isTeacherViewOpen = "-1";\r\n                //var url1="https://mobilelearn.chaoxing.com/sign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role;\r\n                var url1="https://mobilelearn.chaoxing.com/new', 'isTeacherViewOpen="+isTeacherViewOpen;\r\n                var opts ="";\r\n                var  atype=\'\';\r\n                var appType=\'15\';\r\n                opts = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl', '签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};\r\n                jsBridge.postNotification(\'CLIENT_OPEN_URL\', opts);\r\n            }\r\n        }\r\n    ', '签到首次签到时间为:"+lsvalue);\r\n                }\r\n            },3000);\r\n        },\r\n        touchmove: function(){\r\n            clearTimeout(timeOutEvent);\r\n            timeOutEvent = 0;\r\n            e.preventD']
+
+  [2.9] /newsign/preSign (学生, isTeacherViewOpen=1 绕过尝试)
+    状态码: 200
+    返回HTML, 长度: 14550
+    前800字符: ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>签到</title>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1780843995640" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/portrait.css?v=1780843995640" rel="stylesheet" type="text/css" />
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/comm
+... [truncated, total 14550 chars]
+
+======================================================================
+  Part 3: IDOR漏洞测试
+======================================================================
+
+--- 测试活动: 普通签到 (activeId=5000163965982) ---
+
+  [3.1] IDOR - 学生查询教师uid的签到数据
+  [3.1a] /v2/apis/sign/signIn?activeId=5000163965982&uid=402644510
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371688276, "uid": 431407443, "activeId": 5000163965982, "status": 1, "createtime": 1780486788000, "updatetime": 1780486897000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780486787836, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 19:39:47", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+    [安全] uid参数被忽略, 返回的是学生自己的数据(uid=431407443)
+    [注意] 虽然不是IDOR, 但说明uid参数无效, 服务器使用session认证
+
+  [3.1b] /pptSign/signDetail?activeId=5000163965982&uid=402644510
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.1c] /pptSign/signedResult?activeId=5000163965982&uid=402644510 (学生session, 教师uid)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.2] 跨活动访问测试
+  [3.2] 学生访问活动 二维码签到(5000163964324) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163963862) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163963460) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到-签退(5000163958796) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到-签退(5000163958798) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 位置签到(5000163954277) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954252) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000163954225) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954182) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163891319) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776552) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到-签退(5000163776554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776548) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000163776163) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776153) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163767353) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000162787534) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139908007) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139741015) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139740903) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139561997) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139509423) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139506185) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139505593) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139503533) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139411280) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139410559) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139410338) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139411554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 [type=42]随堂练习(5000163776583) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=43]投票(5000163776585) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=14]问卷(5000163776587) 的签到数据
+    result=0, msg=None
+
+  [3.3] 跨课程访问测试 (随机activeId)
+    activeId=999999999: result=0, msg=
+    activeId=100000000: result=0, msg=
+    activeId=123456789: result=0, msg=None
+
+--- 测试活动: 二维码签到 (activeId=5000163964324) ---
+
+  [3.1] IDOR - 学生查询教师uid的签到数据
+  [3.1a] /v2/apis/sign/signIn?activeId=5000163964324&uid=402644510
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371634484, "uid": 431407443, "activeId": 5000163964324, "status": 5, "createtime": 1780484473000, "updatetime": 1780554510000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780484472716, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 19:01:12", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+    [安全] uid参数被忽略, 返回的是学生自己的数据(uid=431407443)
+    [注意] 虽然不是IDOR, 但说明uid参数无效, 服务器使用session认证
+
+  [3.1b] /pptSign/signDetail?activeId=5000163964324&uid=402644510
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.1c] /pptSign/signedResult?activeId=5000163964324&uid=402644510 (学生session, 教师uid)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.2] 跨活动访问测试
+  [3.2] 学生访问活动 普通签到(5000163965982) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163963862) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163963460) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到-签退(5000163958796) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到-签退(5000163958798) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 位置签到(5000163954277) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954252) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000163954225) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954182) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163891319) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776552) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到-签退(5000163776554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776548) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000163776163) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776153) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163767353) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000162787534) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139908007) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139741015) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139740903) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139561997) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139509423) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139506185) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139505593) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139503533) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139411280) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139410559) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139410338) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139411554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 [type=42]随堂练习(5000163776583) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=43]投票(5000163776585) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=14]问卷(5000163776587) 的签到数据
+    result=0, msg=None
+
+  [3.3] 跨课程访问测试 (随机activeId)
+    activeId=999999999: result=0, msg=
+    activeId=100000000: result=0, msg=
+    activeId=123456789: result=0, msg=None
+
+--- 测试活动: 二维码签到 (activeId=5000163963862) ---
+
+  [3.1] IDOR - 学生查询教师uid的签到数据
+  [3.1a] /v2/apis/sign/signIn?activeId=5000163963862&uid=402644510
+    状态码: 200
+    响应: {"result": 1, "msg": "success", "data": {"id": 5001371626458, "uid": 431407443, "activeId": 5000163963862, "status": 5, "createtime": 1780484389000, "updatetime": 1780485813000, "name": "3141cpy", "username": "", "isdelete": 0, "qasort": null, "sasort": 1780484389372, "longitude": null, "latitude": null, "longitude_gd": null, "latitude_gd": null, "distance": null, "distanceStr": null, "xxuid": 0, "clientip": null, "issend": null, "useragent": null, "type": 0, "confidence": null, "islook": 1, "isshow": 0, "score": null, "flowerScore": null, "skscore": null, "result": null, "title": null, "iphoneContent": null, "ismark": 0, "submittime": "2026-06-03 18:59:49", "groupId": 0, "taskavg": 0.0, "content": "", "answerScore": null, "answerTime": null, "teacherGiveScore": 0, "isPrompted": 0, "mutual
+... [truncated, total 1352 chars]
+    [安全] uid参数被忽略, 返回的是学生自己的数据(uid=431407443)
+    [注意] 虽然不是IDOR, 但说明uid参数无效, 服务器使用session认证
+
+  [3.1b] /pptSign/signDetail?activeId=5000163963862&uid=402644510
+    状态码: 500
+    返回HTML, 长度: 224
+    前800字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.1c] /pptSign/signedResult?activeId=5000163963862&uid=402644510 (学生session, 教师uid)
+    状态码: 500
+    返回HTML, 长度: 224
+    前500字符: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [3.2] 跨活动访问测试
+  [3.2] 学生访问活动 普通签到(5000163965982) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163964324) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163963460) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到-签退(5000163958796) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到-签退(5000163958798) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 位置签到(5000163954277) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954252) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000163954225) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163954182) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163891319) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776552) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到-签退(5000163776554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776548) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000163776163) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000163776153) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 普通签到(5000163767353) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000162787534) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139908007) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139741015) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139740903) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139561997) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 签到码签到(5000139509423) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139506185) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139505593) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139503533) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139411280) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 位置签到(5000139410559) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 手势签到(5000139410338) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 二维码签到(5000139411554) 的签到数据
+    result=1, 返回uid=431407443(学生自己) - 可访问自己的签到记录
+  [3.2] 学生访问活动 [type=42]随堂练习(5000163776583) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=43]投票(5000163776585) 的签到数据
+    result=0, msg=None
+  [3.2] 学生访问活动 [type=14]问卷(5000163776587) 的签到数据
+    result=0, msg=None
+
+  [3.3] 跨课程访问测试 (随机activeId)
+    activeId=999999999: result=0, msg=
+    activeId=100000000: result=0, msg=
+    activeId=123456789: result=0, msg=None
+
+======================================================================
+  Part 4: V2 signIn 响应深度分析
+======================================================================
+
+--- 分析活动: 普通签到 (activeId=5000163965982) ---
+
+  [4.1] 学生自己的签到数据
+    完整响应: {
+  "result": 1,
+  "msg": "success",
+  "data": {
+    "id": 5001371688276,
+    "uid": 431407443,
+    "activeId": 5000163965982,
+    "status": 1,
+    "createtime": 1780486788000,
+    "updatetime": 1780486897000,
+    "name": "3141cpy",
+    "username": "",
+    "isdelete": 0,
+    "qasort": null,
+    "sasort": 1780486787836,
+    "longitude": null,
+    "latitude": null,
+    "longitude_gd": null,
+    "latitude_gd": null,
+    "distance": null,
+    "distanceStr": null,
+    "xxuid": 0,
+    "clientip": null,
+    "issend": null,
+    "useragent": null,
+    "type": 0,
+    "confidence": null,
+    "islook": 1,
+    "isshow": 0,
+    "score": null,
+    "flowerScore": null,
+    "skscore": null,
+    "result": null,
+    "title": null,
+    "iphoneContent": null,
+    "ismark": 0,
+    "submittime": "2026-06-03 19:39:47",
+    "groupId": 0,
+    "taskavg": 0.0,
+    "content": "",
+    "answerScore": null,
+    "answerTime": null,
+    "teacherGiveScore": 0,
+    "isPrompted": 0,
+    "mutualEvaluationId": null,
+    "pingyu": null,
+    "tag": "{\"teaUpdateFlag\": 1}",
+    "flowerCount": null,
+    "schoolname": null,
+    "fid": 20,
+    "screenContent": null,
+    "screenimages": null,
+    "iframeCount": null,
+    "showScore": 0,
+    "teaScore": null,
+    "ifGiveScore": null,
+    "taskScoreRecored": null,
+    "taskTeacherEvaluation": null,
+    "updatetimeStr": "2026-06-03 19:41:37",
+    "extraJsonData": null,
+    "deviceCode": null,
+    "vpProbability": null,
+    "vpStrategy": null,
+    "uname": null,
+    "stuGet
+... [truncated, total 1622 chars]
+
+    字段分析:
+      id: 5001371688276
+      uid: 431407443
+      activeId: 5000163965982
+      status: 1
+      createtime: 1780486788000
+      updatetime: 1780486897000
+      name: 3141cpy
+      username: 
+      isdelete: 0
+      qasort: None
+      sasort: 1780486787836
+      longitude: None
+      latitude: None
+      longitude_gd: None
+      latitude_gd: None
+      distance: None
+      distanceStr: None
+      xxuid: 0
+      clientip: None
+      issend: None
+      useragent: None
+      type: 0
+      confidence: None
+      islook: 1
+      isshow: 0
+      score: None
+      flowerScore: None
+      skscore: None
+      result: None
+      title: None
+      iphoneContent: None
+      ismark: 0
+      submittime: 2026-06-03 19:39:47
+      groupId: 0
+      taskavg: 0.0
+      content: 
+      answerScore: None
+      answerTime: None
+      teacherGiveScore: 0
+      isPrompted: 0
+      mutualEvaluationId: None
+      pingyu: None
+      tag: {"teaUpdateFlag": 1}
+      flowerCount: None
+      schoolname: None
+      fid: 20
+      screenContent: None
+      screenimages: None
+      iframeCount: None
+      showScore: 0
+      teaScore: None
+      ifGiveScore: None
+      taskScoreRecored: None
+      taskTeacherEvaluation: None
+      updatetimeStr: 2026-06-03 19:41:37
+      extraJsonData: None
+      deviceCode: None
+      vpProbability: None
+      vpStrategy: None
+      uname: None
+      stuGetAnswerTime: 
+      vpProbabilityFromJson: 0
+      extraJson: {}
+      teaGetAnswerTime: 
+    >>> 发现字段: updatetime = 1780486897000
+    >>> 发现字段: createtime = 1780486788000
+    >>> 发现字段: longitude = None
+    >>> 发现字段: latitude = None
+
+  [4.2] 教师查看签到数据 (对比)
+    完整响应: {
+  "result": 0,
+  "msg": null,
+  "data": {
+    "refreshFlag": 1
+  },
+  "errorMsg": "签到已结束，签到失败"
+}
+
+    字段分析:
+      refreshFlag: 1
+
+--- 分析活动: 二维码签到 (activeId=5000163964324) ---
+
+  [4.1] 学生自己的签到数据
+    完整响应: {
+  "result": 1,
+  "msg": "success",
+  "data": {
+    "id": 5001371634484,
+    "uid": 431407443,
+    "activeId": 5000163964324,
+    "status": 5,
+    "createtime": 1780484473000,
+    "updatetime": 1780554510000,
+    "name": "3141cpy",
+    "username": "",
+    "isdelete": 0,
+    "qasort": null,
+    "sasort": 1780484472716,
+    "longitude": null,
+    "latitude": null,
+    "longitude_gd": null,
+    "latitude_gd": null,
+    "distance": null,
+    "distanceStr": null,
+    "xxuid": 0,
+    "clientip": null,
+    "issend": null,
+    "useragent": null,
+    "type": 0,
+    "confidence": null,
+    "islook": 1,
+    "isshow": 0,
+    "score": null,
+    "flowerScore": null,
+    "skscore": null,
+    "result": null,
+    "title": null,
+    "iphoneContent": null,
+    "ismark": 0,
+    "submittime": "2026-06-03 19:01:12",
+    "groupId": 0,
+    "taskavg": 0.0,
+    "content": "",
+    "answerScore": null,
+    "answerTime": null,
+    "teacherGiveScore": 0,
+    "isPrompted": 0,
+    "mutualEvaluationId": null,
+    "pingyu": null,
+    "tag": "{\"teaUpdateFlag\": 1}",
+    "flowerCount": null,
+    "schoolname": null,
+    "fid": 20,
+    "screenContent": null,
+    "screenimages": null,
+    "iframeCount": null,
+    "showScore": 0,
+    "teaScore": null,
+    "ifGiveScore": null,
+    "taskScoreRecored": null,
+    "taskTeacherEvaluation": null,
+    "updatetimeStr": "2026-06-04 14:28:30",
+    "extraJsonData": null,
+    "deviceCode": null,
+    "vpProbability": null,
+    "vpStrategy": null,
+    "uname": null,
+    "stuGet
+... [truncated, total 1622 chars]
+
+    字段分析:
+      id: 5001371634484
+      uid: 431407443
+      activeId: 5000163964324
+      status: 5
+      createtime: 1780484473000
+      updatetime: 1780554510000
+      name: 3141cpy
+      username: 
+      isdelete: 0
+      qasort: None
+      sasort: 1780484472716
+      longitude: None
+      latitude: None
+      longitude_gd: None
+      latitude_gd: None
+      distance: None
+      distanceStr: None
+      xxuid: 0
+      clientip: None
+      issend: None
+      useragent: None
+      type: 0
+      confidence: None
+      islook: 1
+      isshow: 0
+      score: None
+      flowerScore: None
+      skscore: None
+      result: None
+      title: None
+      iphoneContent: None
+      ismark: 0
+      submittime: 2026-06-03 19:01:12
+      groupId: 0
+      taskavg: 0.0
+      content: 
+      answerScore: None
+      answerTime: None
+      teacherGiveScore: 0
+      isPrompted: 0
+      mutualEvaluationId: None
+      pingyu: None
+      tag: {"teaUpdateFlag": 1}
+      flowerCount: None
+      schoolname: None
+      fid: 20
+      screenContent: None
+      screenimages: None
+      iframeCount: None
+      showScore: 0
+      teaScore: None
+      ifGiveScore: None
+      taskScoreRecored: None
+      taskTeacherEvaluation: None
+      updatetimeStr: 2026-06-04 14:28:30
+      extraJsonData: None
+      deviceCode: None
+      vpProbability: None
+      vpStrategy: None
+      uname: None
+      stuGetAnswerTime: 
+      vpProbabilityFromJson: 0
+      extraJson: {}
+      teaGetAnswerTime: 
+    >>> 发现字段: updatetime = 1780554510000
+    >>> 发现字段: createtime = 1780484473000
+    >>> 发现字段: longitude = None
+    >>> 发现字段: latitude = None
+
+  [4.2] 教师查看签到数据 (对比)
+    完整响应: {
+  "result": 0,
+  "msg": null,
+  "data": {
+    "refreshFlag": 1
+  },
+  "errorMsg": "签到已结束，签到失败"
+}
+
+    字段分析:
+      refreshFlag: 1
+
+--- 分析活动: 二维码签到 (activeId=5000163963862) ---
+
+  [4.1] 学生自己的签到数据
+    完整响应: {
+  "result": 1,
+  "msg": "success",
+  "data": {
+    "id": 5001371626458,
+    "uid": 431407443,
+    "activeId": 5000163963862,
+    "status": 5,
+    "createtime": 1780484389000,
+    "updatetime": 1780485813000,
+    "name": "3141cpy",
+    "username": "",
+    "isdelete": 0,
+    "qasort": null,
+    "sasort": 1780484389372,
+    "longitude": null,
+    "latitude": null,
+    "longitude_gd": null,
+    "latitude_gd": null,
+    "distance": null,
+    "distanceStr": null,
+    "xxuid": 0,
+    "clientip": null,
+    "issend": null,
+    "useragent": null,
+    "type": 0,
+    "confidence": null,
+    "islook": 1,
+    "isshow": 0,
+    "score": null,
+    "flowerScore": null,
+    "skscore": null,
+    "result": null,
+    "title": null,
+    "iphoneContent": null,
+    "ismark": 0,
+    "submittime": "2026-06-03 18:59:49",
+    "groupId": 0,
+    "taskavg": 0.0,
+    "content": "",
+    "answerScore": null,
+    "answerTime": null,
+    "teacherGiveScore": 0,
+    "isPrompted": 0,
+    "mutualEvaluationId": null,
+    "pingyu": null,
+    "tag": "{\"teaUpdateFlag\": 1}",
+    "flowerCount": null,
+    "schoolname": null,
+    "fid": 20,
+    "screenContent": null,
+    "screenimages": null,
+    "iframeCount": null,
+    "showScore": 0,
+    "teaScore": null,
+    "ifGiveScore": null,
+    "taskScoreRecored": null,
+    "taskTeacherEvaluation": null,
+    "updatetimeStr": "2026-06-03 19:23:33",
+    "extraJsonData": null,
+    "deviceCode": null,
+    "vpProbability": null,
+    "vpStrategy": null,
+    "uname": null,
+    "stuGet
+... [truncated, total 1622 chars]
+
+    字段分析:
+      id: 5001371626458
+      uid: 431407443
+      activeId: 5000163963862
+      status: 5
+      createtime: 1780484389000
+      updatetime: 1780485813000
+      name: 3141cpy
+      username: 
+      isdelete: 0
+      qasort: None
+      sasort: 1780484389372
+      longitude: None
+      latitude: None
+      longitude_gd: None
+      latitude_gd: None
+      distance: None
+      distanceStr: None
+      xxuid: 0
+      clientip: None
+      issend: None
+      useragent: None
+      type: 0
+      confidence: None
+      islook: 1
+      isshow: 0
+      score: None
+      flowerScore: None
+      skscore: None
+      result: None
+      title: None
+      iphoneContent: None
+      ismark: 0
+      submittime: 2026-06-03 18:59:49
+      groupId: 0
+      taskavg: 0.0
+      content: 
+      answerScore: None
+      answerTime: None
+      teacherGiveScore: 0
+      isPrompted: 0
+      mutualEvaluationId: None
+      pingyu: None
+      tag: {"teaUpdateFlag": 1}
+      flowerCount: None
+      schoolname: None
+      fid: 20
+      screenContent: None
+      screenimages: None
+      iframeCount: None
+      showScore: 0
+      teaScore: None
+      ifGiveScore: None
+      taskScoreRecored: None
+      taskTeacherEvaluation: None
+      updatetimeStr: 2026-06-03 19:23:33
+      extraJsonData: None
+      deviceCode: None
+      vpProbability: None
+      vpStrategy: None
+      uname: None
+      stuGetAnswerTime: 
+      vpProbabilityFromJson: 0
+      extraJson: {}
+      teaGetAnswerTime: 
+    >>> 发现字段: updatetime = 1780485813000
+    >>> 发现字段: createtime = 1780484389000
+    >>> 发现字段: longitude = None
+    >>> 发现字段: latitude = None
+
+  [4.2] 教师查看签到数据 (对比)
+    完整响应: {
+  "result": 0,
+  "msg": null,
+  "data": {
+    "refreshFlag": 1
+  },
+  "errorMsg": "签到已结束，签到失败"
+}
+
+    字段分析:
+      refreshFlag: 1
+
+======================================================================
+  Part 5: signedResult 页面解析
+======================================================================
+
+--- 解析活动: 普通签到 (activeId=5000163965982) ---
+
+  [5.1] signedResult (移动端UA)
+    状态码: 500, Content-Type: text/html; charset=utf-8
+    HTML长度: 224
+
+    HTML前1500字符:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [5.2] signedResult (PC浏览器UA)
+    状态码: 500, Content-Type: text/html; charset=utf-8
+    HTML长度: 224
+
+    HTML前1500字符:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 解析活动: 二维码签到 (activeId=5000163964324) ---
+
+  [5.1] signedResult (移动端UA)
+    状态码: 500, Content-Type: text/html; charset=utf-8
+    HTML长度: 224
+
+    HTML前1500字符:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+  [5.2] signedResult (PC浏览器UA)
+    状态码: 500, Content-Type: text/html; charset=utf-8
+    HTML长度: 224
+
+    HTML前1500字符:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+======================================================================
+  Part 6: mooc1-api 域名测试
+======================================================================
+
+--- 测试活动: 普通签到 (activeId=5000163965982) ---
+
+  [6.x] signedResult: https://mooc1-api.chaoxing.com/mooc-ans/pptSign/signedResult?activeId=5000163965982&classId=1328211...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] signDetail: https://mooc1-api.chaoxing.com/mooc-ans/pptSign/signDetail?activeId=5000163965982&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] v2 signIn: https://mooc1-api.chaoxing.com/mooc-ans/v2/apis/sign/signIn?activeId=5000163965982&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] taskactivelist: https://mooc1-api.chaoxing.com/mooc-ans/ppt/activeAPI/taskactivelist?courseId=257485372&classId=132...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] getSignDetail: https://mooc1-api.chaoxing.com/mooc-ans/newsign/getSignDetail?activeId=5000163965982&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+--- 测试活动: 二维码签到 (activeId=5000163964324) ---
+
+  [6.x] signedResult: https://mooc1-api.chaoxing.com/mooc-ans/pptSign/signedResult?activeId=5000163964324&classId=1328211...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] signDetail: https://mooc1-api.chaoxing.com/mooc-ans/pptSign/signDetail?activeId=5000163964324&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] v2 signIn: https://mooc1-api.chaoxing.com/mooc-ans/v2/apis/sign/signIn?activeId=5000163964324&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] taskactivelist: https://mooc1-api.chaoxing.com/mooc-ans/ppt/activeAPI/taskactivelist?courseId=257485372&classId=132...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+  [6.x] getSignDetail: https://mooc1-api.chaoxing.com/mooc-ans/newsign/getSignDetail?activeId=5000163964324&uid=431407443...
+    状态码: 404, Content-Type: text/html;charset=UTF-8
+    HTML长度: 737
+    前500字符: <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+... [truncated, total 737 chars]
+
+======================================================================
+  Part 7: 探索'允许学生查看统计'设置
+======================================================================
+
+--- 测试活动: 普通签到 (activeId=5000163965982) ---
+
+  [7.1] /ppt/activeAPI/getActiveDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.2] /newsign/activeDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.3] /ppt/activeAPI/getActiveDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.4] mooc1-api /newsign/activeDetail
+    状态码: 404
+    响应: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [7.5] /newsign/getSignDetail (学生)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.6] /newsign/getSignDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+--- 测试活动: 二维码签到 (activeId=5000163964324) ---
+
+  [7.1] /ppt/activeAPI/getActiveDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.2] /newsign/activeDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.3] /ppt/activeAPI/getActiveDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.4] mooc1-api /newsign/activeDetail
+    状态码: 404
+    响应: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [7.5] /newsign/getSignDetail (学生)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.6] /newsign/getSignDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+--- 测试活动: 二维码签到 (activeId=5000163963862) ---
+
+  [7.1] /ppt/activeAPI/getActiveDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.2] /newsign/activeDetail
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.3] /ppt/activeAPI/getActiveDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.4] mooc1-api /newsign/activeDetail
+    状态码: 404
+    响应: {"_raw_status": 404, "_raw_text": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n    <title>404</title>\n    <style>\n        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}\n        .font_top{padding-top:45px;display:inline;}\n        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}\n    </style>\n</head>\n<body>\n<div class=\"main\">\n    <p class=\"font_t"}
+
+  [7.5] /newsign/getSignDetail (学生)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+  [7.6] /newsign/getSignDetail (教师)
+    状态码: 500
+    响应: {"_raw_status": 500, "_raw_text": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body>\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n"}
+
+======================================================================
+  综合总结
+======================================================================
+
+=== 敏感数据泄露 ===
+  未发现敏感数据泄露
+
+=== IDOR漏洞 ===
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139740903
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163958796
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139908007
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139410338
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139505593
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163776554
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139411554
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139509423
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139503533
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163891319
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163776552
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163965982
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163963460
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163767353
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139410559
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163954277
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000162787534
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163776153
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139411280
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163954225
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139741015
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139561997
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163964324
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000139506185
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163954252
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163963862
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163776163
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163776548
+  !!!IDOR!!! 跨活动访问: 学生可访问其他活动的个人签到数据 - aid=5000163954182
+
+=== 统计数据访问 ===
+  !!!STATS!!! preSign页面包含统计信息 - aid=5000163964324
+  !!!STATS!!! newsign/preSign包含统计数据 - aid=5000163964324
+  !!!STATS!!! newsign/preSign包含统计数据 - aid=5000163963862
+  !!!STATS!!! preSign页面包含统计信息 - aid=5000163963862
+  !!!STATS!!! preSign页面包含统计信息 - aid=5000163965982
+  !!!STATS!!! newsign/preSign包含统计数据 - aid=5000163965982
+
+=== 错误 ===
+  无严重错误
+
+======================================================================
+  测试完成
+======================================================================
