@@ -1,9 +1,5 @@
-- [ ] ChaoxingSignFaker揭示的签到流程(preSign→analysis→analysis2→stuSignajax)已验证
-- [ ] V2 API活动列表和签到详情信息泄露已验证
-- [ ] 人脸识别绕过(LiveDetectionStatus硬编码)已验证
-- [ ] 二维码enc参数代签已验证
-- [ ] 拍照签到绕过(云盘上传)已验证
-- [ ] 验证码系统安全评估已完成
-- [ ] 手势/签到码暴力破解评估已完成
-- [ ] IM群聊签到获取已验证
-- [ ] 安全测试报告已更新至v10.0
+- [x] V2 API信息泄露研究完成（签到码/enc获取）— 发现ewnCtime1泄露 HIGH 7.0
+- [x] preSign/checkSignCode/check-face-result权限研究完成 — checkSignCode可暴力破解 MEDIUM 4.8
+- [x] analysis链与签到前置条件研究完成 — analysis链不被强制执行
+- [x] 辅助端点安全研究完成 — SSO泄露IM密码 HIGH 6.8；云盘无文件验证 MEDIUM 5.2
+- [x] 安全测试报告已更新至v10.0

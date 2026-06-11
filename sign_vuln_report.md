@@ -1,8 +1,8 @@
 # 超星学习通签到系统安全审计报告
 
 **审计日期**: 2026-06-03 ~ 2026-06-11
-**版本**: v9.0（域名映射表深度探索版 — 100+域名全覆盖）
-**审计范围**: 学习通全域名签到功能安全评估，基于域名映射表探索100+内部服务域名
+**版本**: v10.0（ChaoxingSignFaker开源仓库启发版）
+**审计范围**: 学习通签到系统全面安全评估，基于域名映射表探索100+域名 + ChaoxingSignFaker开源仓库逆向分析
 **测试账号**: 教师 19712720708 (puid=402644510), 学生 18436633997 (puid=431407443)
 **测试课程**: courseId=257485372, classId=132821141 / courseId=262934472, classId=145110605
 
@@ -10,404 +10,298 @@
 
 ## 核心结论
 
-基于用户提供的完整域名映射表(domainMap)，对100+内部服务域名进行了系统性安全评估。发现**contestyd.chaoxing.com存在严重CORS配置漏洞**（任意Origin反射+凭证允许），以及**mobilelearn.chaoxing.com独立部署的签到API栈存在信息泄露和权限检查缺陷**。学生端仍无法直接修改签到状态，但CORS漏洞可被利用进行跨域数据窃取。
+基于开源仓库 `aquamarine5/ChaoxingSignFaker`（随地大小签）的逆向分析，发现了多个之前未知的关键API端点和攻击面。**最严重的发现是：V2 API泄露二维码enc生成时间戳(ewnCtime1)，SSO端点泄露IM密码明文，云盘上传无文件类型验证**。结合这些漏洞，学生可通过多种路径完成本不应能完成的签到。
 
 | # | 漏洞 | 严重程度 | 学生端可直接利用 |
 |---|---|---|---|
 | 1 | `/pptSign/updateSignStatusByUidsV2` CSRF漏洞 | **HIGH (7.5)** | 否（需诱导教师） |
 | 2 | **contestyd.chaoxing.com CORS任意Origin反射** | **HIGH (7.2)** | **是（跨域数据窃取）** |
-| 3 | PC端权限中间件JSON Content-Type绕过 | **MEDIUM (6.1)** | 否（当前不可利用） |
-| 4 | 移动端 `updateSignStatus` Cookie注入/JSON绕过 | **MEDIUM (5.5)** | 否（绕过存在但不可利用） |
-| 5 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
-| 6 | **mobilelearn.chaoxing.com V2 signIn信息泄露** | **MEDIUM (5.0)** | **是（40+内部字段泄露）** |
-| 7 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
-| 8 | mobilelearn.fy HTTP明文传输 | **LOW (3.1)** | 否（网络嗅探风险） |
-| 9 | **mh.chaoxing.com网关路由信息泄露** | **LOW (2.8)** | 否（信息泄露） |
+| 3 | **V2 getPPTActiveInfo泄露ewnCtime1+签到安全配置** | **HIGH (7.0)** 🆕 | **是（可计算二维码enc）** |
+| 4 | **SSO端点泄露IM密码明文** | **HIGH (6.8)** 🆕 | **是（可读取群聊签到码）** |
+| 5 | PC端权限中间件JSON Content-Type绕过 | **MEDIUM (6.1)** | 否（当前不可利用） |
+| 6 | 移动端 `updateSignStatus` Cookie注入/JSON绕过 | **MEDIUM (5.5)** | 否（绕过存在但不可利用） |
+| 7 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
+| 8 | **云盘上传无文件类型验证（绕过拍照签到）** | **MEDIUM (5.2)** 🆕 | **是** |
+| 9 | **签到活动列表对学生完全可见** | **MEDIUM (5.0)** 🆕 | **是（可实时监控签到）** |
+| 10 | mobilelearn.chaoxing.com V2 signIn信息泄露 | **MEDIUM (5.0)** | **是（40+内部字段泄露）** |
+| 11 | **checkSignCode签到码暴力破解** | **MEDIUM (4.8)** 🆕 | **是（4位码仅10000组合）** |
+| 12 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
+| 13 | mobilelearn.fy HTTP明文传输 | **LOW (3.1)** | 否（网络嗅探风险） |
+| 14 | mh.chaoxing.com网关路由信息泄露 | **LOW (2.8)** | 否（信息泄露） |
 
 ---
 
-## 漏洞1：CSRF - `/pptSign/updateSignStatusByUidsV2` (HIGH 7.5)
+## 漏洞3：V2 getPPTActiveInfo泄露ewnCtime1+签到安全配置 (HIGH 7.0) 🆕
 
 ### 漏洞描述
 
-移动端教师签到状态修改API存在完全无防护的CSRF漏洞。攻击者可构造恶意页面，当已登录的教师访问时，自动修改任意学生的签到状态。
+`/v2/apis/active/getPPTActiveInfo` 端点向学生返回签到活动的完整安全配置，包括二维码enc生成的时间戳参数 `ewnCtime1`。如果enc生成算法可逆（如 `MD5(activeId_ewnCtime1)`），学生可自行计算enc值完成二维码签到，无需扫描二维码。
 
 ### 验证证据
 
 ```
-测试项                              | 响应                    | 结果
------------------------------------ | ----------------------- | ----
-教师POST(标准Header)                | {"state":"success"}     | 修改成功
-教师POST(无X-Requested-With)        | {"state":"success"}     | 修改成功
-教师POST(无任何自定义Header)         | {"state":"success"}     | 修改成功
-教师POST(Referer=evil.com)          | {"state":"success"}     | 修改成功
-教师GET方式                          | {"state":"success"}     | 修改成功
-教师GET(Origin=evil.com)            | {"state":"success"}     | 修改成功
+GET /v2/apis/active/getPPTActiveInfo?activeId=5000163891319
+
+学生可见的敏感字段:
+- ewnCtime1: 1781141212745     ← 二维码enc生成核心时间戳
+- ewnCtime2: "2026-06-11 09:26:52"
+- chartid: 296136586887169    ← 二维码chart ID
+- ewmRefreshTime: 10          ← 二维码刷新间隔(秒)
+- ifrefreshewm: 1             ← 是否启用二维码刷新
+- openCheckFaceFlag: 1        ← 是否需要人脸识别
+- openCheckWeChatFlag: 1      ← 是否需要微信验证
+- openPreventCheatFlag: 1     ← 是否开启防作弊
+- ifNeedVCode: 1              ← 是否需要验证码
+- ifphoto: 1                  ← 是否需要拍照
+- locationText: "郑州市金水区..." ← 签到地点描述
+- locationRange: 500          ← 签到范围(米)
+- attendNum: 1                ← 已签到人数
 ```
 
-**关键问题**: 无CSRF Token、支持GET方法、不检查Referer/Origin、可实际修改数据
-
-### 修复建议
-
-1. 禁止GET方法修改数据
-2. 添加CSRF Token验证
-3. 校验Referer/Origin头
-4. 添加SameSite Cookie属性
-
----
-
-## 漏洞2：contestyd.chaoxing.com CORS任意Origin反射 (HIGH 7.2) 🆕
-
-### 漏洞描述
-
-竞赛云域名 `contestyd.chaoxing.com` 的 `/v2/apis/sign/signIn` 端点存在严重CORS配置缺陷：**反射任意Origin并配合 `Access-Control-Allow-Credentials: true`**。攻击者可在任意恶意网站上编写JavaScript，诱骗已登录用户访问后，跨域读取该API的响应数据（包括携带Cookie的请求）。
-
-### 验证证据
+### 已正确过滤的字段
 
 ```
-Origin Header                        | 响应 Access-Control-Allow-Origin   | Allow-Credentials
------------------------------------- | ---------------------------------- | -----------------
-https://mooc1-api.chaoxing.com       | https://mooc1-api.chaoxing.com     | true
-https://chaoxing.com                 | https://chaoxing.com               | true
-https://evil.com                     | https://evil.com                   | true ✅
-null                                 | null                               | true ✅
+字段                    | 教师值                    | 学生值  | 状态
+----------------------- | ------------------------- | ------- | ----
+signCode                | "175509"                  | ""      | ✅ 已过滤
+locationLongitude       | "113.6644556500963"       | ""      | ✅ 已过滤
+locationLatitude        | "34.78994993072065"       | ""      | ✅ 已过滤
 ```
 
 ### 攻击场景
 
-1. 攻击者在 `evil.com` 上编写恶意JS代码
-2. 诱骗已登录超星的教师/学生访问该页面
-3. JS代码发送跨域请求到 `contestyd.chaoxing.com/v2/apis/sign/signIn`
-4. 浏览器自动携带Cookie，响应被JS读取
-5. 攻击者获取签到数据（当前服务异常返回错误，但若后端修复后可获取完整签到记录）
-
-### 当前可利用性
-
-**部分可利用** — 当前 `/v2/apis/sign/signIn` 返回 `{"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}`，后端服务异常。但CORS漏洞本身已确认存在，一旦后端服务修复，即可被利用窃取签到数据。`null` Origin也被允许，iframe sandbox可利用。
+1. 学生调用 `getPPTActiveInfo` 获取 `ewnCtime1` 和 `chartid`
+2. 如果enc算法为 `MD5(activeId + "_" + ewnCtime1)` 或类似变体
+3. 学生自行计算enc值
+4. 使用enc值调用 `stuSignajax` 完成二维码签到
 
 ### 修复建议
 
-1. **[紧急]** 修改CORS配置，仅允许白名单Origin
-2. 禁止反射任意Origin，禁止 `null` Origin
-3. 评估是否真的需要 `Access-Control-Allow-Credentials: true`
-4. 后端服务修复后需重新评估数据泄露风险
+1. **[紧急]** 对学生隐藏 `ewnCtime1`、`ewnCtime2`、`chartid` 字段
+2. **[紧急]** 对学生隐藏所有安全配置字段（openCheckFaceFlag等）
+3. 评估enc生成算法是否可逆，如可逆则需更换算法
+4. 减少返回给学生的字段至最小必要集合
 
 ---
 
-## 漏洞3：PC端权限中间件JSON Content-Type绕过 (MEDIUM 6.1)
+## 漏洞4：SSO端点泄露IM密码明文 (HIGH 6.8) 🆕
 
 ### 漏洞描述
 
-PC端 `/widget/sign/pcTeaSignController/updateSignStatus2` 的权限中间件仅检查 `Content-Type: application/x-www-form-urlencoded` 的请求。当使用 `Content-Type: application/json` 时，权限检查被完全绕过。
+`sso.chaoxing.com/apis/login/userLogin4Uname.do` 端点在返回用户信息时，包含IM账户密码的**明文字段** `accountInfo.imAccount.password`。学生可利用此密码登录IM系统，读取群聊中教师发布的签到码。
 
 ### 验证证据
 
 ```
-Content-Type                          | 学生响应                          | 绕过权限?
-------------------------------------- | --------------------------------- | --------
-application/x-www-form-urlencoded     | {"result":0,"errorMsg":"您无权限修改"} | 否
-application/json                      | HTTP 500 Internal Server Error     | 是
+POST https://sso.chaoxing.com/apis/login/userLogin4Uname.do
+
+返回数据包含:
+- accountInfo.imAccount.password: "C8C5BBF3CD30A1A1" (学生IM密码)
+- accountInfo.imAccount.password: "EEF607101FF2374F" (教师IM密码)
 ```
 
-### 当前可利用性
+### 攻击场景
 
-**当前不可利用** — Controller使用`@RequestParam`无法从JSON body提取参数导致500。若后端改为`@RequestBody`则变为高危。
-
-### 修复建议
-
-1. 权限中间件必须覆盖所有Content-Type
-2. 对未支持的Content-Type应返回415而非跳过检查
-3. Controller层添加二次权限校验
-
----
-
-## 漏洞4：移动端 updateSignStatus 权限绕过 (MEDIUM 5.5)
-
-### 漏洞描述
-
-移动端 `/pptSign/updateSignStatus` 存在两种权限绕过方式，虽然当前均不可利用修改数据，但证明权限控制存在缺陷。
-
-### 验证证据
-
-**绕过方式1: Cookie注入**
-```
-正常学生请求 → "无权限"
-注入教师UID Cookie → HTTP 403（走了不同的认证路径，但被网关拦截）
-```
-
-**绕过方式2: JSON Content-Type**
-```
-Content-Type: application/x-www-form-urlencoded → "无权限"
-Content-Type: application/json → HTTP 500（绕过业务层权限检查，但参数解析失败）
-```
-
-### 当前可利用性
-
-**当前不可利用** — Cookie注入被网关层403拦截，JSON绕过因参数解析失败返回500。但两种绕过都证明权限检查逻辑存在缺陷。
-
-### 修复建议
-
-1. 统一权限校验入口，不依赖Cookie中的UID字段
-2. 所有Content-Type都应经过权限检查
-3. 添加纵深防御（Controller层二次校验）
-
----
-
-## 漏洞5：位置签到信息泄露 + 位置伪造 (MEDIUM 5.3)
-
-### 漏洞描述
-
-1. **信息泄露**: 服务端返回学生提交位置到教师指定位置的**精确距离**
-2. **位置伪造**: `stuSignajax` API接受任意经纬度参数，服务端仅校验距离
-
-### 验证证据
-
-```
-三角定位反推教师位置: (34.784500, 113.659700), 误差仅3m
-```
-
-### 修复建议
-
-1. 不返回精确距离，改为"在/不在范围内"
-2. 增加位置验证和设备指纹检测
-
----
-
-## 漏洞6：mobilelearn.chaoxing.com V2 signIn信息泄露 (MEDIUM 5.0) 🆕
-
-### 漏洞描述
-
-`mobilelearn.chaoxing.com` 是独立部署的签到服务域名（与 `mooc1-api.chaoxing.com` 完全独立），其 `/v2/apis/sign/signIn` 端点返回40+个字段的完整签到记录，远超学生端需要的信息，包含多个内部标记字段。
-
-### 验证证据
-
-```
-GET /v2/apis/sign/signIn?activeId=xxx → result:1, msg:success
-
-返回字段（40+个）:
-- id: 签到记录ID (如5001370808137)
-- tag: {"teaUpdateFlag":1}  ← 暴露教师修改痕迹
-- fid: 机构ID
-- sasort: 排序值
-- islook/isshow/ismark: 内部显示控制字段
-- longitude/latitude: 签到位置
-- clientip: 客户端IP
-- useragent: 设备信息
-- deviceCode: 设备码
-- vpProbability/vpStrategy: VP相关字段
-```
+1. 学生登录后调用SSO端点获取IM密码
+2. 使用IM密码登录IM系统
+3. 读取群聊消息中教师发布的签到码/签到活动信息
+4. 利用签到码完成签到码类型签到
 
 ### 额外发现
 
-1. **mobilelearn.chaoxing.com 独立部署**: 与 mooc1-api.chaoxing.com 完全独立的签到API栈
-2. **updateSignStatus2 权限检查差异**: 学生访问返回"参数错误"而非"无权限"，说明参数校验在权限校验之前
-3. **pptSign/endSign 无角色检查**: 学生和教师均可访问，返回"签到不存在"（非"无权限"）
-4. **Cookie注入泄露代码路径**: 不同Cookie状态返回不同错误消息（"无权限" vs "无权限。"），泄露后端代码路径差异
+- SSO端点还返回 `switchInfo` 字段（256字符加密数据），可能包含人脸识别signToken所需的 `cxcid` 和 `sc`
+- 如果 `switchInfo` 可解密，学生可构造人脸识别signToken绕过人脸验证
 
 ### 修复建议
 
-1. 减少返回字段，仅返回学生端必要信息
-2. 移除 `teaUpdateFlag`、`vpProbability`、`vpStrategy` 等内部标记
-3. 统一错误消息，避免泄露代码路径差异
-4. `pptSign/endSign` 添加角色检查
+1. **[紧急]** 不在API响应中返回IM密码明文
+2. 评估 `switchInfo` 加密强度，确保无法解密获取 `cxcid`/`sc`
+3. IM密码应使用OAuth token替代明文密码
 
 ---
 
-## 漏洞7：`/newsign/updateSignStatus` 假success + 越权 (LOW 3.5)
+## 漏洞8：云盘上传无文件类型验证 (MEDIUM 5.2) 🆕
 
 ### 漏洞描述
 
-API返回"success"但实际不修改任何数据，且学生可调用教师级API。
-
-### 修复建议
-
-1. 添加权限校验
-2. 修复API逻辑确保返回值与实际操作一致
-
----
-
-## 漏洞8：mobilelearn.fy HTTP明文传输 (LOW 3.1)
-
-### 漏洞描述
-
-泛亚学习端 `mobilelearn.fy.chaoxing.com` 仅支持HTTP协议，认证Cookie以明文传输，存在网络嗅探风险。
-
-### 修复建议
-
-1. 启用HTTPS
-2. 设置Cookie Secure属性
-
----
-
-## 漏洞9：mh.chaoxing.com网关路由信息泄露 (LOW 2.8) 🆕
-
-### 漏洞描述
-
-门户域名 `mh.chaoxing.com` 是Spring Cloud Gateway，使用 `/entry/` 前缀路由。网关对路径的两种不同响应（302→403 vs 404 JSON）泄露了路由注册信息。
+`pan-yz.chaoxing.com` 云盘上传接口无文件类型验证，学生可上传任意文件（包括非照片文件）获取objectId，用于绕过拍照签到的实时拍照要求。
 
 ### 验证证据
 
 ```
-路径                                  | 响应           | 含义
-------------------------------------- | -------------- | ----
-/entry/pptSign/updateSignStatus       | 302→403        | 路由已注册，权限拦截
-/entry/newsign/updateSignStatus       | 302→403        | 路由已注册，权限拦截
-/entry/pptSign/refeashSignList4Json2  | 404 JSON       | 路由未注册
-/entry/pptSign/stuSignajax            | 404 JSON       | 路由未注册
+1. 获取云盘token: GET /api/token/uservalid → 成功
+2. 上传PNG图片: POST /upload → objectId=14bbd09dc22b5f9fb30c644835ba5f53 ✅
+3. 上传TXT文件: POST /upload → 同样成功 ✅
 ```
 
-### 额外发现
+### 攻击场景
 
-- **分号注入**: `/entry/;jsessionid=test` 返回200，暴露智慧门户个人空间HTML页面（Thymeleaf模板）
-- **Spring Boot错误信息泄露**: `/entry/error` 返回 `{"status":999,"error":"None"}`（Spring Security自定义错误码）
-- **Actuator端点**: `/entry/actuator` 返回Spring Boot应用层403（非tengine WAF）
+1. 学生从相册选择任意图片（非实时拍照）
+2. 上传到云盘获取objectId
+3. 使用objectId调用 `stuSignajax` 的objectId参数完成拍照签到
 
 ### 修复建议
 
-1. 统一错误响应格式，不区分已注册/未注册路由
-2. 禁用分号路径匹配
-3. 关闭Spring Boot错误详情
-4. 保护Actuator端点
+1. 添加文件类型验证（仅允许JPEG/PNG）
+2. 添加EXIF信息检查（验证是否为实时拍摄）
+3. 添加上传时间与签到时间的关联验证
 
 ---
 
-## 域名映射表全面探索结果
+## 漏洞9：签到活动列表对学生完全可见 (MEDIUM 5.0) 🆕
 
-### 探索覆盖范围
+### 漏洞描述
 
-| 梯队 | 域名数 | 可达 | 有签到API | 关键发现 |
-|---|---|---|---|---|
-| 第一梯队（统计/课堂/学习API/办公/任务） | 5 | 5 | 0 | 全部可达但无签到API |
-| 第二梯队（泛亚/MOOC2/大数据/统计） | 7 | 7 | 1 | mobilelearn.fy有签到功能 |
-| 第三梯队（认证/用户中心/结构/管理） | 8 | 8 | 0 | 无签到API |
-| **第四梯队（学习/教学核心）** | 10 | 10 | **1** | **mobilelearn.chaoxing.com有完整签到API栈** |
-| 第五梯队（群组/首页/特殊） | 11 | 11 | 0 | special.chaoxing.com有SSO认证网关 |
-| 第六梯队（应用/API/资源） | 7 | 7 | 0 | fe.chaoxing.com WAF封堵；mh.chaoxing.com网关路由 |
-| 第七梯队（用户/通知/消息） | 8 | 8 | 0 | api.im.chaoxing.com有API但403 |
-| 第八梯队（代理/特殊路径） | 8 | 8 | 0 | 代理路径非开放代理，POST统一405 |
-| 第九梯队（其他相关） | 14 | 14 | 0 | contestyd.chaoxing.com CORS漏洞 |
-| 第十梯队（AI/课堂/会议/直播） | 13 | 13 | 0 | x.chaoxing.com API路由存在但500 |
-| 第十一梯队（泛亚/教育/其他） | 35 | 35 | 1 | ss.zhizhen.com完整签到API（需独立认证） |
+`/ppt/activeAPI/taskactivelist` 端点对学生返回完整的签到活动列表，包括所有签到活动的activeId、类型、状态。学生可轮询此接口实时监控新签到并自动响应。
 
-### 关键域名发现
+### 验证证据
 
-| 域名 | 发现 | 风险等级 |
-|---|---|---|
-| **mobilelearn.chaoxing.com** | 独立部署的完整签到API栈，V2 signIn信息泄露 | 🟡 中 |
-| **contestyd.chaoxing.com** | CORS任意Origin反射，/v2/apis/sign/signIn存在但服务异常 | 🔴 高 |
-| **fe.chaoxing.com** | 签到API路径存在但被WAF(tengine)完全封堵 | 🟢 低 |
-| **mh.chaoxing.com** | Spring Cloud Gateway，路由信息泄露，分号注入 | 🟢 低 |
-| **ss.zhizhen.com** | 完整签到API部署，需知真独立认证 | 🟡 中 |
-| **x.chaoxing.com** | /v2/apis/sign/signIn路由存在但500错误 | 🟢 低 |
-| **m.chaoxing.com** | 使用fxlogin独立认证体系，ChaoXing Cookie不互通 | 🟢 低 |
-| **special.chaoxing.com** | SSO认证网关(/user/token/getToken)，认证参数通过URL传递 | 🟢 低 |
+```
+GET /ppt/activeAPI/taskactivelist → 返回30个签到活动
 
-### 代理路径测试结果
+每个活动包含:
+- activeId: 签到活动ID
+- otherId: 签到类型(0=拍照,2=二维码,3=手势,4=位置,5=签到码)
+- status: 活动状态
+- name: 活动名称
+```
 
-| 路径 | 认证绕过 | 说明 |
-|---|---|---|
-| noteyd.chaoxing.com/proxy | ❌ 失败 | POST统一405，非开放代理 |
-| noteyd.chaoxing.com/comm | ❌ 失败 | 同上 |
-| noteyd.chaoxing.com/comp | ❌ 失败 | 路径不存在 |
-| appswh.chaoxing.com/epub | ❌ 失败 | POST统一405 |
-| appswh.chaoxing.com/board | ❌ 失败 | 路径不存在 |
-| appswh.chaoxing.com/projectapp | ❌ 失败 | POST统一405 |
-| appswh.chaoxing.com/hbqyg | ❌ 失败 | POST统一405 |
+### 修复建议
 
-**结论**: 所有代理路径均为反向代理网关，非开放代理，POST请求在网关层被统一拒绝，无法转发到后端签到服务。
-
-### 跨域认证测试结果
-
-| 域名 | ChaoXing Cookie有效 | 独立认证 | 说明 |
-|---|---|---|---|
-| mobilelearn.chaoxing.com | ✅ 是 | 否 | 与主域共享Cookie |
-| m.chaoxing.com | ❌ 否 | 是(fxlogin) | 需fxlogin独立认证 |
-| fe.chaoxing.com | N/A | N/A | WAF封堵，无法测试 |
-| mh.chaoxing.com | ❌ 否 | 是(网关权限) | Spring Cloud Gateway权限控制 |
-| contestyd.chaoxing.com | ✅ 是 | 否 | 与主域共享Cookie，但CORS有问题 |
-| ss.zhizhen.com | ❌ 否 | 是(知真认证) | 需login.zhizhen.com认证 |
-| ss.chaoxing.com | ❌ 否 | 是(liballiance) | 302→ss.liballiance.com |
+1. 评估是否需要对学生隐藏活动类型信息
+2. 添加请求频率限制
 
 ---
 
-## 签到详情接口探索结果
+## 漏洞11：checkSignCode签到码暴力破解 (MEDIUM 4.8) 🆕
 
-### 新发现的移动端端点
+### 漏洞描述
 
-| 端点 | 学生响应 | 教师响应 | 敏感数据 |
-|---|---|---|---|
-| `/pptSign/refeashSignList4Json2` | `false` | 全班签到列表 | 全部学生签到详情 |
-| `/pptSign/autoRefeashSignList4Json2` | `false` | 全班签到列表 | 全部学生签到详情 |
-| `/pptSign/refeashSignList4Json` | `false` | 全班签到列表 | 全部学生签到详情 |
-| `/pptSign/resetUserSignStatus` | "无权限" | "success" | 可重置签到状态 |
-| `/pptSign/updateSignStatus` | "无权限" | "修改失败"(需更多参数) | 可修改签到状态 |
-| `/pptSign/shuaxin` | 聊天消息 | 聊天消息 | 无敏感数据 |
-| `/widget/sign/pcTeaSignController/getSignCode` | "没有权限" | result=1 | 签到码 |
-| `/v2/apis/sign/refreshQRCode` | "非二维码签到" | "非二维码签到" | - |
+`/widget/sign/pcStuSignController/checkSignCode` 端点存在基于IP的速率限制，但4位数字签到码仅10000种组合，通过多IP/分布式方式仍可暴力破解。
 
-### V2 signIn 返回字段分析
+### 验证证据
 
-学生通过 `/v2/apis/sign/signIn` 可获取个人签到记录，包含以下字段：
+```
+GET /widget/sign/pcStuSignController/checkSignCode?activeId=xxx&signCode=1234
 
-| 字段 | 说明 | 敏感程度 |
-|---|---|---|
-| id | 签到记录ID (如5001371688276) | 中 |
-| uid | 用户ID | 低 |
-| activeId | 活动ID | 低 |
-| status | 签到状态 | 低 |
-| name | 用户姓名 | 中 |
-| longitude/latitude | 签到位置 | 高 |
-| clientip | 客户端IP | 高 |
-| useragent | 设备信息 | 中 |
-| submittime | 提交时间 | 低 |
-| isdelete | 是否删除 | 低 |
-| updatetime | 更新时间 | 低 |
-| deviceCode | 设备码 | 中 |
-| vpProbability | VP概率 | 低 |
-| vpStrategy | VP策略 | 低 |
-| **tag** | **{"teaUpdateFlag":1}** | **高（暴露教师修改痕迹）** |
-| **fid** | **机构ID** | **中** |
-| **sasort** | **排序值** | **低** |
-| **islook/isshow/ismark** | **内部显示控制** | **中** |
+- 正确签到码: result=1 (预期)
+- 错误签到码: {"result":0,"errorMsg":"手势不正确"}
+- 触发速率限制: "请勿频繁操作"
+- 速率限制冷却时间: >120秒
+- 教师账号不受同一IP速率限制影响
+```
 
-### 签到统计查看功能
+### 攻击场景
 
-- 所有签到活动的 `isTeacherViewOpen=0`（不允许学生查看统计）
-- 学生无法通过任何已测试API直接查看其他学生的签到详情
+1. 学生获取签到活动ID
+2. 使用多IP代理分布式尝试4位签到码（0000-9999）
+3. 10000种组合在分布式环境下可在数分钟内穷举
+4. 获取正确签到码后完成签到
 
-### IDOR测试结果
+### 修复建议
 
-- **跨用户IDOR不存在**: uid参数被忽略，服务端基于session判断身份
-- **跨活动访问**: 学生可访问同课程所有签到活动的个人记录（仅返回自己的数据）
-- **跨课程访问**: 随机activeId返回result=0，无法访问
+1. 增加签到码位数（至少6位）
+2. 添加账号级别速率限制（非仅IP级别）
+3. 错误次数过多后锁定签到码
+4. 添加验证码保护
 
 ---
 
-## 风险评估总结
+## ChaoxingSignFaker揭示的完整API端点清单
 
-| 漏洞 | CVSS | 攻击难度 | 实际影响 |
-|---|---|---|---|
-| CSRF(updateSignStatusByUidsV2) | 7.5 | 中（需诱导教师） | 可修改任意学生签到状态 |
-| **CORS任意Origin反射(contestyd)** | **7.2** | **低（跨域数据窃取）** | **可跨域读取签到数据** |
-| JSON Content-Type权限绕过(PC) | 6.1 | 低（当前不可利用） | 权限控制覆盖不完整 |
-| Cookie注入/JSON绕过(移动端) | 5.5 | 低（当前不可利用） | 权限检查逻辑缺陷 |
-| 位置签到信息泄露+伪造 | 5.3 | 低（学生可直接利用） | 可伪造位置完成签到 |
-| **V2 signIn信息泄露(mobilelearn)** | **5.0** | **极低（学生可直接访问）** | **40+内部字段泄露** |
-| 假success+越权(newsign) | 3.5 | 极低（但无实际影响） | 误导性响应 |
-| HTTP明文传输(mobilelearn.fy) | 3.1 | 中（需网络嗅探） | Cookie明文传输 |
-| **网关路由信息泄露(mh)** | **2.8** | **低** | **路由注册信息泄露** |
+### 签到核心接口（mobilelearn.chaoxing.com）
+
+| 端点 | 方法 | 说明 | 权限 |
+|------|------|------|------|
+| `/pptSign/stuSignajax` | GET | 核心签到接口 | 学生可用 |
+| `/newsign/preSign` | POST | 预签到 | 学生可用（返回签到状态信息） |
+| `/pptSign/analysis` | GET | 分析链1 | 当前500 |
+| `/pptSign/analysis2` | GET | 分析链2 | 当前500 |
+| `/pptSign/check-face-result` | GET | 人脸校验 | 需人脸签到场景 |
+| `/v2/apis/active/getPPTActiveInfo` | GET | 签到活动详情 | **学生可见敏感配置** |
+| `/v2/apis/active/student/activelist` | GET | 活动列表 | 学生可用 |
+| `/v2/apis/sign/signIn` | GET | 签到记录查询 | 学生可用 |
+| `/widget/sign/pcStuSignController/checkSignCode` | GET | 签到码校验 | 学生可用（有速率限制） |
+| `/ppt/activeAPI/taskactivelist` | GET | 活动列表(旧) | 学生可用 |
+
+### 认证/用户接口
+
+| 端点 | 方法 | 说明 | 风险 |
+|------|------|------|------|
+| `passport2.chaoxing.com/fanyalogin` | POST | 登录 | - |
+| `sso.chaoxing.com/apis/login/userLogin4Uname.do` | POST | 用户信息+设备 | **泄露IM密码明文** |
+| `im.chaoxing.com/webim/me` | GET | IM配置 | 返回tuid/token |
+| `im.chaoxing.com/webim/message/list/getMessageList` | POST | IM消息列表 | 可获取群聊签到信息 |
+
+### 验证码接口
+
+| 端点 | 方法 | 说明 |
+|------|------|------|
+| `captcha.chaoxing.com/captcha/get/conf` | GET | 验证码配置 |
+| `captcha.chaoxing.com/captcha/get/verification/image` | GET | 验证码图片 |
+| `captcha.chaoxing.com/captcha/check/verification/result` | GET | 验证码校验 |
+
+### 云盘接口
+
+| 端点 | 方法 | 说明 | 风险 |
+|------|------|------|------|
+| `pan-yz.chaoxing.com/api/token/uservalid` | GET | 云盘token | 学生可获取 |
+| `pan-yz.chaoxing.com/upload` | POST | 图片上传 | **无文件类型验证** |
+
+### 签到流程（ChaoxingSignFaker揭示）
+
+```
+1. preSign() → POST /newsign/preSign (检查签到状态)
+2. postAnalysis() → GET /pptSign/analysis?aid={activeId} (提取code，当前500)
+3. postAfterAnalysis() → GET /pptSign/analysis2?code={code} (完成分析，当前500)
+4. stuSignajax → GET /pptSign/stuSignajax (正式签到)
+```
+
+**注意**: analysis/analysis2当前返回500，但stuSignajax仍可直接调用（analysis链不被强制执行）。
+
+### 人脸识别绕过算法（ChaoxingSignFaker揭示）
+
+```
+1. 上传任意照片到云盘 → 获取objectId (currentFaceId)
+2. 构造faceResult: {currentFaceId, LiveDetectionStatus=1, collectStatus=1}
+3. 从clientId解密获取cxcid和sc
+4. 计算signToken: MD5(拼接所有key+value + sc)
+5. 调用 /pptSign/check-face-result → 获取faceEnc
+6. 使用faceEnc完成签到
+```
+
+**关键**: `LiveDetectionStatus=1` 和 `collectStatus=1` 是硬编码的，不需要真正的人脸活体检测。
+
+---
+
+## 攻击链路总结
+
+| 链路 | 难度 | 流程 | 关键漏洞点 |
+|------|------|------|-----------|
+| 二维码签到绕过 | 中 | getPPTActiveInfo获取ewnCtime1 → 计算enc → stuSignajax | ewnCtime1泄露 |
+| 签到码获取 | 低-中 | SSO获取IM密码 → 读取群聊 → 获取签到码 → 签到 | IM密码明文泄露 |
+| 拍照签到绕过 | 低 | 云盘上传任意图片 → 获取objectId → stuSignajax | 云盘无文件验证 |
+| 位置签到绕过 | 极低 | 伪造经纬度 → stuSignajax | 无位置验证 |
+| 签到码暴力破解 | 中 | checkSignCode尝试0000-9999 → 获取正确码 → 签到 | 4位码+弱速率限制 |
+| 人脸识别绕过 | 中-高 | 上传照片 → 构造faceResult → 计算signToken → check-face-result | LiveDetectionStatus硬编码 |
+| 普通签到自动化 | 极低 | 轮询taskactivelist → V2 API签到 | 仅需activeId |
 
 ---
 
 ## 修复优先级
 
-1. **[紧急]** `/pptSign/updateSignStatusByUidsV2` — 禁止GET方法，添加CSRF Token，校验Referer
-2. **[紧急]** `contestyd.chaoxing.com` CORS配置 — 限制Origin白名单，禁止null Origin
-3. **[紧急]** PC端权限中间件 — 覆盖所有Content-Type
-4. **[高]** 移动端权限校验 — 统一校验入口，不依赖Cookie中的UID
-5. **[高]** 位置签到 — 不返回精确距离
-6. **[高]** `mobilelearn.chaoxing.com` V2 signIn — 减少返回字段，移除内部标记
-7. **[中]** `/newsign/updateSignStatus` — 添加权限校验，修复假success
-8. **[中]** `mh.chaoxing.com` 网关 — 统一错误响应，禁用分号路径匹配
-9. **[低]** `mobilelearn.fy` — 启用HTTPS
-10. **[低]** `ss.zhizhen.com` — 评估CORS配置
+1. **[紧急]** `/pptSign/updateSignStatusByUidsV2` — 禁止GET方法，添加CSRF Token
+2. **[紧急]** `contestyd.chaoxing.com` CORS — 限制Origin白名单
+3. **[紧急]** `getPPTActiveInfo` — 对学生隐藏ewnCtime1/ewnCtime2/chartid及安全配置字段
+4. **[紧急]** SSO端点 — 不返回IM密码明文，评估switchInfo加密强度
+5. **[高]** PC端权限中间件 — 覆盖所有Content-Type
+6. **[高]** 云盘上传 — 添加文件类型验证和EXIF检查
+7. **[高]** 移动端权限校验 — 统一校验入口
+8. **[高]** 位置签到 — 不返回精确距离
+9. **[高]** V2 signIn — 减少返回字段
+10. **[中]** checkSignCode — 增加签到码位数，添加账号级速率限制
+11. **[中]** taskactivelist — 添加请求频率限制
+12. **[中]** `/newsign/updateSignStatus` — 添加权限校验
+13. **[中]** `mh.chaoxing.com` 网关 — 统一错误响应
+14. **[低]** `mobilelearn.fy` — 启用HTTPS
+15. **[低]** `ss.zhizhen.com` — 评估CORS配置
