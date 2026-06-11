@@ -1,0 +1,15 @@
+- [x] 第一梯队域名(statisticyd/k.chaoxing/study-api/office/task)签到API已探索
+- [x] 第二梯队域名(fanya/mooc2-ans/bigdata/stat)替代API已探索
+- [x] 第三梯队域名(passport2-api/uc/structure/v1/wx/manage)基础设施已探索
+- [x] 第一轮跨域名鉴权差异已测试
+- [x] 第一轮新发现漏洞已验证
+- [x] 安全测试报告已更新至v8.0
+- [x] 第四梯队域名(learn/mobilelearn/mooc1/mooc/pc/m/i)签到API已探索
+- [x] 第五梯队域名(groupyd/groupweb/home/special)签到API已探索
+- [x] 第六梯队域名(apps/cs-api/resource/fe/mh)签到API已探索
+- [x] 第七梯队域名(user/notice/message/im/contacts)签到API已探索
+- [x] 第八梯队代理路径(noteyd/proxy/comm/comp/appswh特殊路径)认证绕过已测试
+- [x] 第九至十一梯队域名批量探索已完成
+- [x] 跨域认证深度测试已完成
+- [x] 新发现漏洞已验证（contestyd CORS HIGH 7.2, mobilelearn信息泄露 MEDIUM 5.0, mh网关泄露 LOW 2.8）
+- [x] 安全测试报告已更新至v9.0

@@ -1,0 +1,1860 @@
+================================================================================
+Deep Security Testing - Authorized Audit
+Targets: fe.chaoxing.com, mh.chaoxing.com, contestyd.chaoxing.com, ss.zhizhen.com
+================================================================================
+
+[*] Logging in as student...
+    Student PUID: 431407443
+[*] Logging in as teacher...
+    Teacher PUID: 402644510
+
+================================================================================
+TEST 1: fe.chaoxing.com WAF Bypass Tests
+================================================================================
+
+--- 1a: Path Encoding Bypass ---
+
+[URL-encoded slash] https://fe.chaoxing.com/pptSign%2FupdateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Double URL-encoded slash] https://fe.chaoxing.com/pptSign%252FupdateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Unicode fullwidth slash] https://fe.chaoxing.com/pptSign%ef%bc%8fupdateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Semicolon injection] https://fe.chaoxing.com/pptSign/;updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Dot segment] https://fe.chaoxing.com/pptSign/./updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Double slash] https://fe.chaoxing.com/pptSign//updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Triple slash] https://fe.chaoxing.com///pptSign/updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Path with %00] https://fe.chaoxing.com/pptSign%00/updateSignStatus
+HTTP 400
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Backslash] https://fe.chaoxing.com/pptSign\updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Tab in path] https://fe.chaoxing.com/pptSign%09/updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Space in path] https://fe.chaoxing.com/pptSign%20/updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Path with ..] https://fe.chaoxing.com/pptSign/../pptSign/updateSignStatus
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 1b: Header Manipulation Bypass ---
+
+[X-Forwarded-For: 127.0.0.1]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Original-URL]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Rewrite-URL]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Forwarded-Host: mooc1-api]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Referer: mooc1-api]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Origin: mooc1-api]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Real-IP: 127.0.0.1]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Client-IP: 127.0.0.1]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-Forwarded-For: 10.0.0.1]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[True-Client-IP: 127.0.0.1]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[PC User-Agent]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Empty UA]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[X-WAF-Bypass: true]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[All internal headers combined]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 1c: HTTP Method Override ---
+
+[POST + X-HTTP-Method-Override: GET]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[POST + X-Method-Override: GET]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[PUT method]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[PATCH method]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[OPTIONS method]
+HTTP 204
+  Access-Control-Allow-Origin: *
+
+[HEAD method]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+
+[DELETE method]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[TRACE method]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 1d: Content-Type Variations (POST) ---
+
+[application/json]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[multipart/form-data]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[text/xml]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[application/x-www-form-urlencoded]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 1e: POST with sign-in parameters ---
+
+[POST /pptSign/updateSignStatus with params]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[POST /newsign/updateSignStatus with params]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 1f: Other Interesting Paths ---
+
+[GET /]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /favicon.ico]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /robots.txt]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /actuator]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /actuator/health]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 0dd09c1e83a6403c9d36c8c4f1333b66 -->
+
+[GET /swagger-ui.html]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /api]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /v2/apis/sign/signIn]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /widget/sign/pcTeaSignController/updateSignStatus2]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /pptSign/stuSignajax]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+================================================================================
+TEST 2: mh.chaoxing.com Gateway Tests
+================================================================================
+
+--- 2a: /entry/ Prefix Routing ---
+
+[GET /entry/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/pptSign/updateSignStatusByUidsV2]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/pptSign/refeashSignList4Json2]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/pptSign/refeashSignList4Json2"}
+
+[GET /entry/newsign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/v2/apis/sign/signIn]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/v2/apis/sign/signIn"}
+
+[GET /entry/widget/sign/pcTeaSignController/updateSignStatus2]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/pptSign/stuSignajax]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/pptSign/stuSignajax"}
+
+[GET /entry/pptSign/getSignDetail]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:55","status":404,"error":"Not Found","path":"/entry/pptSign/getSignDetail"}
+
+[GET /entry/pptSign/preSignStuList4Json]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/pptSign/preSignStuList4Json"}
+
+--- 2b: POST /entry/ with sign-in params ---
+
+[POST /entry/pptSign/updateSignStatus with params]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[POST /entry/newsign/updateSignStatus with params]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[POST /entry/v2/apis/sign/signIn with params]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/v2/apis/sign/signIn"}
+
+[POST /entry/pptSign/stuSignajax with params]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/pptSign/stuSignajax"}
+
+--- 2c: Gateway Routing Bypass ---
+
+[GET /pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /newsign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /v2/apis/sign/signIn]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/v2/apis/sign/signIn"}
+
+[GET /entry/../pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/..;/pptSign/updateSignStatus]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 1c866f689a82444cbdf3697bde71a545 -->
+
+[GET /entry/%2e%2e/pptSign/updateSignStatus]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 16a544444eb14ed1a0bd941ea5b662c4 -->
+
+[GET /entry/..%252f/pptSign/updateSignStatus]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 785bc945a4094a6aa200d88520ab8ebf -->
+
+[GET /api/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /v1/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /v2/pptSign/updateSignStatus]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/v2/pptSign/updateSignStatus"}
+
+[GET /gateway/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /route/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /proxy/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /service/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/actuator]
+HTTP 403
+  Content-Type: application/json;charset=UTF-8
+  Body: 403
+
+[GET /entry/actuator/health]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 83e43b0e15e246629bac5a67e07871df -->
+
+[GET /entry/actuator/env]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 0b93607e69e3453cb413646c0c009460 -->
+
+[GET /entry/actuator/routes]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 6511bef098be402089a995977977f105 -->
+
+[GET /actuator]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /actuator/health]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /actuator/gateway/routes]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+--- 2d: Auth Header Tests ---
+
+[X-Forwarded-For: 127.0.0.1]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[X-Real-IP: 127.0.0.1]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[Referer: chaoxing]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[Authorization Bearer test]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[X-Auth-Token test]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+--- 2e: Spring Boot Error/Info Disclosure ---
+
+[GET /entry/error]
+HTTP 500
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":999,"error":"None"}
+
+[GET /entry/%s%s%s%s]
+HTTP 404
+  Content-Type: application/json;charset=UTF-8
+  Body: {"timestamp":"2026-06-11 09:41:56","status":404,"error":"Not Found","path":"/entry/%25s%25s%25s%25s"}
+
+[GET /entry/;jsessionid=test]
+HTTP 200
+  Content-Type: text/html;charset=UTF-8
+  Body: <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" th:content="智慧门户-个人空间"/>
+    <meta name="description" th:content="智慧门户-个人空间"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content
+
+[GET /entry/pptSign/..;/updateSignStatus]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 3cc97d753bf54aed807c26c2b84530f0 -->
+
+[GET /entry/pptSign/updateSignStatus;jsessionid=test]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[GET /entry/pptSign/updateSignStatus?a=<script>alert(1)</script>]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 1cbb1389dd2f4637a96a084ce6a74104 -->
+
+[GET /entry/pptSign/updateSignStatus#fragment]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+--- 2f: Gateway Route Discovery ---
+
+[GET /entry/actuator/gateway/routes]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 1a0d3bc12beb4a479873ceeceeecf0ae -->
+
+[GET /entry/actuator/gateway/globalfilters]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 9027c86996bf457b937555f60748656e -->
+
+[GET /entry/actuator/gateway/routefilters]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+<!-- event_id: 64a478eefa4f4e66aa558a83309253ad -->
+
+[GET /actuator/gateway/routes]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /actuator/gateway/globalfilters]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+================================================================================
+TEST 3: contestyd.chaoxing.com Service Error Investigation
+================================================================================
+
+--- 3a: All Sign-in Paths (Student Session) ---
+
+[GET /v2/apis/sign/signIn]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[GET /pptSign/updateSignStatus]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /pptSign/updateSignStatusByUidsV2]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /pptSign/refeashSignList4Json2]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /pptSign/stuSignajax]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /pptSign/getSignDetail]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /pptSign/preSignStuList4Json]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /newsign/updateSignStatus]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /newsign/getSignDetail]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /widget/sign/pcTeaSignController/updateSignStatus2]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /widget/sign/pcTeaSignController/getSignDetail2]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+--- 3b: POST Sign-in with Parameters (Student) ---
+
+[POST /v2/apis/sign/signIn with sign_params]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[POST /pptSign/updateSignStatus with sign_params]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[POST /newsign/updateSignStatus with sign_params]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[POST /pptSign/stuSignajax with sign_params]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[POST /pptSign/updateSignStatusByUidsV2 with sign_params]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[POST /v2/apis/sign/signIn with JSON body]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+--- 3c: Teacher Session Tests ---
+
+[Teacher POST /v2/apis/sign/signIn]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[Teacher POST /pptSign/updateSignStatus]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[Teacher POST /pptSign/updateSignStatusByUidsV2]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[Teacher POST /pptSign/refeashSignList4Json2]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[Teacher POST /newsign/updateSignStatus]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[Teacher POST /widget/sign/pcTeaSignController/updateSignStatus2]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+--- 3d: CORS Investigation ---
+
+[OPTIONS /v2/apis/sign/signIn Origin=https://mooc1-api.chaoxing.com]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Origin: https://mooc1-api.chaoxing.com
+
+[OPTIONS /v2/apis/sign/signIn Origin=https://chaoxing.com]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Origin: https://chaoxing.com
+
+[OPTIONS /v2/apis/sign/signIn Origin=https://evil.com]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Origin: https://evil.com
+
+[OPTIONS /v2/apis/sign/signIn Origin=null]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Origin: null
+
+--- 3e: Parameter Variation Tests ---
+
+[Missing activeId]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[Missing courseId]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[Empty activeId]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[Invalid activeId]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[With enc param]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[With GPS coords]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+[With clientIp]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Content-Type: text/html;charset=UTF-8
+  Body: {"result":"0","errorMsg":"服务异常，请稍后重试[50001]"}
+
+--- 3f: Other Interesting Paths ---
+
+[GET /]
+HTTP 400
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /v2/apis/]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /v2/]
+HTTP 500
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /v2/apis/sign/]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /actuator]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /actuator/health]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /swagger-ui.html]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /api-docs]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /v2/api-docs]
+HTTP 500
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /favicon.ico]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[GET /robots.txt]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+================================================================================
+TEST 4: ss.zhizhen.com Auth Investigation
+================================================================================
+
+--- 4a: Zhizhen Auth Flow ---
+
+[*] Testing login.zhizhen.com...
+
+[GET https://login.zhizhen.com/findlogin.jsp]
+HTTP 200
+  Content-Type: text/html;charset=utf-8
+  Body: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="超星发现以数十亿海量元
+
+[GET https://login.zhizhen.com/]
+HTTP 302
+  Redirect: https://login.zhizhen.com/login.jsp
+
+[*] Testing special.chaoxing.com token endpoint...
+
+[GET https://special.chaoxing.com/user/token/getToken]
+HTTP 200
+
+[GET .../getToken?target=zhizhen]
+HTTP 200
+
+--- 4b: API Behavior Without Auth ---
+
+[GET /pptSign/updateSignStatus]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /pptSign/updateSignStatusByUidsV2]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /pptSign/refeashSignList4Json2]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /pptSign/stuSignajax]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /pptSign/getSignDetail]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /newsign/updateSignStatus]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /v2/apis/sign/signIn]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.233+00:00","status":404,"error":"Not Found","path":"/v2/apis/sign/signIn"}
+
+[GET /widget/sign/pcTeaSignController/updateSignStatus2]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+--- 4c: POST with ChaoXing Cookies ---
+
+[POST /pptSign/updateSignStatus with ChaoXing cookies]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[POST /v2/apis/sign/signIn with ChaoXing cookies]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.363+00:00","status":404,"error":"Not Found","path":"/v2/apis/sign/signIn"}
+
+[POST /newsign/updateSignStatus with ChaoXing cookies]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+--- 4d: Zhizhen-Specific Headers ---
+
+[X-Zhizhen-Token: test]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[Authorization: Bearer test]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[X-Auth-Token: test]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[Referer: zhizhen.com]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[Origin: zhizhen.com]
+HTTP 200
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Origin: https://www.zhizhen.com
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+--- 4e: Weaker Auth Endpoints ---
+
+[GET /]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /favicon.ico]
+HTTP 200
+  Content-Type: image/x-icon
+  Body:          h     (                                                      �.  ��  ��  ��  |�  x�  s�o0                          �  ��  ��  ��  ��  ��  ��  ��  ��  w�p�	n
+              �  ��  ��  ��  ��  ��  ��  ��  ��  ��  ��  |�r�
+p
+          ��34��EF����FF��..��  ��EF��'(����DE
+
+[GET /robots.txt]
+HTTP 200
+  Content-Type: text/plain; charset=utf-8
+  Body: User-agent: *
+Disallow: /
+
+
+[GET /actuator]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /actuator/health]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出错了(404)</title>
+<style>
+html,body { background:#D
+
+[GET /swagger-ui.html]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[GET /v2/api-docs]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.611+00:00","status":404,"error":"Not Found","path":"/v2/api-docs"}
+
+[GET /api-docs]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.630+00:00","status":404,"error":"Not Found","path":"/api-docs"}
+
+[GET /health]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /info]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /pptSign/]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /newsign/]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /v2/]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET /v2/apis/]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.698+00:00","status":404,"error":"Not Found","path":"/v2/apis/"}
+
+[GET /v2/apis/sign/]
+HTTP 404
+  Content-Type: application/json
+  Body: {"timestamp":"2026-06-11T01:41:59.719+00:00","status":404,"error":"Not Found","path":"/v2/apis/sign/"}
+
+--- 4f: Zhizhen SSO Login Flow ---
+
+[GET https://login.zhizhen.com/findlogin.jsp]
+HTTP 200
+  Content-Type: text/html;charset=utf-8
+  Body: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="超星发现以数十亿海量元
+
+[GET https://login.zhizhen.com/cas/login]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出错了(404)</title>
+<style>
+html,body { background:#D
+
+[GET https://login.zhizhen.com/oauth/authorize]
+HTTP 404
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出错了(404)</title>
+<style>
+html,body { background:#D
+
+[GET https://ss.zhizhen.com/login]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET https://ss.zhizhen.com/sso/login]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[GET https://ss.zhizhen.com/auth/login]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+--- 4g: UID-based Auth Attempts ---
+
+[X-UID header uid=431407443]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[X-User-Id header uid=431407443]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+[uid query param uid=431407443]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+================================================================================
+TEST 5: Cross-Domain Cookie/Token Reuse
+================================================================================
+
+--- 5a: Cookie Reuse Across Domains ---
+
+[Student POST https://fe.chaoxing.com/pptSign/updateSignStatus]
+HTTP 403
+  Content-Type: text/html; charset=utf-8
+  Body: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>tengine</center>
+</body>
+</html>
+
+
+[Student POST https://mh.chaoxing.com/pptSign/updateSignStatus]
+HTTP 302
+  Redirect: https://mh.chaoxing.com/entry/global/403
+
+[Student POST https://contestyd.chaoxing.com/pptSign/updateSignStatus]
+HTTP 405
+  Content-Type: text/html; charset=utf-8
+  Body: <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0"/>
+<meta charset="
+
+[Student POST https://ss.zhizhen.com/pptSign/updateSignStatus]
+HTTP 200
+  Content-Type: application/json;charset=UTF-8
+  Body: {"msg":"暂无权限","code":401,"url":"https://login.zhizhen.com/findlogin.jsp?backurl="}
+
+--- 5b: User Info Endpoints ---
+
+================================================================================
+ALL TESTS COMPLETE
+================================================================================

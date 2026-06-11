@@ -1,0 +1,3509 @@
+[
+  {
+    "domain": "user.yd.chaoxing.com",
+    "type": "user",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [],
+    "critical_endpoints": [],
+    "interesting_findings": []
+  },
+  {
+    "domain": "useryd.chaoxing.com",
+    "type": "user",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [],
+    "critical_endpoints": [],
+    "interesting_findings": []
+  },
+  {
+    "domain": "notice.chaoxing.com",
+    "type": "notice",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [],
+    "critical_endpoints": [],
+    "interesting_findings": []
+  },
+  {
+    "domain": "message.chaoxing.com",
+    "type": "message",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [],
+    "critical_endpoints": [],
+    "interesting_findings": []
+  },
+  {
+    "domain": "im.chaoxing.com",
+    "type": "im",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 200,
+        "body_preview": "\u0000\u0000\u0001\u0000\u0001\u0000dd\u0000\u0000\u0001\u0000 \u0000��\u0000\u0000\u0016\u0000\u0000\u0000(\u0000\u0000\u0000d\u0000\u0000\u0000�\u0000\u0000\u0000\u0001\u0000 \u0000\u0000\u0000\u0000\u0000@�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000�\b\u0012\u0000�8\u0012\u0000�x\u0012\u0000�\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000�\u0012\u0000�x\u0012\u0000�8\u0012\u0000�\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000� ",
+        "content_type": "image/x-icon",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "POST",
+        "status": 405,
+        "body_preview": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+        "content_type": "text/html; charset=utf-8",
+        "severity": "LOW"
+      }
+    ],
+    "critical_endpoints": [],
+    "interesting_findings": [
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 200,
+        "body_preview": "\u0000\u0000\u0001\u0000\u0001\u0000dd\u0000\u0000\u0001\u0000 \u0000��\u0000\u0000\u0016\u0000\u0000\u0000(\u0000\u0000\u0000d\u0000\u0000\u0000�\u0000\u0000\u0000\u0001\u0000 \u0000\u0000\u0000\u0000\u0000@�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000�\b\u0012\u0000�8\u0012\u0000�x\u0012\u0000�\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000�\u0012\u0000�x\u0012\u0000�8\u0012\u0000�\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000� ",
+        "content_type": "image/x-icon",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      }
+    ]
+  },
+  {
+    "domain": "api.im.chaoxing.com",
+    "type": "im",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 500,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>500</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 å¾®è½¯é",
+      "content_type": "text/html"
+    },
+    "base_response_http": {
+      "status": 200,
+      "body_preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\" content=\"0;url=/verifiable/chat?rid=60\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\nI AM success\r\n</body>\r\n</html>",
+      "content_type": "text/html;charset=UTF-8"
+    },
+    "found_endpoints": [
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/user/info",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/user/info",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/base",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/base",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/base",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/base",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/count",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/count",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/getList",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/getList",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/unread",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/unread",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/count",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/count",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/chat",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/chat",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/chat",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/chat",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/contact",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/im/contact",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contact",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contact",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/doc.html",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/doc.html",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/actuator",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/actuator",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/health",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/health",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/status",
+        "method": "GET",
+        "status": 403,
+        "body_preview": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+        "content_type": "text/html",
+        "severity": "LOW"
+      },
+      {
+        "path": "/status",
+        "method": "POST",
+        "status": 403,
+        "body_preview": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\r\n<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n",
+        "content_type": "text/html",
+        "severity": "LOW"
+      },
+      {
+        "path": "/info",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/info",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "POST",
+        "status": 500,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"",
+        "content_type": "text/html",
+        "severity": "LOW",
+        "note": "HTML error page"
+      }
+    ],
+    "critical_endpoints": [],
+    "interesting_findings": []
+  },
+  {
+    "domain": "api1.im.chaoxing.com",
+    "type": "im",
+    "alive_https": false,
+    "alive_http": true,
+    "base_response_https": null,
+    "base_response_http": {
+      "status": 502,
+      "body_preview": "Forwarding error: connection closed before message completed",
+      "content_type": ""
+    },
+    "found_endpoints": [
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/base",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/base",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/base",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/base",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: operation was canceled",
+        "content_type": "",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/count",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/count",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/unread",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/unread",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/count",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/count",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/doc.html",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/doc.html",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/actuator",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/actuator",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/health",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/health",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/status",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/status",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      }
+    ],
+    "critical_endpoints": [],
+    "interesting_findings": [
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/pptSign/stuSignajax",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/widget/sign/pcTeaSignController/updateSignStatus2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/apis/sign/signIn",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/updateSignStatusByUidsV2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/pptSign/refeashSignList4Json2",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mooc-ans/newsign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/sign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/pptSign/updateSignStatus",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/getUserInfo",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v2/user/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/backclazzdata",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/mycourse/stuList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/base",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/base",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/base",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/base",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: operation was canceled",
+        "content_type": "",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/notice/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/unread",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/count",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/count",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/notice/getUnreadCount",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getList",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getList",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/message/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/unread",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/unread",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/count",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/count",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/getUnreadCount",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/message/conversation",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/im/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/conversation",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/chat",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/im/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contact",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/v1/contacts/list",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/contacts/search",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/contacts/search",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v1/",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/api/v2/",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/swagger-ui.html",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/doc.html",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/doc.html",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/actuator",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/actuator",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/health",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/health",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/status",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/status",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/info",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/info",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "POST",
+        "status": 502,
+        "body_preview": "Forwarding error: connection closed before message completed",
+        "content_type": "",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "domain": "contactsyd.chaoxing.com",
+    "type": "contacts",
+    "alive_https": true,
+    "alive_http": true,
+    "base_response_https": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "base_response_http": {
+      "status": 400,
+      "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>400</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "found_endpoints": [
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 200,
+        "body_preview": "\u0000\u0000\u0001\u0000\u0001\u0000dd\u0000\u0000\u0001\u0000 \u0000��\u0000\u0000\u0016\u0000\u0000\u0000(\u0000\u0000\u0000d\u0000\u0000\u0000�\u0000\u0000\u0000\u0001\u0000 \u0000\u0000\u0000\u0000\u0000@�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000�\b\u0012\u0000�8\u0012\u0000�x\u0012\u0000�\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000�\u0012\u0000�x\u0012\u0000�8\u0012\u0000�\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000� ",
+        "content_type": "image/x-icon",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      },
+      {
+        "path": "/favicon.ico",
+        "method": "POST",
+        "status": 405,
+        "body_preview": "<!doctype html>\r\n<html>\r\n<head>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no\" />\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\" />\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta charset=\"utf-8\">\r\n<title>405</title>\r\n<style>\r\n@charset \"utf-8\";\r\n/* CSS Document */\r\n*{margin:0;padding:0;-webkit-box-sizing:border-box;}\r\nh1,h2,h3,h4,h5,h6{ font-weight:normal;}\r\nbody{font:14px/1.5 微软雅黑;colo",
+        "content_type": "text/html; charset=utf-8",
+        "severity": "LOW"
+      }
+    ],
+    "critical_endpoints": [],
+    "interesting_findings": [
+      {
+        "path": "/favicon.ico",
+        "method": "GET",
+        "status": 200,
+        "body_preview": "\u0000\u0000\u0001\u0000\u0001\u0000dd\u0000\u0000\u0001\u0000 \u0000��\u0000\u0000\u0016\u0000\u0000\u0000(\u0000\u0000\u0000d\u0000\u0000\u0000�\u0000\u0000\u0000\u0001\u0000 \u0000\u0000\u0000\u0000\u0000@�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000�\b\u0012\u0000�8\u0012\u0000�x\u0012\u0000�\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000��\u0012\u0000�\u0012\u0000�x\u0012\u0000�8\u0012\u0000�\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000� ",
+        "content_type": "image/x-icon",
+        "severity": "LOW",
+        "note": "Non-HTML response"
+      }
+    ]
+  }
+]
