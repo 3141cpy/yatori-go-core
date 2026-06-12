@@ -1,0 +1,974 @@
+======================================================================
+超星测试账号身份验证 - 精简版
+======================================================================
+
+=== 登录 ===
+账号1 (19712720708) PUID: 402644510
+账号2 (18436633997) PUID: 431407443
+
+=== 账号1 课程列表 (backclazzdata) ===
+
+[GET] 账号1课程列表
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/mycourse/backclazzdata?view=json&m=0
+  状态码: 200
+  响应: {
+  "result": 1,
+  "msg": "获取成功",
+  "channelList": [
+    {
+      "cfid": -1,
+      "norder": 18,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 141377820,
+      "content": {
+        "studentcount": 31,
+        "chatid": "307822088749057",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "国际学院2025级4班",
+        "course": {
+          "data": [
+            {
+              "createtime": 1772166621000,
+              "defaultShowCatalog": 0,
+              "sectionId": 38336,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "张泽斌",
+              "isCourseSquare": 0,
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=260554328&personId=493376740&classId=141377820&userId=402644510",
+              "imageurl": "http://p.ananas.chaoxing.com/star3/origin/669ca80d6a0c5f74835bb936a41aabca.jpg",
+              "name": "数值计算与程序设计",
+              "id": 260554328
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 141377820,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "62e6c5044903dd7a53576c0eab9107ed",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 16,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 140271434,
+      "content": {
+        "studentcount": 61,
+        "chatid": "307346133811212",
+        "endDate": "2028-03-03 10:55",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "beginDate": "2026-03-03 10:55",
+        "isretire": -1,
+        "name": "班级977002.29周五上午1-2节",
+        "course": {
+          "data": [
+            {
+              "createtime": 1772506513000,
+              "appInfo": "4",
+              "defaultShowCatalog": 0,
+              "sectionId": 38336,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "李笑笑",
+              "isCourseSquare": 0,
+              "schools": "郑州大学",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=260899594&personId=493376740&classId=140271434&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/6ce77a10dd3268daa7ba6c93e5e76459.jpg",
+              "name": "大学生心理健康教育",
+              "id": 260899594
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 140271434,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "76a8363eb0146d7d92fe60b3194dcc34",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 15,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 139283549,
+      "content": {
+        "studentcount": 120,
+        "chatid": "306935181148165",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "2025级机械工程（中外合作办学）-1234",
+        "course": {
+          "data": [
+            {
+              "createtime": 1772114474000,
+              "defaultShowCatalog": 0,
+              "sectionId": 38336,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "周俊杰",
+              "isCourseSquare": 0,
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=260532723&personId=493376740&classId=139283549&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/669ca80d6a0c5f74835bb936a41aabca.jpg",
+              "name": "数值计算与程序设计",
+              "id": 260532723
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 139283549,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "ef9200c2b80cfa385263e6ac6d6df1d5",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 14,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 138928392,
+      "content": {
+        "studentcount": 97,
+        "chatid": "304470255796228",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "机械工程25级1-4班",
+        "course": {
+          "data": [
+            {
+              "createtime": 1769763659000,
+              "appInfo": "",
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "刘宏超",
+              "isCourseSquare": 0,
+              "schools": "",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=260362082&personId=493376740&classId=138928392&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/2ed03fe0662960834d8640ea4f14a005.png",
+              "name": "概率论与数理统计（25-26下48学时）",
+              "id": 260362082
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 138928392,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "54a7c0463a610988b038770febe47423",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 13,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 134350680,
+      "content": {
+        "studentcount": 119,
+        "chatid": "297935690596353",
+        "endDate": "2027-11-19 14:00",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "beginDate": "2025-11-19 14:00",
+        "isretire": -1,
+        "name": "班级841065.09",
+        "course": {
+          "data": [
+            {
+              "createtime": 1763532005000,
+              "appInfo": "4",
+              "defaultShowCatalog": 0,
+              "sectionId": 35880,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "朱西周",
+              "isCourseSquare": 0,
+              "schools": "",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=258167046&personId=493376740&classId=134350680&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/a52f800b14e1c1c8878d9f124a785296.jpg",
+              "name": "《中国近现代史纲要》",
+              "id": 258167046
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 134350680,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "d0eec3fa484aeaf19a1682a1901cf9ab",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 12,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 482881077,
+      "key": "tea_257485372",
+      "content": {
+        "createtime": 1761816180000,
+        "dtype": "Course",
+        "isFiled": 0,
+        "defaultShowCatalog": 0,
+        "sectionId": 36713,
+        "smartCourseState": 0,
+        "appData": 0,
+        "coursestate": 0,
+        "belongSchoolId": "22757",
+        "teacherfactor": "陈鹏宇",
+        "person": {
+          "data": [
+            {
+              "userid": "402644510"
+            }
+          ]
+        },
+        "imageurl": "https://p.ananas.chaoxing.com/star3/origin/3a7c4e2929905646967168696f78ff01.png",
+        "name": "111",
+        "roletype": 1,
+        "id": 257485372,
+        "clazz": [
+          {
+            "chatid": "296136586887169",
+            "clazzId": 132821141,
+            "state": 0,
+            "clazzStudentCount": 1,
+            "clazzName": "exam"
+          },
+          {
+            "chatid": "296136506146819",
+            "clazzId": 132821037,
+            "state": 0,
+            "clazzStudentCount": 0,
+            "clazzName": "默认班级"
+          }
+        ],
+        "cpi": 482881077,
+        "bbsid": "74e2e556820bd3534701ded6cce5827b",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 3,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 130789414,
+      "content": {
+        "studentcount": 120,
+        "chatid": "294258290524163",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "国院25级机械工程1-4班",
+        "course": {
+          "data": [
+            {
+              "createtime": 1760010558000,
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "周世国",
+              "isCourseSquare": 0,
+              "schools": "郑州大学",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=256571696&personId=493376740&classId=130789414&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/6ce77a10dd3268daa7ba6c93e5e76459.jpg",
+              "name": "微积分A(2)",
+              "id": 256571696
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 130789414,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "796c3def6f24bf8b5db81fbfdbbc110a",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 2,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 128255887,
+      "content": {
+        "studentcount": 61,
+        "chatid": "291763920109573",
+        "endDate": "2027-09-12 11:02",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "beginDate": "2025-09-12 11:02",
+        "isretire": 0,
+        "name": "班级841011.08",
+        "course": {
+          "data": [
+            {
+              "createtime": 1757646156000,
+              "appInfo": "4",
+              "defaultShowCatalog": 0,
+              "sectionId": 35880,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "张桂梅",
+              "isCourseSquare": 0,
+              "schools": "郑州大学",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=255538200&personId=493376740&classId=128255887&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/6ce77a10dd3268daa7ba6c93e5e76459.jpg",
+              "name": "大学英语听说（Ⅰ）",
+              "id": 255538200
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 128255887,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "c00db3e0d7ab4543a12d9c24348d5efd",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 1,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 505704349,
+      "key": 128677101,
+      "content": {
+        "studentcount": 120,
+        "chatid": "292120876351493",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "机械工程25级1-4班",
+        "course": {
+          "data": [
+            {
+              "createtime": 1757986369000,
+              "appInfo": "",
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "刘宏超",
+              "isCourseSquare": 0,
+              "schools": "",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=255697280&personId=505704349&classId=128677101&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/f23a4b313e1aa0a7a840ab81aabc918f.jpg",
+              "name": "线性代数25-26上（48学时）",
+              "id": 255697280
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 128677101,
+        "state": 0,
+        "cpi": 505704349,
+        "bbsid": "f5ec687e05c12960aabcef6a9ba09565",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 1,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 493376740,
+      "key": 128190013,
+      "content": {
+        "studentcount": 119,
+        "chatid": "291706822000643",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 0,
+        "name": "机械工程(中外合作办学)1234班",
+        "course": {
+          "data": [
+            {
+              "createtime": 1757586729000,
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "1257",
+              "coursestate": 0,
+              "teacherfactor": "李钝",
+              "isCourseSquare": 0,
+              "schools": "郑州大学",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=255512502&personId=493376740&classId=128190013&userId=402644510",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/6ce77a10dd3268daa7ba6c93e5e76459.jpg",
+              "name": "人工智能通识与数字素养（理工医）",
+              "id": 255512502
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 128190013,
+        "state": 0,
+        "cpi": 493376740,
+        "bbsid": "c7e8282c61d62e11f25cb6ded36bf1f4",
+        "isSquare": 0
+      },
+      "topsign": 0
+    }
+  ],
+  "mcode": "-1",
+  "createcourse": 1,
+  "teacherEndCourse": 0,
+  "showEndCourse": 1,
+  "hasMore": false,
+  "stuEndCourse": 1
+}
+
+--- 账号1课程列表摘要 ---
+result: 1
+msg: 获取成功
+createcourse: 1
+teacherEndCourse: 0
+stuEndCourse: 1
+课程总数: 10
+
+  课程#1:
+    课程名: 数值计算与程序设计
+    courseId: 260554328
+    classId: 141377820
+    班级名: 国际学院2025级4班
+    roletype: 3 → 学生
+    teacherfactor: 张泽斌
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 1
+    studentcount: 31
+
+  课程#2:
+    课程名: 大学生心理健康教育
+    courseId: 260899594
+    classId: 140271434
+    班级名: 班级977002.29周五上午1-2节
+    roletype: 3 → 学生
+    teacherfactor: 李笑笑
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: -1
+    studentcount: 61
+
+  课程#3:
+    课程名: 数值计算与程序设计
+    courseId: 260532723
+    classId: 139283549
+    班级名: 2025级机械工程（中外合作办学）-1234
+    roletype: 3 → 学生
+    teacherfactor: 周俊杰
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 1
+    studentcount: 120
+
+  课程#4:
+    课程名: 概率论与数理统计（25-26下48学时）
+    courseId: 260362082
+    classId: 138928392
+    班级名: 机械工程25级1-4班
+    roletype: 3 → 学生
+    teacherfactor: 刘宏超
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 1
+    studentcount: 97
+
+  课程#5:
+    课程名: 《中国近现代史纲要》
+    courseId: 258167046
+    classId: 134350680
+    班级名: 班级841065.09
+    roletype: 3 → 学生
+    teacherfactor: 朱西周
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: -1
+    studentcount: 119
+
+  课程#6:
+    课程名: N/A
+    courseId: N/A
+    classId: tea_257485372
+    班级名: 111
+    roletype: 1 → 教师
+    teacherfactor: N/A
+    belongSchoolId: N/A
+    cpi: 482881077
+    isretire: None
+    studentcount: None
+
+  课程#7:
+    课程名: 微积分A(2)
+    courseId: 256571696
+    classId: 130789414
+    班级名: 国院25级机械工程1-4班
+    roletype: 3 → 学生
+    teacherfactor: 周世国
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 1
+    studentcount: 120
+
+  课程#8:
+    课程名: 大学英语听说（Ⅰ）
+    courseId: 255538200
+    classId: 128255887
+    班级名: 班级841011.08
+    roletype: 3 → 学生
+    teacherfactor: 张桂梅
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 0
+    studentcount: 61
+
+  课程#9:
+    课程名: 线性代数25-26上（48学时）
+    courseId: 255697280
+    classId: 128677101
+    班级名: 机械工程25级1-4班
+    roletype: 3 → 学生
+    teacherfactor: 刘宏超
+    belongSchoolId: 1257
+    cpi: 505704349
+    isretire: 1
+    studentcount: 120
+
+  课程#10:
+    课程名: 人工智能通识与数字素养（理工医）
+    courseId: 255512502
+    classId: 128190013
+    班级名: 机械工程(中外合作办学)1234班
+    roletype: 3 → 学生
+    teacherfactor: 李钝
+    belongSchoolId: 1257
+    cpi: 493376740
+    isretire: 0
+    studentcount: 119
+
+=== 账号2 课程列表 (backclazzdata) ===
+
+[GET] 账号2课程列表
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/mycourse/backclazzdata?view=json&m=0
+  状态码: 200
+  响应: {
+  "result": 1,
+  "msg": "获取成功",
+  "channelList": [
+    {
+      "cfid": -1,
+      "norder": 5,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 520211407,
+      "key": 145110605,
+      "content": {
+        "studentcount": 17,
+        "chatid": "311140036968453",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 0,
+        "name": "默认班级",
+        "course": {
+          "data": [
+            {
+              "createtime": 1776124662000,
+              "defaultShowCatalog": 0,
+              "sectionId": 0,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "0",
+              "coursestate": 0,
+              "teacherfactor": "刘俊琦",
+              "isCourseSquare": 0,
+              "schools": "",
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=262934472&personId=520211407&classId=145110605&userId=431407443",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/3a7c4e2929905646967168696f78ff01.png",
+              "name": "好好学习，天天向上",
+              "id": 262934472
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 145110605,
+        "state": 0,
+        "cpi": 520211407,
+        "bbsid": "33c1b6ed43e91f4faaea31b6f809c534",
+        "isSquare": 0
+      },
+      "topsign": 0
+    },
+    {
+      "cfid": -1,
+      "norder": 4,
+      "cataName": "课程",
+      "cataid": "100000002",
+      "id": 0,
+      "cpi": 520211407,
+      "key": 132821141,
+      "content": {
+        "studentcount": 1,
+        "chatid": "296136586887169",
+        "isFiled": 0,
+        "isthirdaq": 0,
+        "isstart": true,
+        "isretire": 1,
+        "name": "exam",
+        "course": {
+          "data": [
+            {
+              "createtime": 1761816180000,
+              "defaultShowCatalog": 0,
+              "sectionId": 36713,
+              "smartCourseState": 0,
+              "appData": 0,
+              "belongSchoolId": "22757",
+              "coursestate": 0,
+              "teacherfactor": "陈鹏宇",
+              "isCourseSquare": 0,
+              "courseSquareUrl": "https://tsjy.chaoxing.com/plaza/app?courseId=257485372&personId=520211407&classId=132821141&userId=431407443",
+              "imageurl": "https://p.ananas.chaoxing.com/star3/origin/3a7c4e2929905646967168696f78ff01.png",
+              "name": "111",
+              "id": 257485372
+            }
+          ]
+        },
+        "roletype": 3,
+        "id": 132821141,
+        "state": 0,
+        "cpi": 520211407,
+        "bbsid": "74e2e556820bd3534701ded6cce5827b",
+        "isSquare": 0
+      },
+      "topsign": 0
+    }
+  ],
+  "mcode": "-1",
+  "createcourse": 1,
+  "teacherEndCourse": 0,
+  "showEndCourse": 0,
+  "hasMore": false,
+  "stuEndCourse": 0
+}
+
+--- 账号2课程列表摘要 ---
+result: 1
+createcourse: 1
+teacherEndCourse: 0
+stuEndCourse: 0
+课程总数: 2
+
+  课程#1:
+    课程名: 好好学习，天天向上
+    courseId: 262934472
+    classId: 145110605
+    班级名: 默认班级
+    roletype: 3 → 学生
+    teacherfactor: 刘俊琦
+    cpi: 520211407
+    isretire: 0
+    studentcount: 17
+
+  课程#2:
+    课程名: 111
+    courseId: 257485372
+    classId: 132821141
+    班级名: exam
+    roletype: 3 → 学生
+    teacherfactor: 陈鹏宇
+    cpi: 520211407
+    isretire: 1
+    studentcount: 1
+
+=== 账号1 账号管理页面 ===
+姓名: 陈鹏宇
+性别: 197****0708
+
+=== 账号1 i.chaoxing.com/base 信息 ===
+学校: 郑州大学
+用户名: 陈鹏宇
+
+=== 账号1 尝试教师功能 ===
+
+--- 在课程1 (自己创建的课程) 发起签到 ---
+
+[POST] 账号1-课程1发起签到
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/updateSignStatus2
+  Data: {'courseId': '257485372', 'classId': '132821141', 'signType': '0', 'signDuration': '5'}
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+--- 在课程2 (别人创建的课程) 发起签到 ---
+
+[POST] 账号1-课程2发起签到
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/updateSignStatus2
+  Data: {'courseId': '262934472', 'classId': '145110605', 'signType': '0', 'signDuration': '5'}
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+=== 账号2 尝试教师功能 ===
+
+--- 账号2在课程1发起签到 ---
+
+[POST] 账号2-课程1发起签到
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/updateSignStatus2
+  Data: {'courseId': '257485372', 'classId': '132821141', 'signType': '0', 'signDuration': '5'}
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+--- 账号2在课程2发起签到 ---
+
+[POST] 账号2-课程2发起签到
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/updateSignStatus2
+  Data: {'courseId': '262934472', 'classId': '145110605', 'signType': '0', 'signDuration': '5'}
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+=== 获取课程签到信息 ===
+
+[GET] 账号1-课程1签到列表
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/stuSignList?courseId=257485372&classId=132821141
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+[GET] 账号1-课程2签到列表
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/sign/stuSignList?courseId=262934472&classId=145110605
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+=== 尝试获取课程成员列表 ===
+
+[GET] 账号1-课程1成员列表
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/clazz/memberList?courseId=257485372&classId=132821141&cpi=0
+  状态码: 404
+  响应(非JSON, 前500字符): <!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+    <title>404</title>
+    <style>
+        .main{height:255px;margin:0 auto;margin-top:15%;font-size:16px;color:#999; width: 350px;}
+        .font_top{padding-top:45px;display:inline;}
+        .msg_font{color: #8A8B99;font-size: 16px;line-height: 24px;padding-left: 30px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="font_t
+
+=== 尝试PC端API ===
+
+[GET] PC端-课程1交互页面
+  URL: https://mooc1-api.chaoxing.com/mooc-ans/visit/interaction?courseId=257485372&classId=132821141&cpi=0&ut=s
+  状态码: 200
+  响应(非JSON, 前500字符): <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script>
+    _HOST_ = "//mooc1-api.chaoxing.com";
+    _CP_ = "/mooc-ans";
+    _HOST_CP1_ = "//mooc1-api.chaoxing.com/mooc-ans";
+    // _HOST_CP2_ = _HOST_ + _CP_;
+    _HOST_CP2_ = _CP_;
+</script><html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>课程</title>
+	    <link rel="stylesheet" ty
+
+======================================================================
+=== 最终汇总 ===
+======================================================================
+
+关键发现:
+1. 账号1 (19712720708, puid=402644510):
+   - 姓名: 陈鹏宇
+   - 学校: 郑州大学 (fid=1257)
+   - 作为教师的课程(1个):
+     * 课程'N/A'(courseId=N/A, classId=tea_257485372, teacher=N/A)
+   - 作为学生的课程(9个):
+     * 课程'数值计算与程序设计'(courseId=260554328, classId=141377820, teacher=张泽斌)
+     * 课程'大学生心理健康教育'(courseId=260899594, classId=140271434, teacher=李笑笑)
+     * 课程'数值计算与程序设计'(courseId=260532723, classId=139283549, teacher=周俊杰)
+     * 课程'概率论与数理统计（25-26下48学时）'(courseId=260362082, classId=138928392, teacher=刘宏超)
+     * 课程'《中国近现代史纲要》'(courseId=258167046, classId=134350680, teacher=朱西周)
+     * 课程'微积分A(2)'(courseId=256571696, classId=130789414, teacher=周世国)
+     * 课程'大学英语听说（Ⅰ）'(courseId=255538200, classId=128255887, teacher=张桂梅)
+     * 课程'线性代数25-26上（48学时）'(courseId=255697280, classId=128677101, teacher=刘宏超)
+     * 课程'人工智能通识与数字素养（理工医）'(courseId=255512502, classId=128190013, teacher=李钝)
+   - 其他角色(0个):
+   - createcourse字段: 1
+
+2. 账号2 (18436633997, puid=431407443):
+   - 作为教师的课程(0个):
+   - 作为学生的课程(2个):
+     * 课程'好好学习，天天向上'(courseId=262934472, classId=145110605, teacher=刘俊琦)
+     * 课程'111'(courseId=257485372, classId=132821141, teacher=陈鹏宇)
+   - createcourse字段: 1
+
+3. 关键结论:
+   - roletype=1 表示教师, roletype=3 表示学生
+   - 账号1在课程1(courseId=257485372)中的角色需要确认
+   - 账号1在课程2(courseId=262934472)中的角色需要确认
+   - 超星平台的'教师'角色是课程级别的，不是账号级别的
+   - 一个用户可以在某些课程中是教师，在其他课程中是学生
