@@ -1,5 +1,0 @@
-- [x] V2 API信息泄露研究完成（签到码/enc获取）— 发现ewnCtime1泄露 HIGH 7.0
-- [x] preSign/checkSignCode/check-face-result权限研究完成 — checkSignCode可暴力破解 MEDIUM 4.8
-- [x] analysis链与签到前置条件研究完成 — analysis链不被强制执行
-- [x] 辅助端点安全研究完成 — SSO泄露IM密码 HIGH 6.8；云盘无文件验证 MEDIUM 5.2
-- [x] 安全测试报告已更新至v10.0
