@@ -1,72 +1,69 @@
 # 逆向分析第三方签到修改网站漏洞利用方法 Spec
 
 ## Why
-用户发现了一个第三方网站可以实际修改学习通签到状态，需要逆向分析该网站使用的漏洞利用方法，以便定位和修复底层漏洞。这是一个典型的"已知可利用→反推漏洞"的安全审计场景。
+用户发现第三方网站(beta-a.xiucat.top)可以实际修改学习通签到状态，需要逆向分析该网站使用的漏洞利用方法。经初步探测，该网站后端暴露了完整OpenAPI文档，揭示了其核心机制：**使用系统教师账号代理修改学生签到状态**。
 
 ## What Changes
-- 设计并实现一套完整的流量捕获与API调用分析方案
-- 编写自动化脚本监控测试账号签到状态变化
-- 编写自动化脚本对比使用网站前后的API调用差异
-- 编写流量拦截代理脚本记录第三方网站的所有HTTP请求
-- 基于已知的100+域名和签到API端点，自动匹配第三方网站调用的目标
+- 已完成：后端API结构探测，发现完整OpenAPI文档
+- 需验证：确认该网站具体调用学习通的哪个API端点
+- 需验证：确认教师账号修改签到的具体参数和流程
+- 需编写：签到状态监控脚本，在使用网站前后捕获变化
+- 需编写：验证脚本，通过teaUpdateFlag等字段确认修改来源
 
 ## Impact
-- Affected code: 新建流量分析脚本、签到状态监控脚本
-- Test accounts: 学生 18436633997/3.1415926Cpy (puid=431407443), 教师 19712720708/3.1415926Cpy (puid=402644510)
+- 第三方网站: https://beta-a.xiucat.top (VIP Center API, NestJS后端)
+- Test accounts: 学生 18436633997/3.1415926Cpy, 教师 19712720708/3.1415926Cpy
 - Course: courseId=257485372, classId=132821141
 
-## 已知信息
-- 我们已完整映射了100+域名的签到API端点
-- 已知可修改签到状态的API:
-  - `/pptSign/updateSignStatusByUidsV2` (教师端, CSRF漏洞)
-  - `/widget/sign/pcTeaSignController/updateSignStatus2` (PC端教师)
-  - `/newsign/updateSignStatus` (教师端)
-  - `/pptSign/updateSignStatus` (教师端)
-  - `/pptSign/resetUserSignStatus` (教师端)
-- 学生端无法直接修改签到状态（已验证）
-- 第三方网站确实能修改签到状态（用户已验证）
+## 核心发现
+
+### 第三方网站工作原理
+1. 用户绑定学习通账号（提供手机号+密码）
+2. 网站后端存储一个**系统教师账号**（`/api/chaoxing/accounts/system-teacher`）
+3. 用户创建补签任务时，网站使用教师账号调用学习通教师端API修改学生签到状态
+4. 补签任务状态：CREATED → QUEUED → RUNNING → SUCCESS/FAILED
+
+### 关键API端点
+- `POST /api/chaoxing/accounts` — 绑定学习通账号
+- `GET /api/chaoxing/accounts/system-teacher` — 获取系统教师账号
+- `PUT /api/chaoxing/accounts/system-teacher` — 配置系统教师账号
+- `POST /api/patch-sign/tasks` — 创建补签任务（核心）
+- `POST /api/patch-sign/tasks/bulk` — 批量补签
+- `GET /api/chaoxing/actives/{activeId}/members` — 获取成员签到状态
+
+### targetStatus值
+1=正常签到, 2=迟到, 5=请假, 7=未签到, 8-12=其他状态
 
 ## ADDED Requirements
 
-### Requirement: 流量拦截方案设计
-系统 SHALL 提供一套完整的流量拦截方案，用于捕获第三方网站与学习通服务器之间的所有HTTP/HTTPS通信。
+### Requirement: 验证教师账号代理修改机制
+系统 SHALL 验证第三方网站是否通过教师账号调用学习通API修改签到状态。
 
-#### Scenario: mitmproxy代理拦截
-- **WHEN** 用户通过mitmproxy代理访问第三方网站并执行签到修改操作
-- **THEN** 应记录所有发往*.chaoxing.com域名的请求，包括URL、方法、Header、参数、响应
-
-#### Scenario: 浏览器DevTools捕获
-- **WHEN** 用户在浏览器DevTools Network面板中操作第三方网站
-- **THEN** 应能识别所有XHR/Fetch请求到学习通域名
-
-### Requirement: 签到状态实时监控
-系统 SHALL 提供签到状态实时监控脚本，在使用第三方网站前后持续轮询签到状态。
-
-#### Scenario: 签到状态变化检测
-- **WHEN** 第三方网站成功修改了签到状态
-- **THEN** 监控脚本应立即检测到变化，并记录精确时间戳
-
-### Requirement: API调用差异对比
-系统 SHALL 提供API调用差异对比工具，将第三方网站的调用与已知API端点进行匹配。
-
-#### Scenario: 端点匹配
-- **WHEN** 捕获到第三方网站的API调用
-- **THEN** 应自动匹配到已知的签到API端点，并标注调用方式
-
-### Requirement: 账号活动日志分析
-系统 SHALL 通过学习通API查询测试账号的近期活动日志，识别第三方网站的操作痕迹。
-
-#### Scenario: 操作日志查询
-- **WHEN** 第三方网站修改了签到状态
-- **THEN** 应能通过V2 signIn API查询到修改记录（含teaUpdateFlag、updatetime等）
-
-### Requirement: 多维度验证方案
-系统 SHALL 提供多维度验证方案，从不同角度确认第三方网站的漏洞利用方法。
-
-#### Scenario: 教师端验证
+#### Scenario: teaUpdateFlag验证
 - **WHEN** 第三方网站修改了学生签到状态
-- **THEN** 应通过教师端API验证修改是否真实生效
+- **THEN** 通过V2 signIn API查询签到记录，teaUpdateFlag应为1（教师修改标记）
 
-#### Scenario: Cookie/Session分析
-- **WHEN** 第三方网站要求用户提供认证信息
-- **THEN** 应分析网站获取的认证信息类型（Cookie/Token/密码）及其使用方式
+#### Scenario: 修改时间验证
+- **WHEN** 第三方网站修改了签到状态
+- **THEN** updatetime应与补签任务完成时间一致
+
+### Requirement: 识别具体调用的学习通API
+系统 SHALL 识别第三方网站具体调用了学习通的哪个API端点。
+
+#### Scenario: API端点识别
+- **WHEN** 分析第三方网站的补签流程
+- **THEN** 应确定是updateSignStatusByUidsV2、updateSignStatus2、还是其他端点
+
+### Requirement: 编写签到状态监控脚本
+系统 SHALL 提供签到状态监控脚本，在使用第三方网站前后持续监控。
+
+#### Scenario: 实时监控
+- **WHEN** 运行监控脚本
+- **THEN** 应每5秒轮询一次签到状态，检测变化并记录时间戳
+
+### Requirement: 编写完整验证报告
+系统 SHALL 编写完整的验证报告，包含漏洞利用方法、影响范围和修复建议。
+
+#### Scenario: 报告输出
+- **WHEN** 所有验证完成
+- **THEN** 应输出包含具体API调用路径、参数、认证方式的完整报告

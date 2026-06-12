@@ -1,0 +1,4656 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JWT access and refresh tokens"
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/xiucat-quick-login": {
+      "post": {
+        "operationId": "AuthController_xiucatQuickLogin",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/XiucatQuickLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JWT access and refresh tokens for Xiucat quick login"
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/refresh": {
+      "post": {
+        "operationId": "AuthController_refresh",
+        "parameters": [
+          {
+            "name": "authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "operationId": "AuthController_logout",
+        "parameters": [
+          {
+            "name": "authorization",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogoutDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/change-password": {
+      "post": {
+        "operationId": "AuthController_changePassword",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "HealthController_health",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Health check passed"
+          },
+          "503": {
+            "description": "One or more dependencies are down"
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/admin/service-config": {
+      "get": {
+        "operationId": "ServiceConfigController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Service configuration values returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List service configuration values",
+        "tags": [
+          "service-config"
+        ]
+      }
+    },
+    "/api/admin/service-config/{key}": {
+      "patch": {
+        "operationId": "ServiceConfigController_update",
+        "parameters": [
+          {
+            "name": "key",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceConfigDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Service configuration value updated."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Update one service configuration value",
+        "tags": [
+          "service-config"
+        ]
+      }
+    },
+    "/api/service-config": {
+      "get": {
+        "operationId": "PublicServiceConfigController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Public service configuration values returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List public service configuration values",
+        "tags": [
+          "service-config"
+        ]
+      }
+    },
+    "/api/admin/announcements": {
+      "get": {
+        "operationId": "AnnouncementController_listAdmin",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "displayMode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "MODAL",
+                "SILENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetRole",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "AGENT",
+                "STUDENT"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      },
+      "post": {
+        "operationId": "AnnouncementController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAnnouncementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/admin/announcements/{id}": {
+      "patch": {
+        "operationId": "AnnouncementController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAnnouncementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/admin/announcements/{id}/publish": {
+      "post": {
+        "operationId": "AnnouncementController_publish",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/admin/announcements/{id}/archive": {
+      "post": {
+        "operationId": "AnnouncementController_archive",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/announcements/active": {
+      "get": {
+        "operationId": "AnnouncementController_listActive",
+        "parameters": [
+          {
+            "name": "displayMode",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "MODAL",
+                "SILENT"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/announcements/{id}/acknowledge": {
+      "post": {
+        "operationId": "AnnouncementController_acknowledge",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "announcements"
+        ]
+      }
+    },
+    "/api/ledger/accounts": {
+      "get": {
+        "operationId": "LedgerController_accounts",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/admin/ledger/accounts/{ownerId}": {
+      "get": {
+        "operationId": "LedgerController_adminAccounts",
+        "parameters": [
+          {
+            "name": "ownerId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/ledger/history": {
+      "get": {
+        "operationId": "LedgerController_history",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "ownerId",
+            "required": false,
+            "in": "query",
+            "description": "Restrict results to a user id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reason",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ADMIN_GRANT",
+                "CARD_REDEEM",
+                "SHOP_RECHARGE",
+                "SHOP_RECHARGE_REFUND",
+                "DISCOUNT_PACKAGE_PURCHASE",
+                "PATCH_SIGN_FREEZE",
+                "PATCH_SIGN_REFUND",
+                "PATCH_SIGN_SETTLE",
+                "COIN_TO_POINT",
+                "POINT_FROM_COIN",
+                "AGENT_COMMISSION",
+                "WITHDRAW_FREEZE",
+                "WITHDRAW_REFUND",
+                "ADJUSTMENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "refId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "POINT",
+                "COIN"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/admin/ledger/history": {
+      "get": {
+        "operationId": "LedgerController_adminHistory",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "ownerId",
+            "required": false,
+            "in": "query",
+            "description": "Restrict results to a user id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reason",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ADMIN_GRANT",
+                "CARD_REDEEM",
+                "SHOP_RECHARGE",
+                "SHOP_RECHARGE_REFUND",
+                "DISCOUNT_PACKAGE_PURCHASE",
+                "PATCH_SIGN_FREEZE",
+                "PATCH_SIGN_REFUND",
+                "PATCH_SIGN_SETTLE",
+                "COIN_TO_POINT",
+                "POINT_FROM_COIN",
+                "AGENT_COMMISSION",
+                "WITHDRAW_FREEZE",
+                "WITHDRAW_REFUND",
+                "ADJUSTMENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "refId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "POINT",
+                "COIN"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "ownerKeyword",
+            "required": false,
+            "in": "query",
+            "description": "Admin search keyword for user id, login name, nickname, or phone.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/agent/ledger": {
+      "get": {
+        "operationId": "LedgerController_agentHistory",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "ownerId",
+            "required": false,
+            "in": "query",
+            "description": "Restrict results to a user id.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reason",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ADMIN_GRANT",
+                "CARD_REDEEM",
+                "SHOP_RECHARGE",
+                "SHOP_RECHARGE_REFUND",
+                "DISCOUNT_PACKAGE_PURCHASE",
+                "PATCH_SIGN_FREEZE",
+                "PATCH_SIGN_REFUND",
+                "PATCH_SIGN_SETTLE",
+                "COIN_TO_POINT",
+                "POINT_FROM_COIN",
+                "AGENT_COMMISSION",
+                "WITHDRAW_FREEZE",
+                "WITHDRAW_REFUND",
+                "ADJUSTMENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "refId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "POINT",
+                "COIN"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "studentId",
+            "required": false,
+            "in": "query",
+            "description": "Restrict to a specific student invited by the current agent.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/ledger/coin-to-point": {
+      "post": {
+        "operationId": "LedgerController_coinToPoint",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CoinToPointDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "ledger"
+        ]
+      }
+    },
+    "/api/admin/cards/batches": {
+      "post": {
+        "operationId": "CardController_createBatch",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCardBatchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      },
+      "get": {
+        "operationId": "CardController_listBatches",
+        "parameters": [
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/admin/cards": {
+      "get": {
+        "operationId": "CardController_listCards",
+        "parameters": [
+          {
+            "name": "batchId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "UNUSED",
+                "USED",
+                "REVOKED",
+                "EXPIRED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/admin/cards/{code}/revoke": {
+      "post": {
+        "operationId": "CardController_revokeCard",
+        "parameters": [
+          {
+            "name": "code",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/admin/cards/batches/{id}/revoke": {
+      "post": {
+        "operationId": "CardController_revokeBatch",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/admin/cards/batches/{id}/expires": {
+      "patch": {
+        "operationId": "CardController_updateBatchExpiry",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardExpiryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/card/redeem": {
+      "post": {
+        "operationId": "CardController_redeem",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedeemCardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Card redeemed"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "cards"
+        ]
+      }
+    },
+    "/api/agent/withdraw": {
+      "post": {
+        "operationId": "WithdrawController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWithdrawDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      },
+      "get": {
+        "operationId": "WithdrawController_listMine",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "PENDING",
+                "APPROVED",
+                "REJECTED",
+                "PAID"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/agent/withdraw/{id}/resubmit": {
+      "post": {
+        "operationId": "WithdrawController_resubmit",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWithdrawDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/admin/withdraw": {
+      "get": {
+        "operationId": "WithdrawController_listAll",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "PENDING",
+                "APPROVED",
+                "REJECTED",
+                "PAID"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/admin/withdraw/{id}/approve": {
+      "post": {
+        "operationId": "WithdrawController_approve",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/admin/withdraw/{id}/mark-paid": {
+      "post": {
+        "operationId": "WithdrawController_markPaid",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/admin/withdraw/{id}/reject": {
+      "post": {
+        "operationId": "WithdrawController_reject",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectWithdrawDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "withdraw"
+        ]
+      }
+    },
+    "/api/notifications": {
+      "get": {
+        "operationId": "NotificationController_list",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "INFO",
+                "WARN",
+                "ERROR"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "readStatus",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "read",
+                "unread"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/api/notifications/summary": {
+      "get": {
+        "operationId": "NotificationController_summary",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/api/notifications/{id}/read": {
+      "post": {
+        "operationId": "NotificationController_markRead",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/api/notifications/read-all": {
+      "post": {
+        "operationId": "NotificationController_markAllRead",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/api/invite-codes": {
+      "post": {
+        "operationId": "InviteController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInviteCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "invite-codes"
+        ]
+      },
+      "get": {
+        "operationId": "InviteController_list",
+        "parameters": [
+          {
+            "name": "issuerId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "issuerType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ADMIN",
+                "AGENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ACTIVE",
+                "DISABLED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "invite-codes"
+        ]
+      }
+    },
+    "/api/invite-codes/{id}/disable": {
+      "post": {
+        "operationId": "InviteController_disable",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "invite-codes"
+        ]
+      }
+    },
+    "/api/admin/users": {
+      "get": {
+        "operationId": "UserController_list",
+        "parameters": [
+          {
+            "name": "keyword",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "role",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ADMIN",
+                "AGENT",
+                "STUDENT"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "ACTIVE",
+                "DISABLED"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}": {
+      "get": {
+        "operationId": "UserController_detail",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/disable": {
+      "patch": {
+        "operationId": "UserController_disable",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/restore": {
+      "patch": {
+        "operationId": "UserController_restore",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/reassign": {
+      "patch": {
+        "operationId": "UserController_reassign",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReassignUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/promote-agent": {
+      "patch": {
+        "operationId": "UserController_promoteAgent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/commission": {
+      "patch": {
+        "operationId": "UserController_updateCommission",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommissionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/agents/{id}/cleanup-students": {
+      "post": {
+        "operationId": "UserController_cleanupStudents",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CleanupStudentsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/grant-points": {
+      "post": {
+        "operationId": "UserController_grantPoints",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrantPointsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/admin/users/{id}/reset-password": {
+      "post": {
+        "operationId": "UserController_resetPassword",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/agent/students": {
+      "get": {
+        "operationId": "UserController_agentStudents",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/agent/students/{id}": {
+      "get": {
+        "operationId": "UserController_agentStudentDetail",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/agent/students/{id}/disable": {
+      "patch": {
+        "operationId": "UserController_disableAgentStudent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/agent/students/{id}/restore": {
+      "patch": {
+        "operationId": "UserController_restoreAgentStudent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/register/agent": {
+      "post": {
+        "operationId": "RegistrationController_registerAgent",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterAgentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "registration"
+        ]
+      }
+    },
+    "/api/register/student": {
+      "post": {
+        "operationId": "RegistrationController_registerStudent",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterStudentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "registration"
+        ]
+      }
+    },
+    "/api/feishu/review/events": {
+      "post": {
+        "operationId": "FeishuReviewController_handleEvent",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "feishu-review"
+        ]
+      }
+    },
+    "/api/admin/applications": {
+      "get": {
+        "operationId": "ApplicationController_list",
+        "parameters": [
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "PENDING",
+                "APPROVED",
+                "REJECTED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "agent",
+                "student"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "applications"
+        ]
+      }
+    },
+    "/api/admin/applications/agent/{id}/approve": {
+      "post": {
+        "operationId": "ApplicationController_approveAgent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "applications"
+        ]
+      }
+    },
+    "/api/admin/applications/agent/{id}/reject": {
+      "post": {
+        "operationId": "ApplicationController_rejectAgent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectApplicationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "applications"
+        ]
+      }
+    },
+    "/api/admin/applications/student/{id}/approve": {
+      "post": {
+        "operationId": "ApplicationController_approveStudent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "applications"
+        ]
+      }
+    },
+    "/api/admin/applications/student/{id}/reject": {
+      "post": {
+        "operationId": "ApplicationController_rejectStudent",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectApplicationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "applications"
+        ]
+      }
+    },
+    "/api/admin/discount-package-rules": {
+      "get": {
+        "operationId": "AdminDiscountPackageController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Discount package rules returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List discount package rules as admin",
+        "tags": [
+          "discount-package-rules"
+        ]
+      },
+      "post": {
+        "operationId": "AdminDiscountPackageController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDiscountPackageRuleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Discount package rule created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create a discount package rule",
+        "tags": [
+          "discount-package-rules"
+        ]
+      }
+    },
+    "/api/admin/discount-package-rules/{id}": {
+      "patch": {
+        "operationId": "AdminDiscountPackageController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDiscountPackageRuleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Discount package rule updated."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Update a discount package rule",
+        "tags": [
+          "discount-package-rules"
+        ]
+      }
+    },
+    "/api/student/discount-package/rules": {
+      "get": {
+        "operationId": "StudentDiscountPackageController_listRules",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Discount package rules returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List active discount package rules for students",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/student/discount-package/current": {
+      "get": {
+        "operationId": "StudentDiscountPackageController_current",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Current discount package returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get current active discount package purchase",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/student/discount-package/purchases": {
+      "post": {
+        "operationId": "StudentDiscountPackageController_purchase",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseDiscountPackageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Discount package purchased."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Purchase a discount package",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/student/discount-package/shop-orders": {
+      "post": {
+        "operationId": "StudentDiscountPackageController_createShopOrder",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseDiscountPackageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Discount package shop order created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create a discount package shop checkout order",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/student/discount-package/shop-orders/{orderNo}": {
+      "get": {
+        "operationId": "StudentDiscountPackageController_getShopOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Discount package shop order returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get a discount package shop order status",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/student/discount-package/shop-orders/{orderNo}/cancel": {
+      "post": {
+        "operationId": "StudentDiscountPackageController_cancelShopOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Discount package shop order canceled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel a pending discount package shop order",
+        "tags": [
+          "student-discount-package"
+        ]
+      }
+    },
+    "/api/admin/audit-logs": {
+      "get": {
+        "operationId": "AuditController_list",
+        "parameters": [
+          {
+            "name": "action",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "actorId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createdFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createdTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "refId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "refType",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "audit-logs"
+        ]
+      }
+    },
+    "/api/me": {
+      "get": {
+        "operationId": "ProfileController_me",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "profile"
+        ]
+      }
+    },
+    "/api/student/overview": {
+      "get": {
+        "operationId": "ProfileController_studentOverview",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "profile"
+        ]
+      }
+    },
+    "/api/agent/overview": {
+      "get": {
+        "operationId": "ProfileController_agentOverview",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "profile"
+        ]
+      }
+    },
+    "/api/admin/overview": {
+      "get": {
+        "operationId": "ProfileController_adminOverview",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "profile"
+        ]
+      }
+    },
+    "/api/chaoxing/accounts": {
+      "post": {
+        "operationId": "ChaoxingAccountController_bind",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BindChaoxingAccountDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Chaoxing account bound."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Bind one Chaoxing account and validate login",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      },
+      "get": {
+        "operationId": "ChaoxingAccountController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Visible Chaoxing accounts returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List visible Chaoxing accounts",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      }
+    },
+    "/api/chaoxing/accounts/bulk": {
+      "post": {
+        "operationId": "ChaoxingAccountController_bulkImport",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "file": {
+                    "format": "binary",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "file"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Import batch created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Bulk import Chaoxing accounts from CSV",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      }
+    },
+    "/api/chaoxing/accounts/bulk/{id}": {
+      "get": {
+        "operationId": "ChaoxingAccountController_getImportBatch",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Import batch returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get one Chaoxing account import batch",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      }
+    },
+    "/api/chaoxing/accounts/system-teacher": {
+      "get": {
+        "operationId": "ChaoxingAccountController_getSystemTeacher",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "System teacher account returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get configured patch-sign system teacher account",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      },
+      "put": {
+        "operationId": "ChaoxingAccountController_configureSystemTeacher",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigureSystemTeacherAccountDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "System teacher account configured."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Configure patch-sign system teacher account",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      }
+    },
+    "/api/chaoxing/accounts/{id}": {
+      "delete": {
+        "operationId": "ChaoxingAccountController_delete",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Chaoxing account deleted."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Delete one visible Chaoxing account",
+        "tags": [
+          "chaoxing-accounts"
+        ]
+      }
+    },
+    "/api/chaoxing/courses": {
+      "get": {
+        "operationId": "CourseController_listCourses",
+        "parameters": [
+          {
+            "name": "accountId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Course list returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List Chaoxing courses for an account",
+        "tags": [
+          "chaoxing-courses"
+        ]
+      }
+    },
+    "/api/chaoxing/courses/{courseId}/classes/{classId}/actives": {
+      "get": {
+        "operationId": "CourseController_listActives",
+        "parameters": [
+          {
+            "name": "courseId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "classId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Activity list returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List Chaoxing sign activities for a class",
+        "tags": [
+          "chaoxing-courses"
+        ]
+      }
+    },
+    "/api/chaoxing/actives/{activeId}": {
+      "get": {
+        "operationId": "CourseController_getActivityInfo",
+        "parameters": [
+          {
+            "name": "activeId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Activity details returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get Chaoxing sign activity details",
+        "tags": [
+          "chaoxing-courses"
+        ]
+      }
+    },
+    "/api/chaoxing/actives/{activeId}/members": {
+      "get": {
+        "operationId": "CourseController_getMembers",
+        "parameters": [
+          {
+            "name": "activeId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Member status summary returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get Chaoxing sign activity member statuses",
+        "tags": [
+          "chaoxing-courses"
+        ]
+      }
+    },
+    "/api/patch-sign/tasks": {
+      "post": {
+        "operationId": "PatchSignController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatchSignTaskDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Patch-sign task created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create one patch-sign task",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      },
+      "get": {
+        "operationId": "PatchSignController_list",
+        "parameters": [
+          {
+            "name": "accountId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "courseId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "activeId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createdFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createdTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "CREATED",
+                "QUEUED",
+                "RUNNING",
+                "SUCCESS",
+                "FAILED",
+                "SKIPPED",
+                "CANCELED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Patch-sign task list returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List visible patch-sign tasks",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      }
+    },
+    "/api/patch-sign/tasks/bulk": {
+      "post": {
+        "operationId": "PatchSignController_createBulk",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBulkPatchSignTaskDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Bulk creation results returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create patch-sign tasks in bulk",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      }
+    },
+    "/api/patch-sign/tasks/{id}": {
+      "get": {
+        "operationId": "PatchSignController_get",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Patch-sign task returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get one visible patch-sign task",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      },
+      "delete": {
+        "operationId": "PatchSignController_cancel",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Patch-sign task canceled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel a queued patch-sign task",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      }
+    },
+    "/api/admin/patch-sign/tasks/{id}/force-cancel": {
+      "post": {
+        "operationId": "PatchSignController_forceCancel",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Patch-sign task force-canceled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Force-cancel a patch-sign task as admin",
+        "tags": [
+          "patch-sign-tasks"
+        ]
+      }
+    },
+    "/api/admin/shop-recharge/orders": {
+      "get": {
+        "operationId": "AdminShopRechargeController_listOrders",
+        "parameters": [
+          {
+            "name": "cursor",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "createdFrom",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "createdTo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderNo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "shopOrderNo",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "PENDING",
+                "PAID",
+                "FAILED",
+                "CANCELED",
+                "EXPIRED",
+                "MANUAL_REVIEW"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "refundStatus",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "NONE",
+                "REFUNDED",
+                "MANUAL_REVIEW"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "traceId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Shop recharge orders returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List shop recharge orders for administrators",
+        "tags": [
+          "admin-shop-recharge"
+        ]
+      }
+    },
+    "/api/admin/shop-recharge/orders/{id}/refund": {
+      "post": {
+        "operationId": "AdminShopRechargeController_refundOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundShopRechargeOrderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Shop recharge order refund handled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Record external refund and claw back points",
+        "tags": [
+          "admin-shop-recharge"
+        ]
+      }
+    },
+    "/api/agent/shop-recharge/packages": {
+      "get": {
+        "operationId": "AgentShopRechargeController_listPackages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Shop recharge packages returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List shop recharge packages for agents",
+        "tags": [
+          "agent-shop-recharge"
+        ]
+      }
+    },
+    "/api/agent/shop-recharge/orders": {
+      "post": {
+        "operationId": "AgentShopRechargeController_createOrder",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateShopRechargeOrderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Shop recharge order created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create an agent shop recharge order and checkout redirect",
+        "tags": [
+          "agent-shop-recharge"
+        ]
+      }
+    },
+    "/api/agent/shop-recharge/orders/{orderNo}": {
+      "get": {
+        "operationId": "AgentShopRechargeController_getOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Shop recharge order returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get an agent shop recharge order status",
+        "tags": [
+          "agent-shop-recharge"
+        ]
+      }
+    },
+    "/api/agent/shop-recharge/orders/{orderNo}/cancel": {
+      "post": {
+        "operationId": "AgentShopRechargeController_cancelOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Shop recharge order canceled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel a pending agent shop recharge order",
+        "tags": [
+          "agent-shop-recharge"
+        ]
+      }
+    },
+    "/api/student/shop-recharge/packages": {
+      "get": {
+        "operationId": "StudentShopRechargeController_listPackages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Shop recharge packages returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "List shop recharge packages for students",
+        "tags": [
+          "student-shop-recharge"
+        ]
+      }
+    },
+    "/api/student/shop-recharge/orders": {
+      "post": {
+        "operationId": "StudentShopRechargeController_createOrder",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateShopRechargeOrderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Shop recharge order created."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Create a shop recharge order and checkout redirect",
+        "tags": [
+          "student-shop-recharge"
+        ]
+      }
+    },
+    "/api/student/shop-recharge/orders/{orderNo}": {
+      "get": {
+        "operationId": "StudentShopRechargeController_getOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Shop recharge order returned."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Get a shop recharge order status",
+        "tags": [
+          "student-shop-recharge"
+        ]
+      }
+    },
+    "/api/student/shop-recharge/orders/{orderNo}/cancel": {
+      "post": {
+        "operationId": "StudentShopRechargeController_cancelOrder",
+        "parameters": [
+          {
+            "name": "orderNo",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Shop recharge order canceled."
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Cancel a pending shop recharge order",
+        "tags": [
+          "student-shop-recharge"
+        ]
+      }
+    },
+    "/api/shop-recharge/callback": {
+      "post": {
+        "operationId": "ShopRechargeCallbackController_callback",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShopRechargeCallbackDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Callback accepted."
+          }
+        },
+        "summary": "Receive signed xiucat-shop recharge callback",
+        "tags": [
+          "shop-recharge-callback"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "VIP Center API",
+    "description": "VIP service center API",
+    "version": "0.1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "loginName",
+          "password"
+        ]
+      },
+      "XiucatQuickLoginDto": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string",
+            "description": "修猫账号 / 学习通手机号"
+          },
+          "password": {
+            "type": "string",
+            "description": "密码"
+          }
+        },
+        "required": [
+          "account",
+          "password"
+        ]
+      },
+      "RefreshDto": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "description": "Optional refresh token. Authorization bearer is preferred."
+          }
+        }
+      },
+      "LogoutDto": {
+        "type": "object",
+        "properties": {
+          "all": {
+            "type": "boolean"
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "Optional refresh token. Authorization bearer is preferred."
+          }
+        }
+      },
+      "ChangePasswordDto": {
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "currentPassword",
+          "newPassword"
+        ]
+      },
+      "UpdateServiceConfigDto": {
+        "type": "object",
+        "properties": {
+          "valueInt": {
+            "type": "number",
+            "example": 30
+          },
+          "valueStr": {
+            "type": "string",
+            "example": "enabled"
+          }
+        }
+      },
+      "CreateAnnouncementDto": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "displayMode": {
+            "type": "string",
+            "enum": [
+              "MODAL",
+              "SILENT"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "INFO",
+              "WARN",
+              "ERROR"
+            ]
+          },
+          "endsAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "startsAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ]
+          },
+          "targetRole": {
+            "type": "string",
+            "enum": [
+              "AGENT",
+              "STUDENT"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 120
+          }
+        },
+        "required": [
+          "body",
+          "displayMode",
+          "targetRole",
+          "title"
+        ]
+      },
+      "UpdateAnnouncementDto": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "displayMode": {
+            "type": "string",
+            "enum": [
+              "MODAL",
+              "SILENT"
+            ]
+          },
+          "endsAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "INFO",
+              "WARN",
+              "ERROR"
+            ]
+          },
+          "startsAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "targetRole": {
+            "type": "string",
+            "enum": [
+              "AGENT",
+              "STUDENT"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 120
+          }
+        }
+      },
+      "CoinToPointDto": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "amount"
+        ]
+      },
+      "CreateCardBatchDto": {
+        "type": "object",
+        "properties": {
+          "faceValue": {
+            "type": "number",
+            "minimum": 1
+          },
+          "count": {
+            "type": "number",
+            "maximum": 10000,
+            "minimum": 1
+          },
+          "expiresAt": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "faceValue",
+          "count"
+        ]
+      },
+      "UpdateCardExpiryDto": {
+        "type": "object",
+        "properties": {
+          "expiresAt": {
+            "type": "object",
+            "nullable": true
+          }
+        }
+      },
+      "RedeemCardDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "CreateWithdrawDto": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "minimum": 1
+          },
+          "payoutMethod": {
+            "type": "string"
+          },
+          "payoutNote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount"
+        ]
+      },
+      "RejectWithdrawDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "CreateInviteCodeDto": {
+        "type": "object",
+        "properties": {
+          "issuerType": {
+            "type": "string",
+            "enum": [
+              "ADMIN",
+              "AGENT"
+            ]
+          },
+          "maxUses": {
+            "type": "number",
+            "minimum": 1
+          },
+          "expiresAt": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      },
+      "DisableUserDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "ReassignUserDto": {
+        "type": "object",
+        "properties": {
+          "agentId": {
+            "type": "object",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateCommissionDto": {
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "number",
+            "maximum": 100,
+            "minimum": 0
+          }
+        },
+        "required": [
+          "rate"
+        ]
+      },
+      "CleanupStudentsDto": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "null",
+              "transfer"
+            ]
+          },
+          "transferToAgentId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "GrantPointsDto": {
+        "type": "object",
+        "properties": {
+          "delta": {
+            "type": "number"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "delta",
+          "note"
+        ]
+      },
+      "RegisterAgentDto": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string",
+            "description": "登录名需为至少 6 位数字、字母或下划线",
+            "minLength": 6,
+            "pattern": "^[A-Za-z0-9_]{6,}$"
+          },
+          "password": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "inviteCode": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "contactNote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "loginName",
+          "password",
+          "nickname",
+          "email",
+          "inviteCode",
+          "reason"
+        ]
+      },
+      "RegisterStudentDto": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string",
+            "description": "登录名需为至少 6 位数字、字母或下划线",
+            "minLength": 6,
+            "pattern": "^[A-Za-z0-9_]{6,}$"
+          },
+          "password": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "inviteCode": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "contactNote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "loginName",
+          "password",
+          "nickname",
+          "email"
+        ]
+      },
+      "RejectApplicationDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "CreateDiscountPackageRuleDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "3次优惠包"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 1
+          },
+          "unitPrice": {
+            "type": "number",
+            "minimum": 1
+          },
+          "note": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "shopSkuId": {
+            "type": "number",
+            "description": "xiucat-shop SKU id for cash checkout"
+          },
+          "cashAmount": {
+            "type": "string",
+            "description": "Cash amount charged by xiucat-shop, e.g. 19.90"
+          },
+          "currency": {
+            "type": "string",
+            "default": "CNY"
+          },
+          "purchaseEnabled": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "name",
+          "quantity",
+          "unitPrice"
+        ]
+      },
+      "UpdateDiscountPackageRuleDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "5次优惠包"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 1
+          },
+          "unitPrice": {
+            "type": "number",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "DISABLED"
+            ]
+          },
+          "note": {
+            "type": "object",
+            "nullable": true
+          },
+          "sortOrder": {
+            "type": "number"
+          },
+          "shopSkuId": {
+            "type": "object",
+            "description": "xiucat-shop SKU id for cash checkout",
+            "nullable": true
+          },
+          "cashAmount": {
+            "type": "object",
+            "description": "Cash amount charged by xiucat-shop, e.g. 19.90",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "default": "CNY"
+          },
+          "purchaseEnabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PurchaseDiscountPackageDto": {
+        "type": "object",
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ruleId"
+        ]
+      },
+      "BindChaoxingAccountDto": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string",
+            "example": "13800138000"
+          },
+          "password": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account",
+          "password"
+        ]
+      },
+      "ConfigureSystemTeacherAccountDto": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string",
+            "example": "13800138000"
+          },
+          "password": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string",
+            "example": "补签系统教师账号"
+          }
+        },
+        "required": [
+          "account",
+          "password"
+        ]
+      },
+      "CreatePatchSignTaskDto": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "courseId": {
+            "type": "string"
+          },
+          "classId": {
+            "type": "string"
+          },
+          "activeId": {
+            "type": "string"
+          },
+          "targetStatus": {
+            "type": "number",
+            "enum": [
+              1,
+              2,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          "acknowledgeSmallClass": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "accountId",
+          "courseId",
+          "classId",
+          "activeId",
+          "targetStatus",
+          "acknowledgeSmallClass"
+        ]
+      },
+      "BulkPatchSignTaskItemDto": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "courseId": {
+            "type": "string"
+          },
+          "classId": {
+            "type": "string"
+          },
+          "activeId": {
+            "type": "string"
+          },
+          "targetStatus": {
+            "type": "number",
+            "enum": [
+              1,
+              2,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          "acknowledgeSmallClass": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "accountId",
+          "courseId",
+          "classId",
+          "activeId",
+          "targetStatus",
+          "acknowledgeSmallClass"
+        ]
+      },
+      "CreateBulkPatchSignTaskDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BulkPatchSignTaskItemDto"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ]
+      },
+      "RefundShopRechargeOrderDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "description": "Admin-facing refund reason",
+            "maxLength": 500
+          },
+          "externalRef": {
+            "type": "string",
+            "description": "External xiucat-shop refund record, payment-provider refund number, or manual refund evidence",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "reason",
+          "externalRef"
+        ]
+      },
+      "CreateShopRechargeOrderDto": {
+        "type": "object",
+        "properties": {
+          "packageKey": {
+            "type": "string",
+            "description": "Recharge package key from GET /student/shop-recharge/packages"
+          },
+          "quantity": {
+            "type": "number",
+            "default": 1,
+            "description": "Number of package units to purchase",
+            "maximum": 99,
+            "minimum": 1
+          }
+        },
+        "required": [
+          "packageKey"
+        ]
+      },
+      "ShopRechargeCallbackFulfillmentDto": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          }
+        }
+      },
+      "ShopRechargeCallbackDto": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "number"
+          },
+          "order_no": {
+            "type": "string"
+          },
+          "downstream_order_no": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "fulfillment": {
+            "$ref": "#/components/schemas/ShopRechargeCallbackFulfillmentDto"
+          }
+        },
+        "required": [
+          "event",
+          "order_id",
+          "order_no",
+          "downstream_order_no",
+          "status",
+          "timestamp"
+        ]
+      }
+    }
+  }
+}
