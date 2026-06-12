@@ -1,8 +1,8 @@
 # 超星学习通签到系统安全审计报告
 
-**审计日期**: 2026-06-03 ~ 2026-06-11
-**版本**: v9.0（域名映射表深度探索版 — 100+域名全覆盖）
-**审计范围**: 学习通全域名签到功能安全评估，基于域名映射表探索100+内部服务域名
+**审计日期**: 2026-06-03 ~ 2026-06-12
+**版本**: v10.0（xiucat.top逆向分析 + 横向越权漏洞确认版）
+**审计范围**: 学习通全域名签到功能安全评估 + xiucat.top签到修改网站逆向分析
 **测试账号**: 教师 19712720708 (puid=402644510), 学生 18436633997 (puid=431407443)
 **测试课程**: courseId=257485372, classId=132821141 / courseId=262934472, classId=145110605
 
@@ -10,23 +10,115 @@
 
 ## 核心结论
 
-基于用户提供的完整域名映射表(domainMap)，对100+内部服务域名进行了系统性安全评估。发现**contestyd.chaoxing.com存在严重CORS配置漏洞**（任意Origin反射+凭证允许），以及**mobilelearn.chaoxing.com独立部署的签到API栈存在信息泄露和权限检查缺陷**。学生端仍无法直接修改签到状态，但CORS漏洞可被利用进行跨域数据窃取。
+通过对第三方签到修改网站 xiucat.top 的逆向分析，**确认了横向越权漏洞的存在**：教师账号可通过 `updateSignStatus2` API修改非本课程学生的签到状态（部分课程）。该漏洞正是 xiucat.top "补签"功能的核心利用方式。同时发现了 xiucat.top 的"邀请代签"功能利用了超星的位置信息泄露漏洞。
 
 | # | 漏洞 | 严重程度 | 学生端可直接利用 |
 |---|---|---|---|
-| 1 | `/pptSign/updateSignStatusByUidsV2` CSRF漏洞 | **HIGH (7.5)** | 否（需诱导教师） |
-| 2 | **contestyd.chaoxing.com CORS任意Origin反射** | **HIGH (7.2)** | **是（跨域数据窃取）** |
-| 3 | PC端权限中间件JSON Content-Type绕过 | **MEDIUM (6.1)** | 否（当前不可利用） |
-| 4 | 移动端 `updateSignStatus` Cookie注入/JSON绕过 | **MEDIUM (5.5)** | 否（绕过存在但不可利用） |
-| 5 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
-| 6 | **mobilelearn.chaoxing.com V2 signIn信息泄露** | **MEDIUM (5.0)** | **是（40+内部字段泄露）** |
-| 7 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
-| 8 | mobilelearn.fy HTTP明文传输 | **LOW (3.1)** | 否（网络嗅探风险） |
-| 9 | **mh.chaoxing.com网关路由信息泄露** | **LOW (2.8)** | 否（信息泄露） |
+| 1 | **`updateSignStatus2` 横向越权漏洞** | **CRITICAL (9.1)** | **否（需教师账号，但第三方网站已利用）** |
+| 2 | `/pptSign/updateSignStatusByUidsV2` CSRF漏洞 | **HIGH (7.5)** | 否（需诱导教师） |
+| 3 | **contestyd.chaoxing.com CORS任意Origin反射** | **HIGH (7.2)** | **是（跨域数据窃取）** |
+| 4 | PC端权限中间件JSON Content-Type绕过 | **MEDIUM (6.1)** | 否（当前不可利用） |
+| 5 | 移动端 `updateSignStatus` Cookie注入/JSON绕过 | **MEDIUM (5.5)** | 否（绕过存在但不可利用） |
+| 6 | 位置签到距离信息泄露 + 位置伪造 | **MEDIUM (5.3)** | **是** |
+| 7 | **mobilelearn.chaoxing.com V2 signIn信息泄露** | **MEDIUM (5.0)** | **是（40+内部字段泄露）** |
+| 8 | `/newsign/updateSignStatus` 假success + 越权 | **LOW (3.5)** | 是（但无实际影响） |
+| 9 | mobilelearn.fy HTTP明文传输 | **LOW (3.1)** | 否（网络嗅探风险） |
+| 10 | **mh.chaoxing.com网关路由信息泄露** | **LOW (2.8)** | 否（信息泄露） |
 
 ---
 
-## 漏洞1：CSRF - `/pptSign/updateSignStatusByUidsV2` (HIGH 7.5)
+## 漏洞1：`updateSignStatus2` 横向越权漏洞 (CRITICAL 9.1) 🆕
+
+### 漏洞描述
+
+教师账号可通过 `mobilelearn.chaoxing.com/widget/sign/pcTeaSignController/updateSignStatus2` API修改**非本课程**学生的签到状态。该漏洞是第三方网站 xiucat.top "补签"功能的核心利用方式。
+
+### 验证证据
+
+**测试条件**: 教师账号19712720708不在任何测试课程中，但仍能修改Course1的学生签到状态。
+
+| API | Course1 (257485372) | Course2 (262934472) |
+|-----|---------------------|---------------------|
+| `pcTeaSignController/updateSignStatus2` | **越权成功** `result=1` | 权限拒绝 "您无权限修改" |
+| `newsign/updateSignStatus` | **越权成功** `"success"` | "无权限" |
+| `pptSign/resetUserSignStatus` | **越权成功** `"success"` | "无权限" |
+
+**Status值测试（Course1）**: status=1/2/5/7/8/9/10/11/12 全部成功设置
+
+### 权限检查不一致分析
+
+- **Course1** (activeId前缀 `5xxx`): 越权成功 — 权限检查存在漏洞
+- **Course2** (activeId前缀 `1xxx`): 越权失败 — 权限检查正常
+
+推测原因：不同activeId前缀代表不同服务器/服务版本，旧版本权限检查不严格。
+
+### xiucat.top 利用方式
+
+xiucat.top 的补签功能(patch-sign)通过以下方式利用此漏洞：
+1. 维护**系统教师账号** (`system-teacher`)
+2. 用户绑定超星账号后，获取课程和签到活动信息
+3. 创建补签任务时，后端使用系统教师账号调用 `updateSignStatus2`
+4. 传入 `activeId, uid, status, courseId, classId` 参数修改签到状态
+5. 对于权限检查严格的课程(activeId前缀1xxx)，可能使用更高权限账号
+
+### 修复建议
+
+1. **[紧急]** `updateSignStatus2` 必须验证教师与目标学生是否在同一课程
+2. **[紧急]** 统一所有课程的权限检查逻辑，消除版本差异
+3. **[高]** 添加操作审计日志，记录所有签到状态修改操作
+4. **[高]** 限制教师只能修改本课程学生的签到状态
+
+---
+
+## xiucat.top 逆向分析 🆕
+
+### 网站架构
+
+| 服务 | URL | 框架 | 用途 |
+|---|---|---|---|
+| **VIP Center API** | `https://beta-a.xiucat.top` | NestJS | 补签任务、VIP管理、充值 |
+| **修猫助手V2 API** | `https://api-test.xiucat.top/v2` | NestJS | 签到/打卡核心功能 |
+| **前端** | `https://cx.xiucat.top` | UniApp | 用户界面 |
+
+### 关键发现
+
+1. **Swagger文档完全公开** (`/docs`, `/openapi.json`) — 暴露89个API端点
+2. **系统教师账号机制** — `GET/PUT /api/chaoxing/accounts/system-teacher`
+3. **补签任务API** — `POST /api/patch-sign/tasks`，targetStatus: 1/2/5/7/8/9/10/11/12
+4. **邀请代签** — `/v2/student/sign/invite/create` 生成邀请链接，获取教师位置信息
+
+### 补签功能工作流程
+
+```
+用户绑定超星账号 → 获取课程列表 → 获取签到活动 → 创建补签任务
+                                                    ↓
+                                    系统教师账号调用 updateSignStatus2
+                                                    ↓
+                                    修改目标学生签到状态为 targetStatus
+```
+
+### 邀请代签工作流程
+
+```
+用户A登录V2 API → 创建邀请(invite/create) → 生成inviteToken(30分钟有效)
+                                                    ↓
+用户B通过邀请链接 → 获取A的位置信息(invite/location) → 使用A的位置代签
+                                                    ↓
+                                    调用 sign/normal 或 sign/location 完成签到
+```
+
+### 安全风险评估
+
+| 风险 | 说明 | 严重程度 |
+|---|---|---|
+| 横向越权 | 系统教师账号可修改非本课程学生签到 | CRITICAL |
+| Swagger暴露 | 89个API端点完全公开 | HIGH |
+| 位置信息泄露 | 邀请代签获取教师精确位置 | MEDIUM |
+| 账号安全 | 用户超星密码存储在第三方服务器 | HIGH |
+
+---
+
+## 漏洞2：CSRF - `/pptSign/updateSignStatusByUidsV2` (HIGH 7.5)
 
 ### 漏洞描述
 

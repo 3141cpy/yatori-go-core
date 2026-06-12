@@ -1,0 +1,420 @@
+{
+  "login": {
+    "teacher_uid": "402644510",
+    "student_uid": "431407443"
+  },
+  "courses": {
+    "teacher_courses": [
+      {
+        "courseId": "260554328",
+        "courseName": "数值计算与程序设计",
+        "classId": "141377820",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "260899594",
+        "courseName": "大学生心理健康教育",
+        "classId": "140271434",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "260532723",
+        "courseName": "数值计算与程序设计",
+        "classId": "139283549",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "260362082",
+        "courseName": "概率论与数理统计（25-26下48学时）",
+        "classId": "138928392",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "258167046",
+        "courseName": "《中国近现代史纲要》",
+        "classId": "134350680",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "256571696",
+        "courseName": "微积分A(2)",
+        "classId": "130789414",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "255538200",
+        "courseName": "大学英语听说（Ⅰ）",
+        "classId": "128255887",
+        "cpi": 493376740,
+        "roletype": ""
+      },
+      {
+        "courseId": "255697280",
+        "courseName": "线性代数25-26上（48学时）",
+        "classId": "128677101",
+        "cpi": 505704349,
+        "roletype": ""
+      },
+      {
+        "courseId": "255512502",
+        "courseName": "人工智能通识与数字素养（理工医）",
+        "classId": "128190013",
+        "cpi": 493376740,
+        "roletype": ""
+      }
+    ],
+    "student_courses": [
+      {
+        "courseId": "262934472",
+        "courseName": "好好学习，天天向上",
+        "classId": "145110605",
+        "cpi": 520211407,
+        "roletype": ""
+      },
+      {
+        "courseId": "257485372",
+        "courseName": "111",
+        "classId": "132821141",
+        "cpi": 520211407,
+        "roletype": ""
+      }
+    ],
+    "teacher_in_c1": false,
+    "teacher_in_c2": false
+  },
+  "activities": {
+    "c1_activities": [
+      {
+        "activeId": "5000165046206",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：06-12 01:56"
+      },
+      {
+        "activeId": "5000165046204",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-12 01:56"
+      },
+      {
+        "activeId": "5000165046200",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-12 01:54"
+      },
+      {
+        "activeId": "5000163965982",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-03 19:23"
+      },
+      {
+        "activeId": "5000163964324",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 19:06"
+      },
+      {
+        "activeId": "5000163963862",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 19:00"
+      },
+      {
+        "activeId": "5000163963460",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-03 18:57"
+      },
+      {
+        "activeId": "5000163954277",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：06-03 17:24"
+      },
+      {
+        "activeId": "5000163954252",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-03 17:24"
+      },
+      {
+        "activeId": "5000163954225",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：06-03 17:23"
+      },
+      {
+        "activeId": "5000163954182",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-03 17:23"
+      },
+      {
+        "activeId": "5000163891319",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 13:40"
+      },
+      {
+        "activeId": "5000163776552",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 02:19"
+      },
+      {
+        "activeId": "5000163776548",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 01:49"
+      },
+      {
+        "activeId": "5000163776163",
+        "status": 2,
+        "name": "签到码签到",
+        "nameTwo": "结束时间：06-03 00:14"
+      },
+      {
+        "activeId": "5000163776153",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：06-03 00:12"
+      },
+      {
+        "activeId": "5000163767353",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：06-02 19:46"
+      },
+      {
+        "activeId": "5000162787534",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：05-26 12:54"
+      },
+      {
+        "activeId": "5000139908007",
+        "status": 2,
+        "name": "手势签到",
+        "nameTwo": "结束时间：2025-11-04 10:12"
+      },
+      {
+        "activeId": "5000139741015",
+        "status": 2,
+        "name": "签到码签到",
+        "nameTwo": "结束时间：2025-11-03 12:24"
+      },
+      {
+        "activeId": "5000139740903",
+        "status": 2,
+        "name": "手势签到",
+        "nameTwo": "结束时间：2025-11-03 12:24"
+      },
+      {
+        "activeId": "5000139561997",
+        "status": 2,
+        "name": "手势签到",
+        "nameTwo": "结束时间：2025-10-31 16:27"
+      },
+      {
+        "activeId": "5000139509423",
+        "status": 2,
+        "name": "签到码签到",
+        "nameTwo": "结束时间：2025-10-31 11:30"
+      },
+      {
+        "activeId": "5000139506185",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：2025-10-31 11:17"
+      },
+      {
+        "activeId": "5000139505593",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：2025-10-31 11:14"
+      },
+      {
+        "activeId": "5000139503533",
+        "status": 2,
+        "name": "手势签到",
+        "nameTwo": "结束时间：2025-10-31 11:05"
+      },
+      {
+        "activeId": "5000139411280",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：2025-10-30 18:02"
+      },
+      {
+        "activeId": "5000139410559",
+        "status": 2,
+        "name": "位置签到",
+        "nameTwo": "结束时间：2025-10-30 17:56"
+      },
+      {
+        "activeId": "5000139410338",
+        "status": 2,
+        "name": "手势签到",
+        "nameTwo": "结束时间：2025-10-30 17:55"
+      },
+      {
+        "activeId": "5000139411554",
+        "status": 2,
+        "name": "二维码签到",
+        "nameTwo": "结束时间：2025-10-30 17:36"
+      }
+    ],
+    "c2_activities": [
+      {
+        "activeId": "1000155099942",
+        "status": 2,
+        "name": "中午吃什么",
+        "nameTwo": "结束时间：04-17 11:41"
+      },
+      {
+        "activeId": "1000155014067",
+        "status": 2,
+        "name": "早8签到",
+        "nameTwo": "结束时间：04-16 08:31"
+      },
+      {
+        "activeId": "1000154971238",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：04-15 18:32"
+      },
+      {
+        "activeId": "1000154834275",
+        "status": 2,
+        "name": "拍周围的事物",
+        "nameTwo": "结束时间：04-15 10:23"
+      },
+      {
+        "activeId": "1000154756982",
+        "status": 2,
+        "name": "自拍签到",
+        "nameTwo": "结束时间：04-14 19:29"
+      },
+      {
+        "activeId": "1000154557017",
+        "status": 2,
+        "name": "普通签到",
+        "nameTwo": "结束时间：04-14 08:28"
+      }
+    ]
+  },
+  "privilege_test": {
+    "course1": {
+      "updateSignStatus(V1)": {
+        "status": "⚠️ 修改失败(非权限问题)",
+        "response": {
+          "_raw": "修改失败"
+        }
+      },
+      "newsign_updateSignStatus": {
+        "status": "🚨 越权成功",
+        "response": {
+          "_raw": "success"
+        }
+      },
+      "resetUserSignStatus": {
+        "status": "🚨 越权成功",
+        "response": {
+          "_raw": "success"
+        }
+      },
+      "pcTeaSign_updateSignStatus2": {
+        "status": "🚨 越权成功",
+        "response": {
+          "result": 1,
+          "msg": "success",
+          "data": null,
+          "errorMsg": null
+        }
+      }
+    },
+    "course2": {
+      "updateSignStatus(V1)": {
+        "status": "❌ 权限拒绝",
+        "response": {
+          "_raw": "无权限"
+        }
+      },
+      "newsign_updateSignStatus": {
+        "status": "❌ 权限拒绝",
+        "response": {
+          "_raw": "无权限"
+        }
+      },
+      "resetUserSignStatus": {
+        "status": "❌ 权限拒绝",
+        "response": {
+          "_raw": "无权限"
+        }
+      },
+      "pcTeaSign_updateSignStatus2": {
+        "status": "❌ 权限拒绝",
+        "response": {
+          "result": 0,
+          "msg": null,
+          "data": null,
+          "errorMsg": "您无权限修改"
+        }
+      }
+    }
+  },
+  "status_test": {
+    "1": {
+      "name": "出勤",
+      "result": 1,
+      "msg": "success"
+    },
+    "2": {
+      "name": "迟到",
+      "result": 1,
+      "msg": "success"
+    },
+    "5": {
+      "name": "补签",
+      "result": 1,
+      "msg": "success"
+    },
+    "7": {
+      "name": "未知7",
+      "result": 1,
+      "msg": "success"
+    },
+    "8": {
+      "name": "未知8",
+      "result": 1,
+      "msg": "success"
+    },
+    "9": {
+      "name": "未知9",
+      "result": 1,
+      "msg": "success"
+    },
+    "10": {
+      "name": "未知10",
+      "result": 1,
+      "msg": "success"
+    },
+    "11": {
+      "name": "未知11",
+      "result": 1,
+      "msg": "success"
+    },
+    "12": {
+      "name": "未知12",
+      "result": 1,
+      "msg": "success"
+    }
+  }
+}
