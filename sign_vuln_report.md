@@ -252,6 +252,36 @@ Content-Type: application/json → HTTP 500（绕过业务层权限检查，但�
 早期测试: 三角定位反推教师位置 (34.784500, 113.659700), 误差仅3m
 ```
 
+### 漏洞5b：`getPPTActiveInfo` 泄露教师签到地点全名（更简单攻击路径）🆕
+
+**2026-09-21 实测确认**：学生端可从 `/v2/apis/active/getPPTActiveInfo?activeId=xxx` 直接获取教师指定签到地点的**完整地名**与签到范围，配合百度地图POI搜索可**免三边测量直接签到**（仅需3次请求）。
+
+```
+[信息泄露证据] 学生Cookie直接GET即得:
+data.locationText    = "河南省郑州市二七区航海西路街道道李村 道李村南治安室"
+data.locationRange   = 300 (米)
+data.latitude/lng    = -1.0 (坐标已脱敏，但地名未脱敏)
+
+[攻击链 — 3次请求完成]
+1. GET /v2/apis/active/getPPTActiveInfo → 拿到locationText地名
+2. 百度Place API搜索该地名 → POI的BD09坐标 (34.724321, 113.572719)
+   (百度地图AK可从超星自己签到页源码提取: presign页面内嵌 xYjRz7D6pjc3xV516qReaRgcTdoZTyxP)
+3. POST /pptSign/stuSignajax 提交BD09坐标 → 通过距离检查 → 签到成功
+
+[关键实测证据]
+- POI坐标BD09提交(34.724321,113.572719) → "您已签到过了"（已过距离校验）
+- 对照: GCJ02转换坐标提交 → "距教师指定签到地点877.0米"（证明服务端用BD09坐标系）
+- 百度Geocoding API对该地址编码错误(偏差9km) → 攻击须用Place POI搜索而非地理编码
+
+[与三边测量法对比]
+| 维度 | locationText+POI法 | 三边测量法 |
+|---|---|---|
+| 请求数 | 3次 | 8-20次（含迭代逼近） |
+| 依赖 | locationText为POI名（教师搜索选点场景，最常见） | 无（任意选点场景） |
+| 精度 | 直接命中POI坐标 | RMS~500m仍需梯度逼近 |
+| 局限 | 教师手输任意坐标/自定义地名时失效 | 通用 |
+```
+
 ### 修复建议
 
 1. 不返回精确距离，改为"在/不在范围内"
