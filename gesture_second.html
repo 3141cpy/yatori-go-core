@@ -1,0 +1,534 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0"/>
+    <meta charset="utf-8">
+    <title>签到</title>
+
+    <script src="/service-domain/serviceDomainScript?DB_STRATEGY=RANDOM"></script>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/zcommon.css?v=1789919286821" type="text/css" rel="stylesheet"/>
+    <link href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/css/alert.css?v=1789919286821" type="text/css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/css/style.css?v=1789919286821" />
+    <!--<script src="../front/mobile/sign/js/jquery.js?v=1789919286821" type="text/javascript"></script>-->
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/jquery.min.js?v=1789919286821" type="text/javascript"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/CXJSBridge.js?v=1789919286821" type="text/javascript"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/domian.js?v=1789919286821" type="text/javascript"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xYjRz7D6pjc3xV516qReaRgcTdoZTyxP"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/app.utils.js?v=1789919286821" type="text/javascript"></script>
+    <script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/ratio2.js?v=1789919286821" type="text/javascript"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/common/js/jquery.gesture.password.triangle.js?v=1789919286821"></script>
+    <script type="text/javascript" src="//captcha.chaoxing.com/load.min.js?v=29833264"></script>
+    <script src="https://mobilelearn-static.chaoxing.com/mobilelearn/front/mobile/sign/js/mySignCaptchaUtils.js?v=1789919286821" type="text/javascript"></script>
+
+    <style type="text/css">
+        .zbox { -webkit-box-pack: center;}
+        /**2017-01-03**/
+        .fontTips{ font-size:0.32rem;color:#999;line-height:1.8;padding:10vmin 0;}
+        .rebuild{width:240px;margin:0 auto;font-size:16px;padding:20px 0 20px  30px;color:#999;}
+        .rebuild span.blue{color:#0099ff}
+        .gesturepwd { width: 70vmin; height: 70vmin; margin:0 auto;text-align: center;}
+        /*.gesturepwd canvas { width: 5rem; height: 5rem;}*/
+
+        /*验证码样式*/
+        .cx_modal_close{display: none}
+    </style>
+<script type="text/javascript" src="https://mobilelearn-static.chaoxing.com/mobilelearn/js/widget/client-user-location-address.js?v=1789919286821" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="zbox">
+    <p style="font-size:.34rem;line-height:.45rem;padding:.3rem .3rem 0 .3rem; margin-bottom:.3rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;" id="selectionTitle">手势签到</p>
+    
+
+    <div align="center" class="fontTips">
+        <p>
+                            重绘发起者传达的手势图案完成签到
+                    </p>
+    </div>
+    <div id="gesturepwd-container">
+        <div id="gesturepwd" class="gesturepwd"></div>
+    </div>
+    <div class="" style="-webkit-box-flex: 2;"></div>
+</div>
+<input type="hidden"  id="status" value="0">
+<input type="hidden"  id="uid" value="431407443">
+<input type="hidden"  id="substatus">
+<input type="hidden" id="juli" value="-1.0">
+<input type="hidden" id="latitude" value="-1">
+<input type="hidden" id="longitude" value="-1">
+<input type="hidden" id="fid" value="0">
+<input type="hidden" id="status1" value="-1">
+<input type="hidden" id="ifopenAddress" value="0">
+<!-- 提示弹出层 -->
+<article class="zalert"></article>
+<article class="zal_box">
+    <div class="zal_content">
+        <div id="tip_content" class="zal_txt"></div>
+    </div>
+    <div class="zal_btn">
+        <ul>
+            <li id="tip_confirm" class="zal_bt">确定</li>
+        </ul>
+    </div>
+</article>
+<script type="text/javascript">
+    //阻止页面滑动
+    // function preventDefault(ev) {
+    // ev.preventDefault()
+    // }
+
+    //document.addEventListener('touchmove', preventDefault, false);
+    $(".zal_box").css('marginTop','-'+$(".zal_box").height()/2-70+'px');
+</script>
+<script>
+    var checkresult;
+    var signCode="";
+    function renderGesturePasswd(){
+        let vminLength = Math.min(document.documentElement.clientWidth, document.documentElement.clientHeight);
+        $("#gesturepwd-container .gesturepwd").remove();
+        $('#gesturepwd-container').prepend('<div id="gesturepwd" class="gesturepwd"></div>');
+        $("#gesturepwd").GesturePasswd({
+            backgroundColor: "none", //背景色
+            color: "#999", //主要的控件颜色
+            lineWidth: 2,
+            roundRadii: 27*vminLength/375, //大圆点的半径
+            pointRadii: 7*vminLength/375, //大圆点被选中时显示的圆心的半径
+            space: 34*vminLength/375, //大圆点之间的间隙
+            width: vminLength * 7/10, //整个组件的宽度
+            height: vminLength * 7/10, //整个组件的高度
+            lineColor: "#7fccff", //用户划出线条的颜色
+            cirCleColor: "#09f", //用户划出圆的颜色
+            zindex: 100, //整个组件的css z-index属性
+            isRem: false, // 是否使用rem（默认比例750/100）
+            definition: 1,
+            triangleSize: 14*vminLength/375,  // 三角的大小
+            triangleDistance: 10*vminLength/375,  // 三角的距离
+        });
+
+        $(".gesturepwd").on("hasPasswd", function(e, passwd) {
+            if(passwd.length <= 3){
+                $("#gesturepwd").trigger("passwdWrong");
+                return;
+            }
+            signCode = passwd;
+            var activeId="5000173244801";
+            var url = "/widget/sign/pcStuSignController/checkSignCode";
+            $.ajax(url,{
+                data:{"activeId":activeId,"signCode":passwd},
+                dataType:"json",
+                success:function(obj) {
+                    if (obj.result == 1) {
+                        checkresult=true;
+                    }else{
+                        checkresult=false;
+                    }
+                    if(checkresult == true){
+                        $("#gesturepwd").trigger("passwdRight");
+                        setTimeout(function(){
+                            navOpen();
+                        },200);  //延迟半秒以照顾视觉效果
+                    } else{
+                        //密码验证错误后的其他操作。。。
+                        $(document.body).append("<article id='ts' class='zal_bg'  style='bottom:50%'><span id='wz'></span></article>");
+                        // -1 表示触发暴力破解封禁，显示后台返回的错误提示
+                        if (obj.result == -1 && obj.errorMsg) {
+                            $("#wz").html(obj.errorMsg);
+                        } else {
+                            $("#wz").html("手势错误，请重试");
+                        }
+                        tep(".zal_bg",1);
+                        $("#gesturepwd").trigger("passwdWrong");
+                    }
+                }
+            });
+        });
+    }
+    renderGesturePasswd()
+
+    var resizeTimer = null;
+    var window_width = document.documentElement.clientWidth;
+    window.addEventListener("resize", (event) => {
+        resizeTimer = resizeTimer ? null : setTimeout(() => {
+            if(window_width != document.documentElement.clientWidth){
+                renderGesturePasswd();
+            }
+        },0);
+    });
+</script>
+<script >
+    window.alert = function(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    };
+    window.confirm = function (message) {
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display = "none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        var alertFrame = window.frames[0];
+        var result = alertFrame.window.confirm(message);
+        iframe.parentNode.removeChild(iframe);
+        return result;
+    };
+</script>
+
+<script type="text/javascript">
+            document.title="签到"
+        var count=0;
+    var chongfu = 0;
+    var deviceCode = "";//设备指纹
+    var locationJson = "";
+    var locationResult = "";
+    var pendingSign = false;
+    function navOpen(){
+        var ifopenAddress = $("#ifopenAddress").val();
+        if(ifopenAddress == 1 && !locationJson){
+            pendingSign = true;
+            return;
+        }
+        var acId="5000173244801";
+        var uid=$("#uid").val();
+        var latitude=$("#latitude").val();
+        var longitude=$("#longitude").val();
+        var ip ="";
+        var fid=$("#fid").val();
+        var location = "";
+        if(locationJson){
+            location = encodeURIComponent(locationJson);
+        }
+        //var url="https://mobilelearn.chaoxing.com/sign/preStuSign?activeId="+activeId+"&code=&uid=431407443&courseId=257485372&classId=132821141";
+        var url="/pptSign/stuSignajax?activeId=" + acId + "&courseId=257485372&uid="+ uid +"&clientip="+ip+"&latitude="+latitude+"&longitude="+longitude+
+                "&appType=15&fid="+fid+"&name="+name+"&signCode="+signCode + "&deviceCode=" + deviceCode + "&location=" + location;
+        if(url != ''){
+            //var  classId="132821141";
+
+            sendData2(url);
+        }
+    }
+    function sendData2(url){
+        //判断这个设备是否已经签到过了
+        var activePrimaryId="5000173244801";
+        var lskey = "pptactive"+activePrimaryId;
+        var lsvalue = window.localStorage[lskey];
+        if(lsvalue){
+            jsBridge.postNotification('CLIENT_DISPLAY_MESSAGE', {'message':"同一设备不允许重复签到！"});
+            jsBridge.postNotification('CLIENT_EXIT_LEVEL', {}) ;
+            return;
+        }
+
+        var latitude=$("#latitude").val();
+        var longitude=$("#longitude").val();
+        var juli=$("#juli").val();
+        var appType='15';
+        if(appType!=2 && count==0 && appType!=6){
+            count++;
+            //jsBridge.postNotification('CLIENT_SEND_AFFAIR', data);
+            //jsBridge.postNotification('CLIENT_ATTACHMENT_SELECTED', data);
+        }
+        var params = urlParamsToObject(url);
+        params.locationResult = locationResult;
+        $.ajax({
+            url: '/pptSign/stuSignajax',
+            type: "post",
+            data: params,
+            success:function(res){
+                if(res=="validate"){
+                    validateShow(url);
+                    return;
+                }
+                if(res=="success"||res=="success2"){
+                    //签到成功，计入localStorage
+                    var lskey = "pptactive"+activePrimaryId;
+                    //window.localStorage[lskey] = 1;
+                    if(!window.localStorage[lskey]){
+
+                        window.localStorage[lskey] = new Date().Format("yyyy-MM-dd HH:mm:ss")+"  "+name2+"   "+'431407443'+"  "+activePrimaryId;
+                    }
+
+                    chongfu += 1;
+                    if(1==2){
+                        if(res=="success2"){
+                            $(document.body).append("<article id='ts' class='zal_bg'  style='bottom:50%'><span id='wz'></span></article>");
+                            $("#wz").html("已过教师设置的截止时间");
+                        }
+                    }else{
+                        if(res=="success"){
+                            $(document.body).append("<article id='ts' class='zal_bg'  style='bottom:50%'><span id='wz'></span></article>");
+                                                            $("#wz").html("恭喜你已完成签到");
+                                                    }
+                    }
+                    tep(".zal_bg",1);
+                    setTimeout("fanhui()",500);
+
+                    if(15 != 17){
+                    }else{
+                        fanhui();
+                    }
+
+                    //location.href = url;
+                }else{
+                    if(res.indexOf("errorLocation") >= 0) {
+                        var location = "";
+                        if(locationJson){
+                            location = encodeURIComponent(locationJson);
+                        }
+                        var errorUrl="https://mobilelearn.chaoxing.com/pptSign/errorLocation?DB_STRATEGY=PRIMARY_KEY&STRATEGY_PARA=activeId&activeId=5000173244801&uid=431407443&location="+location+"&errortype="+res;
+                        jsBridge.postNotification('CLIENT_OPEN_URL', {"title":"", "checkLogin":"1", "loadType":"0" ,"webUrl":errorUrl+"#INNER","toolbarType":"2"});
+                        return;
+                    }
+                    jsBridge.postNotification('CLIENT_DISPLAY_MESSAGE', {'message':res});
+                    jsBridge.postNotification('CLIENT_EXIT_LEVEL', {});
+                }
+            }
+        });
+    }
+    function  fanhui(){
+        var acId="5000173244801";
+        var role="";
+        var uid=$("#uid").val();
+        //var url1="https://mobilelearn.chaoxing.com/pptSign/tiaozhuanSuc?activeId=" + acId + "&uid="+ uid+"&role="+role+"&appType=15";
+        var url1="https://mobilelearn.chaoxing.com/newsign/preSign?courseId=257485372&classId=132821141&activePrimaryId=" + acId + "&uid="+ uid+"&role="+role+"&appType=15&isTeacherViewOpen=0&ut=";
+        var opts  = {"title":"签到", "checkLogin":"1", "loadType":"0" ,"webUrl":url1+"#INNER","toolbarType":"2"};
+        jsBridge.postNotification('CLIENT_OPEN_URL', opts);
+
+    }
+    function tep(ele,n){
+        if(zc) clearInterval(zc);
+        var js=n;
+        $(ele).removeClass("zend").addClass("zstart");
+        var zc=setInterval(function(){
+            if(js<=0){
+                $(ele).removeClass('zstart').addClass("zend");
+                clearInterval(zc);
+            }
+            js--;
+        },2000);
+        setTimeout(function(){$("#ts").remove();},1500);  //提示停留1.5秒
+    }
+    //向学习通传输数据
+    function sendData(classId,activePrimaryId){
+        $.ajax({
+            url: "/pptSign/signReceipt",
+            type: "get",
+            data: {"classId":classId,"activeId":activePrimaryId,"appType":"15"},
+            dataType:"json",
+            success:function(data){
+                //jsBridge.postNotification('CLIENT_SEND_AFFAIR', data);
+                jsBridge.postNotification('CLIENT_ATTACHMENT_SELECTED', data);
+            }
+        });
+    }
+    $(document).ready(function(){
+        var  atype='';
+        if(atype==2 ){
+            getLocation();
+        }
+        //弹出层消失
+        $("#tip_confirm").click(function(){
+            $(".zalert").hide();
+            $(".zal_box").hide();
+        })
+    });
+    //创建成功提示
+    function showTip(content){
+        $("#tip_content").html(content);
+        $(".zalert").show();
+        $(".zal_box").show();
+    }
+    var locFail = function(err) {
+        $("#status1").val(0);//可以提交手机不支持
+        // navOpen();
+    };
+    function getLocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,locFail,{maximumAge:3000,timeout:2000,enableHighAccuracy:true});
+        }
+        else{
+            // x.innerHTML="Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        $("#status1").val(0);
+        $("#latitude").val(position.coords.latitude);
+        $("#longitude").val(position.coords.longitude);
+        //navOpen();
+        // alert(position.coords.latitude+"--------"+ position.coords.longitude)
+        //x.innerHTML="Latitude: " + position.coords.latitude +"<br />Longitude: " + position.coords.longitude;
+    }
+
+    //	window.addEventListener('load', getLocation , true);
+    var name = "";
+    var name2 = "";
+    function getCurrentApplyUserInfo(object){
+        //alert(JSON.stringify(object));
+        $("#fid").val(object.fid);
+        if(!object.name){
+            object.name = "";
+        }
+        name = object.name;
+        name2 = name;
+        name = encodeURIComponent(name);
+
+    }
+    function  _jsBridgeReady(){
+        ifopenAddress = $("#ifopenAddress").val();
+
+        jsBridge.bind('CLIENT_USER_LOCATION', function(object){
+            console.log("客户端返回的位置数据："+JSON.stringify(object));
+            if (object && object.result == 1) {
+				locationResult = window.getClientUserLocationResult(object);
+            }
+            // locType = -200 说明客户端获取到了经纬度，但是没有获取到位置描述
+            if('257485372' == '254139468' || (object != null && object.result == 1 && object.locType && object.locType == -200)) {
+                object.address = "经度" + object.longitude + "，纬度" + object.latitude + "。";
+            }
+            afterLocationData(object);
+        });
+
+        // 客户端位置数据处理：写入locationJson并回填经纬度
+        function afterLocationData(object){
+            var locationInfo;
+            if (object && object.result == 1) {
+                locationInfo = {
+                    result: object.result,
+                    address: object.address,
+                    longitude: object.longitude,
+                    latitude: object.latitude,
+                }
+            } else {
+                locationInfo = object
+            }
+            locationJson = JSON.stringify(locationInfo);
+            if (object && object.result == 1 && object.longitude && object.latitude) {
+                $("#longitude").val(object.longitude);
+                $("#latitude").val(object.latitude);
+            }
+            if(pendingSign){
+                pendingSign = false;
+                navOpen();
+                return;
+            }
+            AppUtils.getUserInfo('',getCurrentApplyUserInfo);
+        }
+
+        if(ifopenAddress == 1){
+            jsBridge.postNotification('CLIENT_USER_LOCATION',{message:''});//先给客户端发消息  然后调用上面的绑定函数
+        }else{
+            AppUtils.getUserInfo('',getCurrentApplyUserInfo);
+        }
+        try {
+            //CLIENT_DEVICE_FLAG 获取设备指纹
+            jsBridge.bind('CLIENT_DEVICE_FLAG', function(object) {
+                if (object && object.flagInfo) {
+                    deviceCode = object.flagInfo.trim().replace(/[?&]/g, '');
+                }
+            });
+            jsBridge.postNotification("CLIENT_DEVICE_FLAG", {});
+        } catch (e) {
+            console.log(e)
+        }
+
+        //添加举报入口
+        jsBridge.postNotification('CLIENT_CUSTOM_MENU',{
+            show: 1,
+            icon: '',
+            menu: '举报',
+            option: 'showReportDialog()',
+            height: 70,
+            width: 62
+        });
+    }
+
+    // 显示举报对话框 - 使用POST方式打开举报页面
+    function showReportDialog(){
+        var activeId = "5000173244801";
+        var pUid = "402644510";
+        var title = $.trim($("#selectionTitle").text());
+        // alert("puid: " + pUid);
+        // alert("activeId: "+ activeId);  // 临时调试
+        // alert("活动标题: " + title);
+        var url = "https://groupweb.chaoxing.com"+'/pc/report/reportIndex';
+        var postData = {};
+        postData.type="classActivity";
+        postData.sourceIdstr=activeId;
+        postData.fromClientProtocol=1;
+        postData.sourceContent=encodeURIComponent(JSON.stringify({
+            "bePuid" : pUid,   //活动创建者
+            "reportContent" : title    //活动名称
+        }));
+        jsBridge.postNotification('CLIENT_OPEN_URL', {
+            "loadType" : 1,
+            "webUrl" : url,
+            "toolbarType" : 2,
+            "postData" : postData
+        });
+    }
+
+    var fid_cookie = "0";
+
+    $(function () {
+        // 初始化签到验证码插件
+        mySignCaptchaUtils.initSignCaptchaPlugin();
+    })
+
+    function validateShow(url) {
+        mySignCaptchaUtils.verifySuccessCallback = function (validate) {
+            sendData2(url + "&validate=" + validate);
+        };
+        mySignCaptchaUtils.popUpCaptcha();
+    }
+
+    function urlParamsToObject(url) {
+        //获取字符串 ? 后面的部分
+        var queryString = url.split('?')[1];
+        var paramsArr = queryString.split('&');
+        var paramObj = {};
+
+        paramsArr.forEach(param => {
+            var idx = param.indexOf('=');
+            if (idx != -1) {
+                var key = param.substring(0, idx);
+                var value = param.substring(idx + 1);
+                paramObj[key] = decodeURIComponent(value);
+            } else {
+                paramObj[param] = undefined;
+            }
+        });
+
+        return paramObj;
+    }
+
+    Date.prototype.Format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "H+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+</script>
+
+
+<!-- 验证码逻辑开始 -->
+<div id="captcha"></div>
+<!-- 验证码逻辑结束 -->
+
+
+</body>
+</html>
+
+
